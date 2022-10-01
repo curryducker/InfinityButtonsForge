@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [],
+  "optional": [
+    "cavesandcliffs:copper_block",
+    "cavesandcliffs:exposed_copper",
+    "cavesandcliffs:weathered_copper",
+    "cavesandcliffs:oxidized_copper"
+  ]
+}

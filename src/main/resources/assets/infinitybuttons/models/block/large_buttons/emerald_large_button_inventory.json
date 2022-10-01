@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button_inventory",
+  "textures": {
+    "texture": "minecraft:block/emerald_block"
+  }
+}

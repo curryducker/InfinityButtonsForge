@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button",
+  "textures": {
+    "texture": "infinitybuttons:block/copper_button"
+  }
+}

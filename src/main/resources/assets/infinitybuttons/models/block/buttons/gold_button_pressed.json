@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "infinitybuttons:block/gold_small_button"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/copper"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "copper_large_button",
+  "ingredients": [{"tag": "forge:storage_blocks/copper"},{"item": "infinitybuttons:stone_large_button"}],
+  "result": {
+    "item": "infinitybuttons:copper_large_button",
+    "count": 2
+  }
+}

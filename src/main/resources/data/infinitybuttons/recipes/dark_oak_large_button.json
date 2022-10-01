@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "minecraft:dark_oak_button"},{"item": "minecraft:dark_oak_button"}],
+  "result": {
+    "item": "infinitybuttons:dark_oak_large_button",
+    "count": 2
+  }
+}

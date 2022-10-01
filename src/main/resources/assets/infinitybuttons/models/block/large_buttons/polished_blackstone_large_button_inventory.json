@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button_inventory",
+  "textures": {
+    "texture": "infinitybuttons:block/polished_blackstone_button"
+  }
+}

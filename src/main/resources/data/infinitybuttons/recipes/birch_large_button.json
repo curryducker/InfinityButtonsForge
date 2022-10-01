@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "minecraft:birch_button"},{"item": "minecraft:birch_button"}],
+  "result": {
+    "item": "infinitybuttons:birch_large_button",
+    "count": 2
+  }
+}

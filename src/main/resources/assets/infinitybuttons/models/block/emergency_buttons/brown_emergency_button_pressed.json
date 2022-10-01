@@ -1,0 +1,8 @@
+{
+	"parent": "infinitybuttons:block/emergency_button_pressed",
+	"textures": {
+		"0": "minecraft:block/smooth_stone",
+		"1": "infinitybuttons:block/emergency_buttons/brown",
+		"particle": "infinitybuttons:block/emergency_buttons/brown"
+	}
+}

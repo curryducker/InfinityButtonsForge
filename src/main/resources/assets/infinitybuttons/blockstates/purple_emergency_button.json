@@ -1,0 +1,118 @@
+{
+  "variants": {
+    "pressed=false,face=floor,facing=north": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button"
+    },
+    "pressed=true,face=floor,facing=north": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed"
+    },
+    "pressed=false,face=floor,facing=east": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "y": 90
+    },
+    "pressed=true,face=floor,facing=east": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "y": 90
+    },
+    "pressed=false,face=floor,facing=west": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "y": 270
+    },
+    "pressed=true,face=floor,facing=west": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "y": 270
+    },
+    "pressed=false,face=floor,facing=south": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "y": 180
+    },
+    "pressed=true,face=floor,facing=south": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "y": 180
+    },
+    "pressed=false,face=ceiling,facing=north": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "x": 180
+    },
+    "pressed=true,face=ceiling,facing=north": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "x": 180
+    },
+    "pressed=false,face=ceiling,facing=east": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "x": 180,
+      "y": 90
+    },
+    "pressed=true,face=ceiling,facing=east": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "x": 180,
+      "y": 90
+    },
+    "pressed=false,face=ceiling,facing=south": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "x": 180,
+      "y": 180
+    },
+    "pressed=true,face=ceiling,facing=south": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "x": 180,
+      "y": 180
+    },
+    "pressed=false,face=ceiling,facing=west": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "x": 180,
+      "y": 270
+    },
+    "pressed=true,face=ceiling,facing=west": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "x": 180,
+      "y": 270
+    },
+    "pressed=false,face=wall,facing=north": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "uvlock": false,
+      "x": 90
+    },
+    "pressed=true,face=wall,facing=north": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "uvlock": false,
+      "x": 90
+    },
+    "pressed=false,face=wall,facing=east": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "uvlock": false,
+      "x": 90,
+      "y": 90
+    },
+    "pressed=true,face=wall,facing=east": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "uvlock": false,
+      "x": 90,
+      "y": 90
+    },
+    "pressed=false,face=wall,facing=west": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "uvlock": false,
+      "x": 90,
+      "y": 270
+    },
+    "pressed=true,face=wall,facing=west": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "uvlock": false,
+      "x": 90,
+      "y": 270
+    },
+    "pressed=false,face=wall,facing=south": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button",
+      "uvlock": false,
+      "x": 90,
+      "y": 180
+    },
+    "pressed=true,face=wall,facing=south": {
+      "model": "infinitybuttons:block/emergency_buttons/purple_emergency_button_pressed",
+      "uvlock": false,
+      "x": 90,
+      "y": 180
+    }
+  }
+}

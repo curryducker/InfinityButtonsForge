@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "sticky_copper_button",
+  "ingredients": [{"item": "minecraft:honeycomb"},{"item": "infinitybuttons:copper_button"}],
+  "result": {
+    "item": "infinitybuttons:sticky_copper_button",
+    "count": 1
+  }
+}

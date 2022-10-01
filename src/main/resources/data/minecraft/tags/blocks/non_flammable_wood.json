@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "infinitybuttons:crimson_large_button",
+    "infinitybuttons:warped_large_button",
+
+    "infinitybuttons:crimson_plank_secret_button",
+    "infinitybuttons:warped_plank_secret_button"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "button.copper.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "minecraft:block/copper/break1",
+      "minecraft:block/copper/break2",
+      "minecraft:block/copper/break3",
+      "minecraft:block/copper/break4"
+    ]
+  },
+  "button.copper.fall": {
+    "sounds": [
+      "minecraft:block/copper/step1",
+      "minecraft:block/copper/step2",
+      "minecraft:block/copper/step3",
+      "minecraft:block/copper/step4",
+      "minecraft:block/copper/step5",
+      "minecraft:block/copper/step6"
+    ]
+  },
+  "button.copper.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "minecraft:block/copper/step1",
+      "minecraft:block/copper/step2",
+      "minecraft:block/copper/step3",
+      "minecraft:block/copper/step4",
+      "minecraft:block/copper/step5",
+      "minecraft:block/copper/step6"
+    ]
+  },
+  "button.copper.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "minecraft:block/copper/break1",
+      "minecraft:block/copper/break2",
+      "minecraft:block/copper/break3",
+      "minecraft:block/copper/break4"
+    ]
+  },
+  "button.copper.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "minecraft:block/copper/step1",
+      "minecraft:block/copper/step2",
+      "minecraft:block/copper/step3",
+      "minecraft:block/copper/step4",
+      "minecraft:block/copper/step5",
+      "minecraft:block/copper/step6"
+    ]
+  },
+  "alarm": {
+    "subtitle": "infinitybuttons.subtitle.alarm",
+    "sounds": [
+      "infinitybuttons:alarm"
+    ]
+  },
+  "stone_scrape": {
+    "subtitle": "infinitybuttons.subtitle.stone_scrape",
+    "sounds": [
+      "infinitybuttons:stone_scrape"
+    ]
+  },
+  "wood_scrape": {
+    "subtitle": "infinitybuttons.subtitle.wood_scrape",
+    "sounds": [
+      "infinitybuttons:wood_scrape"
+    ]
+  }
+}

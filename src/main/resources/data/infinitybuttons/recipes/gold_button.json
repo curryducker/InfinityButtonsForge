@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"tag": "forge:ingots/gold"},{"item": "minecraft:stone_button"}],
+  "result": {
+    "item": "infinitybuttons:gold_button",
+    "count": 1
+  }
+}

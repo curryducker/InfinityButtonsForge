@@ -1,0 +1,8 @@
+{
+	"parent": "infinitybuttons:block/emergency_button_inventory",
+	"textures": {
+		"0": "minecraft:block/smooth_stone",
+		"1": "infinitybuttons:block/emergency_buttons/orange"
+
+	}
+}

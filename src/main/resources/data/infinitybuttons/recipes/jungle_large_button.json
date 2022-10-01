@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "minecraft:jungle_button"},{"item": "minecraft:jungle_button"}],
+  "result": {
+    "item": "infinitybuttons:jungle_large_button",
+    "count": 2
+  }
+}

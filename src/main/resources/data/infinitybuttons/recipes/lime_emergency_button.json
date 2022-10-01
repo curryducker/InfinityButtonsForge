@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "emergency_button",
+  "ingredients": [{"item": "minecraft:lime_dye"},{"item": "minecraft:stone_button"}],
+  "result": {
+    "item": "infinitybuttons:lime_emergency_button",
+    "count": 1
+  }
+}
