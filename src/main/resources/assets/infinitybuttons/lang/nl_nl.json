@@ -20,6 +20,9 @@
   "block.infinitybuttons.emerald_large_button": "Smaragden grote knop",
   "block.infinitybuttons.iron_large_button": "Ijzeren grote knop",
   "block.infinitybuttons.gold_large_button": "Gouden grote knop",
+  "block.infinitybuttons.willow_large_button": "Wilgenhouten grote knop",
+  "block.infinitybuttons.cherry_large_button": "Kersenhouten grote knop",
+  "block.infinitybuttons.wisteria_large_button": "Blauweregenhouten grote knop",
 
   "block.infinitybuttons.copper_button": "Koperen knop",
   "block.infinitybuttons.exposed_copper_button": "Blootgestelde koperen knop",
@@ -117,6 +120,9 @@
   "block.infinitybuttons.chiseled_red_terracotta_brick_secret_button":  "Gebeiteld rode terracotta bakstenen verborgen knop",
   "block.infinitybuttons.black_terracotta_brick_secret_button":  "Zwarte terracotta bakstenen verborgen knop",
   "block.infinitybuttons.chiseled_black_terracotta_brick_secret_button":  "Gebeiteld zwarte terracotta bakstenen verborgen knop",
+  "block.infinitybuttons.willow_plank_secret_button": "Wilgenhouten planken verborgen knop",
+  "block.infinitybuttons.cherry_plank_secret_button": "Kersenhouten planken verborgen knop",
+  "block.infinitybuttons.wisteria_plank_secret_button": "Blauweregenhouten planken verborgen knop",
 
   "infinitybuttons.subtitle.alarm": "Alarm ging af",
   "infinitybuttons.subtitle.stone_scrape": "Steen verschuift",

@@ -125,6 +125,18 @@ public class ModBlocks {
             () -> new ArrowLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
 
+    public static final RegistryObject<Block> WILLOW_LARGE_BUTTON = registerCompatBlock("environmental", "willow_large_button",
+            () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CHERRY_LARGE_BUTTON = registerCompatBlock("environmental", "cherry_large_button",
+            () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WISTERIA_LARGE_BUTTON = registerCompatBlock("environmental", "wisteria_large_button",
+            () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
     /*
     -------------
     Buttons
@@ -518,6 +530,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHISELED_BLACK_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_black_terracotta_brick_secret_button",
             () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK_TERRACOTTA)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> WILLOW_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "willow_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CHERRY_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "cherry_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WISTERIA_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "wisteria_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WHITE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
 
     /*
     --------------

@@ -20,6 +20,9 @@
   "block.infinitybuttons.emerald_large_button": "Emerald Large Button",
   "block.infinitybuttons.iron_large_button": "Iron Large Button",
   "block.infinitybuttons.gold_large_button": "Gold Large Button",
+  "block.infinitybuttons.willow_large_button": "Willow Large Button",
+  "block.infinitybuttons.cherry_large_button": "Cherry Large Button",
+  "block.infinitybuttons.wisteria_large_button": "Wisteria Large Button",
 
   "block.infinitybuttons.copper_button": "Copper Button",
   "block.infinitybuttons.exposed_copper_button": "Exposed Copper Button",
@@ -117,6 +120,9 @@
   "block.infinitybuttons.chiseled_red_terracotta_brick_secret_button":  "Chiseled Red Terracotta Brick Secret Button",
   "block.infinitybuttons.black_terracotta_brick_secret_button":  "Black Terracotta Brick Secret Button",
   "block.infinitybuttons.chiseled_black_terracotta_brick_secret_button":  "Chiseled Black Terracotta Brick Secret Button",
+  "block.infinitybuttons.willow_plank_secret_button": "Willow Plank Secret Button",
+  "block.infinitybuttons.cherry_plank_secret_button": "Cherry Plank Secret Button",
+  "block.infinitybuttons.wisteria_plank_secret_button": "Wisteria Plank Secret Button",
 
   "infinitybuttons.subtitle.alarm": "Alarm went off",
   "infinitybuttons.subtitle.stone_scrape": "Stone scrapes",
