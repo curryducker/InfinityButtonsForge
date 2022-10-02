@@ -15,7 +15,9 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.DyeColor;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -249,122 +251,272 @@ public class ModBlocks {
     */
 
     public static final RegistryObject<Block> BOOKSHELF_SECRET_BUTTON = registerBlock("bookshelf_secret_button",
-            () -> new BookshelfSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new BookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> STONE_BRICK_SECRET_BUTTON = registerBlock("stone_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
     public static final RegistryObject<Block> MOSSY_STONE_BRICK_SECRET_BUTTON = registerBlock("mossy_stone_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
     public static final RegistryObject<Block> CRACKED_STONE_BRICK_SECRET_BUTTON = registerBlock("cracked_stone_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
     public static final RegistryObject<Block> CHISELED_STONE_BRICK_SECRET_BUTTON = registerBlock("chiseled_stone_brick_secret_button",
-            () -> new ChiseledStoneBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new ChiseledStoneBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
-    public static final RegistryObject<Block> END_STONE_BRICK_SECRET_BUTTON = registerBlock("end_stone_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+    public static final RegistryObject<Block> MUD_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "mud_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 2.5f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
-    public static final RegistryObject<Block> QUARTZ_BRICK_SECRET_BUTTON = registerBlock("quartz_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
-
-    public static final RegistryObject<Block> POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON = registerBlock("polished_blackstone_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
-
-    public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON = registerBlock("cracked_polished_blackstone_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
-
-    public static final RegistryObject<Block> CHISELED_POLISHED_BLACKSTONE_SECRET_BUTTON = registerBlock("chiseled_polished_blackstone_secret_button",
-            () -> new ChiseledStoneBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
-
-    public static final RegistryObject<Block> BRICK_SECRET_BUTTON = registerBlock("brick_secret_button",
-            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
-
-    public static final RegistryObject<Block> NETHER_BRICK_SECRET_BUTTON = registerBlock("nether_brick_secret_button",
-            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
-
-    public static final RegistryObject<Block> CRACKED_NETHER_BRICK_SECRET_BUTTON = registerBlock("cracked_nether_brick_secret_button",
-            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
-
-    public static final RegistryObject<Block> CHISELED_NETHER_BRICK_SECRET_BUTTON = registerBlock("chiseled_nether_brick_secret_button",
-            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
-
-    public static final RegistryObject<Block> RED_NETHER_BRICK_SECRET_BUTTON = registerBlock("red_nether_brick_secret_button",
-            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
-
-    public static final RegistryObject<Block> DARK_PRISMARINE_SECRET_BUTTON = registerBlock("dark_prismarine_secret_button",
-            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
-
-    public static final RegistryObject<Block> OAK_PLANK_SECRET_BUTTON = registerBlock("oak_plank_secret_button",
-            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> BIRCH_PLANK_SECRET_BUTTON = registerBlock("birch_plank_secret_button",
-            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> SPRUCE_PLANK_SECRET_BUTTON = registerBlock("spruce_plank_secret_button",
-            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> ACACIA_PLANK_SECRET_BUTTON = registerBlock("acacia_plank_secret_button",
-            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> DARK_OAK_PLANK_SECRET_BUTTON = registerBlock("dark_oak_plank_secret_button",
-            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> JUNGLE_PLANK_SECRET_BUTTON = registerBlock("jungle_plank_secret_button",
-            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> CRIMSON_PLANK_SECRET_BUTTON = registerBlock("crimson_plank_secret_button",
-            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> WARPED_PLANK_SECRET_BUTTON = registerBlock("warped_plank_secret_button",
-            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD).setRequiresTool()));
-
-    /*
-    --------------
-    Compat Blocks
-    --------------
-    */
+    public static final RegistryObject<Block> CHISELED_MUD_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_mud_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 2.5f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
     public static final RegistryObject<Block> DEEPSLATE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "deepslate_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.5f, 6.0f).notSolid().sound(QuarkSounds.DEEPSLATE_BRICKS_TYPE).setRequiresTool()));
 
     public static final RegistryObject<Block> CRACKED_DEEPSLATE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "cracked_deepslate_brick_secret_button",
-            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.5f, 6.0f).notSolid().sound(QuarkSounds.DEEPSLATE_BRICKS_TYPE).setRequiresTool()));
 
     public static final RegistryObject<Block> DEEPSLATE_TILE_SECRET_BUTTON = registerCompatBlock("quark", "deepslate_tile_secret_button",
-            () -> new DeepslateTileSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new DeepslateTileSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.5f, 6.0f).notSolid().sound(QuarkSounds.DEEPSLATE_TILES_TYPE).setRequiresTool()));
 
     public static final RegistryObject<Block> CRACKED_DEEPSLATE_TILE_SECRET_BUTTON = registerCompatBlock("quark", "cracked_deepslate_tile_secret_button",
-            () -> new DeepslateTileSecretButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new DeepslateTileSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.5f, 6.0f).notSolid().sound(QuarkSounds.DEEPSLATE_TILES_TYPE).setRequiresTool()));
+
+    public static final RegistryObject<Block> END_STONE_BRICK_SECRET_BUTTON = registerBlock("end_stone_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> QUARTZ_BRICK_SECRET_BUTTON = registerBlock("quartz_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON = registerBlock("polished_blackstone_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON = registerBlock("cracked_polished_blackstone_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_BLACKSTONE_SECRET_BUTTON = registerBlock("chiseled_polished_blackstone_secret_button",
+            () -> new ChiseledStoneBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> BRICK_SECRET_BUTTON = registerBlock("brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.RED)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.RED)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> NETHER_BRICK_SECRET_BUTTON = registerBlock("nether_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
+
+    public static final RegistryObject<Block> CRACKED_NETHER_BRICK_SECRET_BUTTON = registerBlock("cracked_nether_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_NETHER_BRICK_SECRET_BUTTON = registerBlock("chiseled_nether_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
+
+    public static final RegistryObject<Block> RED_NETHER_BRICK_SECRET_BUTTON = registerBlock("red_nether_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
+
+    public static final RegistryObject<Block> DARK_PRISMARINE_SECRET_BUTTON = registerBlock("dark_prismarine_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.DIAMOND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> OAK_PLANK_SECRET_BUTTON = registerBlock("oak_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BIRCH_PLANK_SECRET_BUTTON = registerBlock("birch_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.SAND)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> SPRUCE_PLANK_SECRET_BUTTON = registerBlock("spruce_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.OBSIDIAN)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ACACIA_PLANK_SECRET_BUTTON = registerBlock("acacia_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.ADOBE)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> DARK_OAK_PLANK_SECRET_BUTTON = registerBlock("dark_oak_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> JUNGLE_PLANK_SECRET_BUTTON = registerBlock("jungle_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.DIRT)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CRIMSON_PLANK_SECRET_BUTTON = registerBlock("crimson_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.CRIMSON_STEM)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WARPED_PLANK_SECRET_BUTTON = registerBlock("warped_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.WARPED_STEM)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD).setRequiresTool()));
+
+    public static final RegistryObject<Block> ICE_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "ice_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ICE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.0f, 2.0f).notSolid().sound(SoundType.GLASS).setRequiresTool().slipperiness(0.99F)));
+
+    public static final RegistryObject<Block> CHISELED_ICE_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_ice_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ICE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.0f, 2.0f).notSolid().sound(SoundType.GLASS).setRequiresTool().slipperiness(0.99F)));
+
+    public static final RegistryObject<Block> TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ADOBE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ADOBE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> WHITE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "white_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_WHITE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_white_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> ORANGE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "orange_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ORANGE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_ORANGE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_orange_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ORANGE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> MAGENTA_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "magenta_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.MAGENTA_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_MAGENTA_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_magenta_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.MAGENTA_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "light_blue_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_LIGHT_BLUE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_light_blue_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> YELLOW_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "yellow_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_YELLOW_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_yellow_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.YELLOW_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> LIME_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "lime_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIME_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_LIME_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_lime_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIME_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> PINK_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "pink_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_PINK_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_pink_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PINK_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "gray_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_gray_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GRAY_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "light_gray_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_GRAY_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_LIGHT_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_light_gray_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_GRAY_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CYAN_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "cyan_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.CYAN_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_CYAN_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_cyan_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.CYAN_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> PURPLE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "purple_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_PURPLE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_purple_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> BLUE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "blue_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLUE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_BLUE_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_blue_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLUE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> BROWN_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "brown_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_BROWN_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_brown_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> GREEN_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "green_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GREEN_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_GREEN_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_green_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.GREEN_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> RED_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "red_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.RED_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_RED_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_red_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.RED_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> BLACK_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "black_terracotta_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_BLACK_TERRACOTTA_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "chiseled_black_terracotta_brick_secret_button",
+            () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
 
     /*
     --------------

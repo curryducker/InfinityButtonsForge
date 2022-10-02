@@ -3,7 +3,6 @@ package net.larsmans.infinitybuttons.item;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 

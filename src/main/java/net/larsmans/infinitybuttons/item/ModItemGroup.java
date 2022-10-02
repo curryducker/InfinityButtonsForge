@@ -4,8 +4,6 @@ import net.larsmans.infinitybuttons.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
-import java.util.Stack;
-
 public class ModItemGroup {
 
     public static final ItemGroup INFINITYBUTTONS = new ItemGroup("infinityButtonsTab")
