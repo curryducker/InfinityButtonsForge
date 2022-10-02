@@ -128,6 +128,7 @@
   "infinitybuttons.tooltip.arrow_button": "\u00A77Deze knop kan alleen ingedrukt worden met een pijl",
 
   "itemGroup.infinityButtonsTab": "Infinity Buttons",
+  "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",
 
   "text.autoconfig.infinitybuttons.option.alarmSound": "Alarmgeluid",
   "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "Of de noodknoppen een alarmgeluid maken",

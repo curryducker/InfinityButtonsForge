@@ -19,6 +19,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.DyeColor;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
@@ -526,7 +527,7 @@ public class ModBlocks {
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
+        registerBlockItem(name, toReturn, ModItemGroup.INFINITYBUTTONS);
         return toReturn;
     }
 
@@ -534,14 +535,14 @@ public class ModBlocks {
         RegistryObject<T> toReturn = null;
         if (ModList.get().isLoaded(modid)) {
             toReturn = BLOCKS.register(name, block);
-            registerBlockItem(name, toReturn);
+            registerBlockItem(name, toReturn, ModItemGroup.INFINITYBUTTONSCOMPAT);
         }
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, ItemGroup group) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().group(ModItemGroup.INFINITYBUTTONS)));
+                new Item.Properties().group(group)));
     }
 
     public static void register(IEventBus eventBus) {

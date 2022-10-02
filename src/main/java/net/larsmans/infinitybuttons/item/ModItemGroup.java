@@ -15,4 +15,13 @@ public class ModItemGroup {
         }
     };
 
+    public static final ItemGroup INFINITYBUTTONSCOMPAT = new ItemGroup("infinityButtonsCompatTab")
+    {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(ModBlocks.RED_EMERGENCY_BUTTON.get());
+        }
+    };
+
 }
