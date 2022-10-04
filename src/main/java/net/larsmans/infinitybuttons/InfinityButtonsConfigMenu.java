@@ -6,8 +6,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.ExtensionPoint;
 import net.minecraftforge.fml.ModLoadingContext;
 
-
-
 @OnlyIn(Dist.CLIENT)
 public class InfinityButtonsConfigMenu {
     public static void registerConfigMenu() {

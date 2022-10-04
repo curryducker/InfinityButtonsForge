@@ -1,14 +1,14 @@
 {
-  "parent": "infinitybuttons:root",
+  "parent": "infinitybuttons:emergency",
   "display": {
     "icon": {
-      "item": "infinitybuttons:red_emergency_button"
+      "item": "infinitybuttons:lime_emergency_button"
     },
     "title": {
       "translate": "advancement.infinitybuttons.all_emergency_buttons"
     },
     "description": {
-      "translate": "advancement.infinitybuttons.all_emergency_buttons.root"
+      "translate": "advancement.infinitybuttons.all_emergency_buttons.desc"
     },
     "frame": "goal",
     "show_toast": true,
