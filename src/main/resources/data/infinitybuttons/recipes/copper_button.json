@@ -13,6 +13,6 @@
   "ingredients": [{"tag": "forge:storage_blocks/copper"},{"item": "minecraft:stone_button"}],
   "result": {
     "item": "infinitybuttons:copper_button",
-    "count": 1
+    "count": 2
   }
 }

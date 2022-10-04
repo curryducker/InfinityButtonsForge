@@ -124,6 +124,13 @@
   "block.infinitybuttons.cherry_plank_secret_button": "Cherry Plank Secret Button",
   "block.infinitybuttons.wisteria_plank_secret_button": "Wisteria Plank Secret Button",
 
+  "block.infinitybuttons.torch_button": "火把按钮",
+  "block.infinitybuttons.torch_lever": "火把拉杆",
+  "block.infinitybuttons.soul_torch_button": "灵魂火把按钮",
+  "block.infinitybuttons.soul_torch_lever": "灵魂火把拉杆",
+  "block.infinitybuttons.redstone_torch_button": "红石火把按钮",
+  "block.infinitybuttons.redstone_torch_lever": "红石火把",
+
   "infinitybuttons.subtitle.alarm": "警铃大作",
   "infinitybuttons.subtitle.stone_scrape": "石头刮擦",
   "infinitybuttons.subtitle.wood_scrape": "木头刮擦",

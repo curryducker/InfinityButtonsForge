@@ -4,6 +4,6 @@
   "ingredients": [{"item": "minecraft:warped_button"},{"item": "minecraft:warped_button"}],
   "result": {
     "item": "infinitybuttons:warped_large_button",
-    "count": 2
+    "count": 1
   }
 }

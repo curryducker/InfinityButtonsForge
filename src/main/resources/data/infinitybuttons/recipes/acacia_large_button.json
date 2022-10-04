@@ -4,6 +4,6 @@
   "ingredients": [{"item": "minecraft:acacia_button"},{"item": "minecraft:acacia_button"}],
   "result": {
     "item": "infinitybuttons:acacia_large_button",
-    "count": 2
+    "count": 1
   }
 }

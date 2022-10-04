@@ -124,7 +124,14 @@
   "block.infinitybuttons.cherry_plank_secret_button": "Kersenhouten planken verborgen knop",
   "block.infinitybuttons.wisteria_plank_secret_button": "Blauweregenhouten planken verborgen knop",
 
-  "infinitybuttons.subtitle.alarm": "Alarm ging af",
+  "block.infinitybuttons.torch_button": "Fakkelknop",
+  "block.infinitybuttons.torch_lever": "Fakkelhendel",
+  "block.infinitybuttons.soul_torch_button": "Zielenfakkelknop",
+  "block.infinitybuttons.soul_torch_lever": "Zielenfakkelhendel",
+  "block.infinitybuttons.redstone_torch_button": "Redstonefakkelknop",
+  "block.infinitybuttons.redstone_torch_lever": "Redstonefakkelhendel",
+
+  "infinitybuttons.subtitle.alarm": "Alarm gaat af",
   "infinitybuttons.subtitle.stone_scrape": "Steen verschuift",
   "infinitybuttons.subtitle.wood_scrape": "Hout verschuift",
 

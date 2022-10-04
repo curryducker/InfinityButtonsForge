@@ -1,18 +1,9 @@
 {
-  "conditions": [
-    {
-      "type": "forge:not",
-      "value": {
-        "type": "forge:tag_empty",
-        "tag": "forge:storage_blocks/oxidized_copper"
-      }
-    }
-  ],
   "type": "minecraft:crafting_shapeless",
   "group": "copper_large_button",
-  "ingredients": [{"tag": "forge:storage_blocks/oxidized_copper"},{"item": "infinitybuttons:stone_large_button"}],
+  "ingredients": [{"item": "infinitybuttons:oxidized_copper_button"},{"item": "infinitybuttons:oxidized_copper_button"}],
   "result": {
     "item": "infinitybuttons:oxidized_copper_large_button",
-    "count": 2
+    "count": 1
   }
 }

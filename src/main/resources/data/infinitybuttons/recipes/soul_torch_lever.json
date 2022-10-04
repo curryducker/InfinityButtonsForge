@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    },
+    "X": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ],
+    "Y": {
+      "item": "minecraft:lever"
+    }
+  },
+  "pattern": [
+    "X ",
+    "#Y",
+    "S "
+  ],
+  "result": {
+    "count": 4,
+    "item": "infinitybuttons:soul_torch_lever"
+  }
+}

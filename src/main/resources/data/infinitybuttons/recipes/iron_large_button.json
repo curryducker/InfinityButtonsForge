@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [{"tag": "forge:ingots/iron"},{"item": "infinitybuttons:stone_large_button"}],
+  "ingredients": [{"item": "infinitybuttons:iron_button"},{"item": "infinitybuttons:iron_button"}],
   "result": {
     "item": "infinitybuttons:iron_large_button",
-    "count": 2
+    "count": 1
   }
 }

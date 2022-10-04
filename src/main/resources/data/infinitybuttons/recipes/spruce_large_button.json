@@ -4,6 +4,6 @@
   "ingredients": [{"item": "minecraft:spruce_button"},{"item": "minecraft:spruce_button"}],
   "result": {
     "item": "infinitybuttons:spruce_large_button",
-    "count": 2
+    "count": 1
   }
 }

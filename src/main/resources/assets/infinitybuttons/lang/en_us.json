@@ -124,7 +124,14 @@
   "block.infinitybuttons.cherry_plank_secret_button": "Cherry Plank Secret Button",
   "block.infinitybuttons.wisteria_plank_secret_button": "Wisteria Plank Secret Button",
 
-  "infinitybuttons.subtitle.alarm": "Alarm went off",
+  "block.infinitybuttons.torch_button": "Torch Button",
+  "block.infinitybuttons.torch_lever": "Torch Lever",
+  "block.infinitybuttons.soul_torch_button": "Soul Torch Button",
+  "block.infinitybuttons.soul_torch_lever": "Soul Torch Lever",
+  "block.infinitybuttons.redstone_torch_button": "Redstone Torch Button",
+  "block.infinitybuttons.redstone_torch_lever": "Redstone Torch Lever",
+
+  "infinitybuttons.subtitle.alarm": "Alarm goes off",
   "infinitybuttons.subtitle.stone_scrape": "Stone scrapes",
   "infinitybuttons.subtitle.wood_scrape": "Wood scrapes",
 

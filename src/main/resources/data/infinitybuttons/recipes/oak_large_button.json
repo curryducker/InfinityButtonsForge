@@ -4,6 +4,6 @@
   "ingredients": [{"item": "minecraft:oak_button"},{"item": "minecraft:oak_button"}],
   "result": {
     "item": "infinitybuttons:oak_large_button",
-    "count": 2
+    "count": 1
   }
 }

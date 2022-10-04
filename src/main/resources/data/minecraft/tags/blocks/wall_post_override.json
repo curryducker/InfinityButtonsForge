@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "infinitybuttons:redstone_torch_button",
+    "infinitybuttons:redstone_torch_lever"
+  ]
+}
