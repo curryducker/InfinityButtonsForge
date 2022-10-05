@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 public class RedstoneWallTorchLever extends RedstoneWallTorchButton{
     public RedstoneWallTorchLever(Properties properties) {
         super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(LIT, Boolean.FALSE));
+        this.setDefaultState((BlockState)((BlockState)this.stateContainer.getBaseState()).with(LIT, false));
     }
 
     @Override
@@ -29,12 +29,12 @@ public class RedstoneWallTorchLever extends RedstoneWallTorchButton{
 
     @Override
     public void powerBlock(BlockState state, World worldIn, BlockPos pos) {
-        worldIn.setBlockState(pos, state.with(LIT, Boolean.TRUE), 3);
+        worldIn.setBlockState(pos, (BlockState)state.with(LIT, true), 3);
         this.updateNeighbors(state, worldIn, pos);
     }
 
     public void unpowerBlock(BlockState state, World worldIn, BlockPos pos) {
-        worldIn.setBlockState(pos, state.with(LIT, Boolean.FALSE), 3);
+        worldIn.setBlockState(pos, (BlockState)state.with(LIT, false), 3);
         this.updateNeighbors(state, worldIn, pos);
     }
 }

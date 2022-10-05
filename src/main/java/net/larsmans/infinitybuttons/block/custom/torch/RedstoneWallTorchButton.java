@@ -2,7 +2,6 @@ package net.larsmans.infinitybuttons.block.custom.torch;
 
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
@@ -26,7 +25,7 @@ public class RedstoneWallTorchButton extends RedstoneTorchButton {
 
     public RedstoneWallTorchButton(Properties properties) {
         super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(LIT, Boolean.FALSE).with(FACING, Direction.NORTH));
+        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateContainer.getBaseState()).with(LIT, false)).with(FACING, Direction.NORTH));
     }
 
     @Override
@@ -48,7 +47,7 @@ public class RedstoneWallTorchButton extends RedstoneTorchButton {
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockState blockState = Blocks.WALL_TORCH.getStateForPlacement(context);
-        return blockState == null ? null : this.stateContainer.getBaseState().with(FACING, blockState.get(FACING));
+        return blockState == null ? null : (BlockState)this.getDefaultState().with(FACING, blockState.get(FACING));
     }
 
     @Override
@@ -58,10 +57,9 @@ public class RedstoneWallTorchButton extends RedstoneTorchButton {
             return;
         }
         Direction direction = stateIn.get(FACING).getOpposite();
-        double d0 = 0.27D;
-        double d1 = (double)pos.getX() + 0.5D + (rand.nextDouble() - 0.5D) * 0.2D + 0.27D * (double)direction.getXOffset();
-        double d2 = (double)pos.getY() + 0.7D + (rand.nextDouble() - 0.5D) * 0.2D + 0.22D;
-        double d3 = (double)pos.getZ() + 0.5D + (rand.nextDouble() - 0.5D) * 0.2D + 0.27D * (double)direction.getZOffset();
+        double d0 = (double)pos.getX() + 0.5D + (rand.nextDouble() - 0.5D) * 0.2D + 0.27D * (double)direction.getXOffset();
+        double d1 = (double)pos.getY() + 0.7D + (rand.nextDouble() - 0.5D) * 0.2D + 0.22D;
+        double d2 = (double)pos.getZ() + 0.5D + (rand.nextDouble() - 0.5D) * 0.2D + 0.27D * (double)direction.getZOffset();
         worldIn.addParticle(this.particleData, d0, d1, d2, 0.0D, 0.0D, 0.0D);
     }
 

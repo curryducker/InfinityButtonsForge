@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 public class TorchLever extends TorchButton{
     public TorchLever(Properties properties, IParticleData particleData) {
         super(properties, particleData);
-        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, Boolean.FALSE));
+        this.setDefaultState((BlockState)((BlockState)this.stateContainer.getBaseState()).with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, Boolean.FALSE));
     }
 
     @Override
@@ -30,12 +30,12 @@ public class TorchLever extends TorchButton{
 
     @Override
     public void powerBlock(BlockState state, World worldIn, BlockPos pos) {
-        worldIn.setBlockState(pos, state.with(PRESSED, Boolean.TRUE), 3);
+        worldIn.setBlockState(pos, (BlockState)state.with(PRESSED, Boolean.TRUE), 3);
         this.updateNeighbors(state, worldIn, pos);
     }
 
     public void unpowerBlock(BlockState state, World worldIn, BlockPos pos) {
-        worldIn.setBlockState(pos, state.with(PRESSED, Boolean.FALSE), 3);
+        worldIn.setBlockState(pos, (BlockState)state.with(PRESSED, Boolean.FALSE), 3);
         this.updateNeighbors(state, worldIn, pos);
     }
 }

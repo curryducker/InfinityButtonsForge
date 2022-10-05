@@ -25,7 +25,7 @@ public class TorchButton extends WallTorchBlock {
 
     public TorchButton(Properties properties, IParticleData particleData) {
         super(properties, particleData);
-        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, Boolean.FALSE));
+        this.setDefaultState((BlockState)((BlockState)this.stateContainer.getBaseState()).with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, Boolean.FALSE));
     }
 
     @Override
@@ -73,7 +73,7 @@ public class TorchButton extends WallTorchBlock {
     }
 
     public void powerBlock(BlockState state, World worldIn, BlockPos pos) {
-        worldIn.setBlockState(pos, state.with(PRESSED, Boolean.TRUE), 3);
+        worldIn.setBlockState(pos, (BlockState)state.with(PRESSED, Boolean.TRUE), 3);
         this.updateNeighbors(state, worldIn, pos);
         worldIn.getPendingBlockTicks().scheduleTick(pos, this, 60);
     }
@@ -114,7 +114,7 @@ public class TorchButton extends WallTorchBlock {
     @Override
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(PRESSED)) {
-            worldIn.setBlockState(pos, state.with(PRESSED, Boolean.FALSE), 3);
+            worldIn.setBlockState(pos, (BlockState)state.with(PRESSED, Boolean.FALSE), 3);
             this.updateNeighbors(state, worldIn, pos);
             this.playSound((PlayerEntity)null, worldIn, pos, false);
 

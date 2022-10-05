@@ -8,6 +8,7 @@ import net.larsmans.infinitybuttons.block.custom.button.EmeraldButton;
 import net.larsmans.infinitybuttons.block.custom.button.StickyCopperButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.*;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
+import net.larsmans.infinitybuttons.block.custom.torch.*;
 import net.larsmans.infinitybuttons.item.ModItemGroup;
 import net.larsmans.infinitybuttons.item.ModItems;
 import net.larsmans.infinitybuttons.sounds.ModSounds;
@@ -20,6 +21,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.DyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
@@ -545,6 +547,52 @@ public class ModBlocks {
 
     /*
     --------------
+    Torches
+    --------------
+    */
+
+    public static final RegistryObject<Block> TORCH_BUTTON = registerBlock("torch_button",
+            () -> new TorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD), ParticleTypes.FLAME));
+
+    public static final RegistryObject<Block> TORCH_LEVER = registerBlock("torch_lever",
+            () -> new TorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD), ParticleTypes.FLAME));
+
+    public static final RegistryObject<Block> SOUL_TORCH_BUTTON = registerBlock("soul_torch_button",
+            () -> new TorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 10;
+            }).sound(SoundType.WOOD), ParticleTypes.SOUL_FIRE_FLAME));
+
+    public static final RegistryObject<Block> SOUL_TORCH_LEVER = registerBlock("soul_torch_lever",
+            () -> new TorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 10;
+            }).sound(SoundType.WOOD), ParticleTypes.SOUL_FIRE_FLAME));
+
+    public static final RegistryObject<Block> REDSTONE_TORCH_BUTTON = registerTorchBlock("redstone_torch_button",
+            () -> new RedstoneTorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 7;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> REDSTONE_WALL_TORCH_BUTTON = registerTorchBlock("redstone_wall_torch_button",
+            () -> new RedstoneWallTorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 7;
+            }).sound(SoundType.WOOD).lootFrom(REDSTONE_TORCH_BUTTON)));
+
+    public static final RegistryObject<Block> REDSTONE_TORCH_LEVER = registerTorchBlock("redstone_torch_lever",
+            () -> new RedstoneTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 7;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> REDSTONE_WALL_TORCH_LEVER = registerTorchBlock("redstone_wall_torch_lever",
+            () -> new RedstoneWallTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 7;
+            }).sound(SoundType.WOOD).lootFrom(REDSTONE_TORCH_LEVER)));
+
+    /*
+    --------------
     Other Stuff
     --------------
     */
@@ -567,6 +615,11 @@ public class ModBlocks {
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, ItemGroup group) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().group(group)));
+    }
+
+    private static <T extends Block>RegistryObject<T> registerTorchBlock(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        return toReturn;
     }
 
     public static void register(IEventBus eventBus) {

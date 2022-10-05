@@ -101,7 +101,10 @@ public abstract class AbstractSecretButton extends HorizontalBlock {
     }
 
     public int getStrongPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        return blockState.get(PRESSED) ? 15 : 0;
+        if (blockState.get(PRESSED) && blockState.get(HORIZONTAL_FACING) == side) {
+            return 15;
+        }
+        return 0;
     }
 
     public boolean canProvidePower(BlockState state) {
@@ -117,6 +120,7 @@ public abstract class AbstractSecretButton extends HorizontalBlock {
 
     public void updateNeighbors(BlockState state, World worldIn, BlockPos pos) {
         worldIn.notifyNeighborsOfStateChange(pos, this);
+        worldIn.notifyNeighborsOfStateChange(pos.offset(state.get(HORIZONTAL_FACING).getOpposite()), this);
     }
 
     @Nullable

@@ -24,7 +24,7 @@ public class RedstoneTorchButton extends TorchBlock {
 
     public RedstoneTorchButton(Properties properties) {
         super(properties, RedstoneParticleData.REDSTONE_DUST);
-        this.setDefaultState(this.stateContainer.getBaseState().with(LIT, Boolean.FALSE));
+        this.setDefaultState((BlockState)((BlockState)this.stateContainer.getBaseState()).with(LIT, false));
     }
 
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
@@ -38,7 +38,7 @@ public class RedstoneTorchButton extends TorchBlock {
 
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(LIT)) {
-            worldIn.setBlockState(pos, state.with(LIT, Boolean.FALSE), 3);
+            worldIn.setBlockState(pos, (BlockState)state.with(LIT, false), 3);
             this.updateNeighbors(state, worldIn, pos);
             this.playSound((PlayerEntity)null, worldIn, pos, false);
 
@@ -46,7 +46,7 @@ public class RedstoneTorchButton extends TorchBlock {
     }
 
     public void powerBlock(BlockState state, World worldIn, BlockPos pos) {
-        worldIn.setBlockState(pos, state.with(LIT, Boolean.TRUE), 3);
+        worldIn.setBlockState(pos, (BlockState)state.with(LIT, true), 3);
         this.updateNeighbors(state, worldIn, pos);
         worldIn.getPendingBlockTicks().scheduleTick(pos, this, 60);
     }
