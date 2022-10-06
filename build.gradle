@@ -124,6 +124,7 @@ repositories {
         name "blamejared"
         url "https://maven.blamejared.com/"
     }
+    maven { url "https://www.cursemaven.com" }
 }
 
 dependencies {
@@ -134,6 +135,7 @@ dependencies {
     api fg.deobf("me.shedaniel.cloth:cloth-config-forge:4.16.91")
     compileOnly fg.deobf("vazkii.autoreglib:AutoRegLib:1.6-49.90")
     compileOnly fg.deobf("vazkii.quark:Quark:r2.4-322.1")
+    compileOnly fg.deobf("curse.maven:endergetic-291509:3750371")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

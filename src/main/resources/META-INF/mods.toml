@@ -74,3 +74,9 @@ A mod which adds new exciting buttons!
     versionRange="[1.1.1,)"
     ordering="BEFORE"
     side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="endergetic"
+    mandatory=false
+    versionRange="[3.0.2,)"
+    ordering="BEFORE"
+    side="BOTH"

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "endergetic:poise_button"},{"item": "endergetic:poise_button"}],
+  "result": {
+    "item": "infinitybuttons:poise_large_button",
+    "count": 1
+  }
+}

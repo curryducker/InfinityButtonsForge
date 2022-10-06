@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -21,6 +22,10 @@ public class InfinityButtonsClient {
             RenderTypeLookup.setRenderLayer(ModBlocks.REDSTONE_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.REDSTONE_TORCH_LEVER.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.REDSTONE_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+            if (ModList.get().isLoaded("endergetic")) {
+                RenderTypeLookup.setRenderLayer(ModBlocks.ENDER_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(ModBlocks.ENDER_TORCH_LEVER.get(), RenderType.getCutout());
+            }
         });
     }
 }

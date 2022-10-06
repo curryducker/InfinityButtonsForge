@@ -1,5 +1,6 @@
 package net.larsmans.infinitybuttons.block;
 
+import com.minecraftabnormals.endergetic.client.particles.EEParticles;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.button.ArrowButton;
@@ -136,6 +137,10 @@ public class ModBlocks {
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> WISTERIA_LARGE_BUTTON = registerCompatBlock("environmental", "wisteria_large_button",
+            () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> POISE_LARGE_BUTTON = registerCompatBlock("endergetic", "poise_large_button",
             () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
@@ -545,6 +550,30 @@ public class ModBlocks {
             () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WHITE_TERRACOTTA)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> POISE_PLANK_SECRET_BUTTON = registerCompatBlock("endergetic", "poise_plank_secret_button",
+            () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CHISELED_END_STONE_BRICK_SECRET_BUTTON = registerCompatBlock("endergetic", "chiseled_end_stone_brick_secret_button",
+            () -> new ChiseledEndStoneBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_EUMUS_BRICK_SECRET_BUTTON = registerCompatBlock("endergetic", "chiseled_eumus_brick_secret_button",
+            () -> new ChiseledEumusBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 30.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CRACKED_END_STONE_BRICK_SECRET_BUTTON = registerCompatBlock("endergetic", "cracked_end_stone_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CRACKED_EUMUS_BRICK_SECRET_BUTTON = registerCompatBlock("endergetic", "cracked_eumus_brick_secret_button",
+            () -> new EumusBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 30.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> EUMUS_BRICK_SECRET_BUTTON = registerCompatBlock("endergetic", "eumus_brick_secret_button",
+            () -> new EumusBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 30.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
     /*
     --------------
     Torches
@@ -590,6 +619,16 @@ public class ModBlocks {
             () -> new RedstoneWallTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 7;
             }).sound(SoundType.WOOD).lootFrom(REDSTONE_TORCH_LEVER)));
+
+    public static final RegistryObject<Block> ENDER_TORCH_BUTTON = registerCompatBlock("endergetic", "ender_torch_button",
+            () -> new EnderTorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ENDER_TORCH_LEVER = registerCompatBlock("endergetic", "ender_torch_lever",
+            () -> new EnderTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
 
     /*
     --------------

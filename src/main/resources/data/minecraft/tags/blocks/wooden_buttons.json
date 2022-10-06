@@ -26,6 +26,8 @@
     "infinitybuttons:wisteria_large_button",
     "infinitybuttons:willow_plank_secret_button",
     "infinitybuttons:cherry_plank_secret_button",
-    "infinitybuttons:wisteria_plank_secret_button"
+    "infinitybuttons:wisteria_plank_secret_button",
+    "infinitybuttons:poise_large_button",
+    "infinitybuttons:poise_plank_secret_button"
   ]
 }

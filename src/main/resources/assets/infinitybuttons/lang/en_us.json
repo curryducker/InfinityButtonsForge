@@ -23,6 +23,7 @@
   "block.infinitybuttons.willow_large_button": "Willow Large Button",
   "block.infinitybuttons.cherry_large_button": "Cherry Large Button",
   "block.infinitybuttons.wisteria_large_button": "Wisteria Large Button",
+  "block.infinitybuttons.poise_large_button":  "Poise Large Button",
 
   "block.infinitybuttons.copper_button": "Copper Button",
   "block.infinitybuttons.exposed_copper_button": "Exposed Copper Button",
@@ -123,6 +124,12 @@
   "block.infinitybuttons.willow_plank_secret_button": "Willow Plank Secret Button",
   "block.infinitybuttons.cherry_plank_secret_button": "Cherry Plank Secret Button",
   "block.infinitybuttons.wisteria_plank_secret_button": "Wisteria Plank Secret Button",
+  "block.infinitybuttons.chiseled_end_stone_brick_secret_button":  "Chiseled End Stone Brick Secret Button",
+  "block.infinitybuttons.chiseled_eumus_brick_secret_button":  "Chiseled Eumus Brick Secret Button",
+  "block.infinitybuttons.cracked_end_stone_brick_secret_button":  "Cracked End Stone Brick Secret Button",
+  "block.infinitybuttons.cracked_eumus_brick_secret_button":  "Cracked Eumus Brick Secret Button",
+  "block.infinitybuttons.eumus_brick_secret_button":  "Eumus Brick Secret Button",
+  "block.infinitybuttons.poise_plank_secret_button":  "Poise Plank Secret Button",
 
   "block.infinitybuttons.torch_button": "Torch Button",
   "block.infinitybuttons.torch_lever": "Torch Lever",
@@ -130,6 +137,8 @@
   "block.infinitybuttons.soul_torch_lever": "Soul Torch Lever",
   "block.infinitybuttons.redstone_torch_button": "Redstone Torch Button",
   "block.infinitybuttons.redstone_torch_lever": "Redstone Torch Lever",
+  "block.infinitybuttons.ender_torch_button": "Ender Torch Button",
+  "block.infinitybuttons.ender_torch_lever": "Ender Torch Lever",
 
   "infinitybuttons.subtitle.alarm": "Alarm goes off",
   "infinitybuttons.subtitle.stone_scrape": "Stone scrapes",

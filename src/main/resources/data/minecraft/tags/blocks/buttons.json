@@ -103,6 +103,11 @@
     "infinitybuttons:red_terracotta_brick_secret_button",
     "infinitybuttons:chiseled_red_terracotta_brick_secret_button",
     "infinitybuttons:black_terracotta_brick_secret_button",
-    "infinitybuttons:chiseled_black_terracotta_brick_secret_button"
+    "infinitybuttons:chiseled_black_terracotta_brick_secret_button",
+    "infinitybuttons:chiseled_end_stone_brick_secret_button",
+    "infinitybuttons:chiseled_eumus_brick_secret_button",
+    "infinitybuttons:cracked_end_stone_brick_secret_button",
+    "infinitybuttons:cracked_eumus_brick_secret_button",
+    "infinitybuttons:eumus_brick_secret_button"
   ]
 }
