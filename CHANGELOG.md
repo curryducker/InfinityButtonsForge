@@ -6,11 +6,11 @@
 - Added more Secret Buttons: Bookshelf, Planks and more!
 - Added Torch Buttons and Torch Levers. Also in soul and redstone form.
 - Edited the vanilla Button recipe to produce 4 Buttons instead of 1.
+- Edited the small Button recipe to produce 2 Buttons instead of 1.
 - Fixed the side textures of the item model of Large Buttons.
-- Added advancements.
 
 Forge only:
-- Added compatibility for Quark, Environmental and The Endergetic Expansion.
+- Added compatibility for Quark, Environmental and The Endergetic Expansion blocks.
 
 ## 1.5.0
 

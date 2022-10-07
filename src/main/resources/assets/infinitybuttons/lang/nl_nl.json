@@ -144,17 +144,6 @@
   "infinitybuttons.subtitle.stone_scrape": "Steen verschuift",
   "infinitybuttons.subtitle.wood_scrape": "Hout verschuift",
 
-  "advancement.infinitybuttons.root": "Infinity Buttons",
-  "advancement.infinitybuttons.root.desc": "Indrukken die hap!",
-  "advancement.infinitybuttons.first_button": "Eerste knop",
-  "advancement.infinitybuttons.first_button.desc": "Verkrijg je eerste knop",
-  "advancement.infinitybuttons.emergency": "Noodgeval!",
-  "advancement.infinitybuttons.emergency.desc": "Druk de noodknop in!",
-  "advancement.infinitybuttons.secret_button": "Sttt... het is geheim!",
-  "advancement.infinitybuttons.secret_button.desc": "Verstop een verborgen knop in een muur",
-  "advancement.infinitybuttons.all_emergency_buttons": "Monsterlijk noodgeval!",
-  "advancement.infinitybuttons.all_emergency_buttons.desc": "Verkrijg alle noodknoppen!",
-
   "infinitybuttons.tooltip.hold_shift": "\u00A77[Houd Shift ingedrukt]",
   "infinitybuttons.tooltip.sticky_copper_button": "\u00A77Deze knop werkt als een hendel",
   "infinitybuttons.tooltip.emerald_button": "\u00A77Deze knop blijft willekeurig tussen 0,5 en 5 seconden ingedrukt",
