@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "infinitybuttons:dark_oak_large_button"},{"tag": "forge:nuggets/gold"}],
+  "result": {
+    "item": "infinitybuttons:doorbell"
+  }
+}

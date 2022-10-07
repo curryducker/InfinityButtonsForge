@@ -21,6 +21,7 @@ public class ModSounds {
     public static RegistryObject<SoundEvent> ALARM = registerSoundEvent("alarm");
     public static RegistryObject<SoundEvent> STONE_SCRAPE = registerSoundEvent("stone_scrape");
     public static RegistryObject<SoundEvent> WOOD_SCRAPE = registerSoundEvent("wood_scrape");
+    public static RegistryObject<SoundEvent> DOORBELL = registerSoundEvent("doorbell");
 
     public static final ForgeSoundType COPPER = new ForgeSoundType(1f, 1f, ModSounds.BLOCK_COPPER_BREAK, ModSounds.BLOCK_COPPER_STEP, ModSounds.BLOCK_COPPER_PLACE, ModSounds.BLOCK_COPPER_HIT, ModSounds.BLOCK_COPPER_FALL);
 

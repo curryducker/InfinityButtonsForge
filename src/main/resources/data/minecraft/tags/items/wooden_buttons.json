@@ -18,7 +18,10 @@
     "infinitybuttons:acacia_plank_secret_button",
     "infinitybuttons:jungle_plank_secret_button",
     "infinitybuttons:crimson_plank_secret_button",
-    "infinitybuttons:warped_plank_secret_button"
+    "infinitybuttons:warped_plank_secret_button",
+
+    "infinitybuttons:doorbell",
+    "infinitybuttons:doorbell_button"
     ],
   "optional": [
     "infinitybuttons:willow_large_button",

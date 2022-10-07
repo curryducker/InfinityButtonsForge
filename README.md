@@ -2,21 +2,6 @@
 
 Infinity Buttons is a mod which adds exciting new buttons!
 
-### Important!
-*Fabric:*
-- [oωo lib](https://modrinth.com/mod/owo-lib) is required!
-
-*Forge:*
-- [Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) is required!
-- Can be played without, but has additional content with:
-  - [Quark](https://quarkmod.net/)
-  - [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental)
-  - [The Endergetic Expansion](https://www.curseforge.com/minecraft/mc-mods/endergetic)
-### GitHub links
-
-Fabric: [https://github.com/LarsMans64/InfinityButtons](https://github.com/LarsMans64/InfinityButtons)  
-Forge: [https://github.com/curryducker/InfinityButtonsForge](https://github.com/curryducker/InfinityButtonsForge)
-
 ### Current features
 
 - Large Buttons, which are bigger than normal buttons.
@@ -35,12 +20,39 @@ Forge: [https://github.com/curryducker/InfinityButtonsForge](https://github.com/
 - More button shapes
 - _I need suggestions_
 
+### Important!
+
+*Fabric:*
+- [oωo lib](https://modrinth.com/mod/owo-lib) is required!
+
+*Forge:*
+- [Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) is required!
+- Can be played without, but has additional content with:
+  - [Quark](https://quarkmod.net/)
+  - [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental)
+  - [The Endergetic Expansion](https://www.curseforge.com/minecraft/mc-mods/endergetic)
+
+### GitHub links
+
+Fabric: [https://github.com/LarsMans64/InfinityButtons](https://github.com/LarsMans64/InfinityButtons)  
+Forge: [https://github.com/curryducker/InfinityButtonsForge](https://github.com/curryducker/InfinityButtonsForge)
+
 [![Discord](https://discordapp.com/api/guilds/968437531865645076/widget.png?style=banner2)](https://discord.gg/PJCXjSJnu2)
 
 ## Images
 
-![Large Buttons](https://i.imgur.com/suHiurX.png)
+Large Buttons
+![Large Wooden Buttons](https://i.imgur.com/2EZ3uxb.png)
 
-![Emergency Buttons](https://i.imgur.com/YdZktEs.png)
+New Materials
+![New Materials](https://i.imgur.com/JhtUeLK.png)
 
-![Secret Button](https://i.imgur.com/IplIWut.png)
+Red Emergency Button
+![Emergency Button](https://i.imgur.com/jkStdkN.png)
+
+Secret Button
+![Secret Button](https://i.imgur.com/AsBxaGF.png)
+
+Torch Buttons
+![Torch Buttons](https://i.imgur.com/eMpZxGw.png)
+

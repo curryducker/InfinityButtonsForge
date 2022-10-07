@@ -85,6 +85,8 @@
   "block.infinitybuttons.jungle_plank_secret_button": "从林木板隐蔽按钮",
   "block.infinitybuttons.crimson_plank_secret_button": " 绯红木板隐蔽按钮",
   "block.infinitybuttons.warped_plank_secret_button": "诡异木板隐蔽按钮",
+  "block.infinitybuttons.doorbell": "Doorbell",
+  "block.infinitybuttons.doorbell_button": "Doorbell Button",
   "block.infinitybuttons.ice_brick_secret_button":  "Ice Brick Secret Button",
   "block.infinitybuttons.chiseled_ice_brick_secret_button":  "Chiseled Ice Brick Secret Button",
   "block.infinitybuttons.terracotta_brick_secret_button":  "Terracotta Brick Secret Button",
@@ -143,11 +145,13 @@
   "infinitybuttons.subtitle.alarm": "警铃大作",
   "infinitybuttons.subtitle.stone_scrape": "石头刮擦",
   "infinitybuttons.subtitle.wood_scrape": "木头刮擦",
+  "infinitybuttons.subtitle.doorbell": "Ding dong",
 
   "infinitybuttons.tooltip.hold_shift": "\u00A77[按下 Shift 键]",
   "infinitybuttons.tooltip.sticky_copper_button": "\u00A77这个按钮的作用类似杠杆",
   "infinitybuttons.tooltip.emerald_button": "\u00A77这个按钮再按下后会在0.5至5秒内随机弹起",
   "infinitybuttons.tooltip.arrow_button": "\u00A77这个按钮只能通过弓箭射击来按下",
+  "infinitybuttons.tooltip.doorbell_button": "\u00A77This doorbell emits a redstone signal",
 
   "itemGroup.infinityButtonsTab": "无限按钮",
   "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",

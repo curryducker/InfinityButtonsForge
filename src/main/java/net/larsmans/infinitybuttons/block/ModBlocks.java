@@ -2,6 +2,8 @@ package net.larsmans.infinitybuttons.block;
 
 import com.minecraftabnormals.endergetic.client.particles.EEParticles;
 import net.larsmans.infinitybuttons.InfinityButtons;
+import net.larsmans.infinitybuttons.block.custom.Doorbell;
+import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.button.ArrowButton;
 import net.larsmans.infinitybuttons.block.custom.button.CopperButton;
@@ -573,6 +575,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> EUMUS_BRICK_SECRET_BUTTON = registerCompatBlock("endergetic", "eumus_brick_secret_button",
             () -> new EumusBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 30.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+     /*
+    ------
+    Random
+    ------
+    */
+
+    public static final RegistryObject<Block> DOORBELL = registerBlock("doorbell",
+            () -> new Doorbell(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> DOORBELL_BUTTON = registerBlock("doorbell_button",
+            () -> new DoorbellButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
     /*
     --------------

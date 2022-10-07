@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "pressed=false,facing=north": {
+      "model": "infinitybuttons:block/doorbell"
+    },
+    "pressed=false,facing=east": {
+      "model": "infinitybuttons:block/doorbell",
+      "y": 90
+    },
+    "pressed=false,facing=south": {
+      "model": "infinitybuttons:block/doorbell",
+      "y": 180
+    },
+    "pressed=false,facing=west": {
+      "model": "infinitybuttons:block/doorbell",
+      "y": 270
+    },
+    "pressed=true,facing=north": {
+      "model": "infinitybuttons:block/doorbell_pressed"
+    },
+    "pressed=true,facing=east": {
+      "model": "infinitybuttons:block/doorbell_pressed",
+      "y": 90
+    },
+    "pressed=true,facing=south": {
+      "model": "infinitybuttons:block/doorbell_pressed",
+      "y": 180
+    },
+    "pressed=true,facing=west": {
+      "model": "infinitybuttons:block/doorbell_pressed",
+      "y": 270
+    }
+  }
+}

@@ -85,6 +85,8 @@
   "block.infinitybuttons.jungle_plank_secret_button": "Jungle Plank Secret Button",
   "block.infinitybuttons.crimson_plank_secret_button": "Crimson Plank Secret Button",
   "block.infinitybuttons.warped_plank_secret_button": "Warped Plank Secret Button",
+  "block.infinitybuttons.doorbell": "Doorbell",
+  "block.infinitybuttons.doorbell_button": "Doorbell Button",
   "block.infinitybuttons.ice_brick_secret_button":  "Ice Brick Secret Button",
   "block.infinitybuttons.chiseled_ice_brick_secret_button":  "Chiseled Ice Brick Secret Button",
   "block.infinitybuttons.terracotta_brick_secret_button":  "Terracotta Brick Secret Button",
@@ -143,11 +145,13 @@
   "infinitybuttons.subtitle.alarm": "Alarm goes off",
   "infinitybuttons.subtitle.stone_scrape": "Stone scrapes",
   "infinitybuttons.subtitle.wood_scrape": "Wood scrapes",
+  "infinitybuttons.subtitle.doorbell": "Ding dong",
 
   "infinitybuttons.tooltip.hold_shift": "\u00A77[Hold Shift]",
   "infinitybuttons.tooltip.sticky_copper_button": "\u00A77This button acts like a lever",
   "infinitybuttons.tooltip.emerald_button": "\u00A77This button stays pressed randomly between 0.5 and 5 seconds",
   "infinitybuttons.tooltip.arrow_button": "\u00A77This button can only be pressed with an arrow",
+  "infinitybuttons.tooltip.doorbell_button": "\u00A77This doorbell emits a redstone signal",
 
   "itemGroup.infinityButtonsTab": "Infinity Buttons",
   "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",
