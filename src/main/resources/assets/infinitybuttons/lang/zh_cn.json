@@ -136,7 +136,7 @@
   "block.infinitybuttons.soul_torch_button": "灵魂火把按钮",
   "block.infinitybuttons.soul_torch_lever": "灵魂火把拉杆",
   "block.infinitybuttons.redstone_torch_button": "红石火把按钮",
-  "block.infinitybuttons.redstone_torch_lever": "红石火把",
+  "block.infinitybuttons.redstone_torch_lever": "红石火把拉杆",
   "block.infinitybuttons.ender_torch_button": "Ender Torch Button",
   "block.infinitybuttons.ender_torch_lever": "Ender Torch Lever",
 
@@ -145,9 +145,9 @@
   "infinitybuttons.subtitle.wood_scrape": "木头刮擦",
 
   "infinitybuttons.tooltip.hold_shift": "\u00A77[按下 Shift 键]",
-  "infinitybuttons.tooltip.sticky_copper_button": "\u00A77这个按钮钮的作用类似杠杆",
+  "infinitybuttons.tooltip.sticky_copper_button": "\u00A77这个按钮的作用类似杠杆",
   "infinitybuttons.tooltip.emerald_button": "\u00A77这个按钮再按下后会在0.5至5秒内随机弹起",
-  "infinitybuttons.tooltip.arrow_button": "\u00A77这个按钮只能用弓箭按下",
+  "infinitybuttons.tooltip.arrow_button": "\u00A77这个按钮只能通过弓箭射击来按下",
 
   "itemGroup.infinityButtonsTab": "无限按钮",
   "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",
