@@ -110,6 +110,7 @@ public abstract class AbstractSecretButton extends HorizontalBlock {
     public boolean canProvidePower(BlockState state) {
         return true;
     }
+
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(PRESSED)) {
             worldIn.setBlockState(pos, state.with(PRESSED, Boolean.FALSE), 3);
