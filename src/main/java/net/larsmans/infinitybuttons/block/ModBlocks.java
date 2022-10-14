@@ -42,6 +42,68 @@ public class ModBlocks {
 
     /*
     -------------
+    Buttons
+    -------------
+    */
+
+    public static final RegistryObject<Block> COPPER_BUTTON = registerBlock("copper_button",
+            () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
+
+    public static final RegistryObject<Block> EXPOSED_COPPER_BUTTON = registerBlock("exposed_copper_button",
+            () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
+
+    public static final RegistryObject<Block> WEATHERED_COPPER_BUTTON = registerBlock("weathered_copper_button",
+            () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
+
+    public static final RegistryObject<Block> OXIDIZED_COPPER_BUTTON = registerBlock("oxidized_copper_button",
+            () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
+
+    public static final RegistryObject<Block> STICKY_COPPER_BUTTON = registerBlock("sticky_copper_button",
+            () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
+
+    public static final RegistryObject<Block> STICKY_EXPOSED_COPPER_BUTTON = registerBlock("sticky_exposed_copper_button",
+            () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
+
+    public static final RegistryObject<Block> STICKY_WEATHERED_COPPER_BUTTON = registerBlock("sticky_weathered_copper_button",
+            () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
+
+    public static final RegistryObject<Block> STICKY_OXIDIZED_COPPER_BUTTON = registerBlock("sticky_oxidized_copper_button",
+            () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
+
+    public static final RegistryObject<Block> EMERALD_BUTTON = registerBlock("emerald_button",
+            () -> new EmeraldButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> IRON_BUTTON = registerBlock("iron_button",
+            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
+            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> PRISMARINE_BUTTON = registerBlock("prismarine_button",
+            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.CYAN)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> PRISMARINE_BRICK_BUTTON = registerBlock("prismarine_brick_button",
+            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.DIAMOND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> DARK_PRISMARINE_BUTTON = registerBlock("dark_prismarine_button",
+            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.DIAMOND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    /*
+    -------------
     Large Buttons
     -------------
     */
@@ -130,6 +192,18 @@ public class ModBlocks {
             () -> new ArrowLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
 
+    public static final RegistryObject<Block> PRISMARINE_LARGE_BUTTON = registerBlock("prismarine_large_button",
+            () -> new ArrowLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.CYAN)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> PRISMARINE_BRICK_LARGE_BUTTON = registerBlock("prismarine_brick_large_button",
+            () -> new ArrowLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.DIAMOND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> DARK_PRISMARINE_LARGE_BUTTON = registerBlock("dark_prismarine_large_button",
+            () -> new ArrowLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.DIAMOND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
     public static final RegistryObject<Block> WILLOW_LARGE_BUTTON = registerCompatBlock("environmental", "willow_large_button",
             () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
@@ -145,56 +219,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> POISE_LARGE_BUTTON = registerCompatBlock("endergetic", "poise_large_button",
             () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
-
-    /*
-    -------------
-    Buttons
-    -------------
-    */
-
-    public static final RegistryObject<Block> COPPER_BUTTON = registerBlock("copper_button",
-            () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
-
-    public static final RegistryObject<Block> EXPOSED_COPPER_BUTTON = registerBlock("exposed_copper_button",
-            () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
-
-    public static final RegistryObject<Block> WEATHERED_COPPER_BUTTON = registerBlock("weathered_copper_button",
-            () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
-
-    public static final RegistryObject<Block> OXIDIZED_COPPER_BUTTON = registerBlock("oxidized_copper_button",
-            () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
-
-    public static final RegistryObject<Block> STICKY_COPPER_BUTTON = registerBlock("sticky_copper_button",
-            () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
-
-    public static final RegistryObject<Block> STICKY_EXPOSED_COPPER_BUTTON = registerBlock("sticky_exposed_copper_button",
-            () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
-
-    public static final RegistryObject<Block> STICKY_WEATHERED_COPPER_BUTTON = registerBlock("sticky_weathered_copper_button",
-            () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
-
-    public static final RegistryObject<Block> STICKY_OXIDIZED_COPPER_BUTTON = registerBlock("sticky_oxidized_copper_button",
-            () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(ModSounds.COPPER)));
-
-    public static final RegistryObject<Block> EMERALD_BUTTON = registerBlock("emerald_button",
-            () -> new EmeraldButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
-
-    public static final RegistryObject<Block> IRON_BUTTON = registerBlock("iron_button",
-            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
-
-    public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
-            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
 
     /*
     -----------------
