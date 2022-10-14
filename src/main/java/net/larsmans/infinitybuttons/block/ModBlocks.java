@@ -5,10 +5,7 @@ import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.EmergencyButton;
-import net.larsmans.infinitybuttons.block.custom.button.ArrowButton;
-import net.larsmans.infinitybuttons.block.custom.button.CopperButton;
-import net.larsmans.infinitybuttons.block.custom.button.EmeraldButton;
-import net.larsmans.infinitybuttons.block.custom.button.StickyCopperButton;
+import net.larsmans.infinitybuttons.block.custom.button.*;
 import net.larsmans.infinitybuttons.block.custom.largebutton.*;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
 import net.larsmans.infinitybuttons.block.custom.torch.*;
@@ -90,16 +87,20 @@ public class ModBlocks {
             () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
 
+    //public static final RegistryObject<Block> DIAMOND_BUTTON = registerBlock("diamond_button",
+    //        () -> new DiamondButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    //                .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
+
     public static final RegistryObject<Block> PRISMARINE_BUTTON = registerBlock("prismarine_button",
-            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.CYAN)
+            () -> new PrismarineButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> PRISMARINE_BRICK_BUTTON = registerBlock("prismarine_brick_button",
-            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.DIAMOND)
+            () -> new PrismarineButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> DARK_PRISMARINE_BUTTON = registerBlock("dark_prismarine_button",
-            () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.DIAMOND)
+            () -> new PrismarineButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     /*
@@ -193,15 +194,15 @@ public class ModBlocks {
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL)));
 
     public static final RegistryObject<Block> PRISMARINE_LARGE_BUTTON = registerBlock("prismarine_large_button",
-            () -> new ArrowLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.CYAN)
+            () -> new PrismarineLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> PRISMARINE_BRICK_LARGE_BUTTON = registerBlock("prismarine_brick_large_button",
-            () -> new ArrowLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.DIAMOND)
+            () -> new PrismarineLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> DARK_PRISMARINE_LARGE_BUTTON = registerBlock("dark_prismarine_large_button",
-            () -> new ArrowLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.DIAMOND)
+            () -> new PrismarineLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> WILLOW_LARGE_BUTTON = registerCompatBlock("environmental", "willow_large_button",
@@ -287,6 +288,10 @@ public class ModBlocks {
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
 
     public static final RegistryObject<Block> BLACK_EMERGENCY_BUTTON = registerBlock("black_emergency_button",
+            () -> new EmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> FANCY_EMERGENCY_BUTTON = registerBlock("fancy_emergency_button",
             () -> new EmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
 

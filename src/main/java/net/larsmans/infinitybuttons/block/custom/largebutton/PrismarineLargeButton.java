@@ -33,7 +33,7 @@ public class PrismarineLargeButton extends AbstractLargeButton{
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    protected PrismarineLargeButton(Properties properties) {
+    public PrismarineLargeButton(Properties properties) {
         super(true, properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR).with(WATERLOGGED, false));
     }
