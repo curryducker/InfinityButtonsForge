@@ -31,8 +31,8 @@ Infinity Buttons is a mod which adds exciting new buttons!
 - [Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) is required!
 - Can be played without, but has additional content with:
   - [Quark](https://quarkmod.net/)
-  - [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental)
-  - [The Endergetic Expansion](https://www.curseforge.com/minecraft/mc-mods/endergetic)
+  - [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental) (1.16.5 only)
+  - [The Endergetic Expansion](https://www.curseforge.com/minecraft/mc-mods/endergetic) (1.16.5 only)
 
 ### GitHub links
 
