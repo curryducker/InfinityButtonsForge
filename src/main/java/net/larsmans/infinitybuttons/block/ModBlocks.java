@@ -1,6 +1,5 @@
 package net.larsmans.infinitybuttons.block;
 
-import com.minecraftabnormals.endergetic.client.particles.EEParticles;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
@@ -18,7 +17,6 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.DyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.particles.ParticleTypes;
@@ -423,7 +421,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WARPED_PLANK_SECRET_BUTTON = registerBlock("warped_plank_secret_button",
             () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.WARPED_STEM)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> ICE_BRICK_SECRET_BUTTON = registerCompatBlock("environmental", "ice_brick_secret_button",
             () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ICE)
@@ -604,6 +602,72 @@ public class ModBlocks {
     public static final RegistryObject<Block> EUMUS_BRICK_SECRET_BUTTON = registerCompatBlock("endergetic", "eumus_brick_secret_button",
             () -> new EumusBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 30.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> PERMAFROST_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "permafrost_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 10.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> SANDY_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "sandy_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHARRED_NETHER_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "charred_nether_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> BLUE_NETHER_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "blue_nether_brick_secret_button",
+            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> TWISTING_POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "twisting_polished_blackstone_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> WEEPING_POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "weeping_polished_blackstone_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> MAGMA_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "magma_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 10.0f).notSolid().sound(SoundType.STONE).setRequiresTool().setLightLevel((state) -> {
+                        return 3;
+                    }).setEmmisiveRendering((s, r, p) -> true)));
+
+    public static final RegistryObject<Block> POLISHED_GRANITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "polished_granite_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.DIRT)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLISHED_DIORITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "polished_diorite_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLISHED_ANDESITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "polished_andesite_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLISHED_MARBLE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "polished_marble_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLISHED_LIMESTONE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "polished_limestone_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLISHED_JASPER_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "polished_jasper_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.RED_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLISHED_SLATE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "polished_slate_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ICE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLISHED_VOIDSTONE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "polished_voidstone_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> BIOTITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "biotite_brick_secret_button",
+            () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
      /*
     ------
