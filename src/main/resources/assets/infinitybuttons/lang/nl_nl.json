@@ -44,6 +44,7 @@
   "block.infinitybuttons.cherry_large_button": "Kersenhouten grote knop",
   "block.infinitybuttons.wisteria_large_button": "Blauweregenhouten grote knop",
   "block.infinitybuttons.poise_large_button": "Zweefhouten grote knop",
+  "block.infinitybuttons.maple_large_button":  "Esdoornhouten grote knop",
 
   "block.infinitybuttons.red_emergency_button": "Rode noodknop",
   "block.infinitybuttons.orange_emergency_button": "Oranje noodknop",
@@ -143,6 +144,7 @@
   "block.infinitybuttons.cracked_eumus_brick_secret_button": "Gebarsten eumusblokstenen verborgen knop",
   "block.infinitybuttons.eumus_brick_secret_button": "Eumusblokstenen verborgen knop",
   "block.infinitybuttons.poise_plank_secret_button": "Zweefhouten planken verborgen knop",
+  "block.infinitybuttons.maple_plank_secret_button":  "Esdoornhouten planken verborgen knop",
 
   "block.infinitybuttons.permafrost_brick_secret_button": "Permafrostblokstenen verborgen knop",
   "block.infinitybuttons.sandy_brick_secret_button": "Zanderige bakstenen verborgen knop",

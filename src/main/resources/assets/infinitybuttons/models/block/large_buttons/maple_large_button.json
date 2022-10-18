@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button",
+  "textures": {
+    "texture": "autumnity:block/maple_planks"
+  }
+}

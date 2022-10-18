@@ -1,0 +1,15 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "autumnity"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "autumnity:maple_button"},{"item": "autumnity:maple_button"}],
+  "result": {
+    "item": "infinitybuttons:maple_large_button",
+    "count": 1
+  }
+}

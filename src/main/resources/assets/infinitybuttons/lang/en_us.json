@@ -44,6 +44,7 @@
   "block.infinitybuttons.cherry_large_button": "Cherry Large Button",
   "block.infinitybuttons.wisteria_large_button": "Wisteria Large Button",
   "block.infinitybuttons.poise_large_button":  "Poise Large Button",
+  "block.infinitybuttons.maple_large_button":  "Maple Large Button",
 
   "block.infinitybuttons.red_emergency_button": "Red Emergency Button",
   "block.infinitybuttons.orange_emergency_button": "Orange Emergency Button",
@@ -143,6 +144,7 @@
   "block.infinitybuttons.cracked_eumus_brick_secret_button":  "Cracked Eumus Brick Secret Button",
   "block.infinitybuttons.eumus_brick_secret_button":  "Eumus Brick Secret Button",
   "block.infinitybuttons.poise_plank_secret_button":  "Poise Plank Secret Button",
+  "block.infinitybuttons.maple_plank_secret_button":  "Maple Plank Secret Button",
 
   "block.infinitybuttons.permafrost_brick_secret_button": "Permafrost Brick Secret Button",
   "block.infinitybuttons.sandy_brick_secret_button": "Sandy Brick Secret Button",
