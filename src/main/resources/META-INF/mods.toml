@@ -80,3 +80,9 @@ A mod which adds new exciting buttons!
     versionRange="[3.0.2,)"
     ordering="BEFORE"
     side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="autumnity"
+    mandatory=false
+    versionRange="[2.1.2,)"
+    ordering="BEFORE"
+    side="BOTH"
