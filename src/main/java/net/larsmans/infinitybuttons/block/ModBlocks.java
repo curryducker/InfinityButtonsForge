@@ -677,10 +677,6 @@ public class ModBlocks {
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
-    public static final RegistryObject<Block> SNAIL_SHELL_BRICK_SECRET_BUTTON = registerCompatBlock("autumnity", "snail_shell_brick_secret_button",
-            () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BROWN_TERRACOTTA)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
-
      /*
     ------
     Random
