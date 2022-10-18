@@ -7,9 +7,10 @@ Infinity Buttons is a mod which adds exciting new buttons!
 - Large Buttons, which are bigger than normal buttons.
 - Copper Buttons, which stay pressed even longer than wooden buttons.
 - Sticky Copper Buttons, which act as fancy, stylish levers.
-- Emergency Buttons in all 16 colors. They can also produce an alarm sound*.
-- Emerald Button, which will stay pressed randomly between 0.5 and 5 seconds.
+- Emergency Buttons in all 16 colors. They also produce an alarm sound*.
+- Emerald Button, which stays pressed randomly between 0.5 and 5 seconds.
 - Iron and Gold Buttons, which can only be pressed by an arrow.
+- Diamond Buttons, purely for flexing
 - Secret Buttons, which blend into walls. Containing bookshelves, bricks, planks and more.
 - Torch Buttons and Levers. They also come in soul and redstone form.
 - Doorbell and Doorbell Button.
@@ -19,8 +20,7 @@ Infinity Buttons is a mod which adds exciting new buttons!
 ### Planned features
 
 - More button shapes
-- Shiny Diamond Button to flex
-- Prismarine Buttons which can be waterlogged
+- *I need suggestions*
 
 ### Important!
 
@@ -36,8 +36,11 @@ Infinity Buttons is a mod which adds exciting new buttons!
 
 ### GitHub links
 
-Fabric: [https://github.com/LarsMans64/InfinityButtons](https://github.com/LarsMans64/InfinityButtons)  
-Forge: [https://github.com/curryducker/InfinityButtonsForge](https://github.com/curryducker/InfinityButtonsForge)
+Fabric: [https://github.com/LarsMans64/InfinityButtons](https://github.com/LarsMans64/InfinityButtons)
+
+Forge:
+- 1.16.5: [https://github.com/curryducker/InfinityButtonsForge](https://github.com/curryducker/InfinityButtonsForge)
+- 1.18.2: [https://github.com/curryducker/InfinityButtonsForge-1.18.2](https://github.com/curryducker/InfinityButtonsForge-1.18.2)
 
 [![Discord](https://discordapp.com/api/guilds/968437531865645076/widget.png?style=banner2)](https://discord.gg/PJCXjSJnu2)
 
