@@ -41,80 +41,82 @@ public class DiamondButton extends AbstractButton{
     @Override
     @OnlyIn(Dist.CLIENT)
     public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (random.nextInt(3) == 0) {
-            switch (state.get(FACE)) {
-                case FLOOR:
-                    switch (state.get(HORIZONTAL_FACING)) {
-                        case NORTH:
-                        case SOUTH:
-                            world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
-                                (double) pos.getX() + 0.25 + (double)random.nextFloat() * 0.5,
-                                (double) pos.getY() + 0.125 + (double) random.nextFloat() * 0.0625,
-                                (double) pos.getZ() + 0.3125 + (double)random.nextFloat() * 0.375,
-                                0, 0, 0);
-                            break;
-                        case EAST:
-                        case WEST:
-                            world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
-                                (double) pos.getX() + 0.3125 + (double)random.nextFloat() * 0.375,
-                                (double) pos.getY() + 0.125 + (double) random.nextFloat() * 0.0625,
-                                (double) pos.getZ() + 0.25 + (double)random.nextFloat() * 0.5,
-                                0, 0, 0);
-                            break;
-                    }
-                    break;
-                case WALL:
-                    switch (state.get(HORIZONTAL_FACING)) {
-                        case NORTH:
-                            world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
-                                (double)pos.getX() + 0.25 + (double)random.nextFloat() * 0.5,
-                                (double)pos.getY() + 0.3125 + (double)random.nextFloat() * 0.375,
-                                (double)pos.getZ() + 0.8125 + (double)random.nextFloat() * 0.0625,
-                                0, 0, 0);
-                            break;
-                        case EAST:
-                            world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
-                                (double)pos.getX() + 0.125 + (double)random.nextFloat() * 0.0625,
-                                (double)pos.getY() + 0.3125 + (double)random.nextFloat() * 0.375,
-                                (double)pos.getZ() + 0.25 + (double)random.nextFloat() * 0.5,
-                                0, 0, 0);
-                            break;
-                        case SOUTH:
-                            world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
-                                (double)pos.getX() + 0.25 + (double)random.nextFloat() * 0.5,
-                                (double)pos.getY() + 0.3125 + (double)random.nextFloat() * 0.375,
-                                (double)pos.getZ() + 0.125 + (double)random.nextFloat() * 0.0625,
-                                0, 0, 0);
-                            break;
-                        case WEST:
-                            world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
-                                (double)pos.getX() + 0.8125 + (double)random.nextFloat() * 0.0625,
-                                (double)pos.getY() + 0.3125 + (double)random.nextFloat() * 0.375,
-                                (double)pos.getZ() + 0.25 + (double)random.nextFloat() * 0.5,
-                                0, 0, 0);
-                            break;
-                    }
-                    break;
-                case CEILING:
-                    switch (state.get(HORIZONTAL_FACING)) {
-                        case NORTH:
-                        case SOUTH:
-                            world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
-                                (double) pos.getX() + 0.25 + (double) random.nextFloat() * 0.5,
-                                (double) pos.getY() + 0.8125 + (double) random.nextFloat() * 0.0625,
-                                (double) pos.getZ() + 0.3125 + (double) random.nextFloat() * 0.375,
-                                0, 0, 0);
-                            break;
-                        case EAST:
-                        case WEST:
-                            world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
-                                (double) pos.getX() + 0.3125 + (double) random.nextFloat() * 0.375,
-                                (double) pos.getY() + 0.8125 + (double) random.nextFloat() * 0.0625,
-                                (double) pos.getZ() + 0.25 + (double) random.nextFloat() * 0.5,
-                                0, 0, 0);
-                            break;
-                    }
-                    break;
+        if (config.diamond_particles) {
+            if (random.nextInt(3) == 0) {
+                switch (state.get(FACE)) {
+                    case FLOOR:
+                        switch (state.get(HORIZONTAL_FACING)) {
+                            case NORTH:
+                            case SOUTH:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double) pos.getX() + 0.25 + (double)random.nextFloat() * 0.5,
+                                        (double) pos.getY() + 0.125 + (double) random.nextFloat() * 0.0625,
+                                        (double) pos.getZ() + 0.3125 + (double)random.nextFloat() * 0.375,
+                                        0, 0, 0);
+                                break;
+                            case EAST:
+                            case WEST:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double) pos.getX() + 0.3125 + (double)random.nextFloat() * 0.375,
+                                        (double) pos.getY() + 0.125 + (double) random.nextFloat() * 0.0625,
+                                        (double) pos.getZ() + 0.25 + (double)random.nextFloat() * 0.5,
+                                        0, 0, 0);
+                                break;
+                        }
+                        break;
+                    case WALL:
+                        switch (state.get(HORIZONTAL_FACING)) {
+                            case NORTH:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double)pos.getX() + 0.25 + (double)random.nextFloat() * 0.5,
+                                        (double)pos.getY() + 0.3125 + (double)random.nextFloat() * 0.375,
+                                        (double)pos.getZ() + 0.8125 + (double)random.nextFloat() * 0.0625,
+                                        0, 0, 0);
+                                break;
+                            case EAST:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double)pos.getX() + 0.125 + (double)random.nextFloat() * 0.0625,
+                                        (double)pos.getY() + 0.3125 + (double)random.nextFloat() * 0.375,
+                                        (double)pos.getZ() + 0.25 + (double)random.nextFloat() * 0.5,
+                                        0, 0, 0);
+                                break;
+                            case SOUTH:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double)pos.getX() + 0.25 + (double)random.nextFloat() * 0.5,
+                                        (double)pos.getY() + 0.3125 + (double)random.nextFloat() * 0.375,
+                                        (double)pos.getZ() + 0.125 + (double)random.nextFloat() * 0.0625,
+                                        0, 0, 0);
+                                break;
+                            case WEST:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double)pos.getX() + 0.8125 + (double)random.nextFloat() * 0.0625,
+                                        (double)pos.getY() + 0.3125 + (double)random.nextFloat() * 0.375,
+                                        (double)pos.getZ() + 0.25 + (double)random.nextFloat() * 0.5,
+                                        0, 0, 0);
+                                break;
+                        }
+                        break;
+                    case CEILING:
+                        switch (state.get(HORIZONTAL_FACING)) {
+                            case NORTH:
+                            case SOUTH:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double) pos.getX() + 0.25 + (double) random.nextFloat() * 0.5,
+                                        (double) pos.getY() + 0.8125 + (double) random.nextFloat() * 0.0625,
+                                        (double) pos.getZ() + 0.3125 + (double) random.nextFloat() * 0.375,
+                                        0, 0, 0);
+                                break;
+                            case EAST:
+                            case WEST:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double) pos.getX() + 0.3125 + (double) random.nextFloat() * 0.375,
+                                        (double) pos.getY() + 0.8125 + (double) random.nextFloat() * 0.0625,
+                                        (double) pos.getZ() + 0.25 + (double) random.nextFloat() * 0.5,
+                                        0, 0, 0);
+                                break;
+                        }
+                        break;
+                }
             }
         }
     }

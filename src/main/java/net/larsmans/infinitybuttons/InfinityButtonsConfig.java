@@ -10,4 +10,6 @@ public class InfinityButtonsConfig implements ConfigData {
     public boolean alarmSound = true;
     @ConfigEntry.Gui.Tooltip()
     public boolean tooltips = true;
+    @ConfigEntry.Gui.Tooltip()
+    public boolean diamond_particles = true;
 }
