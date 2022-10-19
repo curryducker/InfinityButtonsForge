@@ -1,6 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.secretbutton;
 
-import net.larsmans.infinitybuttons.sounds.ModSounds;
+import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.shapes.VoxelShape;
@@ -35,6 +35,6 @@ public class DeepslateTileSecretButton extends AbstractSecretButton {
 
     @Override
     protected SoundEvent getSoundEvent(boolean isOn) {
-        return ModSounds.STONE_SCRAPE.get();
+        return InfinityButtonsSounds.STONE_SCRAPE.get();
     }
 }

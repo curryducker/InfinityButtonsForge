@@ -1,7 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
-import net.larsmans.infinitybuttons.block.custom.largebutton.AbstractLargeButton;
-import net.larsmans.infinitybuttons.sounds.ModSounds;
+import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
@@ -27,6 +26,6 @@ public class CopperButton extends AbstractButton {
 
     @Override
     protected SoundEvent getSoundEvent(boolean isOn) {
-        return ModSounds.BLOCK_COPPER_BREAK.get();
+        return InfinityButtonsSounds.BLOCK_COPPER_BREAK.get();
     }
 }

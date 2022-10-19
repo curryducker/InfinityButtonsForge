@@ -2,7 +2,7 @@ package net.larsmans.infinitybuttons.block.custom;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.InfinityButtonsConfig;
-import net.larsmans.infinitybuttons.sounds.ModSounds;
+import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -118,7 +118,7 @@ public class EmergencyButton extends HorizontalFaceBlock {
             this.powerBlock(state, worldIn, pos);
             this.playSound(player, worldIn, pos, true);
             if (config.alarmSound) {
-                worldIn.playSound(player, pos, ModSounds.ALARM.get(), SoundCategory.BLOCKS, 2f, 0.6f);
+                worldIn.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, 2f, 0.6f);
             }
             return ActionResultType.func_233537_a_(worldIn.isRemote);
         }

@@ -2,8 +2,7 @@ package net.larsmans.infinitybuttons.block.custom.button;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.InfinityButtonsConfig;
-import net.larsmans.infinitybuttons.block.custom.largebutton.AbstractLargeButton;
-import net.larsmans.infinitybuttons.sounds.ModSounds;
+import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
@@ -66,7 +65,7 @@ public class StickyCopperButton extends AbstractButton {
 
     @Override
     protected SoundEvent getSoundEvent(boolean isOn) {
-        return ModSounds.BLOCK_COPPER_BREAK.get();
+        return InfinityButtonsSounds.BLOCK_COPPER_BREAK.get();
     }
 
     @Override
