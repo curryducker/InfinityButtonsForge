@@ -59,7 +59,7 @@ A mod which adds new exciting buttons!
 [[dependencies.infinitybuttons]]
     modId="cloth-config"
     mandatory=true
-    versionRange="[4.16.91,)"
+    versionRange="[4.12.41,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.infinitybuttons]]
@@ -77,7 +77,7 @@ A mod which adds new exciting buttons!
 [[dependencies.infinitybuttons]]
     modId="endergetic"
     mandatory=false
-    versionRange="[3.0.2,)"
+    versionRange="[3.0.0,)"
     ordering="BEFORE"
     side="BOTH"
 [[dependencies.infinitybuttons]]
