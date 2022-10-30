@@ -22,21 +22,25 @@ public class EnderTorchLever extends TorchLever{
         Direction direction = stateIn.get(HORIZONTAL_FACING);
         if (stateIn.get(PRESSED)) {
             double d0 = (double) pos.getX() + 0.5D;
-            double d1 = (double) pos.getY() + 0.6D;
+            double d1 = (double) pos.getY() + 0.63D;
             double d2 = (double) pos.getZ() + 0.5D;
             Direction direction2 = direction.getOpposite();
             worldIn.addParticle(ParticleTypes.SMOKE,
-                    d0 + 0.05D * (double) direction2.getXOffset(),
-                    d1 + 0.15D,
-                    d2 + 0.05D * (double) direction2.getZOffset(),
+                    d0 + 0.23D * (double) direction2.getXOffset(),
+                    d1,
+                    d2 + 0.23D * (double) direction2.getZOffset(),
                     0.0D, 0.0D, 0.0D);
             worldIn.addParticle(EEParticles.ENDER_FLAME.get(),
-                    d0 + 0.05D * (double) direction2.getXOffset(),
-                    d1 + 0.15D,
-                    d2 + 0.05D * (double) direction2.getZOffset(),
+                    d0 + 0.23D * (double) direction2.getXOffset(),
+                    d1,
+                    d2 + 0.23D * (double) direction2.getZOffset(),
                     0.0D, 0.0D, 0.0D);
         } else {
-            super.animateTick(stateIn, worldIn, pos, rand);
+            double d0 = (double)pos.getX() + 0.5D;
+            double d1 = (double)pos.getY() + 0.7D;
+            double d2 = (double)pos.getZ() + 0.5D;
+            worldIn.addParticle(ParticleTypes.SMOKE, d0, d1, d2, 0.0D, 0.0D, 0.0D);
+            worldIn.addParticle(EEParticles.ENDER_FLAME.get(), d0, d1, d2, 0.0D, 0.0D, 0.0D);
         }
     }
 }
