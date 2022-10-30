@@ -42,7 +42,7 @@ public class DiamondLargeButton extends AbstractLargeButton {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (config.diamond_particles) {
+        if (config.diamondParticles) {
             if (random.nextInt(3) == 0) {
                 switch (state.get(FACE)) {
                     case FLOOR:
