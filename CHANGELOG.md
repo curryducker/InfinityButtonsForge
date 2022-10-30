@@ -2,16 +2,18 @@
 
 ## 2.1.0
 
-- Added Fancy Emergency Button.
+- Added Fancy Emergency Button. Taste the rainbow!
 - Added Prismarine Buttons, which can be waterlogged.
 - Added shiny Diamond Buttons, just to flex.
 - Torch Buttons and Levers can now be placed on the floor.
-- Piglins now get angry when breaking Gold Buttons.
+- Piglins now get angry when you break Gold Buttons.
+- Fixed several bugs!
 
 Forge only:
-- Ported to 1.18.2
-- Added Autumnity compat (1.16.5 only)
-- Expanded Quark compat
+- Ported to 1.18.2!
+- Added Autumnity compat. (1.16.5 only)
+- Added Nether's Delight compat.
+- Expanded Quark compat.
 - Fixed Endergetic recipes trying to load when not supposed to (1.16.5 only)
 
 ## 2.0.0

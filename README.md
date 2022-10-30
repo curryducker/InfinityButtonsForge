@@ -7,7 +7,7 @@ Infinity Buttons is a mod which adds exciting new buttons!
 - Large Buttons, which are bigger than normal buttons.
 - Copper Buttons, which stay pressed even longer than wooden buttons.
 - Sticky Copper Buttons, which act as fancy, stylish levers.
-- Emergency Buttons in all 16 colors. They also produce an alarm sound*.
+- Emergency Buttons in all 16 colors, and a special rainbow variant. They also produce an alarm sound*.
 - Emerald Button, which stays pressed randomly between 0.5 and 5 seconds.
 - Iron and Gold Buttons, which can only be pressed by an arrow.
 - Diamond Buttons, purely for flexing
@@ -33,6 +33,8 @@ Infinity Buttons is a mod which adds exciting new buttons!
   - [Quark](https://quarkmod.net/)
   - [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental) (1.16.5 only)
   - [The Endergetic Expansion](https://www.curseforge.com/minecraft/mc-mods/endergetic) (1.16.5 only)
+  - [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) (1.16.5 only)
+  - [Nether's Delight](https://www.curseforge.com/minecraft/mc-mods/nethers-delight)
 
 ### GitHub links
 
