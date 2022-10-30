@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "nethers_delight"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "nethers_delight:propelpearl"
+    },
+    "B": {
+      "item": "minecraft:lever"
+    },
+    "C": {
+      "item": "nethers_delight:propelplant_cane"
+    }
+  },
+  "pattern": [
+    "P",
+    "B",
+    "C"
+  ],
+  "result": {
+    "count": 4,
+    "item": "infinitybuttons:propelplant_torch_lever"
+  }
+}

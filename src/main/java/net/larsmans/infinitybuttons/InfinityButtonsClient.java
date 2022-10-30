@@ -26,6 +26,10 @@ public class InfinityButtonsClient {
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_TORCH_BUTTON.get(), RenderType.getCutout());
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_TORCH_LEVER.get(), RenderType.getCutout());
             }
+            if (ModList.get().isLoaded("nethers_delight")) {
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_TORCH_LEVER.get(), RenderType.getCutout());
+            }
         });
     }
 }

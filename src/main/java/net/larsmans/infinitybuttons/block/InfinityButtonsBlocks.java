@@ -4,6 +4,7 @@ import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.EmergencyButton;
+import net.larsmans.infinitybuttons.block.custom.HoglinMountButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
 import net.larsmans.infinitybuttons.block.custom.largebutton.*;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
@@ -13,6 +14,7 @@ import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -695,6 +697,10 @@ public class InfinityButtonsBlocks {
             () -> new DoorbellButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> HOGLIN_MOUNT_BUTTON = registerCompatBlock("nethers_delight", "hoglin_mount_button",
+            () -> new HoglinMountButton(AbstractBlock.Properties.from(Blocks.BROWN_WOOL)
+                    .setLightLevel((state) -> {return 1;})));
+
     /*
     --------------
     Torches
@@ -749,6 +755,16 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> ENDER_TORCH_LEVER = registerCompatBlock("endergetic", "ender_torch_lever",
             () -> new EnderTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PROPELPLANT_TORCH_BUTTON = registerCompatBlock("nethers_delight", "propelplant_torch_button",
+            () -> new PropelTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 12;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PROPELPLANT_TORCH_LEVER = registerCompatBlock("nethers_delight", "propelplant_torch_lever",
+            () -> new PropelTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 12;
             }).sound(SoundType.WOOD)));
 
     /*

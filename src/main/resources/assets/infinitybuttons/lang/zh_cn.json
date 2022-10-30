@@ -98,6 +98,7 @@
 
   "block.infinitybuttons.doorbell": "门铃",
   "block.infinitybuttons.doorbell_button": "门铃按钮",
+  "block.infinitybuttons.hoglin_mount_button": "Hoglin Mount Button",
 
   "block.infinitybuttons.ice_brick_secret_button": "Ice Brick Secret Button",
   "block.infinitybuttons.chiseled_ice_brick_secret_button": "Chiseled Ice Brick Secret Button",
@@ -171,6 +172,8 @@
   "block.infinitybuttons.redstone_torch_lever": "红石火把拉杆",
   "block.infinitybuttons.ender_torch_button": "Ender Torch Button",
   "block.infinitybuttons.ender_torch_lever": "Ender Torch Lever",
+  "block.infinitybuttons.propelplant_torch_button": "Propelplant Torch Button",
+  "block.infinitybuttons.propelplant_torch_lever": "Propelplant Torch Lever",
 
   "infinitybuttons.subtitle.alarm": "警铃大作",
   "infinitybuttons.subtitle.stone_scrape": "石头刮擦",

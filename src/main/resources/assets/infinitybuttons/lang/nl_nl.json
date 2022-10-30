@@ -98,6 +98,7 @@
 
   "block.infinitybuttons.doorbell": "Deurbel",
   "block.infinitybuttons.doorbell_button": "Deurbelknop",
+  "block.infinitybuttons.hoglin_mount_button": "Opgezette-hoglinknop",
 
   "block.infinitybuttons.ice_brick_secret_button": "Ijsblokstenen verborgen knop",
   "block.infinitybuttons.chiseled_ice_brick_secret_button": "Gebeiteld Ijsblokstenen verborgen knop",
@@ -171,6 +172,8 @@
   "block.infinitybuttons.redstone_torch_lever": "Redstonefakkelhendel",
   "block.infinitybuttons.ender_torch_button": "Enderfakkelknop",
   "block.infinitybuttons.ender_torch_lever": "Enderfakkelhendel",
+  "block.infinitybuttons.propelplant_torch_button": "Propelplantfakkelknop",
+  "block.infinitybuttons.propelplant_torch_lever": "Propelplantfakkelhendel",
 
   "infinitybuttons.subtitle.alarm": "Alarm gaat af",
   "infinitybuttons.subtitle.stone_scrape": "Steen verschuift",

@@ -1,0 +1,6 @@
+{
+ "parent": "infinitybuttons:block/torch_pressed",
+  "textures": {
+    "torch": "nethers_delight:block/propelplant_torch"
+  }
+}

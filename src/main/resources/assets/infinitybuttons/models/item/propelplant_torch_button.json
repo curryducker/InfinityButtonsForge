@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nethers_delight:block/propelplant_torch"
+  }
+}

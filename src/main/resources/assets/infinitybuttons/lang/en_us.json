@@ -98,6 +98,7 @@
 
   "block.infinitybuttons.doorbell": "Doorbell",
   "block.infinitybuttons.doorbell_button": "Doorbell Button",
+  "block.infinitybuttons.hoglin_mount_button": "Hoglin Mount Button",
 
   "block.infinitybuttons.ice_brick_secret_button":  "Ice Brick Secret Button",
   "block.infinitybuttons.chiseled_ice_brick_secret_button":  "Chiseled Ice Brick Secret Button",
@@ -171,6 +172,8 @@
   "block.infinitybuttons.redstone_torch_lever": "Redstone Torch Lever",
   "block.infinitybuttons.ender_torch_button": "Ender Torch Button",
   "block.infinitybuttons.ender_torch_lever": "Ender Torch Lever",
+  "block.infinitybuttons.propelplant_torch_button": "Propelplant Torch Button",
+  "block.infinitybuttons.propelplant_torch_lever": "Propelplant Torch Lever",
 
   "infinitybuttons.subtitle.alarm": "Alarm goes off",
   "infinitybuttons.subtitle.stone_scrape": "Stone scrapes",
