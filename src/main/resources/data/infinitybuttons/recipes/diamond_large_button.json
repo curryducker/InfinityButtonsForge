@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [{"item": "infinitybuttons:diamond_button"},{"item": "infinitybuttons:gold_button"}],
+  "ingredients": [{"item": "infinitybuttons:diamond_button"},{"item": "infinitybuttons:diamond_button"}],
   "result": {
     "item": "infinitybuttons:diamond_large_button",
     "count": 1
