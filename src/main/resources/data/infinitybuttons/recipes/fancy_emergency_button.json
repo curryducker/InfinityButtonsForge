@@ -1,12 +1,17 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "tag": "infinitybuttons:emergency_buttons"
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "item": "minecraft:glowstone_dust"
     },
-    {
-      "item": "minecraft:name_tag"
+    "E": {
+      "tag": "infinitybuttons:emergency_buttons"
     }
+  },
+  "pattern": [
+    "GGG",
+    "GEG",
+    "GGG"
   ],
   "result": {
     "item": "infinitybuttons:fancy_emergency_button"
