@@ -1,0 +1,6 @@
+{
+ "parent": "infinitybuttons:block/wall_torch_pressed",
+  "textures": {
+    "torch": "endergetic:block/ender_torch"
+  }
+}

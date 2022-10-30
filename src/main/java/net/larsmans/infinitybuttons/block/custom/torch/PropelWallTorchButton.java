@@ -9,8 +9,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-public class PropelTorchLever extends TorchLever{
-    public PropelTorchLever(Properties properties) {
+public class PropelWallTorchButton extends WallTorchButton {
+    public PropelWallTorchButton(Properties properties) {
         super(properties, ParticleTypes.FLAME);
     }
 

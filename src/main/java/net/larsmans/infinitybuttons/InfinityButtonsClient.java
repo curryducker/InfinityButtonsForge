@@ -15,20 +15,28 @@ public class InfinityButtonsClient {
     public static void onInitializeClient(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.TORCH_BUTTON.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.WALL_TORCH_BUTTON.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.TORCH_LEVER.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.WALL_TORCH_LEVER.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_TORCH_BUTTON.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_TORCH_LEVER.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.REDSTONE_TORCH_BUTTON.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.REDSTONE_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.REDSTONE_TORCH_LEVER.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.REDSTONE_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             if (ModList.get().isLoaded("endergetic")) {
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             }
             if (ModList.get().isLoaded("nethers_delight")) {
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             }
         });
     }

@@ -1,18 +1,18 @@
 {
   "variants": {
     "pressed=false,facing=north": {
-      "model": "minecraft:block/soul_wall_torch",
+      "model": "minecraft:block/soul_torch",
       "y": 270
     },
     "pressed=false,facing=east": {
-      "model": "minecraft:block/soul_wall_torch"
+      "model": "minecraft:block/soul_torch"
     },
     "pressed=false,facing=west": {
-      "model": "minecraft:block/soul_wall_torch",
+      "model": "minecraft:block/soul_torch",
       "y": 180
     },
     "pressed=false,facing=south": {
-      "model": "minecraft:block/soul_wall_torch",
+      "model": "minecraft:block/soul_torch",
       "y": 90
     },
     "pressed=true,facing=north": {

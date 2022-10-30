@@ -1,18 +1,18 @@
 {
   "variants": {
     "pressed=false,facing=north": {
-      "model": "endergetic:block/ender_wall_torch",
+      "model": "endergetic:block/ender_torch",
       "y": 270
     },
     "pressed=false,facing=east": {
-      "model": "endergetic:block/ender_wall_torch"
+      "model": "endergetic:block/ender_torch"
     },
     "pressed=false,facing=west": {
-      "model": "endergetic:block/ender_wall_torch",
+      "model": "endergetic:block/ender_torch",
       "y": 180
     },
     "pressed=false,facing=south": {
-      "model": "endergetic:block/ender_wall_torch",
+      "model": "endergetic:block/ender_torch",
       "y": 90
     },
     "pressed=true,facing=north": {

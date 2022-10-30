@@ -37,11 +37,9 @@ public class InfinityButtonsBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, InfinityButtons.MOD_ID);
 
-    /*
-    -------------
-    Buttons
-    -------------
-    */
+    /**
+     * Buttons
+     */
 
     public static final RegistryObject<Block> COPPER_BUTTON = registerBlock("copper_button",
             () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -103,11 +101,9 @@ public class InfinityButtonsBlocks {
             () -> new PrismarineButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
-    /*
-    -------------
-    Large Buttons
-    -------------
-    */
+    /**
+     * Large Buttons
+     */
 
     public static final RegistryObject<Block> OAK_LARGE_BUTTON = registerBlock("oak_large_button",
             () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -229,11 +225,9 @@ public class InfinityButtonsBlocks {
             () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
-    /*
-    -----------------
-    Emergency Buttons
-    -----------------
-    */
+    /**
+     * Emergency Buttons
+     */
 
     public static final RegistryObject<Block> RED_EMERGENCY_BUTTON = registerBlock("red_emergency_button",
             () -> new EmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -303,11 +297,9 @@ public class InfinityButtonsBlocks {
             () -> new EmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
 
-    /*
-    --------------
-    Secret Buttons
-    --------------
-    */
+    /**
+     * Secret Buttons
+     */
 
     public static final RegistryObject<Block> BOOKSHELF_SECRET_BUTTON = registerBlock("bookshelf_secret_button",
             () -> new BookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
@@ -683,11 +675,9 @@ public class InfinityButtonsBlocks {
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
-     /*
-    ------
-    Random
-    ------
-    */
+    /**
+     * Misc
+     */
 
     public static final RegistryObject<Block> DOORBELL = registerBlock("doorbell",
             () -> new Doorbell(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -701,31 +691,49 @@ public class InfinityButtonsBlocks {
             () -> new HoglinMountButton(AbstractBlock.Properties.from(Blocks.BROWN_WOOL)
                     .setLightLevel((state) -> {return 1;})));
 
-    /*
-    --------------
-    Torches
-    --------------
-    */
+    /**
+     * Torches
+     */
 
-    public static final RegistryObject<Block> TORCH_BUTTON = registerBlock("torch_button",
+    public static final RegistryObject<Block> TORCH_BUTTON = registerTorchBlock("torch_button",
             () -> new TorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 14;
             }).sound(SoundType.WOOD), ParticleTypes.FLAME));
 
-    public static final RegistryObject<Block> TORCH_LEVER = registerBlock("torch_lever",
+    public static final RegistryObject<Block> WALL_TORCH_BUTTON = registerTorchBlock("wall_torch_button",
+            () -> new WallTorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD).lootFrom(TORCH_BUTTON), ParticleTypes.FLAME));
+
+    public static final RegistryObject<Block> TORCH_LEVER = registerTorchBlock("torch_lever",
             () -> new TorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 14;
             }).sound(SoundType.WOOD), ParticleTypes.FLAME));
 
-    public static final RegistryObject<Block> SOUL_TORCH_BUTTON = registerBlock("soul_torch_button",
+    public static final RegistryObject<Block> WALL_TORCH_LEVER = registerTorchBlock("wall_torch_lever",
+            () -> new WallTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD).lootFrom(TORCH_LEVER), ParticleTypes.FLAME));
+
+    public static final RegistryObject<Block> SOUL_TORCH_BUTTON = registerTorchBlock("soul_torch_button",
             () -> new TorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 10;
             }).sound(SoundType.WOOD), ParticleTypes.SOUL_FIRE_FLAME));
 
-    public static final RegistryObject<Block> SOUL_TORCH_LEVER = registerBlock("soul_torch_lever",
+    public static final RegistryObject<Block> SOUL_WALL_TORCH_BUTTON = registerTorchBlock("soul_wall_torch_button",
+            () -> new WallTorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 10;
+            }).sound(SoundType.WOOD).lootFrom(SOUL_TORCH_BUTTON), ParticleTypes.SOUL_FIRE_FLAME));
+
+    public static final RegistryObject<Block> SOUL_TORCH_LEVER = registerTorchBlock("soul_torch_lever",
             () -> new TorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 10;
             }).sound(SoundType.WOOD), ParticleTypes.SOUL_FIRE_FLAME));
+
+    public static final RegistryObject<Block> SOUL_WALL_TORCH_LEVER = registerTorchBlock("soul_wall_torch_lever",
+            () -> new WallTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 10;
+            }).sound(SoundType.WOOD).lootFrom(SOUL_TORCH_LEVER), ParticleTypes.SOUL_FIRE_FLAME));
 
     public static final RegistryObject<Block> REDSTONE_TORCH_BUTTON = registerTorchBlock("redstone_torch_button",
             () -> new RedstoneTorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
@@ -747,31 +755,49 @@ public class InfinityButtonsBlocks {
                 return 7;
             }).sound(SoundType.WOOD).lootFrom(REDSTONE_TORCH_LEVER)));
 
-    public static final RegistryObject<Block> ENDER_TORCH_BUTTON = registerCompatBlock("endergetic", "ender_torch_button",
+    public static final RegistryObject<Block> ENDER_TORCH_BUTTON = registerCompatTorchBlock("endergetic", "ender_torch_button",
             () -> new EnderTorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 14;
             }).sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> ENDER_TORCH_LEVER = registerCompatBlock("endergetic", "ender_torch_lever",
+    public static final RegistryObject<Block> ENDER_WALL_TORCH_BUTTON = registerCompatTorchBlock("endergetic", "ender_wall_torch_button",
+            () -> new EnderWallTorchButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD).lootFrom(ENDER_TORCH_BUTTON)));
+
+    public static final RegistryObject<Block> ENDER_TORCH_LEVER = registerCompatTorchBlock("endergetic", "ender_torch_lever",
             () -> new EnderTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 14;
             }).sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> PROPELPLANT_TORCH_BUTTON = registerCompatBlock("nethers_delight", "propelplant_torch_button",
+    public static final RegistryObject<Block> ENDER_WALL_TORCH_LEVER = registerCompatTorchBlock("endergetic", "ender_wall_torch_lever",
+            () -> new EnderWallTorchLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD).lootFrom(ENDER_TORCH_LEVER)));
+
+    public static final RegistryObject<Block> PROPELPLANT_TORCH_BUTTON = registerCompatTorchBlock("nethers_delight", "propelplant_torch_button",
             () -> new PropelTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 12;
             }).sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> PROPELPLANT_TORCH_LEVER = registerCompatBlock("nethers_delight", "propelplant_torch_lever",
+    public static final RegistryObject<Block> PROPELPLANT_WALL_TORCH_BUTTON = registerCompatTorchBlock("nethers_delight", "propelplant_wall_torch_button",
+            () -> new PropelWallTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 12;
+            }).sound(SoundType.WOOD).lootFrom(PROPELPLANT_TORCH_BUTTON)));
+
+    public static final RegistryObject<Block> PROPELPLANT_TORCH_LEVER = registerCompatTorchBlock("nethers_delight", "propelplant_torch_lever",
             () -> new PropelTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 12;
             }).sound(SoundType.WOOD)));
 
-    /*
-    --------------
-    Other Stuff
-    --------------
-    */
+    public static final RegistryObject<Block> PROPELPLANT_WALL_TORCH_LEVER = registerCompatTorchBlock("nethers_delight", "propelplant_wall_torch_lever",
+            () -> new PropelWallTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 12;
+            }).sound(SoundType.WOOD).lootFrom(PROPELPLANT_TORCH_LEVER)));
+
+    /**
+     * Methods
+     */
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -794,7 +820,14 @@ public class InfinityButtonsBlocks {
     }
 
     private static <T extends Block>RegistryObject<T> registerTorchBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        return BLOCKS.register(name, block);
+    }
+
+    private static <T extends Block>RegistryObject<T> registerCompatTorchBlock(String modid, String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = null;
+        if (ModList.get().isLoaded(modid)) {
+            toReturn = BLOCKS.register(name, block);
+        }
         return toReturn;
     }
 

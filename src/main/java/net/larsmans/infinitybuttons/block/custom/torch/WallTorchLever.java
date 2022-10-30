@@ -10,8 +10,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
 
-public class TorchLever extends TorchButton{
-    public TorchLever(Properties properties, IParticleData particleData) {
+public class WallTorchLever extends WallTorchButton{
+    public WallTorchLever(Properties properties, IParticleData particleData) {
         super(properties, particleData);
         this.setDefaultState((BlockState)((BlockState)this.stateContainer.getBaseState()).with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false));
     }
