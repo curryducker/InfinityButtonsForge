@@ -1,3 +1,5 @@
+[![Discord](https://i.imgur.com/JiW4MLF.png)](https://discord.gg/PJCXjSJnu2)
+
 # Infinity Buttons
 
 Infinity Buttons is a mod which adds exciting new buttons!
@@ -24,27 +26,26 @@ Infinity Buttons is a mod which adds exciting new buttons!
 
 ### Important!
 
-*Fabric:*
-- [oωo lib](https://modrinth.com/mod/owo-lib) is required!
+**Fabric:**  
+[oωo lib](https://modrinth.com/mod/owo-lib) is required!
 
-*Forge:*
-- [Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) is required!
-- Can be played without, but has additional content with:
-  - [Quark](https://quarkmod.net/)
-  - [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental) (1.16.5 only)
-  - [The Endergetic Expansion](https://www.curseforge.com/minecraft/mc-mods/endergetic) (1.16.5 only)
-  - [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) (1.16.5 only)
-  - [Nether's Delight](https://www.curseforge.com/minecraft/mc-mods/nethers-delight)
+**Forge:**  
+[Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) is required!  
+Can be played without, but has additional content with:
+- [Quark](https://quarkmod.net/)
+- [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental) (1.16.5 only)
+- [The Endergetic Expansion](https://www.curseforge.com/minecraft/mc-mods/endergetic) (1.16.5 only)
+- [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) (1.16.5 only)
+- [Nether's Delight](https://www.curseforge.com/minecraft/mc-mods/nethers-delight)
 
 ### GitHub links
 
-Fabric: [https://github.com/LarsMans64/InfinityButtons](https://github.com/LarsMans64/InfinityButtons)
+**Fabric:** 
+- 1.19: [https://github.com/LarsMans64/InfinityButtons](https://github.com/LarsMans64/InfinityButtons)  
 
-Forge:
-- 1.16.5: [https://github.com/curryducker/InfinityButtonsForge](https://github.com/curryducker/InfinityButtonsForge)
+**Forge:**
+- 1.16.5: [https://github.com/curryducker/InfinityButtonsForge](https://github.com/curryducker/InfinityButtonsForge)  
 - 1.18.2: [https://github.com/curryducker/InfinityButtonsForge-1.18.2](https://github.com/curryducker/InfinityButtonsForge-1.18.2)
-
-[![Discord](https://discordapp.com/api/guilds/968437531865645076/widget.png?style=banner2)](https://discord.gg/PJCXjSJnu2)
 
 ## Images
 
