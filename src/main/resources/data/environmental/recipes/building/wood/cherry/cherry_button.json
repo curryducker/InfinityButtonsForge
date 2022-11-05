@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "environmental:cherry_planks"
+    }
+  ],
+  "result": {
+    "item": "environmental:cherry_button",
+    "count": 4
+  }
+}

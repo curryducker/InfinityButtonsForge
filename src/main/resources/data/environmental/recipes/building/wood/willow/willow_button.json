@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "environmental:willow_planks"
+    }
+  ],
+  "result": {
+    "item": "environmental:willow_button",
+    "count": 4
+  }
+}
