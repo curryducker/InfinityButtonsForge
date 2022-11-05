@@ -43,12 +43,12 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
     protected static final VoxelShape SOUTH_PRESSED_SHAPE = Block.makeCuboidShape(5.0, 6.0, 0.0, 11.0, 10.0, 1.0);
     protected static final VoxelShape WEST_PRESSED_SHAPE = Block.makeCuboidShape(15.0, 6.0, 5.0, 16.0, 10.0, 11.0);
     protected static final VoxelShape EAST_PRESSED_SHAPE = Block.makeCuboidShape(0.0, 6.0, 5.0, 1.0, 10.0, 11.0);
-    private final boolean wooden;
+    private final boolean projectile;
 
-    protected AbstractButton(boolean isWooden, AbstractBlock.Properties properties) {
+    protected AbstractButton(boolean projectile, AbstractBlock.Properties properties) {
         super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, Boolean.FALSE).with(FACE, AttachFace.FLOOR));
-        this.wooden = isWooden;
+        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR));
+        this.projectile = projectile;
     }
 
     public abstract int getActiveDuration();
@@ -96,16 +96,16 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
     }
 
     public void powerBlock(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, state.with(PRESSED, Boolean.TRUE), 3);
+        world.setBlockState(pos, state.with(PRESSED, true), 3);
         this.updateNeighbors(state, world, pos);
         world.getPendingBlockTicks().scheduleTick(pos, this, this.getActiveDuration());
     }
 
-    protected void playSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean hitByArrow) {
-        worldIn.playSound(hitByArrow ? playerIn : null, pos, this.getSoundEvent(hitByArrow), SoundCategory.BLOCKS, 0.3F, hitByArrow ? 0.6F : 0.5F);
+    protected void playSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean pressed) {
+        worldIn.playSound(pressed ? playerIn : null, pos, this.getSoundEvent(pressed), SoundCategory.BLOCKS, 0.3F, pressed ? 0.6F : 0.5F);
     }
 
-    protected abstract SoundEvent getSoundEvent(boolean isOn);
+    protected abstract SoundEvent getSoundEvent(boolean pressed);
 
     public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!isMoving && !state.matchesBlock(newState.getBlock())) {
@@ -131,10 +131,10 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
 
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(PRESSED)) {
-            if (this.wooden) {
+            if (this.projectile) {
                 this.checkPressed(state, worldIn, pos);
             } else {
-                worldIn.setBlockState(pos, state.with(PRESSED, Boolean.FALSE), 3);
+                worldIn.setBlockState(pos, state.with(PRESSED, false), 3);
                 this.updateNeighbors(state, worldIn, pos);
                 this.playSound((PlayerEntity)null, worldIn, pos, false);
             }
@@ -143,7 +143,7 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
     }
 
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
-        if (!worldIn.isRemote && this.wooden && !state.get(PRESSED)) {
+        if (!worldIn.isRemote && this.projectile && !state.get(PRESSED)) {
             this.checkPressed(state, worldIn, pos);
         }
     }
