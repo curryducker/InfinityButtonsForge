@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button_pressed",
+  "textures": {
+    "texture": "minecraft:block/gravel"
+  }
+}

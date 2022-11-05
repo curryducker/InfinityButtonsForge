@@ -16,6 +16,9 @@
     "infinitybuttons:prismarine_button",
     "infinitybuttons:prismarine_brick_button",
     "infinitybuttons:dark_prismarine_button",
+    "infinitybuttons:sand_button",
+    "infinitybuttons:red_sand_button",
+    "infinitybuttons:gravel_button",
 
     "infinitybuttons:stone_large_button",
     "infinitybuttons:polished_blackstone_large_button",
@@ -34,6 +37,9 @@
     "infinitybuttons:prismarine_large_button",
     "infinitybuttons:prismarine_brick_large_button",
     "infinitybuttons:dark_prismarine_large_button",
+    "infinitybuttons:sand_large_button",
+    "infinitybuttons:red_sand_large_button",
+    "infinitybuttons:gravel_large_button",
 
     "infinitybuttons:white_emergency_button",
     "infinitybuttons:orange_emergency_button",

@@ -14,6 +14,9 @@
   "block.infinitybuttons.prismarine_button": "海晶按钮",
   "block.infinitybuttons.prismarine_brick_button": "海晶石砖按钮",
   "block.infinitybuttons.dark_prismarine_button": "暗海晶按钮",
+  "block.infinitybuttons.sand_button": "Sand Button",
+  "block.infinitybuttons.red_sand_button": "Red Sand Button",
+  "block.infinitybuttons.gravel_button": "Gravel Button",
 
   "block.infinitybuttons.oak_large_button": "橡木大按钮",
   "block.infinitybuttons.acacia_large_button": "金合欢木大按钮",
@@ -40,6 +43,9 @@
   "block.infinitybuttons.prismarine_large_button": "海晶大按钮",
   "block.infinitybuttons.prismarine_brick_large_button": "海晶石砖大按钮",
   "block.infinitybuttons.dark_prismarine_large_button": "暗海晶大按钮",
+  "block.infinitybuttons.sand_large_button": "Sand Large Button",
+  "block.infinitybuttons.red_sand_large_button": "Red Sand Large Button",
+  "block.infinitybuttons.gravel_large_button": "Gravel Large Button",
   "block.infinitybuttons.willow_large_button": "Willow Large Button",
   "block.infinitybuttons.cherry_large_button": "Cherry Large Button",
   "block.infinitybuttons.wisteria_large_button": "Wisteria Large Button",
@@ -182,10 +188,12 @@
 
   "infinitybuttons.tooltip.hold_shift": "\u00A77[按下 Shift 键]",
   "infinitybuttons.tooltip.sticky_copper_button": "\u00A77这个按钮的作用类似杠杆",
-  "infinitybuttons.tooltip.emerald_button": "\u00A77这个按钮再按下后会在0.5至5秒内随机弹起",
+  "infinitybuttons.tooltip.emerald_button1": "\u00A77This button stays pressed",
+  "infinitybuttons.tooltip.emerald_button2": "\u00A77randomly between 0.5 and 5 seconds",
   "infinitybuttons.tooltip.arrow_button": "\u00A77这个按钮只能通过弓箭射击来按下",
   "infinitybuttons.tooltip.diamond_button": "\u00A77The biggest flex in the west",
   "infinitybuttons.tooltip.prismarine_button": "\u00A77这个按钮可能会被水淹没",
+  "infinitybuttons.tooltip.falling_button": "\u00A77This button can only be pressed once",
   "infinitybuttons.tooltip.doorbell_button": "\u00A77这个门铃会发出红石信号",
 
   "itemGroup.infinityButtonsTab": "无限按钮",

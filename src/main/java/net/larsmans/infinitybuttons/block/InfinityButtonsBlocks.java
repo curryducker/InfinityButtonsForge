@@ -101,6 +101,18 @@ public class InfinityButtonsBlocks {
             () -> new PrismarineButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> SAND_BUTTON = registerBlock("sand_button",
+            () -> new FallingButton(false, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.SAND)));
+
+    public static final RegistryObject<Block> RED_SAND_BUTTON = registerBlock("red_sand_button",
+            () -> new FallingButton(false, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.SAND)));
+
+    public static final RegistryObject<Block> GRAVEL_BUTTON = registerBlock("gravel_button",
+            () -> new FallingButton(true, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.GROUND)));
+
     /**
      * Large Buttons
      */
@@ -204,6 +216,18 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> DARK_PRISMARINE_LARGE_BUTTON = registerBlock("dark_prismarine_large_button",
             () -> new PrismarineLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> SAND_LARGE_BUTTON = registerBlock("sand_large_button",
+            () -> new FallingLargeButton(false, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.SAND)));
+
+    public static final RegistryObject<Block> RED_SAND_LARGE_BUTTON = registerBlock("red_sand_large_button",
+            () -> new FallingLargeButton(false, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.SAND)));
+
+    public static final RegistryObject<Block> GRAVEL_LARGE_BUTTON = registerBlock("gravel_large_button",
+            () -> new FallingLargeButton(true, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.GROUND)));
 
     public static final RegistryObject<Block> WILLOW_LARGE_BUTTON = registerCompatBlock("environmental", "willow_large_button",
             () -> new WoodenLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)

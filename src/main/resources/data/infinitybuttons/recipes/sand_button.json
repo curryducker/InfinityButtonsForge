@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "minecraft:sand"}],
+  "result": {
+    "item": "infinitybuttons:sand_button",
+    "count": 4
+  }
+}
