@@ -36,7 +36,8 @@ public class EmeraldButton extends AbstractButton {
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (config.tooltips) {
             if(Screen.hasShiftDown()) {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.emerald_button"));
+                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.emerald_button1"));
+                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.emerald_button2"));
             } else {
                 tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.hold_shift"));
             }
