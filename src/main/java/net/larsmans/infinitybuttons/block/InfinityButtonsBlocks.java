@@ -3,7 +3,7 @@ package net.larsmans.infinitybuttons.block;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
-import net.larsmans.infinitybuttons.block.custom.EmergencyButton;
+import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.HoglinMountButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
 import net.larsmans.infinitybuttons.block.custom.largebutton.*;

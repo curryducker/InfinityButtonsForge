@@ -1,46 +1,19 @@
 package net.larsmans.infinitybuttons.block.custom.largebutton;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
+import net.larsmans.infinitybuttons.block.custom.button.EmeraldButton;
+import net.minecraft.block.BlockState;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 
-import javax.annotation.Nullable;
-import java.util.List;
-
-public class EmeraldLargeButton extends AbstractLargeButton {
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
-
+public class EmeraldLargeButton extends EmeraldButton {
     public EmeraldLargeButton(Properties properties) {
-        super(false, properties);
+        super(properties);
     }
 
     @Override
-    public int getActiveDuration() {
-        return (int)Math.floor(Math.random()*(90-10+1)+10);
-    }
-
-    @Override
-    protected SoundEvent getSoundEvent(boolean isOn) {
-        return isOn ? SoundEvents.BLOCK_STONE_BUTTON_CLICK_ON : SoundEvents.BLOCK_STONE_BUTTON_CLICK_OFF;
-    }
-
-    @Override
-    public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if (config.tooltips) {
-            if(Screen.hasShiftDown()) {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.emerald_button1"));
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.emerald_button2"));
-            } else {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.hold_shift"));
-            }
-        }
-        super.addInformation(stack, worldIn, tooltip, flagIn);
+    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+        return LargeButtonShape.outlineShape(state);
     }
 }

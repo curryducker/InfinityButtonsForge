@@ -1,31 +1,19 @@
 package net.larsmans.infinitybuttons.block.custom.largebutton;
 
-import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
+import net.larsmans.infinitybuttons.block.custom.button.CopperButton;
+import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorld;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.world.IBlockReader;
 
-import javax.annotation.Nullable;
-
-public class CopperLargeButton extends AbstractLargeButton {
+public class CopperLargeButton extends CopperButton {
     public CopperLargeButton(Properties properties) {
-        super(false, properties);
+        super(properties);
     }
 
     @Override
-    protected void playSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean hitByArrow) {
-        worldIn.playSound(hitByArrow ? playerIn : null, pos, this.getSoundEvent(hitByArrow), SoundCategory.BLOCKS, 1F, hitByArrow ? 0.6F : 0.5F);
-    }
-
-    @Override
-    public int getActiveDuration() {
-        return 50;
-    }
-
-    @Override
-    protected SoundEvent getSoundEvent(boolean isOn) {
-        return InfinityButtonsSounds.BLOCK_COPPER_BREAK.get();
+    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+        return LargeButtonShape.outlineShape(state);
     }
 }

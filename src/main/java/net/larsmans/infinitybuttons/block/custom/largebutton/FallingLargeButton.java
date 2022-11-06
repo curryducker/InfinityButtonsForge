@@ -14,6 +14,6 @@ public class FallingLargeButton extends FallingButton {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        return AbstractLargeButton.outlineShape(state);
+        return LargeButtonShape.outlineShape(state);
     }
 }
