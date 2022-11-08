@@ -2,6 +2,7 @@ package net.larsmans.infinitybuttons.item;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.WallOrFloorItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -49,6 +50,13 @@ public class InfinityButtonsItems {
 
     public static final RegistryObject<Item> PROPELPLANT_TORCH_LEVER = registerCompatItem("nethers_delight", "propelplant_torch_lever",
             () -> new WallOrFloorItem(InfinityButtonsBlocks.PROPELPLANT_TORCH_LEVER.get(), InfinityButtonsBlocks.PROPELPLANT_WALL_TORCH_LEVER.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONSCOMPAT)));
+
+    /**
+     * Safe Emergency Buttons
+     */
+
+    public static final RegistryObject<Item> SAFE_EMERGENCY_BUTTON = registerItem("safe_emergency_button",
+            () -> new SafeEmergencyButtonItem(InfinityButtonsBlocks.SAFE_EMERGENCY_BUTTON.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
     /**
      * Methods

@@ -69,6 +69,7 @@
   "block.infinitybuttons.gray_emergency_button": "灰色紧急按钮",
   "block.infinitybuttons.black_emergency_button": "黑色紧急按钮",
   "block.infinitybuttons.fancy_emergency_button": "\u00A7c彩\u00A76色\u00A7e紧\u00A7a急\u00A7b按\u00A79钮",
+  "block.infinitybuttons.safe_emergency_button": "Safe Emergency Button",
 
   "block.infinitybuttons.bookshelf_secret_button": "书架隐蔽按钮",
   "block.infinitybuttons.stone_brick_secret_button": "石砖隐蔽按钮",
@@ -194,6 +195,7 @@
   "infinitybuttons.tooltip.diamond_button": "\u00A77The biggest flex in the west",
   "infinitybuttons.tooltip.prismarine_button": "\u00A77这个按钮可能会被水淹没",
   "infinitybuttons.tooltip.falling_button": "\u00A77This button can only be pressed once",
+  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77Shift-click with an empty hand to open the casing",
   "infinitybuttons.tooltip.doorbell_button": "\u00A77这个门铃会发出红石信号",
 
   "itemGroup.infinityButtonsTab": "无限按钮",

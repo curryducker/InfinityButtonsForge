@@ -69,6 +69,7 @@
   "block.infinitybuttons.gray_emergency_button": "Grijze noodknop",
   "block.infinitybuttons.black_emergency_button": "Zwarte noodknop",
   "block.infinitybuttons.fancy_emergency_button": "\u00A7cG\u00A76r\u00A7ea\u00A7ac\u00A7bi\u00A79e\u00A7du\u00A7cz\u00A76e \u00A7en\u00A7ao\u00A7bo\u00A79d\u00A7dk\u00A7cn\u00A76o\u00A7ep",
+  "block.infinitybuttons.safe_emergency_button": "Veilige noodknop",
 
   "block.infinitybuttons.bookshelf_secret_button": "Boekenkast verborgen knop",
   "block.infinitybuttons.stone_brick_secret_button": "Blokstenen verborgen knop",
@@ -194,6 +195,7 @@
   "infinitybuttons.tooltip.diamond_button": "\u00A77De grootste flex in het westen",
   "infinitybuttons.tooltip.prismarine_button": "\u00A77Deze knop kan in het water",
   "infinitybuttons.tooltip.falling_button": "\u00A77Deze knop kan maar één keer ingedrukt worden",
+  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77Shift-klik met een lege hand om het omhulsel te openen",
   "infinitybuttons.tooltip.doorbell_button": "\u00A77Deze deurbel produceert een redstone-signaal",
 
   "itemGroup.infinityButtonsTab": "Infinity Buttons",

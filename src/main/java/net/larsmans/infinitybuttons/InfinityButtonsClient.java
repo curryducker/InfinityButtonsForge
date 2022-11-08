@@ -26,6 +26,7 @@ public class InfinityButtonsClient {
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.REDSTONE_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.REDSTONE_TORCH_LEVER.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.REDSTONE_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SAFE_EMERGENCY_BUTTON.get(), RenderType.getCutout());
             if (ModList.get().isLoaded("endergetic")) {
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_TORCH_BUTTON.get(), RenderType.getCutout());
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_WALL_TORCH_BUTTON.get(), RenderType.getCutout());

@@ -70,19 +70,16 @@ public class EmergencyButton extends HorizontalFaceBlock {
     private static final VoxelShape CEILING_Z_PRESSED_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(5, 13, 5, 11, 15, 11), STONE_UP).simplify();
 
-    protected int getActiveDuration(){
-        return 10;
-    };
-
     public EmergencyButton(AbstractBlock.Properties properties) {
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR));
     }
 
+    @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         Direction direction = state.get(HORIZONTAL_FACING);
         boolean flag = state.get(PRESSED);
-        switch((AttachFace)state.get(FACE)) {
+        switch(state.get(FACE)) {
             case FLOOR:
                 if (direction.getAxis() == Direction.Axis.X) {
                     return flag ? FLOOR_X_PRESSED_SHAPE : FLOOR_X_SHAPE;
@@ -111,70 +108,73 @@ public class EmergencyButton extends HorizontalFaceBlock {
         }
     }
 
+    @Override
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+        builder.add(HORIZONTAL_FACING, PRESSED, FACE);
+    }
+
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (state.get(PRESSED)) {
             return ActionResultType.CONSUME;
-        } else {
-            this.powerBlock(state, worldIn, pos);
-            this.playSound(player, worldIn, pos, true);
-            if (config.alarmSound) {
-                worldIn.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, 2f, 0.6f);
-            }
-            return ActionResultType.func_233537_a_(worldIn.isRemote);
         }
+        this.powerBlock(state, worldIn, pos);
+        this.playSound(player, worldIn, pos, true);
+        if (config.alarmSound) {
+            worldIn.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, 2f, 0.6f);
+        }
+        return ActionResultType.func_233537_a_(worldIn.isRemote);
     }
 
     public void powerBlock(BlockState state, World world, BlockPos pos) {
         world.setBlockState(pos, state.with(PRESSED, Boolean.TRUE), 3);
         this.updateNeighbors(state, world, pos);
-        world.getPendingBlockTicks().scheduleTick(pos, this, this.getActiveDuration());
+        world.getPendingBlockTicks().scheduleTick(pos, this, 10);
     }
 
-    protected void playSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean hitByArrow) {
-        worldIn.playSound(hitByArrow ? playerIn : null, pos, this.getSoundEvent(hitByArrow), SoundCategory.BLOCKS, 0.3F, hitByArrow ? 0.6F : 0.5F);
+    protected void playSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean pressed) {
+        worldIn.playSound(pressed ? playerIn : null, pos, SoundEvents.BLOCK_BONE_BLOCK_BREAK, SoundCategory.BLOCKS, 0.75F, pressed ? 0.6F : 0.5F);
     }
 
-    protected SoundEvent getSoundEvent(boolean isOn) {
-        return SoundEvents.BLOCK_BONE_BLOCK_BREAK;
-    }
-
-    public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!isMoving && !state.matchesBlock(newState.getBlock())) {
-            if (state.get(PRESSED)) {
-                this.updateNeighbors(state, worldIn, pos);
-            }
-
-            super.onReplaced(state, worldIn, pos, newState, isMoving);
+    @Override
+    public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean moved) {
+        if (moved || state.matchesBlock(newState.getBlock())) {
+            return;
         }
+        if (state.get(PRESSED)) {
+            this.updateNeighbors(state, worldIn, pos);
+        }
+        super.onReplaced(state, worldIn, pos, newState, moved);
     }
 
+    @Override
     public int getWeakPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
         return blockState.get(PRESSED) ? 15 : 0;
     }
 
+    @Override
     public int getStrongPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        return blockState.get(PRESSED) && getFacing(blockState) == side ? 15 : 0;
+        if (blockState.get(PRESSED) && getFacing(blockState) == side) {
+            return 15;
+        }
+        return 0;
     }
 
+    @Override
     public boolean canProvidePower(BlockState state) {
         return true;
     }
 
+    @Override
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(PRESSED)) {
             worldIn.setBlockState(pos, state.with(PRESSED, Boolean.FALSE), 3);
             this.updateNeighbors(state, worldIn, pos);
             this.playSound((PlayerEntity)null, worldIn, pos, false);
-
         }
     }
 
     private void updateNeighbors(BlockState state, World worldIn, BlockPos pos) {
         worldIn.notifyNeighborsOfStateChange(pos, this);
         worldIn.notifyNeighborsOfStateChange(pos.offset(getFacing(state).getOpposite()), this);
-    }
-
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(HORIZONTAL_FACING, PRESSED, FACE);
     }
 }

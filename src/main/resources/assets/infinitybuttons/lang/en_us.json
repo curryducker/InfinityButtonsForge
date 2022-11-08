@@ -69,6 +69,7 @@
   "block.infinitybuttons.gray_emergency_button": "Gray Emergency Button",
   "block.infinitybuttons.black_emergency_button": "Black Emergency Button",
   "block.infinitybuttons.fancy_emergency_button": "\u00A7cF\u00A76a\u00A7en\u00A7ac\u00A7by \u00A79E\u00A7dm\u00A7ce\u00A76r\u00A7eg\u00A7ae\u00A7bn\u00A79c\u00A7dy \u00A7cB\u00A76u\u00A7et\u00A7at\u00A7bo\u00A79n",
+  "block.infinitybuttons.safe_emergency_button": "Safe Emergency Button",
 
   "block.infinitybuttons.bookshelf_secret_button": "Bookshelf Secret Button",
   "block.infinitybuttons.stone_brick_secret_button": "Stone Brick Secret Button",
@@ -188,12 +189,13 @@
 
   "infinitybuttons.tooltip.hold_shift": "\u00A77[Hold Shift]",
   "infinitybuttons.tooltip.sticky_copper_button": "\u00A77This button acts like a lever",
-  "infinitybuttons.tooltip.emerald_button1": "\u00A77This button stays pressed",
-  "infinitybuttons.tooltip.emerald_button2": "\u00A77randomly between 0.5 and 5 seconds",
+  "infinitybuttons.tooltip.emerald_button1": "\u00A77This button stays pressed randomly",
+  "infinitybuttons.tooltip.emerald_button2": "\u00A77between 0.5 and 5 seconds",
   "infinitybuttons.tooltip.arrow_button": "\u00A77This button can only be pressed with an arrow",
   "infinitybuttons.tooltip.diamond_button": "\u00A77The biggest flex in the west",
   "infinitybuttons.tooltip.prismarine_button": "\u00A77This button can be waterlogged",
   "infinitybuttons.tooltip.falling_button": "\u00A77This button can only be pressed once",
+  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77Shift-click with an empty hand to open the casing",
   "infinitybuttons.tooltip.doorbell_button": "\u00A77This doorbell emits a redstone signal",
 
   "itemGroup.infinityButtonsTab": "Infinity Buttons",
