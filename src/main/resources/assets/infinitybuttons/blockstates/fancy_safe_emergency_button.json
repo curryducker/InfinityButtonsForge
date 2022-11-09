@@ -1,0 +1,163 @@
+{
+    "variants": {
+        "state=closed,face=floor,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed"
+        },
+        "state=open,face=floor,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_open"
+        },
+        "state=pressed,face=floor,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_pressed"
+        },
+        "state=closed,face=floor,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "y": 90
+        },
+        "state=open,face=floor,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_open",
+            "y": 90
+        },
+        "state=pressed,face=floor,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_pressed",
+            "y": 90
+        },
+        "state=closed,face=floor,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "y": 270
+        },
+        "state=open,face=floor,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_open",
+            "y": 270
+        },
+        "state=pressed,face=floor,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_pressed",
+            "y": 270
+        },
+        "state=closed,face=floor,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "y": 180
+        },
+        "state=open,face=floor,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_open",
+            "y": 180
+        },
+        "state=pressed,face=floor,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_pressed",
+            "y": 180
+        },
+        "state=closed,face=ceiling,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "x": 180,
+            "y": 180
+        },
+        "state=open,face=ceiling,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_open",
+            "x": 180,
+            "y": 180
+        },
+        "state=pressed,face=ceiling,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_pressed",
+            "x": 180,
+            "y": 180
+        },
+        "state=closed,face=ceiling,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "x": 180,
+            "y": 270
+        },
+        "state=open,face=ceiling,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_open",
+            "x": 180,
+            "y": 270
+        },
+        "state=pressed,face=ceiling,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_pressed",
+            "x": 180,
+            "y": 270
+        },
+        "state=closed,face=ceiling,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "x": 180,
+            "y": 90
+        },
+        "state=open,face=ceiling,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_open",
+            "x": 180,
+            "y": 90
+        },
+        "state=pressed,face=ceiling,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_pressed",
+            "x": 180,
+            "y": 90
+        },
+        "state=closed,face=ceiling,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "x": 180
+        },
+        "state=open,face=ceiling,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_open",
+            "x": 180
+        },
+        "state=pressed,face=ceiling,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_pressed",
+            "x": 180
+        },
+        "state=closed,face=wall,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "x": -90,
+            "y": 180
+        },
+        "state=open,face=wall,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_wall_open",
+            "x": -90,
+            "y": 180
+        },
+        "state=pressed,face=wall,facing=north": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_wall_pressed",
+            "x": -90,
+            "y": 180
+        },
+        "state=closed,face=wall,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "x": -90,
+            "y": 270
+        },
+        "state=open,face=wall,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_wall_open",
+            "x": -90,
+            "y": 270
+        },
+        "state=pressed,face=wall,facing=east": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_wall_pressed",
+            "x": -90,
+            "y": 270
+        },
+        "state=closed,face=wall,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "x": -90
+        },
+        "state=open,face=wall,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_wall_open",
+            "x": -90
+        },
+        "state=pressed,face=wall,facing=south": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_wall_pressed",
+            "x": -90
+        },
+        "state=closed,face=wall,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_closed",
+            "x": -90,
+            "y": 90
+        },
+        "state=open,face=wall,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_wall_open",
+            "x": -90,
+            "y": 90
+        },
+        "state=pressed,face=wall,facing=west": {
+            "model": "infinitybuttons:block/emergency_buttons/safe/fancy_safe_emergency_button_wall_pressed",
+            "x": -90,
+            "y": 90
+        }
+    }
+}

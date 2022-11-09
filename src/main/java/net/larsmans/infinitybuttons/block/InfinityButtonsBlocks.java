@@ -12,6 +12,7 @@ import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
 import net.larsmans.infinitybuttons.block.custom.torch.*;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
+import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -322,7 +323,71 @@ public class InfinityButtonsBlocks {
             () -> new EmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
 
-    public static final RegistryObject<Block> SAFE_EMERGENCY_BUTTON = registerTorchBlock("safe_emergency_button",
+    public static final RegistryObject<Block> RED_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("red_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> ORANGE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("orange_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> YELLOW_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("yellow_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> LIME_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("lime_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> GREEN_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("green_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> CYAN_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("cyan_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("light_blue_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> BLUE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("blue_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> PURPLE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("purple_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> MAGENTA_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("magenta_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> PINK_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("pink_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> BROWN_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("brown_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> WHITE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("white_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("light_gray_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("gray_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> BLACK_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("black_safe_emergency_button",
+            () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> FANCY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButtonBlock("fancy_safe_emergency_button",
             () -> new SafeEmergencyButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
 
@@ -834,6 +899,12 @@ public class InfinityButtonsBlocks {
         return toReturn;
     }
 
+    private static <T extends Block>RegistryObject<T> registerSafeEmergencyButtonBlock(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerSafeEmergencyButtonItem(name, toReturn, InfinityButtonsItemGroup.INFINITYBUTTONS);
+        return toReturn;
+    }
+
     private static <T extends Block>RegistryObject<T> registerCompatBlock(String modid, String name, Supplier<T> block) {
         RegistryObject<T> toReturn = null;
         if (ModList.get().isLoaded(modid)) {
@@ -845,6 +916,10 @@ public class InfinityButtonsBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, ItemGroup group) {
         InfinityButtonsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().group(group)));
+    }
+    private static <T extends Block> void registerSafeEmergencyButtonItem(String name, RegistryObject<T> block, ItemGroup group) {
+        InfinityButtonsItems.ITEMS.register(name, () -> new SafeEmergencyButtonItem(block.get(),
                 new Item.Properties().group(group)));
     }
 
