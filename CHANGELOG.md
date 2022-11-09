@@ -1,20 +1,32 @@
 # Changelog Infinity Buttons
 
+## 2.2.0
+
+- Added Sand, Red Sand and Gravel Buttons. They can only be pressed once.
+- Added Safety Buttons in all colors. To unlock it, shift-click to open the glass casing.
+- Fixed Emergency Button breaking particles being black.
+
+Forge only:
+- Ported to 1.19.x!
+- Fixed an issue causing blocks to be unmineable. (1.18.2)
+- Expanded Quark Compat.
+
 ## 2.1.0
 
 - Added Fancy Emergency Button. Taste the rainbow!
 - Added Prismarine Buttons, which can be waterlogged.
 - Added shiny Diamond Buttons, just to flex.
+- The particles of the Diamond Buttons can be disabled in the config.
 - Torch Buttons and Levers can now be placed on the floor.
 - Piglins now get angry when you break Gold Buttons.
 - Fixed several bugs!
 
 Forge only:
 - Ported to 1.18.2!
-- Added Autumnity compat. (1.16.5 only)
+- Added Autumnity compat (1.16.5 only).
 - Added Nether's Delight compat.
 - Expanded Quark compat.
-- Fixed Endergetic recipes trying to load when not supposed to (1.16.5 only)
+- Fixed Endergetic recipes trying to load when not supposed to (1.16.5 only).
 
 ## 2.0.0
 
