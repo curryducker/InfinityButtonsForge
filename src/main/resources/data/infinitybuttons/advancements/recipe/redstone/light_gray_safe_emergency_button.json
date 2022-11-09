@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:glowstone_dust"
+              "minecraft:light_gray_dye"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "infinitybuttons:fancy_emergency_button"
+        "recipe": "infinitybuttons:light_gray_safe_emergency_button"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:fancy_emergency_button"
+      "infinitybuttons:light_gray_safe_emergency_button"
     ]
   }
 }
