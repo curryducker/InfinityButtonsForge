@@ -5,6 +5,7 @@
 - Added Sand, Red Sand and Gravel Buttons. They can only be pressed once.
 - Added Safety Buttons in all colors. To unlock it, shift-click to open the glass casing.
 - Fixed Emergency Button breaking particles being black.
+- Fixed Torch Buttons and Levers on the wall floating and breaking when not supposed to.
 
 Forge only:
 - Ported to 1.19.x!
