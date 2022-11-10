@@ -1,5 +1,9 @@
 # Changelog Infinity Buttons
 
+## 2.2.1
+
+- Fixed an issue causing Safety Buttons being unable to function on Dedicated Servers
+
 ## 2.2.0
 
 - Added Sand, Red Sand and Gravel Buttons. They can only be pressed once.
