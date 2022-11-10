@@ -2,7 +2,7 @@
 
 ## 2.2.1
 
-- Fixed an issue causing Safety Buttons being unable to function on Dedicated Servers
+- Fixed an issue causing Safety Buttons being unable to function on Dedicated Servers.
 
 ## 2.2.0
 
