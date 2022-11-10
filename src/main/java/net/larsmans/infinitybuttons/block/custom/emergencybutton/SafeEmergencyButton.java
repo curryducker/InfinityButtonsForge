@@ -196,7 +196,7 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
                 return ActionResultType.CONSUME;
             }
             case OPEN: {
-                if (Screen.hasShiftDown()) {
+                if (player.isSneaking()) {
                     this.closeCase(state, worldIn, pos);
                     this.playToggleSound(player, worldIn, pos, false);
                 } else {
@@ -209,7 +209,7 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
                 break;
             }
             case CLOSED: {
-                if (Screen.hasShiftDown()) {
+                if (player.isSneaking()) {
                     this.openCase(state, worldIn, pos);
                     this.playToggleSound(player, worldIn, pos, true);
                 } else {
