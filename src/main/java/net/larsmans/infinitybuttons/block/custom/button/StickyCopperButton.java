@@ -19,6 +19,8 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -69,6 +71,7 @@ public class StickyCopperButton extends AbstractButton {
     }
 
     @Override
+    @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (config.tooltips) {
             if(Screen.hasShiftDown()) {

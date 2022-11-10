@@ -122,6 +122,7 @@ public class DiamondButton extends AbstractButton{
     }
 
     @Override
+    @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (config.tooltips) {
             if(Screen.hasShiftDown()) {

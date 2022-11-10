@@ -10,6 +10,8 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -32,6 +34,7 @@ public class EmeraldButton extends AbstractButton {
     }
 
     @Override
+    @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (config.tooltips) {
             if(Screen.hasShiftDown()) {
