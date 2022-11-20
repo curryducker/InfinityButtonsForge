@@ -6,6 +6,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.loot.LootContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.*;
@@ -20,6 +22,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class HoglinMountButton extends HorizontalBlock {
@@ -155,5 +160,10 @@ public class HoglinMountButton extends HorizontalBlock {
             return Blocks.AIR.getDefaultState();
         }
         return stateIn;
+    }
+
+    @Override
+    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+        return new ArrayList<>(Collections.singleton(new ItemStack(this)));
     }
 }
