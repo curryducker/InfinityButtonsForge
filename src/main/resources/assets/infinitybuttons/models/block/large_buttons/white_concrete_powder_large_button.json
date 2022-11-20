@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button",
+  "textures": {
+    "texture": "minecraft:block/white_concrete_powder"
+  }
+}
