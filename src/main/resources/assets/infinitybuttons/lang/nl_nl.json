@@ -250,6 +250,8 @@
   "itemGroup.infinityButtonsTab": "Infinity Buttons",
   "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",
 
+  "infinitybuttons.actionbar.closed_safety_button": "Houd shift ingedrukt om open en dicht te maken",
+
   "text.autoconfig.infinitybuttons.option.alarmSound": "Alarmgeluid",
   "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "Of de noodknoppen een alarmgeluid maken",
   "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",

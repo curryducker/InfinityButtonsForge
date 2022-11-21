@@ -250,6 +250,8 @@
   "itemGroup.infinityButtonsTab": "Infinity Buttons",
   "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",
 
+  "infinitybuttons.actionbar.closed_safety_button": "To open and close case, hold shift",
+
   "text.autoconfig.infinitybuttons.option.alarmSound": "Alarm Sound",
   "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "Whether the Emergency Buttons will make an alarm sound",
   "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",
