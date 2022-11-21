@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "minecraft:green_concrete_powder"}],
+  "result": {
+    "item": "infinitybuttons:green_concrete_powder_button",
+    "count": 4
+  }
+}

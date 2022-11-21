@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "infinitybuttons:black_concrete_powder_button"},{"item": "infinitybuttons:black_concrete_powder_button"}],
+  "result": {
+    "item": "infinitybuttons:black_concrete_powder_large_button",
+    "count": 1
+  }
+}
