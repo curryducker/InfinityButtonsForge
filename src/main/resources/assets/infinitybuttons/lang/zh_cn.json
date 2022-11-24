@@ -1,4 +1,7 @@
 {
+  "block.infinitybuttons.andesite_button": "Andesite Button",
+  "block.infinitybuttons.granite_button": "Granite Button",
+  "block.infinitybuttons.diorite_button": "Diorite Button",
   "block.infinitybuttons.copper_button": "铜质按钮",
   "block.infinitybuttons.exposed_copper_button": "斑驳的铜质按钮",
   "block.infinitybuttons.weathered_copper_button": "锈蚀的铜质按钮",
@@ -43,6 +46,9 @@
   "block.infinitybuttons.warped_large_button": "诡异木大按钮",
   "block.infinitybuttons.crimson_large_button": "绯红木大按钮",
   "block.infinitybuttons.stone_large_button": "石质大按钮",
+  "block.infinitybuttons.andesite_large_button": "Andesite Large Button",
+  "block.infinitybuttons.granite_large_button": "Granite Large Button",
+  "block.infinitybuttons.diorite_large_button": "Diorite Large Button",
   "block.infinitybuttons.polished_blackstone_large_button": "磨制黑石大按钮",
   "block.infinitybuttons.copper_large_button": "铜质大按钮",
   "block.infinitybuttons.exposed_copper_large_button": "斑驳的铜质大按钮",

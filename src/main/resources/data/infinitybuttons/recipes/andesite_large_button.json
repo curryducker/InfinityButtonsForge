@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinitybuttons:andesite_button"
+    },
+    {
+      "item": "infinitybuttons:andesite_button"
+    }
+  ],
+  "result": {
+    "item": "infinitybuttons:andesite_large_button",
+    "count": 1
+  }
+}

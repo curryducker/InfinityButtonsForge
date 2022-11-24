@@ -17,10 +17,7 @@ import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -45,6 +42,18 @@ public class InfinityButtonsBlocks {
     /**
      * Buttons
      */
+
+    public static final RegistryObject<Block> ANDESITE_BUTTON = registerBlock("andesite_button",
+            () -> new StoneButtonBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> GRANITE_BUTTON = registerBlock("granite_button",
+            () -> new StoneButtonBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> DIORITE_BUTTON = registerBlock("diorite_button",
+            () -> new StoneButtonBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> COPPER_BUTTON = registerBlock("copper_button",
             () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -220,11 +229,23 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> STONE_LARGE_BUTTON = registerBlock("stone_large_button",
             () -> new StoneLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> ANDESITE_LARGE_BUTTON = registerBlock("andesite_large_button",
+            () -> new StoneLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> GRANITE_LARGE_BUTTON = registerBlock("granite_large_button",
+            () -> new StoneLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> DIORITE_LARGE_BUTTON = registerBlock("diorite_large_button",
+            () -> new StoneLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> POLISHED_BLACKSTONE_LARGE_BUTTON = registerBlock("polished_blackstone_large_button",
             () -> new StoneLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> COPPER_LARGE_BUTTON = registerBlock("copper_large_button",
             () -> new CopperLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)

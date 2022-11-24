@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinitybuttons:diorite_button"
+    },
+    {
+      "item": "infinitybuttons:diorite_button"
+    }
+  ],
+  "result": {
+    "item": "infinitybuttons:diorite_large_button",
+    "count": 1
+  }
+}

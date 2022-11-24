@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:granite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinitybuttons:granite_button",
+      "infinitybuttons:granite_large_button"
+    ]
+  }
+}

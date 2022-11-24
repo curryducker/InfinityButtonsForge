@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:andesite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinitybuttons:andesite_button",
+      "infinitybuttons:andesite_large_button"
+    ]
+  }
+}

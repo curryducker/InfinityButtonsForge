@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:diorite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinitybuttons:diorite_button",
+      "infinitybuttons:diorite_large_button"
+    ]
+  }
+}

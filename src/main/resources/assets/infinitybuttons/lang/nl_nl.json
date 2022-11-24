@@ -1,4 +1,7 @@
 {
+  "block.infinitybuttons.andesite_button": "Andesieten knop",
+  "block.infinitybuttons.granite_button": "Granieten knop",
+  "block.infinitybuttons.diorite_button": "Diorieten knop",
   "block.infinitybuttons.copper_button": "Koperen knop",
   "block.infinitybuttons.exposed_copper_button": "Blootgestelde koperen knop",
   "block.infinitybuttons.weathered_copper_button": "Verweerde koperen knop",
@@ -43,6 +46,9 @@
   "block.infinitybuttons.warped_large_button": "Spookachtige houten grote knop",
   "block.infinitybuttons.crimson_large_button": "Helrode houten grote knop",
   "block.infinitybuttons.stone_large_button": "Stenen grote knop",
+  "block.infinitybuttons.andesite_large_button": "Andesieten grote knop",
+  "block.infinitybuttons.granite_large_button": "Granieten grote knop",
+  "block.infinitybuttons.diorite_large_button": "Diorieten grote knop",
   "block.infinitybuttons.polished_blackstone_large_button": "Gepolijste zwartstenen grote knop",
   "block.infinitybuttons.copper_large_button": "Koperen grote knop",
   "block.infinitybuttons.exposed_copper_large_button": "Bloodgestelde koperen grote knop",

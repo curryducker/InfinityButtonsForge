@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "infinitybuttons:andesite_button",
+    "infinitybuttons:granite_button",
+    "infinitybuttons:diorite_button",
     "infinitybuttons:copper_button",
     "infinitybuttons:exposed_copper_button",
     "infinitybuttons:weathered_copper_button",

@@ -1,4 +1,7 @@
 {
+  "block.infinitybuttons.andesite_button": "Andesite Button",
+  "block.infinitybuttons.granite_button": "Granite Button",
+  "block.infinitybuttons.diorite_button": "Diorite Button",
   "block.infinitybuttons.copper_button": "Copper Button",
   "block.infinitybuttons.exposed_copper_button": "Exposed Copper Button",
   "block.infinitybuttons.weathered_copper_button": "Weathered Copper Button",
@@ -43,6 +46,9 @@
   "block.infinitybuttons.warped_large_button": "Warped Large Button",
   "block.infinitybuttons.crimson_large_button": "Crimson Large Button",
   "block.infinitybuttons.stone_large_button": "Stone Large Button",
+  "block.infinitybuttons.andesite_large_button": "Andesite Large Button",
+  "block.infinitybuttons.granite_large_button": "Granite Large Button",
+  "block.infinitybuttons.diorite_large_button": "Diorite Large Button",
   "block.infinitybuttons.polished_blackstone_large_button": "Polished Blackstone Large Button",
   "block.infinitybuttons.copper_large_button": "Copper Large Button",
   "block.infinitybuttons.exposed_copper_large_button": "Exposed Copper Large Button",
