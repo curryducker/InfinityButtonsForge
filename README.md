@@ -31,10 +31,11 @@ Infinity Buttons is a mod which adds exciting new buttons!
 ### Important!
 
 **Fabric:**  
-[oωo lib](https://modrinth.com/mod/owo-lib) is required!
+- [oωo lib](https://modrinth.com/mod/owo-lib) is required!
 
 **Forge:**  
-[Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) is required!  
+- [Cloth Config API](https://www.curseforge.com/minecraft/mc-mods/cloth-config) is required!  
+
 Can be played without, but has additional content with:
 - [Quark](https://quarkmod.net/)
 - [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental) (1.16.5 only)
@@ -45,7 +46,8 @@ Can be played without, but has additional content with:
 ### GitHub links
 
 **Fabric:** 
-- 1.19: [https://github.com/LarsMans64/InfinityButtons](https://github.com/LarsMans64/InfinityButtons)  
+- 1.19.x: [https://github.com/LarsMans64/InfinityButtons](https://github.com/LarsMans64/InfinityButtons)
+- 1.18.2: [https://github.com/LarsMans64/InfinityButtons1.18.2](https://github.com/LarsMans64/InfinityButtons1.18.2)
 
 **Forge:**
 - 1.16.5: [https://github.com/curryducker/InfinityButtonsForge](https://github.com/curryducker/InfinityButtonsForge)  
@@ -54,18 +56,18 @@ Can be played without, but has additional content with:
 
 ## Images
 
-Large Buttons
+#### Large Buttons
 ![Large Wooden Buttons](https://i.imgur.com/2EZ3uxb.png)
 
-New Materials
+#### New Materials
 ![New Materials](https://i.imgur.com/JhtUeLK.png)
 
-Red Emergency Button
+#### Red Emergency Button
 ![Emergency Button](https://i.imgur.com/jkStdkN.png)
 
-Secret Button
+#### Secret Button
 ![Secret Button](https://i.imgur.com/AsBxaGF.png)
 
-Torch Buttons
+#### Torch Buttons
 ![Torch Buttons](https://i.imgur.com/eMpZxGw.png)
 
