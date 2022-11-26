@@ -560,6 +560,10 @@ public class InfinityButtonsBlocks {
             () -> new BookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> MAPLE_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("autumnity", "maple_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> BAMBOO_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("bamboo_blocks", "bamboo_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
