@@ -2,39 +2,36 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "environmental"
+      "modid": "bamboo_blocks"
+    }, {
+      "type": "forge:mod_loaded",
+      "modid": "endergetic"
     }
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_planks": {
+    "has_bamboo": {
       "conditions": {
         "items": [
           {
             "items": [
-              "environmental:wisteria_planks"
+              "minecraft:bamboo"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "infinitybuttons:wisteria_large_button"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_planks",
-      "has_the_recipe"
+      "has_bamboo"
     ]
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:wisteria_large_button"
+      "infinitybuttons:ender_bamboo_torch_button",
+      "infinitybuttons:ender_bamboo_torch_lever"
     ]
   }
 }
