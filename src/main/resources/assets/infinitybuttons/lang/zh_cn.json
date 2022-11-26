@@ -84,11 +84,13 @@
   "block.infinitybuttons.light_gray_concrete_powder_large_button": "Light Gray Concrete Powder Large Button",
   "block.infinitybuttons.gray_concrete_powder_large_button": "Gray Concrete Powder Large Button",
   "block.infinitybuttons.black_concrete_powder_large_button": "Black Concrete Powder Large Button",
+
   "block.infinitybuttons.willow_large_button": "Willow Large Button",
   "block.infinitybuttons.cherry_large_button": "Cherry Large Button",
   "block.infinitybuttons.wisteria_large_button": "Wisteria Large Button",
   "block.infinitybuttons.poise_large_button": "Poise Large Button",
   "block.infinitybuttons.maple_large_button":  "Maple Large Button",
+  "block.infinitybuttons.bamboo_large_button":  "Bamboo Large Button",
 
   "block.infinitybuttons.red_emergency_button": "红色紧急按钮",
   "block.infinitybuttons.orange_emergency_button": "橙色紧急按钮",
@@ -127,6 +129,8 @@
   "block.infinitybuttons.fancy_safe_emergency_button": "\u00A7cF\u00A76a\u00A7en\u00A7ac\u00A7by \u00A79S\u00A7da\u00A7cf\u00A76e\u00A7et\u00A7ay \u00A7bB\u00A79u\u00A7dt\u00A7ct\u00A76o\u00A7en",
 
   "block.infinitybuttons.bookshelf_secret_button": "书架隐蔽按钮",
+  "block.infinitybuttons.bamboo_bookshelf_secret_button": "Bamboo Bookshelf Secret Button",
+
   "block.infinitybuttons.stone_brick_secret_button": "石砖隐蔽按钮",
   "block.infinitybuttons.mossy_stone_brick_secret_button": "苔石砖隐蔽按钮",
   "block.infinitybuttons.cracked_stone_brick_secret_button": "裂纹石砖隐蔽按钮",
@@ -198,16 +202,19 @@
   "block.infinitybuttons.chiseled_red_terracotta_brick_secret_button": "Chiseled Red Terracotta Brick Secret Button",
   "block.infinitybuttons.black_terracotta_brick_secret_button": "Black Terracotta Brick Secret Button",
   "block.infinitybuttons.chiseled_black_terracotta_brick_secret_button": "Chiseled Black Terracotta Brick Secret Button",
-  "block.infinitybuttons.willow_plank_secret_button": "Willow Plank Secret Button",
-  "block.infinitybuttons.cherry_plank_secret_button": "Cherry Plank Secret Button",
-  "block.infinitybuttons.wisteria_plank_secret_button": "Wisteria Plank Secret Button",
   "block.infinitybuttons.chiseled_end_stone_brick_secret_button": "Chiseled End Stone Brick Secret Button",
   "block.infinitybuttons.chiseled_eumus_brick_secret_button": "Chiseled Eumus Brick Secret Button",
   "block.infinitybuttons.cracked_end_stone_brick_secret_button": "Cracked End Stone Brick Secret Button",
   "block.infinitybuttons.cracked_eumus_brick_secret_button": "Cracked Eumus Brick Secret Button",
   "block.infinitybuttons.eumus_brick_secret_button": "Eumus Brick Secret Button",
+
+
+  "block.infinitybuttons.willow_plank_secret_button": "Willow Plank Secret Button",
+  "block.infinitybuttons.cherry_plank_secret_button": "Cherry Plank Secret Button",
+  "block.infinitybuttons.wisteria_plank_secret_button": "Wisteria Plank Secret Button",
   "block.infinitybuttons.poise_plank_secret_button": "Poise Plank Secret Button",
   "block.infinitybuttons.maple_plank_secret_button":  "Maple Plank Secret Button",
+  "block.infinitybuttons.bamboo_plank_secret_button":  "Bamboo Plank Secret Button",
 
   "block.infinitybuttons.permafrost_brick_secret_button": "Permafrost Brick Secret Button",
   "block.infinitybuttons.sandy_brick_secret_button": "Sandy Brick Secret Button",
@@ -236,6 +243,12 @@
   "block.infinitybuttons.ender_torch_lever": "Ender Torch Lever",
   "block.infinitybuttons.propelplant_torch_button": "Propelplant Torch Button",
   "block.infinitybuttons.propelplant_torch_lever": "Propelplant Torch Lever",
+  "block.infinitybuttons.bamboo_torch_button": "Bamboo Torch Button",
+  "block.infinitybuttons.bamboo_torch_lever": "Bamboo Torch Lever",
+  "block.infinitybuttons.soul_bamboo_torch_button": "Soul Bamboo Torch Button",
+  "block.infinitybuttons.soul_bamboo_torch_lever": "Soul Bamboo Torch Lever",
+  "block.infinitybuttons.ender_bamboo_torch_button": "Ender Bamboo Torch Button",
+  "block.infinitybuttons.ender_bamboo_torch_lever": "Ender Bamboo Torch Lever",
 
   "infinitybuttons.subtitle.alarm": "警铃大作",
   "infinitybuttons.subtitle.stone_scrape": "石头刮擦",

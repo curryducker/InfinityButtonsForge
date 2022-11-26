@@ -1,0 +1,41 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bamboo_blocks"
+    }, {
+      "type": "forge:mod_loaded",
+      "modid": "endergetic"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bamboo": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bamboo"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_bamboo"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinitybuttons:bamboo_torch_button",
+      "infinitybuttons:bamboo_torch_lever",
+      "infinitybuttons:soul_bamboo_torch_button",
+      "infinitybuttons:soul_bamboo_torch_lever",
+      "infinitybuttons:ender_bamboo_torch_button",
+      "infinitybuttons:ender_bamboo_torch_lever"
+    ]
+  }
+}

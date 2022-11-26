@@ -1,0 +1,7 @@
+{
+  "ambientocclusion": false,
+ "parent": "infinitybuttons:block/bamboo_torch_pressed",
+  "textures": {
+    "torch": "bamboo_blocks:block/bamboo_torch_size0"
+  }
+}

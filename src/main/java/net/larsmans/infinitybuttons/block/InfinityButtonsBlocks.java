@@ -13,6 +13,7 @@ import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.*;
 import net.larsmans.infinitybuttons.block.custom.torch.*;
 import net.larsmans.infinitybuttons.block.custom.torch.compat.*;
+import net.larsmans.infinitybuttons.block.custom.torch.compat.bamboo.*;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
@@ -383,6 +384,8 @@ public class InfinityButtonsBlocks {
             () -> new FallingLargeButton(false, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.SAND)));
 
+    // Compat Large Buttons
+
     public static final RegistryObject<Block> WILLOW_LARGE_BUTTON = registerCompatBlock("environmental", "willow_large_button",
             () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
@@ -400,6 +403,10 @@ public class InfinityButtonsBlocks {
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> MAPLE_LARGE_BUTTON = registerCompatBlock("autumnity", "maple_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BAMBOO_LARGE_BUTTON = registerCompatBlock("bamboo_blocks", "bamboo_large_button",
             () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
@@ -547,9 +554,17 @@ public class InfinityButtonsBlocks {
      * Secret Buttons
      */
 
+    // Bookshelf
+
     public static final RegistryObject<Block> BOOKSHELF_SECRET_BUTTON = registerBlock("bookshelf_secret_button",
             () -> new BookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BAMBOO_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("bamboo_blocks", "bamboo_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    // Other
 
     public static final RegistryObject<Block> STONE_BRICK_SECRET_BUTTON = registerBlock("stone_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
@@ -815,26 +830,6 @@ public class InfinityButtonsBlocks {
             () -> new ChiseledCompatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK_TERRACOTTA)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
 
-    public static final RegistryObject<Block> WILLOW_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "willow_plank_secret_button",
-            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> CHERRY_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "cherry_plank_secret_button",
-            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> WISTERIA_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "wisteria_plank_secret_button",
-            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WHITE_TERRACOTTA)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> POISE_PLANK_SECRET_BUTTON = registerCompatBlock("endergetic", "poise_plank_secret_button",
-            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE_TERRACOTTA)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
-    public static final RegistryObject<Block> MAPLE_PLANK_SECRET_BUTTON = registerCompatBlock("autumnity", "maple_plank_secret_button",
-            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.ORANGE_TERRACOTTA)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
-
     public static final RegistryObject<Block> CHISELED_END_STONE_BRICK_SECRET_BUTTON = registerCompatBlock("endergetic", "chiseled_end_stone_brick_secret_button",
             () -> new ChiseledEndStoneBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
@@ -920,6 +915,32 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> BIOTITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "biotite_brick_secret_button",
             () -> new BigCompatSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    // Compat Plank Secret Button
+
+    public static final RegistryObject<Block> WILLOW_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "willow_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CHERRY_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "cherry_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WISTERIA_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "wisteria_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WHITE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> POISE_PLANK_SECRET_BUTTON = registerCompatBlock("endergetic", "poise_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> MAPLE_PLANK_SECRET_BUTTON = registerCompatBlock("autumnity", "maple_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.ORANGE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BAMBOO_PLANK_SECRET_BUTTON = registerCompatBlock("bamboo_blocks", "bamboo_plank_secret_button",
+            () -> new BambooPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.25f, 3.5f).notSolid().sound(SoundType.WOOD)));
 
     /**
      * Misc
@@ -1039,6 +1060,68 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> PROPELPLANT_WALL_TORCH_LEVER = registerCompatTorchBlock("nethers_delight", "propelplant_wall_torch_lever",
             () -> new PropelWallTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
                 return 12;
+            }).sound(SoundType.WOOD)));
+
+    // Bamboo
+
+    public static final RegistryObject<Block> BAMBOO_TORCH_BUTTON = registerCompatTorchBlock("bamboo_blocks", "bamboo_torch_button",
+            () -> new BambooTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BAMBOO_WALL_TORCH_BUTTON = registerCompatTorchBlock("bamboo_blocks", "bamboo_wall_torch_button",
+            () -> new BambooWallTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BAMBOO_TORCH_LEVER = registerCompatTorchBlock("bamboo_blocks", "bamboo_torch_lever",
+            () -> new BambooTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BAMBOO_WALL_TORCH_LEVER = registerCompatTorchBlock("bamboo_blocks", "bamboo_wall_torch_lever",
+            () -> new BambooWallTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> SOUL_BAMBOO_TORCH_BUTTON = registerCompatTorchBlock("bamboo_blocks", "soul_bamboo_torch_button",
+            () -> new SoulBambooTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 10;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> SOUL_BAMBOO_WALL_TORCH_BUTTON = registerCompatTorchBlock("bamboo_blocks", "soul_bamboo_wall_torch_button",
+            () -> new SoulBambooWallTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 10;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> SOUL_BAMBOO_TORCH_LEVER = registerCompatTorchBlock("bamboo_blocks", "soul_bamboo_torch_lever",
+            () -> new SoulBambooTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 10;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> SOUL_BAMBOO_WALL_TORCH_LEVER = registerCompatTorchBlock("bamboo_blocks", "soul_bamboo_wall_torch_lever",
+            () -> new SoulBambooWallTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 10;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ENDER_BAMBOO_TORCH_BUTTON = registerCompatTorchBlock("bamboo_blocks", "ender_bamboo_torch_button",
+            () -> new EnderBambooTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ENDER_BAMBOO_WALL_TORCH_BUTTON = registerCompatTorchBlock("bamboo_blocks", "ender_bamboo_wall_torch_button",
+            () -> new EnderBambooWallTorchButton(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ENDER_BAMBOO_TORCH_LEVER = registerCompatTorchBlock("bamboo_blocks", "ender_bamboo_torch_lever",
+            () -> new EnderBambooTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
+            }).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ENDER_BAMBOO_WALL_TORCH_LEVER = registerCompatTorchBlock("bamboo_blocks", "ender_bamboo_wall_torch_lever",
+            () -> new EnderBambooWallTorchLever(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
+                return 14;
             }).sound(SoundType.WOOD)));
 
     /**

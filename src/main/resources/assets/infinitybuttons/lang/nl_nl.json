@@ -84,11 +84,13 @@
   "block.infinitybuttons.light_gray_concrete_powder_large_button": "Grote lichtgrijze cementknop",
   "block.infinitybuttons.gray_concrete_powder_large_button": "Grote grijze cementknop",
   "block.infinitybuttons.black_concrete_powder_large_button": "Grote zwarte cementknop",
+
   "block.infinitybuttons.willow_large_button": "Wilgenhouten grote knop",
   "block.infinitybuttons.cherry_large_button": "Kersenhouten grote knop",
   "block.infinitybuttons.wisteria_large_button": "Blauweregenhouten grote knop",
   "block.infinitybuttons.poise_large_button": "Zweefhouten grote knop",
   "block.infinitybuttons.maple_large_button":  "Esdoornhouten grote knop",
+  "block.infinitybuttons.bamboo_large_button":  "Bamboe grote knop",
 
   "block.infinitybuttons.red_emergency_button": "Rode noodknop",
   "block.infinitybuttons.orange_emergency_button": "Oranje noodknop",
@@ -127,6 +129,8 @@
   "block.infinitybuttons.fancy_safe_emergency_button": "\u00A7cG\u00A76r\u00A7ea\u00A7ac\u00A7bi\u00A79e\u00A7du\u00A7cz\u00A76e \u00A7ev\u00A7ae\u00A7bi\u00A79l\u00A7di\u00A7cg\u00A76h\u00A7ee\u00A7ai\u00A7bd\u00A79s\u00A7dk\u00A7cn\u00A76o\u00A7ep",
 
   "block.infinitybuttons.bookshelf_secret_button": "Boekenkast verborgen knop",
+  "block.infinitybuttons.bamboo_bookshelf_secret_button": "Bamboe boekenkast verborgen knop",
+
   "block.infinitybuttons.stone_brick_secret_button": "Blokstenen verborgen knop",
   "block.infinitybuttons.mossy_stone_brick_secret_button": "Mossig blokstenen verborgen knop",
   "block.infinitybuttons.cracked_stone_brick_secret_button": "Gebarsten blokstenen verborgen knop",
@@ -198,16 +202,18 @@
   "block.infinitybuttons.chiseled_red_terracotta_brick_secret_button": "Gebeiteld rode terracotta bakstenen verborgen knop",
   "block.infinitybuttons.black_terracotta_brick_secret_button": "Zwarte terracotta bakstenen verborgen knop",
   "block.infinitybuttons.chiseled_black_terracotta_brick_secret_button": "Gebeiteld zwarte terracotta bakstenen verborgen knop",
-  "block.infinitybuttons.willow_plank_secret_button": "Wilgenhouten planken verborgen knop",
-  "block.infinitybuttons.cherry_plank_secret_button": "Kersenhouten planken verborgen knop",
-  "block.infinitybuttons.wisteria_plank_secret_button": "Blauweregenhouten planken verborgen knop",
   "block.infinitybuttons.chiseled_end_stone_brick_secret_button": "Gebeiteld endblokstenen verborgen knop",
   "block.infinitybuttons.chiseled_eumus_brick_secret_button": "Gebeiteld eumusblokstenen verborgen knop",
   "block.infinitybuttons.cracked_end_stone_brick_secret_button": "Gebarsten endblokstenen verborgen knop",
   "block.infinitybuttons.cracked_eumus_brick_secret_button": "Gebarsten eumusblokstenen verborgen knop",
   "block.infinitybuttons.eumus_brick_secret_button": "Eumusblokstenen verborgen knop",
+
+  "block.infinitybuttons.willow_plank_secret_button": "Wilgenhouten planken verborgen knop",
+  "block.infinitybuttons.cherry_plank_secret_button": "Kersenhouten planken verborgen knop",
+  "block.infinitybuttons.wisteria_plank_secret_button": "Blauweregenhouten planken verborgen knop",
   "block.infinitybuttons.poise_plank_secret_button": "Zweefhouten planken verborgen knop",
   "block.infinitybuttons.maple_plank_secret_button":  "Esdoornhouten planken verborgen knop",
+  "block.infinitybuttons.bamboo_plank_secret_button":  "Bamboeplanken verborgen knop",
 
   "block.infinitybuttons.permafrost_brick_secret_button": "Permafrostblokstenen verborgen knop",
   "block.infinitybuttons.sandy_brick_secret_button": "Zanderige bakstenen verborgen knop",
@@ -236,6 +242,12 @@
   "block.infinitybuttons.ender_torch_lever": "Enderfakkelhendel",
   "block.infinitybuttons.propelplant_torch_button": "Propelplantfakkelknop",
   "block.infinitybuttons.propelplant_torch_lever": "Propelplantfakkelhendel",
+  "block.infinitybuttons.bamboo_torch_button": "Bamboefakkelknop",
+  "block.infinitybuttons.bamboo_torch_lever": "Bamboefakkelhendel",
+  "block.infinitybuttons.soul_bamboo_torch_button": "Zielenbamboefakkelknop",
+  "block.infinitybuttons.soul_bamboo_torch_lever": "Zielenbamboefakkelhendel",
+  "block.infinitybuttons.ender_bamboo_torch_button": "Enderbamboefakkelknop",
+  "block.infinitybuttons.ender_bamboo_torch_lever": "Enderbamboefakkelhendel",
 
   "infinitybuttons.subtitle.alarm": "Alarm gaat af",
   "infinitybuttons.subtitle.stone_scrape": "Steen verschuift",

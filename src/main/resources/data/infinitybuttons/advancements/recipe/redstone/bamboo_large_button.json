@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bamboo_blocks"
+    }
+  ],
   "parent": "minecraft:recipes/root",
   "criteria": {
     "has_planks": {
@@ -6,7 +12,7 @@
         "items": [
           {
             "items": [
-              "minecraft:stone_pickaxe"
+              "bamboo_blocks:bamboo_planks"
             ]
           }
         ]
@@ -15,7 +21,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "infinitybuttons:torch_lever"
+        "recipe": "infinitybuttons:bamboo_large_button"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +34,7 @@
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:torch_lever"
+      "infinitybuttons:bamboo_large_button"
     ]
   }
 }

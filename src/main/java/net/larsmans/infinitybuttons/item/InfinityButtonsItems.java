@@ -51,6 +51,26 @@ public class InfinityButtonsItems {
     public static final RegistryObject<Item> PROPELPLANT_TORCH_LEVER = registerCompatItem("nethers_delight", "propelplant_torch_lever",
             () -> new WallOrFloorItem(InfinityButtonsBlocks.PROPELPLANT_TORCH_LEVER.get(), InfinityButtonsBlocks.PROPELPLANT_WALL_TORCH_LEVER.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONSCOMPAT)));
 
+    // Bamboo
+
+    public static final RegistryObject<Item> BAMBOO_TORCH_BUTTON = registerCompatItem("bamboo_blocks", "bamboo_torch_button",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.BAMBOO_TORCH_BUTTON.get(), InfinityButtonsBlocks.BAMBOO_WALL_TORCH_BUTTON.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONSCOMPAT)));
+
+    public static final RegistryObject<Item> BAMBOO_TORCH_LEVER = registerCompatItem("bamboo_blocks", "bamboo_torch_lever",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.BAMBOO_TORCH_LEVER.get(), InfinityButtonsBlocks.BAMBOO_WALL_TORCH_LEVER.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONSCOMPAT)));
+
+    public static final RegistryObject<Item> SOUL_BAMBOO_TORCH_BUTTON = registerCompatItem("bamboo_blocks", "soul_bamboo_torch_button",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.SOUL_BAMBOO_TORCH_BUTTON.get(), InfinityButtonsBlocks.SOUL_BAMBOO_WALL_TORCH_BUTTON.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONSCOMPAT)));
+
+    public static final RegistryObject<Item> SOUL_BAMBOO_TORCH_LEVER = registerCompatItem("bamboo_blocks", "soul_bamboo_torch_lever",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.SOUL_BAMBOO_TORCH_LEVER.get(), InfinityButtonsBlocks.SOUL_BAMBOO_WALL_TORCH_LEVER.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONSCOMPAT)));
+
+    public static final RegistryObject<Item> ENDER_BAMBOO_TORCH_BUTTON = registerCompatItem("bamboo_blocks", "ender_bamboo_torch_button",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.ENDER_BAMBOO_TORCH_BUTTON.get(), InfinityButtonsBlocks.ENDER_BAMBOO_WALL_TORCH_BUTTON.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONSCOMPAT)));
+
+    public static final RegistryObject<Item> ENDER_BAMBOO_TORCH_LEVER = registerCompatItem("bamboo_blocks", "ender_bamboo_torch_lever",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.ENDER_BAMBOO_TORCH_LEVER.get(), InfinityButtonsBlocks.ENDER_BAMBOO_WALL_TORCH_LEVER.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONSCOMPAT)));
+
     /**
      * Methods
      */

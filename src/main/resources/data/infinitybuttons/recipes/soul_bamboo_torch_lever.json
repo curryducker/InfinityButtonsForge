@@ -1,0 +1,37 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bamboo_blocks"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:bamboo"
+    },
+    "S": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    },
+    "X": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ],
+    "Y": {
+      "item": "minecraft:lever"
+    }
+  },
+  "pattern": [
+    " X",
+    "Y#",
+    " S"
+  ],
+  "result": {
+    "count": 4,
+    "item": "infinitybuttons:soul_bamboo_torch_lever"
+  }
+}

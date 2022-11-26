@@ -13,6 +13,12 @@
     "infinitybuttons:ender_torch_button",
     "infinitybuttons:ender_torch_lever",
     "infinitybuttons:propelplant_torch_button",
-    "infinitybuttons:propelplant_torch_lever"
+    "infinitybuttons:propelplant_torch_lever",
+    "infinitybuttons:bamboo_torch_button",
+    "infinitybuttons:bamboo_torch_lever",
+    "infinitybuttons:soul_bamboo_torch_button",
+    "infinitybuttons:soul_bamboo_torch_lever",
+    "infinitybuttons:ender_bamboo_torch_button",
+    "infinitybuttons:ender_bamboo_torch_lever"
   ]
 }

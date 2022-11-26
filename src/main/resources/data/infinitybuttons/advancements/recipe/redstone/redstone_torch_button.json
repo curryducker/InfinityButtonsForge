@@ -12,23 +12,17 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "infinitybuttons:redstone_torch_button"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_redstone",
-      "has_the_recipe"
+      "has_redstone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:redstone_torch_button"
+      "infinitybuttons:redstone_torch_button",
+      "infinitybuttons:redstone_torch_lever"
     ]
   }
 }

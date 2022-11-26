@@ -55,6 +55,20 @@ public class InfinityButtonsClient {
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_TORCH_LEVER.get(), RenderType.getCutout());
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             }
+            if (ModList.get().isLoaded("bamboo_blocks")) {
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+            }
         });
     }
 }

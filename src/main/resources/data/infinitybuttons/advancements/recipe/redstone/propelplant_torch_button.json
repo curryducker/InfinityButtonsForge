@@ -6,29 +6,23 @@
         "items": [
           {
             "items": [
-              "nethers_delight:propelplant_torch"
+              "nethers_delight:propelplant_cane"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "infinitybuttons:propelplant_torch_button"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_planks",
-      "has_the_recipe"
+      "has_planks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:propelplant_torch_button"
+      "infinitybuttons:propelplant_torch_button",
+      "infinitybuttons:propelplant_torch_lever"
     ]
   }
 }
