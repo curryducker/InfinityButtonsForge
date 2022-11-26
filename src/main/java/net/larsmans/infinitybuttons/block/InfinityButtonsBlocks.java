@@ -560,6 +560,18 @@ public class InfinityButtonsBlocks {
             () -> new BookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> WILLOW_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("environmental", "willow_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CHERRY_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("environmental", "cherry_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WISTERIA_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("environmental", "wisteria_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> POISE_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("endergetic", "poise_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
