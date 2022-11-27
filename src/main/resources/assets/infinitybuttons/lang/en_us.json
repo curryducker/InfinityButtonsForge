@@ -244,6 +244,15 @@
   "block.infinitybuttons.polished_voidstone_brick_secret_button": "Polished Voidstone Brick Secret Button",
   "block.infinitybuttons.biotite_brick_secret_button": "Biotite Brick Secret Button",
 
+  "block.infinitybuttons.chiseled_polished_andesite_brick_secret_button": "Chiseled Polished Andesite Brick Secret Button",
+  "block.infinitybuttons.chiseled_polished_granite_brick_secret_button": "Chiseled Polished Granite Brick Secret Button",
+  "block.infinitybuttons.chiseled_polished_diorite_brick_secret_button": "Chiseled Polished Diorite Brick Secret Button",
+  "block.infinitybuttons.chiseled_polished_marble_brick_secret_button": "Chiseled Polished Marble Brick Secret Button",
+  "block.infinitybuttons.chiseled_polished_limestone_brick_secret_button": "Chiseled Polished Limestone Brick Secret Button",
+  "block.infinitybuttons.chiseled_polished_jasper_brick_secret_button": "Chiseled Polished Jasper Brick Secret Button",
+  "block.infinitybuttons.chiseled_polished_slate_brick_secret_button": "Chiseled Polished Slate Brick Secret Button",
+  "block.infinitybuttons.chiseled_polished_voidstone_brick_secret_button": "Chiseled Polished Voidstone Brick Secret Button",
+
   "block.infinitybuttons.torch_button": "Torch Button",
   "block.infinitybuttons.torch_lever": "Torch Lever",
   "block.infinitybuttons.soul_torch_button": "Soul Torch Button",

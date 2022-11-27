@@ -964,6 +964,38 @@ public class InfinityButtonsBlocks {
             () -> new BigCompatSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
+    public static final RegistryObject<Block> CHISELED_POLISHED_ANDESITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_andesite_brick_secret_button",
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_GRANITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_granite_brick_secret_button",
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.DIRT)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_DIORITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_diorite_brick_secret_button",
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_MARBLE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_marble_brick_secret_button",
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_LIMESTONE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_limestone_brick_secret_button",
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_JASPER_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_jasper_brick_secret_button",
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.RED_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_SLATE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_slate_brick_secret_button",
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ICE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_VOIDSTONE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_voidstone_brick_secret_button",
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
     // Compat Plank Secret Button
 
     public static final RegistryObject<Block> WILLOW_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "willow_plank_secret_button",

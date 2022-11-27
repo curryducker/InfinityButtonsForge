@@ -197,6 +197,15 @@
     "infinitybuttons:polished_jasper_brick_secret_button",
     "infinitybuttons:polished_slate_brick_secret_button",
     "infinitybuttons:polished_voidstone_brick_secret_button",
-    "infinitybuttons:biotite_brick_secret_button"
+    "infinitybuttons:biotite_brick_secret_button",
+
+    "infinitybuttons:chiseled_polished_andesite_brick_secret_button",
+    "infinitybuttons:chiseled_polished_granite_brick_secret_button",
+    "infinitybuttons:chiseled_polished_diorite_brick_secret_button",
+    "infinitybuttons:chiseled_polished_marble_brick_secret_button",
+    "infinitybuttons:chiseled_polished_limestone_brick_secret_button",
+    "infinitybuttons:chiseled_polished_jasper_brick_secret_button",
+    "infinitybuttons:chiseled_polished_slate_brick_secret_button",
+    "infinitybuttons:chiseled_polished_voidstone_brick_secret_button"
   ]
 }
