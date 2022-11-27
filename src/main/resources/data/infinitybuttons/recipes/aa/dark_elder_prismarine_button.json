@@ -1,0 +1,14 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "quark:dark_elder_prismarine"},{"item": "minecraft:stone_button"}],
+  "result": {
+    "item": "infinitybuttons:dark_elder_prismarine_button",
+    "count": 2
+  }
+}

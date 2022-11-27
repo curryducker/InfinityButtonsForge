@@ -37,6 +37,10 @@
   "block.infinitybuttons.gray_concrete_powder_button": "Gray Concrete Powder Button",
   "block.infinitybuttons.black_concrete_powder_button": "Black Concrete Powder Button",
 
+  "block.infinitybuttons.elder_prismarine_button": "Elder Prismarine Button",
+  "block.infinitybuttons.elder_prismarine_brick_button": "Elder Prismarine Brick Button",
+  "block.infinitybuttons.dark_elder_prismarine_button": "Dark Elder Prismarine Button",
+
   "block.infinitybuttons.oak_large_button": "Oak Large Button",
   "block.infinitybuttons.acacia_large_button": "Acacia Large Button",
   "block.infinitybuttons.birch_large_button": "Birch Large Button",
@@ -84,6 +88,10 @@
   "block.infinitybuttons.light_gray_concrete_powder_large_button": "Light Gray Concrete Powder Large Button",
   "block.infinitybuttons.gray_concrete_powder_large_button": "Gray Concrete Powder Large Button",
   "block.infinitybuttons.black_concrete_powder_large_button": "Black Concrete Powder Large Button",
+
+  "block.infinitybuttons.elder_prismarine_large_button": "Elder Prismarine Large Button",
+  "block.infinitybuttons.elder_prismarine_brick_large_button": "Elder Prismarine Brick Large Button",
+  "block.infinitybuttons.dark_elder_prismarine_large_button": "Dark Elder Prismarine Large Button",
 
   "block.infinitybuttons.willow_large_button": "Willow Large Button",
   "block.infinitybuttons.cherry_large_button": "Cherry Large Button",
@@ -243,6 +251,7 @@
   "block.infinitybuttons.polished_slate_brick_secret_button": "Polished Slate Brick Secret Button",
   "block.infinitybuttons.polished_voidstone_brick_secret_button": "Polished Voidstone Brick Secret Button",
   "block.infinitybuttons.biotite_brick_secret_button": "Biotite Brick Secret Button",
+  "block.infinitybuttons.dark_elder_prismarine_secret_button": "Dark Elder Prismarine Secret Button",
 
   "block.infinitybuttons.chiseled_polished_andesite_brick_secret_button": "Chiseled Polished Andesite Brick Secret Button",
   "block.infinitybuttons.chiseled_polished_granite_brick_secret_button": "Chiseled Polished Granite Brick Secret Button",

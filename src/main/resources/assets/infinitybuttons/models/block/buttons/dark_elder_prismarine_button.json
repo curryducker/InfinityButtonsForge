@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "quark:block/dark_elder_prismarine"
+  }
+}

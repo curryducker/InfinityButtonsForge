@@ -16,7 +16,7 @@
   "block.infinitybuttons.diamond_button": "Diamanten knop",
   "block.infinitybuttons.prismarine_button": "Prismarienen knop",
   "block.infinitybuttons.prismarine_brick_button": "Prismarienen bakstenen knop",
-  "block.infinitybuttons.dark_prismarine_button": "Donkere Prismarienen knop",
+  "block.infinitybuttons.dark_prismarine_button": "Donkerprismarienen knop",
   "block.infinitybuttons.sand_button": "Zandknop",
   "block.infinitybuttons.red_sand_button": "Roodzandknop",
   "block.infinitybuttons.gravel_button": "Grindknop",
@@ -36,6 +36,10 @@
   "block.infinitybuttons.light_gray_concrete_powder_button": "Lichtgrijze cementknop",
   "block.infinitybuttons.gray_concrete_powder_button": "Grijze cementknop",
   "block.infinitybuttons.black_concrete_powder_button": "Zwarte cementknop",
+
+  "block.infinitybuttons.elder_prismarine_button": "Oudeprismarienen knop",
+  "block.infinitybuttons.elder_prismarine_brick_button": "Oudeprismarienen bakstenen knop",
+  "block.infinitybuttons.dark_elder_prismarine_button": "Donkeroudeprismarienen knop",
 
   "block.infinitybuttons.oak_large_button": "Eikenhouten grote knop",
   "block.infinitybuttons.acacia_large_button": "Acaciahouten grote knop",
@@ -64,7 +68,7 @@
   "block.infinitybuttons.diamond_large_button": "Diamanten grote knop",
   "block.infinitybuttons.prismarine_large_button": "Prismarienen grote knop",
   "block.infinitybuttons.prismarine_brick_large_button": "Prismarienen bakstenen grote knop",
-  "block.infinitybuttons.dark_prismarine_large_button": "Donkere Prismarienen grote knop",
+  "block.infinitybuttons.dark_prismarine_large_button": "Donkerprismarienen grote knop",
   "block.infinitybuttons.sand_large_button": "Grote zandknop",
   "block.infinitybuttons.red_sand_large_button": "Grote roodzandknop",
   "block.infinitybuttons.gravel_large_button": "Grote grindknop",
@@ -84,6 +88,10 @@
   "block.infinitybuttons.light_gray_concrete_powder_large_button": "Grote lichtgrijze cementknop",
   "block.infinitybuttons.gray_concrete_powder_large_button": "Grote grijze cementknop",
   "block.infinitybuttons.black_concrete_powder_large_button": "Grote zwarte cementknop",
+
+  "block.infinitybuttons.elder_prismarine_large_button": "Oudeprismarienen grote knop",
+  "block.infinitybuttons.elder_prismarine_brick_large_button": "Oudeprismarienen bakstenen grote knop",
+  "block.infinitybuttons.dark_elder_prismarine_large_button": "Donkeroudeprismarienen grote knop",
 
   "block.infinitybuttons.willow_large_button": "Wilgenhouten grote knop",
   "block.infinitybuttons.cherry_large_button": "Kersenhouten grote knop",
@@ -164,7 +172,7 @@
   "block.infinitybuttons.cracked_nether_brick_secret_button": "Gebarsten netherbakstenen verborgen knop",
   "block.infinitybuttons.chiseled_nether_brick_secret_button": "Gebeitelde netherbakstenen verborgen knop",
   "block.infinitybuttons.red_nether_brick_secret_button": "Rode netherbakstenen verborgen knop",
-  "block.infinitybuttons.dark_prismarine_secret_button": "Donkerprismarinen verborgen knop",
+  "block.infinitybuttons.dark_prismarine_secret_button": "Donkerprismarienen verborgen knop",
   "block.infinitybuttons.oak_plank_secret_button": "Eikenhouten planken verborgen knop",
   "block.infinitybuttons.birch_plank_secret_button": "Berkenhouten planken verborgen knop",
   "block.infinitybuttons.spruce_plank_secret_button": "Sparrenhouten planken verborgen knop",
@@ -243,6 +251,7 @@
   "block.infinitybuttons.polished_slate_brick_secret_button": "Gepolijst leistenen blokstenen verborgen knop",
   "block.infinitybuttons.polished_voidstone_brick_secret_button": "Gepolijst leegtestenen blokstenen verborgen knop",
   "block.infinitybuttons.biotite_brick_secret_button": "Biotietblokstenen verborgen knop",
+  "block.infinitybuttons.dark_elder_prismarine_secret_button": "Donkeroudeprismarienen verborgen knop",
 
   "block.infinitybuttons.chiseled_polished_andesite_brick_secret_button": "Gebeiteld gepolijste andesietblokstenen verborgen knop",
   "block.infinitybuttons.chiseled_polished_granite_brick_secret_button": "Gebeiteld gepolijste granietblokstenen verborgen knop",

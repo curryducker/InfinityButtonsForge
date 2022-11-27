@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button_pressed",
+  "textures": {
+    "texture": "quark:block/dark_elder_prismarine"
+  }
+}

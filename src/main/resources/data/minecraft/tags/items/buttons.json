@@ -198,6 +198,14 @@
     "infinitybuttons:polished_slate_brick_secret_button",
     "infinitybuttons:polished_voidstone_brick_secret_button",
     "infinitybuttons:biotite_brick_secret_button",
+    "infinitybuttons:dark_elder_prismarine_secret_button",
+
+    "infinitybuttons:elder_prismarine_button",
+    "infinitybuttons:elder_prismarine_large_button",
+    "infinitybuttons:elder_prismarine_brick_button",
+    "infinitybuttons:elder_prismarine_brick_large_button",
+    "infinitybuttons:dark_elder_prismarine_button",
+    "infinitybuttons:dark_elder_prismarine_large_button",
 
     "infinitybuttons:chiseled_polished_andesite_brick_secret_button",
     "infinitybuttons:chiseled_polished_granite_brick_secret_button",

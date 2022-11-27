@@ -3,11 +3,13 @@ package net.larsmans.infinitybuttons.block;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
+import net.larsmans.infinitybuttons.block.custom.button.compat.PrismarineCompatButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.HoglinMountButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.*;
+import net.larsmans.infinitybuttons.block.custom.largebutton.compat.PrismarineCompatLargeButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.compat.WoodenCompatLargeButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.*;
@@ -191,6 +193,18 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> BLACK_CONCRETE_POWDER_BUTTON = registerBlock("black_concrete_powder_button",
             () -> new FallingButton(false, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.SAND)));
+
+    public static final RegistryObject<Block> ELDER_PRISMARINE_BUTTON = registerCompatBlock("quark", "elder_prismarine_button",
+            () -> new PrismarineCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> ELDER_PRISMARINE_BRICK_BUTTON = registerCompatBlock("quark", "elder_prismarine_brick_button",
+            () -> new PrismarineCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> DARK_ELDER_PRISMARINE_BUTTON = registerCompatBlock("quark", "dark_elder_prismarine_button",
+            () -> new PrismarineCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     /**
      * Large Buttons
@@ -385,6 +399,18 @@ public class InfinityButtonsBlocks {
                     .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.SAND)));
 
     // Compat Large Buttons
+
+    public static final RegistryObject<Block> ELDER_PRISMARINE_LARGE_BUTTON = registerCompatBlock("quark", "elder_prismarine_large_button",
+            () -> new PrismarineCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> ELDER_PRISMARINE_BRICK_LARGE_BUTTON = registerCompatBlock("quark", "elder_prismarine_brick_large_button",
+            () -> new PrismarineCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> DARK_ELDER_PRISMARINE_LARGE_BUTTON = registerCompatBlock("quark", "dark_elder_prismarine_large_button",
+            () -> new PrismarineCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> WILLOW_LARGE_BUTTON = registerCompatBlock("environmental", "willow_large_button",
             () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -963,6 +989,10 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> BIOTITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "biotite_brick_secret_button",
             () -> new BigCompatSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> DARK_ELDER_PRISMARINE_SECRET_BUTTON = registerCompatBlock("quark", "dark_elder_prismarine_secret_button",
+            () -> new FullCompatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ADOBE)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 10f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
     public static final RegistryObject<Block> CHISELED_POLISHED_ANDESITE_BRICK_SECRET_BUTTON = registerCompatBlock("quark", "chiseled_polished_andesite_brick_secret_button",
             () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE)
