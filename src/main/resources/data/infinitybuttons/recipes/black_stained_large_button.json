@@ -1,0 +1,15 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "infinitybuttons:black_stained_button"},{"item": "infinitybuttons:black_stained_button"}],
+  "result": {
+    "item": "infinitybuttons:black_stained_large_button",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "quark:green_stained_planks"
+    }
+  ],
+  "result": {
+    "item": "infinitybuttons:green_stained_button",
+    "count": 4
+  }
+}

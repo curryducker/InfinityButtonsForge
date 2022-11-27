@@ -3,10 +3,11 @@ package net.larsmans.infinitybuttons.block;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
-import net.larsmans.infinitybuttons.block.custom.button.compat.PrismarineCompatButton;
-import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.HoglinMountButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
+import net.larsmans.infinitybuttons.block.custom.button.compat.CompatWoodenButton;
+import net.larsmans.infinitybuttons.block.custom.button.compat.PrismarineCompatButton;
+import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.*;
 import net.larsmans.infinitybuttons.block.custom.largebutton.compat.PrismarineCompatLargeButton;
@@ -206,6 +207,70 @@ public class InfinityButtonsBlocks {
             () -> new PrismarineCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> RED_STAINED_BUTTON = registerCompatBlock("quark", "red_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ORANGE_STAINED_BUTTON = registerCompatBlock("quark", "orange_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> YELLOW_STAINED_BUTTON = registerCompatBlock("quark", "yellow_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIME_STAINED_BUTTON = registerCompatBlock("quark", "lime_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> GREEN_STAINED_BUTTON = registerCompatBlock("quark", "green_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CYAN_STAINED_BUTTON = registerCompatBlock("quark", "cyan_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_STAINED_BUTTON = registerCompatBlock("quark", "light_blue_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BLUE_STAINED_BUTTON = registerCompatBlock("quark", "blue_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PURPLE_STAINED_BUTTON = registerCompatBlock("quark", "purple_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> MAGENTA_STAINED_BUTTON = registerCompatBlock("quark", "magenta_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PINK_STAINED_BUTTON = registerCompatBlock("quark", "pink_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BROWN_STAINED_BUTTON = registerCompatBlock("quark", "brown_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WHITE_STAINED_BUTTON = registerCompatBlock("quark", "white_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_BUTTON = registerCompatBlock("quark", "light_gray_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> GRAY_STAINED_BUTTON = registerCompatBlock("quark", "gray_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BLACK_STAINED_BUTTON = registerCompatBlock("quark", "black_stained_button",
+            () -> new CompatWoodenButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
     /**
      * Large Buttons
      */
@@ -399,6 +464,70 @@ public class InfinityButtonsBlocks {
                     .harvestLevel(0).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.SAND)));
 
     // Compat Large Buttons
+
+    public static final RegistryObject<Block> RED_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "red_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ORANGE_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "orange_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> YELLOW_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "yellow_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIME_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "lime_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> GREEN_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "green_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CYAN_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "cyan_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "light_blue_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BLUE_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "blue_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PURPLE_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "purple_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> MAGENTA_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "magenta_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PINK_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "pink_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BROWN_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "brown_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WHITE_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "white_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "light_gray_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> GRAY_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "gray_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BLACK_STAINED_LARGE_BUTTON = registerCompatBlock("quark", "black_stained_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> ELDER_PRISMARINE_LARGE_BUTTON = registerCompatBlock("quark", "elder_prismarine_large_button",
             () -> new PrismarineCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -1028,6 +1157,70 @@ public class InfinityButtonsBlocks {
 
     // Compat Plank Secret Button
 
+    public static final RegistryObject<Block> RED_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "red_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.RED)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> ORANGE_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "orange_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.ADOBE)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> YELLOW_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "yellow_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.YELLOW)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIME_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "lime_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIME)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> GREEN_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "green_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GREEN)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> CYAN_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "cyan_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.CYAN)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "light_blue_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIGHT_BLUE)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BLUE_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "blue_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLUE)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PURPLE_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "purple_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> MAGENTA_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "magenta_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> PINK_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "pink_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PINK)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BROWN_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "brown_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> WHITE_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "white_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.SNOW)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "light_gray_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.LIGHT_GRAY)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> GRAY_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "gray_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GRAY)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BLACK_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "black_stained_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BLACK)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> WILLOW_PLANK_SECRET_BUTTON = registerCompatBlock("environmental", "willow_plank_secret_button",
             () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
@@ -1066,7 +1259,9 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> HOGLIN_MOUNT_BUTTON = registerCompatBlock("nethers_delight", "hoglin_mount_button",
             () -> new HoglinMountButton(AbstractBlock.Properties.from(Blocks.BROWN_WOOL)
-                    .setLightLevel((state) -> {return 1;})));
+                    .setLightLevel((state) -> {
+                        return 1;
+                    })));
 
     /**
      * Torches
@@ -1238,19 +1433,19 @@ public class InfinityButtonsBlocks {
      * Methods
      */
 
-    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, InfinityButtonsItemGroup.INFINITYBUTTONS);
         return toReturn;
     }
 
-    private static <T extends Block>RegistryObject<T> registerSafeEmergencyButtonBlock(String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerSafeEmergencyButtonBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerSafeEmergencyButtonItem(name, toReturn, InfinityButtonsItemGroup.INFINITYBUTTONS);
         return toReturn;
     }
 
-    private static <T extends Block>RegistryObject<T> registerCompatBlock(String modid, String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerCompatBlock(String modid, String name, Supplier<T> block) {
         RegistryObject<T> toReturn = null;
         if (ModList.get().isLoaded(modid)) {
             toReturn = BLOCKS.register(name, block);
@@ -1263,16 +1458,17 @@ public class InfinityButtonsBlocks {
         InfinityButtonsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().group(group)));
     }
+
     private static <T extends Block> void registerSafeEmergencyButtonItem(String name, RegistryObject<T> block, ItemGroup group) {
         InfinityButtonsItems.ITEMS.register(name, () -> new SafeEmergencyButtonItem(block.get(),
                 new Item.Properties().group(group)));
     }
 
-    private static <T extends Block>RegistryObject<T> registerTorchBlock(String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerTorchBlock(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
     }
 
-    private static <T extends Block>RegistryObject<T> registerCompatTorchBlock(String modid, String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerCompatTorchBlock(String modid, String name, Supplier<T> block) {
         RegistryObject<T> toReturn = null;
         if (ModList.get().isLoaded(modid)) {
             toReturn = BLOCKS.register(name, block);
