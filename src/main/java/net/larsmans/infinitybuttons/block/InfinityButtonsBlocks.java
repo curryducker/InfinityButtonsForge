@@ -1163,6 +1163,10 @@ public class InfinityButtonsBlocks {
             () -> new ChiseledCompatBrickSecretButton(AbstractBlock.Properties.create(Material.CLAY, MaterialColor.ADOBE)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.CORAL).setRequiresTool()));
 
+    public static final RegistryObject<Block> CHISELED_CHOCOLATE_BRICK_SECRET_BUTTON = registerCompatBlock("neapolitan", "chiseled_chocolate_brick_secret_button",
+            () -> new ChiseledCompatBrickSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD).setRequiresTool()));
+
     // Compat Plank Secret Button
 
     public static final RegistryObject<Block> RED_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "red_stained_plank_secret_button",
