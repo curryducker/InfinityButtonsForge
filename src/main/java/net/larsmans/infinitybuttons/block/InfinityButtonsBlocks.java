@@ -1168,7 +1168,7 @@ public class InfinityButtonsBlocks {
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD).setRequiresTool()));
 
     public static final RegistryObject<Block> CHISELED_GLOOMY_TILE_SECRET_BUTTON = registerCompatBlock("neapolitan", "chiseled_gloomy_tile_secret_button",
-            () -> new ChiseledCompatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA)
+            () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool().setLightLevel((state) -> {
                         return getPressLight(state, 7);
                     })));
