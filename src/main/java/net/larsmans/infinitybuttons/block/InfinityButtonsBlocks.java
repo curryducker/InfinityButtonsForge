@@ -565,6 +565,14 @@ public class InfinityButtonsBlocks {
             () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> DRIFTWOOD_LARGE_BUTTON = registerCompatBlock("upgrade_aquatic", "driftwood_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> RIVER_LARGE_BUTTON = registerCompatBlock("upgrade_aquatic", "river_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
     /**
      * Emergency Buttons
      */
@@ -764,6 +772,14 @@ public class InfinityButtonsBlocks {
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> BAMBOO_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("bamboo_blocks", "bamboo_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> DRIFTWOOD_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "driftwood_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> RIVER_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "river_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
 
@@ -1173,6 +1189,30 @@ public class InfinityButtonsBlocks {
                         return getPressLight(state, 7);
                     })));
 
+    public static final RegistryObject<Block> KELPY_STONE_BRICK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "kelpy_stone_brick_secret_button",
+            () -> new BigCompatSecretButton(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> TONGUE_KELPY_STONE_BRICK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "tongue_kelpy_stone_brick_secret_button",
+            () -> new BigCompatSecretButton(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> THORNY_KELPY_STONE_BRICK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "thorny_kelpy_stone_brick_secret_button",
+            () -> new BigCompatSecretButton(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> OCHRE_KELPY_STONE_BRICK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "ochre_kelpy_stone_brick_secret_button",
+            () -> new BigCompatSecretButton(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> POLAR_KELPY_STONE_BRICK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "polar_kelpy_stone_brick_secret_button",
+            () -> new BigCompatSecretButton(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
+    public static final RegistryObject<Block> CHISELED_TOOTH_BRICK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "chiseled_tooth_brick_secret_button",
+            () -> new ChiseledToothSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+
     // Compat Plank Secret Button
 
     public static final RegistryObject<Block> RED_STAINED_PLANK_SECRET_BUTTON = registerCompatBlock("quark", "red_stained_plank_secret_button",
@@ -1262,6 +1302,14 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> BAMBOO_PLANK_SECRET_BUTTON = registerCompatBlock("bamboo_blocks", "bamboo_plank_secret_button",
             () -> new BambooPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.25f, 3.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> DRIFTWOOD_PLANK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "driftwood_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.STONE)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> RIVER_PLANK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "river_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2).notSolid().sound(SoundType.WOOD)));
 
     /**
      * Misc

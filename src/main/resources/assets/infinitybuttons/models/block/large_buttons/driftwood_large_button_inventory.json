@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button_inventory",
+  "textures": {
+    "texture": "upgrade_aquatic:block/driftwood_planks"
+  }
+}

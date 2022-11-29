@@ -1,0 +1,15 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "upgrade_aquatic:driftwood_button"},{"item": "upgrade_aquatic:driftwood_button"}],
+  "result": {
+    "item": "infinitybuttons:driftwood_large_button",
+    "count": 1
+  }
+}

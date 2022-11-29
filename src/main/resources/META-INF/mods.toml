@@ -66,29 +66,35 @@ A mod which adds new exciting buttons!
     modId="quark"
     mandatory=false
     versionRange="[r2.4-322,)"
-    ordering="BEFORE"
+    ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
     modId="environmental"
     mandatory=false
     versionRange="[1.1.1,)"
-    ordering="BEFORE"
+    ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
     modId="endergetic"
     mandatory=false
     versionRange="[3.0.0,)"
-    ordering="BEFORE"
+    ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
     modId="autumnity"
     mandatory=false
     versionRange="[2.1.2,)"
-    ordering="BEFORE"
+    ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
     modId="nethers_delight"
     mandatory=false
     versionRange="[2.1,)"
-    ordering="BEFORE"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="upgrade_aquatic"
+    mandatory=false
+    versionRange="[3.1.2,)"
+    ordering="AFTER"
     side="BOTH"

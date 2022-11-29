@@ -63,6 +63,8 @@
     "infinitybuttons:poise_large_button",
     "infinitybuttons:maple_large_button",
     "infinitybuttons:bamboo_large_button",
+    "infinitybuttons:driftwood_large_button",
+    "infinitybuttons:river_large_button",
 
     "infinitybuttons:red_stained_plank_secret_button",
     "infinitybuttons:orange_stained_plank_secret_button",
@@ -86,6 +88,8 @@
     "infinitybuttons:poise_plank_secret_button",
     "infinitybuttons:maple_plank_secret_button",
     "infinitybuttons:bamboo_plank_secret_button",
+    "infinitybuttons:driftwood_plank_secret_button",
+    "infinitybuttons:river_plank_secret_button",
 
     "infinitybuttons:spruce_bookshelf_secret_button",
     "infinitybuttons:birch_bookshelf_secret_button",
@@ -99,6 +103,8 @@
     "infinitybuttons:wisteria_bookshelf_secret_button",
     "infinitybuttons:poise_bookshelf_secret_button",
     "infinitybuttons:maple_bookshelf_secret_button",
-    "infinitybuttons:bamboo_bookshelf_secret_button"
+    "infinitybuttons:bamboo_bookshelf_secret_button",
+    "infinitybuttons:driftwood_bookshelf_secret_button",
+    "infinitybuttons:river_bookshelf_secret_button"
   ]
 }
