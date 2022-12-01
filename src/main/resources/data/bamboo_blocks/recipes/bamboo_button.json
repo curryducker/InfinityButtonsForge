@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bamboo_blocks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "bamboo_blocks:bamboo_planks"
+    }
+  ],
+  "result": {
+    "item": "bamboo_blocks:bamboo_button",
+    "count": 4
+  }
+}
