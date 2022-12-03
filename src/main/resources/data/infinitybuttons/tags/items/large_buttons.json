@@ -1,0 +1,52 @@
+{
+  "replace": false,
+  "values": [
+    "#infinitybuttons:wooden_large_buttons",
+
+    "infinitybuttons:andesite_large_button",
+    "infinitybuttons:granite_large_button",
+    "infinitybuttons:diorite_large_button",
+    "infinitybuttons:stone_large_button",
+    "infinitybuttons:polished_blackstone_large_button",
+    "infinitybuttons:copper_large_button",
+    "infinitybuttons:exposed_copper_large_button",
+    "infinitybuttons:weathered_copper_large_button",
+    "infinitybuttons:oxidized_copper_large_button",
+    "infinitybuttons:sticky_copper_large_button",
+    "infinitybuttons:sticky_exposed_copper_large_button",
+    "infinitybuttons:sticky_weathered_copper_large_button",
+    "infinitybuttons:sticky_oxidized_copper_large_button",
+    "infinitybuttons:emerald_large_button",
+    "infinitybuttons:iron_large_button",
+    "infinitybuttons:gold_large_button",
+    "infinitybuttons:diamond_large_button",
+    "infinitybuttons:prismarine_large_button",
+    "infinitybuttons:prismarine_brick_large_button",
+    "infinitybuttons:dark_prismarine_large_button",
+    "infinitybuttons:sand_large_button",
+    "infinitybuttons:red_sand_large_button",
+    "infinitybuttons:gravel_large_button",
+
+    "infinitybuttons:red_concrete_powder_large_button",
+    "infinitybuttons:orange_concrete_powder_large_button",
+    "infinitybuttons:yellow_concrete_powder_large_button",
+    "infinitybuttons:lime_concrete_powder_large_button",
+    "infinitybuttons:green_concrete_powder_large_button",
+    "infinitybuttons:cyan_concrete_powder_large_button",
+    "infinitybuttons:light_blue_concrete_powder_large_button",
+    "infinitybuttons:blue_concrete_powder_large_button",
+    "infinitybuttons:purple_concrete_powder_large_button",
+    "infinitybuttons:magenta_concrete_powder_large_button",
+    "infinitybuttons:pink_concrete_powder_large_button",
+    "infinitybuttons:brown_concrete_powder_large_button",
+    "infinitybuttons:white_concrete_powder_large_button",
+    "infinitybuttons:light_gray_concrete_powder_large_button",
+    "infinitybuttons:gray_concrete_powder_large_button",
+    "infinitybuttons:black_concrete_powder_large_button"
+  ],
+  "optional": [
+    "infinitybuttons:elder_prismarine_large_button",
+    "infinitybuttons:elder_prismarine_brick_large_button",
+    "infinitybuttons:dark_elder_prismarine_large_button"
+  ]
+}
