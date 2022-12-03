@@ -99,6 +99,12 @@ A mod which adds new exciting buttons!
     ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
+    modId="atmospheric"
+    mandatory=false
+    versionRange="[3.1.1,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
     modId="bamboo_blocks"
     mandatory=false
     versionRange="[3.0.1,)"

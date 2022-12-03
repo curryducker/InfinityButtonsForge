@@ -1,0 +1,15 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "atmospheric"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "atmospheric:morado_button"},{"item": "atmospheric:morado_button"}],
+  "result": {
+    "item": "infinitybuttons:morado_large_button",
+    "count": 1
+  }
+}
