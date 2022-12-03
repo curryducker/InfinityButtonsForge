@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "infinitybuttons:torch_button",
+    "infinitybuttons:torch_lever",
+    "infinitybuttons:soul_torch_button",
+    "infinitybuttons:soul_torch_lever",
+    "infinitybuttons:redstone_torch_button",
+    "infinitybuttons:redstone_torch_lever"
+  ],
+  "optional": [
+    "infinitybuttons:ender_torch_button",
+    "infinitybuttons:ender_torch_lever",
+    "infinitybuttons:propelplant_torch_button",
+    "infinitybuttons:propelplant_torch_lever",
+    "infinitybuttons:bamboo_torch_button",
+    "infinitybuttons:bamboo_torch_lever",
+    "infinitybuttons:soul_bamboo_torch_button",
+    "infinitybuttons:soul_bamboo_torch_lever",
+    "infinitybuttons:ender_bamboo_torch_button",
+    "infinitybuttons:ender_bamboo_torch_lever"
+  ]
+}

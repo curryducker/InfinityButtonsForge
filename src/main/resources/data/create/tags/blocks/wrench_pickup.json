@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#infinitybuttons:large_buttons",
+    "#infinitybuttons:emergency_buttons",
+    "#infinitybuttons:safe_emergency_buttons",
+    "#infinitybuttons:torch_buttons",
+    "infinitybuttons:fancy_emergency_button",
+    "infinitybuttons:fancy_safe_emergency_button"
+  ]
+}

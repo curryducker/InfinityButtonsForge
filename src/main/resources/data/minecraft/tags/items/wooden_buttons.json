@@ -1,5 +1,7 @@
 {
   "replace": false,
+  "values": [
+  ],
   "optional": [
     "infinitybuttons:red_stained_button",
     "infinitybuttons:orange_stained_button",
