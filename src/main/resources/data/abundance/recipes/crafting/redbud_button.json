@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "abundance"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "abundance:redbud_planks"
+    }
+  ],
+  "result": {
+    "item": "abundance:redbud_button",
+    "count": 4
+  }
+}

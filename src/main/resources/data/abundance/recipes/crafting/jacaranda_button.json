@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "abundance"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "abundance:jacaranda_planks"
+    }
+  ],
+  "result": {
+    "item": "abundance:jacaranda_button",
+    "count": 4
+  }
+}

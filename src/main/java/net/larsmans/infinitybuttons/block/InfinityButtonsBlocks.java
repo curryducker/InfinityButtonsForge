@@ -561,6 +561,14 @@ public class InfinityButtonsBlocks {
             () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> JACARANDA_LARGE_BUTTON = registerCompatBlock("abundance", "jacaranda_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> REDBUD_LARGE_BUTTON = registerCompatBlock("abundance", "redbud_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
     public static final RegistryObject<Block> BAMBOO_LARGE_BUTTON = registerCompatBlock("bamboo_blocks", "bamboo_large_button",
             () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
@@ -768,6 +776,14 @@ public class InfinityButtonsBlocks {
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> MAPLE_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("autumnity", "maple_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> JACARANDA_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("abundance", "jacaranda_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> REDBUD_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("abundance", "redbud_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
 
@@ -1297,6 +1313,14 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> MAPLE_PLANK_SECRET_BUTTON = registerCompatBlock("autumnity", "maple_plank_secret_button",
             () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.ORANGE_TERRACOTTA)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> JACARANDA_PLANK_SECRET_BUTTON = registerCompatBlock("abundance", "jacaranda_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.WARPED_STEM)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> REDBUD_PLANK_SECRET_BUTTON = registerCompatBlock("abundance", "redbud_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.WARPED_STEM)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> BAMBOO_PLANK_SECRET_BUTTON = registerCompatBlock("bamboo_blocks", "bamboo_plank_secret_button",

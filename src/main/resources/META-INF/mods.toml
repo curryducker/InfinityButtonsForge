@@ -93,6 +93,12 @@ A mod which adds new exciting buttons!
     ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
+    modId="abundance"
+    mandatory=false
+    versionRange="[1.0.5,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
     modId="bamboo_blocks"
     mandatory=false
     versionRange="[3.0.1,)"
