@@ -140,6 +140,7 @@
   "block.infinitybuttons.aspen_large_button":  "Espen grote knop",
   "block.infinitybuttons.grimwood_large_button":  "Grimhouten grote knop",
   "block.infinitybuttons.bamboo_large_button": "Bamboe grote knop",
+  "block.infinitybuttons.cypress_large_button":  "Cipreshouten grote knop",
   "block.infinitybuttons.driftwood_large_button": "Drijfhouten grote knop",
   "block.infinitybuttons.river_large_button": "Rivierhouten grote knop",
 
@@ -201,6 +202,7 @@
   "block.infinitybuttons.aspen_bookshelf_secret_button": "Espen boekenkast verborgen knop",
   "block.infinitybuttons.grimwood_bookshelf_secret_button": "Grimhouten boekenkast verborgen knop",
   "block.infinitybuttons.bamboo_bookshelf_secret_button": "Bamboe boekenkast verborgen knop",
+  "block.infinitybuttons.cypress_bookshelf_secret_button": "Cipreshouten boekenkast verborgen knop",
   "block.infinitybuttons.driftwood_bookshelf_secret_button": "Drijfhouten boekenkast verborgen knop",
   "block.infinitybuttons.river_bookshelf_secret_button": "Rivierhouten boekenkast verborgen knop",
 
@@ -321,6 +323,7 @@
   "block.infinitybuttons.aspen_plank_secret_button":  "Espen planken verborgen knop",
   "block.infinitybuttons.grimwood_plank_secret_button":  "Grimhouten planken verborgen knop",
   "block.infinitybuttons.bamboo_plank_secret_button": "Bamboeplanken verborgen knop",
+  "block.infinitybuttons.cypress_plank_secret_button": "Cipreshouten planken verborgen knop",
   "block.infinitybuttons.driftwood_plank_secret_button": "Drijfhouten planken verborgen knop",
   "block.infinitybuttons.river_plank_secret_button": "Rivierhouten planken verborgen knop",
 

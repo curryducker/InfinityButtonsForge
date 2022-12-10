@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bayou_blues"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "bayou_blues:cypress_planks"
+    }
+  ],
+  "result": {
+    "item": "bayou_blues:cypress_button",
+    "count": 4
+  }
+}

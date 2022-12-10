@@ -140,6 +140,7 @@
   "block.infinitybuttons.aspen_large_button":  "Aspen Large Button",
   "block.infinitybuttons.grimwood_large_button":  "Grimwood Large Button",
   "block.infinitybuttons.bamboo_large_button": "Bamboo Large Button",
+  "block.infinitybuttons.cypress_large_button":  "Cypress Large Button",
   "block.infinitybuttons.driftwood_large_button": "Driftwood Large Button",
   "block.infinitybuttons.river_large_button": "River Large Button",
 
@@ -201,6 +202,7 @@
   "block.infinitybuttons.aspen_bookshelf_secret_button": "Aspen Bookshelf Secret Button",
   "block.infinitybuttons.grimwood_bookshelf_secret_button": "Grimwood Bookshelf Secret Button",
   "block.infinitybuttons.bamboo_bookshelf_secret_button": "Bamboo Bookshelf Secret Button",
+  "block.infinitybuttons.cypress_bookshelf_secret_button": "Cypress Bookshelf Secret Button",
   "block.infinitybuttons.driftwood_bookshelf_secret_button": "Driftwood Bookshelf Secret Button",
   "block.infinitybuttons.river_bookshelf_secret_button": "River Bookshelf Secret Button",
 
@@ -321,6 +323,7 @@
   "block.infinitybuttons.aspen_plank_secret_button":  "Aspen Plank Secret Button",
   "block.infinitybuttons.grimwood_plank_secret_button":  "Grimwood Plank Secret Button",
   "block.infinitybuttons.bamboo_plank_secret_button": "Bamboo Plank Secret Button",
+  "block.infinitybuttons.cypress_plank_secret_button": "Cypress Plank Secret Button",
   "block.infinitybuttons.driftwood_plank_secret_button": "Driftwood Plank Secret Button",
   "block.infinitybuttons.river_plank_secret_button": "River Plank Secret Button",
 
