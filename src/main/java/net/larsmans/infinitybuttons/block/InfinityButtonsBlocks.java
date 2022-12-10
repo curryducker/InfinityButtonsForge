@@ -1372,11 +1372,11 @@ public class InfinityButtonsBlocks {
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> JACARANDA_PLANK_SECRET_BUTTON = registerCompatBlock("abundance", "jacaranda_plank_secret_button",
-            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.WARPED_STEM)
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> REDBUD_PLANK_SECRET_BUTTON = registerCompatBlock("abundance", "redbud_plank_secret_button",
-            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, MaterialColor.WARPED_STEM)
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.PURPLE)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> ROSEWOOD_PLANK_SECRET_BUTTON = registerCompatBlock("atmospheric", "rosewood_plank_secret_button",
@@ -1408,7 +1408,7 @@ public class InfinityButtonsBlocks {
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.25f, 3.5f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> CYPRESS_PLANK_SECRET_BUTTON = registerCompatBlock("bayou_blues", "cypress_plank_secret_button",
-            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GREEN)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.25f, 3.5f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> DRIFTWOOD_PLANK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "driftwood_plank_secret_button",
