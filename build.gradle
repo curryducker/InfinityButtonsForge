@@ -125,9 +125,6 @@ repositories {
         url "https://maven.blamejared.com/"
     }
     maven { url "https://www.cursemaven.com" }
-    maven {
-        url = "https://maven.jaackson.me"
-    }
 }
 
 dependencies {

@@ -1,0 +1,17 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "tag": "endergetic:poise_stems"
+  },
+  "result": "endergetic:poise_button",
+  "count": 24,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "endergetic"
+    }, {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    }
+  ]
+}

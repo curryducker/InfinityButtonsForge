@@ -1,0 +1,17 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "tag": "enhanced_mushrooms:red_mushroom_stems"
+  },
+  "result": "enhanced_mushrooms:red_mushroom_button",
+  "count": 24,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    }, {
+      "type": "forge:mod_loaded",
+      "modid": "enhanced_mushrooms"
+    }
+  ]
+}

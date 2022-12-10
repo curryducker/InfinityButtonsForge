@@ -1,0 +1,17 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "atmospheric:yucca_planks"
+  },
+  "result": "atmospheric:yucca_button",
+  "count": 6,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "atmospheric"
+    }, {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    }
+  ]
+}

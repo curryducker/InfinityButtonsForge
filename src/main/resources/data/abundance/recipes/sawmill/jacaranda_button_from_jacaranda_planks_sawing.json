@@ -1,0 +1,17 @@
+{
+  "type": "environmental:sawing",
+  "ingredient": {
+    "item": "abundance:jacaranda_planks"
+  },
+  "result": "abundance:jacaranda_button",
+  "count": 6,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    }, {
+      "type": "forge:mod_loaded",
+      "modid": "abundance"
+    }
+  ]
+}
