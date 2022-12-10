@@ -69,6 +69,10 @@ public class InfinityButtonsClient {
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             }
+            if (ModList.get().isLoaded("enhanced_mushrooms")) {
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.GLOWSHROOM_LARGE_BUTTON.get(), RenderType.getTranslucent());
+                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.GLOWSHROOM_BOOKSHELF_SECRET_BUTTON.get(), RenderType.getTranslucent());
+            }
         });
     }
 }

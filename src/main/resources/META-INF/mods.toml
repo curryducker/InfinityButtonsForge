@@ -117,6 +117,12 @@ A mod which adds new exciting buttons!
     ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
+    modId="enhanced_mushrooms"
+    mandatory=false
+    versionRange="[1.16.5-3.0.9,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
     modId="upgrade_aquatic"
     mandatory=false
     versionRange="[3.1.2,)"

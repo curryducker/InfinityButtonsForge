@@ -10,6 +10,7 @@ import net.larsmans.infinitybuttons.block.custom.button.compat.PrismarineCompatB
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.*;
+import net.larsmans.infinitybuttons.block.custom.largebutton.compat.GlowshroomLargeButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.compat.PrismarineCompatLargeButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.compat.WoodenCompatLargeButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
@@ -601,6 +602,20 @@ public class InfinityButtonsBlocks {
             () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> RED_MUSHROOM_LARGE_BUTTON = registerCompatBlock("enhanced_mushrooms", "red_mushroom_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BROWN_MUSHROOM_LARGE_BUTTON = registerCompatBlock("enhanced_mushrooms", "brown_mushroom_large_button",
+            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> GLOWSHROOM_LARGE_BUTTON = registerCompatBlock("enhanced_mushrooms", "glowshroom_large_button",
+            () -> new GlowshroomLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD).setLightLevel((state) -> {
+                        return 14;
+                    })));
+
     public static final RegistryObject<Block> DRIFTWOOD_LARGE_BUTTON = registerCompatBlock("upgrade_aquatic", "driftwood_large_button",
             () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
@@ -846,6 +861,20 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> CYPRESS_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("bayou_blues", "cypress_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> RED_MUSHROOM_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("enhanced_mushrooms", "red_mushroom_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BROWN_MUSHROOM_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("enhanced_mushrooms", "brown_mushroom_bookshelf_secret_button",
+            () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> GLOWSHROOM_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("enhanced_mushrooms", "glowshroom_bookshelf_secret_button",
+            () -> new GlowshroomBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD).setLightLevel((state) -> {
+                        return 14;
+                    })));
 
     public static final RegistryObject<Block> DRIFTWOOD_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "driftwood_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
@@ -1409,7 +1438,15 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> CYPRESS_PLANK_SECRET_BUTTON = registerCompatBlock("bayou_blues", "cypress_plank_secret_button",
             () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.GREEN)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.25f, 3.5f).notSolid().sound(SoundType.WOOD)));
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> RED_MUSHROOM_PLANK_SECRET_BUTTON = registerCompatBlock("enhanced_mushrooms", "red_mushroom_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.SAND)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> BROWN_MUSHROOM_PLANK_SECRET_BUTTON = registerCompatBlock("enhanced_mushrooms", "brown_mushroom_plank_secret_button",
+            () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.DIRT)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> DRIFTWOOD_PLANK_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "driftwood_plank_secret_button",
             () -> new CompatPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.STONE)

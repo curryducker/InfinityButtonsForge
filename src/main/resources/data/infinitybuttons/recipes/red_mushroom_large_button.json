@@ -1,0 +1,15 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enhanced_mushrooms"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_large_button",
+  "ingredients": [{"item": "enhanced_mushrooms:red_mushroom_button"},{"item": "enhanced_mushrooms:red_mushroom_button"}],
+  "result": {
+    "item": "infinitybuttons:red_mushroom_large_button",
+    "count": 1
+  }
+}
