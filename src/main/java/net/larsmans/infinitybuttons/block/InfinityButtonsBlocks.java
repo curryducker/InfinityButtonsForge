@@ -870,12 +870,6 @@ public class InfinityButtonsBlocks {
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
 
-    public static final RegistryObject<Block> GLOWSHROOM_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("enhanced_mushrooms", "glowshroom_bookshelf_secret_button",
-            () -> new GlowshroomBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD).setLightLevel((state) -> {
-                        return 14;
-                    })));
-
     public static final RegistryObject<Block> DRIFTWOOD_BOOKSHELF_SECRET_BUTTON = registerCompatBlock("upgrade_aquatic", "driftwood_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
