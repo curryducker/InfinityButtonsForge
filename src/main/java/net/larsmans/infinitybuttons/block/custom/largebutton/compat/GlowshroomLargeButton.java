@@ -13,13 +13,61 @@ public class GlowshroomLargeButton extends WoodenCompatLargeButton{
     public GlowshroomLargeButton(Properties properties) {
         super(properties);
     }
-
+    
     @OnlyIn(Dist.CLIENT)
-    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-        super.animateTick(stateIn, worldIn, pos, rand);
-        if (rand.nextInt(10) == 0) {
-            worldIn.addParticle(ParticleTypes.END_ROD, (double)pos.getX() + rand.nextDouble(), (double)pos.getY() + rand.nextDouble(), (double)pos.getZ() + rand.nextDouble(), 0.0, 0.0, 0.0);
-        }
+    public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (random.nextInt(10) == 0) {
+            switch (state.get(FACE)) {
+                case FLOOR:
+                    world.addParticle(ParticleTypes.END_ROD,
+                            (double) pos.getX() + 0.1875 + (double) random.nextFloat() * 0.625,
+                            (double) pos.getY() + 0.125 + (double) random.nextFloat() * 0.0625,
+                            (double) pos.getZ() + 0.1875 + (double) random.nextFloat() * 0.625,
+                            0, 0, 0);
+                    break;
+                case WALL:
+                    switch (state.get(HORIZONTAL_FACING)) {
+                        case NORTH:
+                            world.addParticle(ParticleTypes.END_ROD,
+                                    (double) pos.getX() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                    (double) pos.getY() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                    (double) pos.getZ() + 0.8125 + (double) random.nextFloat() * 0.0625,
+                                    0, 0, 0);
+                            break;
 
+                        case EAST:
+                            world.addParticle(ParticleTypes.END_ROD,
+                                    (double) pos.getX() + 0.125 + (double) random.nextFloat() * 0.0625,
+                                    (double) pos.getY() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                    (double) pos.getZ() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                    0, 0, 0);
+                            break;
+
+                        case SOUTH:
+                            world.addParticle(ParticleTypes.END_ROD,
+                                    (double) pos.getX() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                    (double) pos.getY() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                    (double) pos.getZ() + 0.125 + (double) random.nextFloat() * 0.0625,
+                                    0, 0, 0);
+                            break;
+
+                        case WEST:
+                            world.addParticle(ParticleTypes.END_ROD,
+                                    (double) pos.getX() + 0.8125 + (double) random.nextFloat() * 0.0625,
+                                    (double) pos.getY() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                    (double) pos.getZ() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                    0, 0, 0);
+                            break;
+                    }
+                    break;
+                case CEILING:
+                    world.addParticle(ParticleTypes.END_ROD,
+                            (double) pos.getX() + 0.1875 + (double) random.nextFloat() * 0.625,
+                            (double) pos.getY() + 0.8125 + (double) random.nextFloat() * 0.0625,
+                            (double) pos.getZ() + 0.1875 + (double) random.nextFloat() * 0.625,
+                            0, 0, 0);
+                    break;
+            }
+        }
     }
 }

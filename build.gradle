@@ -139,8 +139,6 @@ dependencies {
     compileOnly fg.deobf("vazkii.autoreglib:AutoRegLib:1.6-49.90")
     compileOnly fg.deobf("vazkii.quark:Quark:r2.4-322.1")
     compileOnly fg.deobf("curse.maven:endergetic-291509:3750371")
-    compileOnly fg.deobf("curse.maven:enhanced-mushrooms-383725:3353212")
-    compileOnly fg.deobf("com.minecraftabnormals:blueprint:1.16.5-3.3.1")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

@@ -71,7 +71,6 @@ public class InfinityButtonsClient {
             }
             if (ModList.get().isLoaded("enhanced_mushrooms")) {
                 RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.GLOWSHROOM_LARGE_BUTTON.get(), RenderType.getTranslucent());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.GLOWSHROOM_BOOKSHELF_SECRET_BUTTON.get(), RenderType.getTranslucent());
             }
         });
     }
