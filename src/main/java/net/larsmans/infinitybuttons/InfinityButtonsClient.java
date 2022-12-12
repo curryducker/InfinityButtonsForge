@@ -1,6 +1,10 @@
 package net.larsmans.infinitybuttons;
 
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.compat.BambooBlocksBlocks;
+import net.larsmans.infinitybuttons.compat.EndergeticBlocks;
+import net.larsmans.infinitybuttons.compat.EnhancedMushroomsBlocks;
+import net.larsmans.infinitybuttons.compat.NethersDelightBlocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
@@ -44,33 +48,33 @@ public class InfinityButtonsClient {
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BLACK_SAFE_EMERGENCY_BUTTON.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.FANCY_SAFE_EMERGENCY_BUTTON.get(), RenderType.getCutout());
             if (ModList.get().isLoaded("endergetic")) {
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_TORCH_LEVER.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(EndergeticBlocks.ENDER_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(EndergeticBlocks.ENDER_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(EndergeticBlocks.ENDER_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(EndergeticBlocks.ENDER_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             }
             if (ModList.get().isLoaded("nethers_delight")) {
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_TORCH_LEVER.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.PROPELPLANT_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(NethersDelightBlocks.PROPELPLANT_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(NethersDelightBlocks.PROPELPLANT_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(NethersDelightBlocks.PROPELPLANT_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(NethersDelightBlocks.PROPELPLANT_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             }
             if (ModList.get().isLoaded("bamboo_blocks")) {
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.SOUL_BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.ENDER_BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.SOUL_BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.SOUL_BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.SOUL_BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.SOUL_BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.ENDER_BAMBOO_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.ENDER_BAMBOO_WALL_TORCH_BUTTON.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.ENDER_BAMBOO_TORCH_LEVER.get(), RenderType.getCutout());
+                RenderTypeLookup.setRenderLayer(BambooBlocksBlocks.ENDER_BAMBOO_WALL_TORCH_LEVER.get(), RenderType.getCutout());
             }
             if (ModList.get().isLoaded("enhanced_mushrooms")) {
-                RenderTypeLookup.setRenderLayer(InfinityButtonsBlocks.GLOWSHROOM_LARGE_BUTTON.get(), RenderType.getTranslucent());
+                RenderTypeLookup.setRenderLayer(EnhancedMushroomsBlocks.GLOWSHROOM_LARGE_BUTTON.get(), RenderType.getTranslucent());
             }
         });
     }

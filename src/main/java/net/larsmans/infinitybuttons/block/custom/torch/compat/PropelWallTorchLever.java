@@ -1,7 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.torch.compat;
 
 import net.larsmans.infinitybuttons.block.custom.torch.WallTorchLever;
-import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
+import net.larsmans.infinitybuttons.compat.NethersDelightItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -28,6 +28,6 @@ public class PropelWallTorchLever extends WallTorchLever {
 
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        return new ArrayList<>(Collections.singleton(new ItemStack(InfinityButtonsItems.PROPELPLANT_TORCH_LEVER.get())));
+        return new ArrayList<>(Collections.singleton(new ItemStack(NethersDelightItems.PROPELPLANT_TORCH_LEVER.get())));
     }
 }

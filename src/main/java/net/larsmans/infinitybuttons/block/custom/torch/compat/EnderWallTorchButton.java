@@ -2,7 +2,7 @@ package net.larsmans.infinitybuttons.block.custom.torch.compat;
 
 import com.minecraftabnormals.endergetic.client.particles.EEParticles;
 import net.larsmans.infinitybuttons.block.custom.torch.WallTorchButton;
-import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
+import net.larsmans.infinitybuttons.compat.EndergeticItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -59,6 +59,6 @@ public class EnderWallTorchButton extends WallTorchButton {
 
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        return new ArrayList<>(Collections.singleton(new ItemStack(InfinityButtonsItems.ENDER_TORCH_BUTTON.get())));
+        return new ArrayList<>(Collections.singleton(new ItemStack(EndergeticItems.ENDER_TORCH_BUTTON.get())));
     }
 }

@@ -1,7 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.torch.compat.bamboo;
 
 import net.larsmans.infinitybuttons.block.custom.torch.compat.PropelWallTorchLever;
-import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
+import net.larsmans.infinitybuttons.compat.BambooBlocksItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -17,6 +17,6 @@ public class SoulBambooWallTorchLever extends PropelWallTorchLever {
 
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        return new ArrayList<>(Collections.singleton(new ItemStack(InfinityButtonsItems.SOUL_BAMBOO_TORCH_LEVER.get())));
+        return new ArrayList<>(Collections.singleton(new ItemStack(BambooBlocksItems.SOUL_BAMBOO_TORCH_LEVER.get())));
     }
 }
