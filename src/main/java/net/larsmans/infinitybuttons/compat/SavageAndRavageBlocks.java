@@ -21,7 +21,7 @@ import java.util.function.Supplier;
 
 public class SavageAndRavageBlocks {
 
-    public static final RegistryObject<Block> CHISELED_GLOOMY_TILE_SECRET_BUTTON = registerBlock("chiseled_gloomy_tile_secret_button",
+    public static final RegistryObject<Block> CHISELED_GLOOMY_TILE_SECRET_BUTTON = registerBlock(
             () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool().setLightLevel(SavageAndRavageBlocks::getPressLight)));
 
@@ -29,14 +29,14 @@ public class SavageAndRavageBlocks {
      * Methods
      */
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = InfinityButtonsBlocks.BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
+    private static <T extends Block> RegistryObject<T> registerBlock(Supplier<T> block) {
+        RegistryObject<T> toReturn = InfinityButtonsBlocks.BLOCKS.register("chiseled_gloomy_tile_secret_button", block);
+        registerBlockItem(toReturn);
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        InfinityButtonsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+    private static <T extends Block> void registerBlockItem(RegistryObject<T> block) {
+        InfinityButtonsItems.ITEMS.register("chiseled_gloomy_tile_secret_button", () -> new BlockItem(block.get(),
                 new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
     }
 

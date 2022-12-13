@@ -244,6 +244,8 @@
 
   "block.infinitybuttons.doorbell": "Deurbel",
   "block.infinitybuttons.doorbell_button": "Deurbelknop",
+  "block.infinitybuttons.lamp_button": "Lampknop",
+  "block.infinitybuttons.lamp_lever": "Lamphendel",
   "block.infinitybuttons.hoglin_mount_button": "Opgezette-hoglinknop",
 
   "block.infinitybuttons.ice_brick_secret_button": "Ijsblokstenen verborgen knop",

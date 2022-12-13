@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:redstone_lamp"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinitybuttons:lamp_button",
+      "infinitybuttons:lamp_lever"
+    ]
+  }
+}

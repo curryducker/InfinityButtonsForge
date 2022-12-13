@@ -244,6 +244,8 @@
 
   "block.infinitybuttons.doorbell": "门铃",
   "block.infinitybuttons.doorbell_button": "门铃按钮",
+  "block.infinitybuttons.lamp_button": "Lamp Button",
+  "block.infinitybuttons.lamp_lever": "Lamp Lever",
   "block.infinitybuttons.hoglin_mount_button": "Hoglin Mount Button",
 
   "block.infinitybuttons.ice_brick_secret_button": "Ice Brick Secret Button",

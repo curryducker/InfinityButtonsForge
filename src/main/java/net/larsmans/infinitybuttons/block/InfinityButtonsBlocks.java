@@ -3,6 +3,8 @@ package net.larsmans.infinitybuttons.block;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
+import net.larsmans.infinitybuttons.block.custom.LampButton;
+import net.larsmans.infinitybuttons.block.custom.LampLever;
 import net.larsmans.infinitybuttons.block.custom.button.*;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
@@ -15,6 +17,7 @@ import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -283,6 +286,14 @@ public class InfinityButtonsBlocks {
             () -> new DoorbellButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> LAMP_BUTTON = registerBlock("lamp_button",
+            () -> new LampButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.3f).sound(SoundType.GLASS).setLightLevel(InfinityButtonsBlocks::getPressLight)));
+
+    public static final RegistryObject<Block> LAMP_LEVER = registerBlock("lamp_lever",
+            () -> new LampLever(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.3f).sound(SoundType.GLASS).setLightLevel(InfinityButtonsBlocks::getPressLight)));
+
     /**
      * Torches
      */
@@ -463,6 +474,10 @@ public class InfinityButtonsBlocks {
 
     private static <T extends Block> RegistryObject<T> registerTorchBlock(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
+    }
+
+    private static int getPressLight(BlockState state) {
+        return state.get(LampButton.PRESSED) ? 15 : 0;
     }
 
     public static void register(IEventBus eventBus) {

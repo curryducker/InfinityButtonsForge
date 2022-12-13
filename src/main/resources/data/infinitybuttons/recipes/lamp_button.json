@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "minecraft:redstone_lamp"},{"item": "minecraft:stone_button"}],
+  "result": {
+    "item": "infinitybuttons:lamp_button",
+    "count": 2
+  }
+}
