@@ -6,9 +6,9 @@
     }
   ],
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [{"item": "quark:elder_prismarine_bricks"},{"item": "minecraft:stone_button"}],
+  "ingredients": [{"item": "quark:elder_prismarine_bricks"}],
   "result": {
     "item": "infinitybuttons:elder_prismarine_brick_button",
-    "count": 2
+    "count": 4
   }
 }

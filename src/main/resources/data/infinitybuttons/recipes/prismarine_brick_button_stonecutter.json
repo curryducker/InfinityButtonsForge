@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 8,
+  "ingredient": {
+    "item": "minecraft:prismarine_bricks"
+  },
+  "result": "infinitybuttons:prismarine_brick_button"
+}

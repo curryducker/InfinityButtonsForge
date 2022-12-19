@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [{"item": "minecraft:prismarine"},{"item": "minecraft:stone_button"}],
+  "ingredients": [{"item": "minecraft:prismarine"}],
   "result": {
     "item": "infinitybuttons:prismarine_button",
-    "count": 2
+    "count": 4
   }
 }

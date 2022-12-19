@@ -1,0 +1,14 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "count": 8,
+  "ingredient": {
+    "item": "quark:elder_prismarine_bricks"
+  },
+  "result": "infinitybuttons:elder_prismarine_brick_button"
+}
