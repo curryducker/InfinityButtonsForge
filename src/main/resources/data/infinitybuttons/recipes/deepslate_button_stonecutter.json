@@ -1,0 +1,14 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "count": 8,
+  "ingredient": {
+    "item": "quark:deepslate"
+  },
+  "result": "infinitybuttons:deepslate_button"
+}
