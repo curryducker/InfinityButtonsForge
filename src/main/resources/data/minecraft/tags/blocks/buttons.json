@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "infinitybuttons:andesite_button",
     "infinitybuttons:granite_button",
     "infinitybuttons:diorite_button",
+    "infinitybuttons:andesite_button",
     "infinitybuttons:copper_button",
     "infinitybuttons:exposed_copper_button",
     "infinitybuttons:weathered_copper_button",
@@ -12,9 +12,9 @@
     "infinitybuttons:sticky_exposed_copper_button",
     "infinitybuttons:sticky_weathered_copper_button",
     "infinitybuttons:sticky_oxidized_copper_button",
-    "infinitybuttons:emerald_button",
     "infinitybuttons:iron_button",
     "infinitybuttons:gold_button",
+    "infinitybuttons:emerald_button",
     "infinitybuttons:diamond_button",
     "infinitybuttons:prismarine_button",
     "infinitybuttons:prismarine_brick_button",
