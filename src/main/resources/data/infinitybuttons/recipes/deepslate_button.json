@@ -1,0 +1,18 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "quark:deepslate"
+    }
+  ],
+  "result": {
+    "item": "infinitybuttons:deepslate_button",
+    "count": 4
+  }
+}

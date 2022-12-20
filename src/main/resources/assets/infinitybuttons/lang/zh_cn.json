@@ -1,4 +1,5 @@
 {
+  "block.infinitybuttons.deepslate_button": "Deepslate Button",
   "block.infinitybuttons.granite_button": "花岗岩按钮",
   "block.infinitybuttons.diorite_button": "闪长岩按钮",
   "block.infinitybuttons.andesite_button": "安山岩按钮",
@@ -67,6 +68,7 @@
   "block.infinitybuttons.crimson_large_button": "绯红木大按钮",
   "block.infinitybuttons.warped_large_button": "诡异木大按钮",
   "block.infinitybuttons.stone_large_button": "石质大按钮",
+  "block.infinitybuttons.deepslate_large_button": "Deepslate Large Button",
   "block.infinitybuttons.granite_large_button": "花岗岩大按钮",
   "block.infinitybuttons.diorite_large_button": "闪长岩大按钮",
   "block.infinitybuttons.andesite_large_button": "安山岩大按钮",

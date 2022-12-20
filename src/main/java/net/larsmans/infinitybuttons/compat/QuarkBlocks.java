@@ -2,9 +2,11 @@ package net.larsmans.infinitybuttons.compat;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.block.custom.button.compat.CompatStoneButton;
 import net.larsmans.infinitybuttons.block.custom.button.compat.CompatWoodenButton;
 import net.larsmans.infinitybuttons.block.custom.button.compat.PrismarineCompatButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.compat.PrismarineCompatLargeButton;
+import net.larsmans.infinitybuttons.block.custom.largebutton.compat.StoneCompatLargeButton;
 import net.larsmans.infinitybuttons.block.custom.largebutton.compat.WoodenCompatLargeButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.*;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
@@ -41,6 +43,10 @@ public class QuarkBlocks {
     public static final RegistryObject<Block> GRAY_STAINED_BUTTON = registerStainedButton("gray");
     public static final RegistryObject<Block> BLACK_STAINED_BUTTON = registerStainedButton("black");
 
+    public static final RegistryObject<Block> DEEPSLATE_BUTTON = registerBlock("deepslate_button",
+            () -> new CompatStoneButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
+
     public static final RegistryObject<Block> ELDER_PRISMARINE_BUTTON = registerBlock("elder_prismarine_button",
             () -> new PrismarineCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
@@ -69,6 +75,10 @@ public class QuarkBlocks {
     public static final RegistryObject<Block> LIGHT_GRAY_STAINED_LARGE_BUTTON = registerStainedLargeButton("light_gray");
     public static final RegistryObject<Block> GRAY_STAINED_LARGE_BUTTON = registerStainedLargeButton("gray");
     public static final RegistryObject<Block> BLACK_STAINED_LARGE_BUTTON = registerStainedLargeButton("black");
+
+    public static final RegistryObject<Block> DEEPSLATE_LARGE_BUTTON = registerBlock("deepslate_large_button",
+            () -> new StoneCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> ELDER_PRISMARINE_LARGE_BUTTON = registerBlock("elder_prismarine_large_button",
             () -> new PrismarineCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
