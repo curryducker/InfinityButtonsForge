@@ -74,6 +74,11 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> RED_SAND_BUTTON = registerSandButton("red_sand", false);
     public static final RegistryObject<Block> GRAVEL_BUTTON = registerSandButton("gravel", true);
 
+    public static final RegistryObject<Block> WHITE_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("white");
+    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("light_gray");
+    public static final RegistryObject<Block> GRAY_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("gray");
+    public static final RegistryObject<Block> BLACK_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("black");
+    public static final RegistryObject<Block> BROWN_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("brown");
     public static final RegistryObject<Block> RED_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("red");
     public static final RegistryObject<Block> ORANGE_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("orange");
     public static final RegistryObject<Block> YELLOW_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("yellow");
@@ -85,11 +90,6 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> PURPLE_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("purple");
     public static final RegistryObject<Block> MAGENTA_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("magenta");
     public static final RegistryObject<Block> PINK_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("pink");
-    public static final RegistryObject<Block> BROWN_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("brown");
-    public static final RegistryObject<Block> WHITE_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("white");
-    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("light_gray");
-    public static final RegistryObject<Block> GRAY_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("gray");
-    public static final RegistryObject<Block> BLACK_CONCRETE_POWDER_BUTTON = registerConcretePowderButton("black");
 
     /**
      * Large Buttons
@@ -139,6 +139,11 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> RED_SAND_LARGE_BUTTON = registerSandLargeButton("red_sand", false);
     public static final RegistryObject<Block> GRAVEL_LARGE_BUTTON = registerSandLargeButton("gravel", true);
 
+    public static final RegistryObject<Block> WHITE_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("white");
+    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("light_gray");
+    public static final RegistryObject<Block> GRAY_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("gray");
+    public static final RegistryObject<Block> BLACK_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("black");
+    public static final RegistryObject<Block> BROWN_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("brown");
     public static final RegistryObject<Block> RED_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("red");
     public static final RegistryObject<Block> ORANGE_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("orange");
     public static final RegistryObject<Block> YELLOW_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("yellow");
@@ -150,16 +155,16 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> PURPLE_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("purple");
     public static final RegistryObject<Block> MAGENTA_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("magenta");
     public static final RegistryObject<Block> PINK_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("pink");
-    public static final RegistryObject<Block> BROWN_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("brown");
-    public static final RegistryObject<Block> WHITE_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("white");
-    public static final RegistryObject<Block> LIGHT_GRAY_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("light_gray");
-    public static final RegistryObject<Block> GRAY_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("gray");
-    public static final RegistryObject<Block> BLACK_CONCRETE_POWDER_LARGE_BUTTON = registerConcretePowderLargeButton("black");
 
     /**
      * Emergency Buttons
      */
 
+    public static final RegistryObject<Block> WHITE_EMERGENCY_BUTTON = registerEmergencyButton("white");
+    public static final RegistryObject<Block> LIGHT_GRAY_EMERGENCY_BUTTON = registerEmergencyButton("light_gray");
+    public static final RegistryObject<Block> GRAY_EMERGENCY_BUTTON = registerEmergencyButton("gray");
+    public static final RegistryObject<Block> BLACK_EMERGENCY_BUTTON = registerEmergencyButton("black");
+    public static final RegistryObject<Block> BROWN_EMERGENCY_BUTTON = registerEmergencyButton("brown");
     public static final RegistryObject<Block> RED_EMERGENCY_BUTTON = registerEmergencyButton("red");
     public static final RegistryObject<Block> ORANGE_EMERGENCY_BUTTON = registerEmergencyButton("orange");
     public static final RegistryObject<Block> YELLOW_EMERGENCY_BUTTON = registerEmergencyButton("yellow");
@@ -171,13 +176,13 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> PURPLE_EMERGENCY_BUTTON = registerEmergencyButton("purple");
     public static final RegistryObject<Block> MAGENTA_EMERGENCY_BUTTON = registerEmergencyButton("magenta");
     public static final RegistryObject<Block> PINK_EMERGENCY_BUTTON = registerEmergencyButton("pink");
-    public static final RegistryObject<Block> BROWN_EMERGENCY_BUTTON = registerEmergencyButton("brown");
-    public static final RegistryObject<Block> WHITE_EMERGENCY_BUTTON = registerEmergencyButton("white");
-    public static final RegistryObject<Block> LIGHT_GRAY_EMERGENCY_BUTTON = registerEmergencyButton("light_gray");
-    public static final RegistryObject<Block> GRAY_EMERGENCY_BUTTON = registerEmergencyButton("gray");
-    public static final RegistryObject<Block> BLACK_EMERGENCY_BUTTON = registerEmergencyButton("black");
     public static final RegistryObject<Block> FANCY_EMERGENCY_BUTTON = registerEmergencyButton("fancy");
 
+    public static final RegistryObject<Block> WHITE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("white");
+    public static final RegistryObject<Block> LIGHT_GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("light_gray");
+    public static final RegistryObject<Block> GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("gray");
+    public static final RegistryObject<Block> BLACK_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("black");
+    public static final RegistryObject<Block> BROWN_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("brown");
     public static final RegistryObject<Block> RED_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("red");
     public static final RegistryObject<Block> ORANGE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("orange");
     public static final RegistryObject<Block> YELLOW_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("yellow");
@@ -189,11 +194,6 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> PURPLE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("purple");
     public static final RegistryObject<Block> MAGENTA_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("magenta");
     public static final RegistryObject<Block> PINK_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("pink");
-    public static final RegistryObject<Block> BROWN_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("brown");
-    public static final RegistryObject<Block> WHITE_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("white");
-    public static final RegistryObject<Block> LIGHT_GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("light_gray");
-    public static final RegistryObject<Block> GRAY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("gray");
-    public static final RegistryObject<Block> BLACK_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("black");
     public static final RegistryObject<Block> FANCY_SAFE_EMERGENCY_BUTTON = registerSafeEmergencyButton("fancy");
 
     /**

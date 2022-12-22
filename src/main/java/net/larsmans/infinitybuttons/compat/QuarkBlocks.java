@@ -26,6 +26,11 @@ import java.util.function.Supplier;
 
 public class QuarkBlocks {
 
+    public static final RegistryObject<Block> WHITE_STAINED_BUTTON = registerStainedButton("white");
+    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_BUTTON = registerStainedButton("light_gray");
+    public static final RegistryObject<Block> GRAY_STAINED_BUTTON = registerStainedButton("gray");
+    public static final RegistryObject<Block> BLACK_STAINED_BUTTON = registerStainedButton("black");
+    public static final RegistryObject<Block> BROWN_STAINED_BUTTON = registerStainedButton("brown");
     public static final RegistryObject<Block> RED_STAINED_BUTTON = registerStainedButton("red");
     public static final RegistryObject<Block> ORANGE_STAINED_BUTTON = registerStainedButton("orange");
     public static final RegistryObject<Block> YELLOW_STAINED_BUTTON = registerStainedButton("yellow");
@@ -37,11 +42,6 @@ public class QuarkBlocks {
     public static final RegistryObject<Block> PURPLE_STAINED_BUTTON = registerStainedButton("purple");
     public static final RegistryObject<Block> MAGENTA_STAINED_BUTTON = registerStainedButton("magenta");
     public static final RegistryObject<Block> PINK_STAINED_BUTTON = registerStainedButton("pink");
-    public static final RegistryObject<Block> BROWN_STAINED_BUTTON = registerStainedButton("brown");
-    public static final RegistryObject<Block> WHITE_STAINED_BUTTON = registerStainedButton("white");
-    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_BUTTON = registerStainedButton("light_gray");
-    public static final RegistryObject<Block> GRAY_STAINED_BUTTON = registerStainedButton("gray");
-    public static final RegistryObject<Block> BLACK_STAINED_BUTTON = registerStainedButton("black");
 
     public static final RegistryObject<Block> DEEPSLATE_BUTTON = registerBlock("deepslate_button",
             () -> new CompatStoneButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -59,6 +59,11 @@ public class QuarkBlocks {
             () -> new PrismarineCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> WHITE_STAINED_LARGE_BUTTON = registerStainedLargeButton("white");
+    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_LARGE_BUTTON = registerStainedLargeButton("light_gray");
+    public static final RegistryObject<Block> GRAY_STAINED_LARGE_BUTTON = registerStainedLargeButton("gray");
+    public static final RegistryObject<Block> BLACK_STAINED_LARGE_BUTTON = registerStainedLargeButton("black");
+    public static final RegistryObject<Block> BROWN_STAINED_LARGE_BUTTON = registerStainedLargeButton("brown");
     public static final RegistryObject<Block> RED_STAINED_LARGE_BUTTON = registerStainedLargeButton("red");
     public static final RegistryObject<Block> ORANGE_STAINED_LARGE_BUTTON = registerStainedLargeButton("orange");
     public static final RegistryObject<Block> YELLOW_STAINED_LARGE_BUTTON = registerStainedLargeButton("yellow");
@@ -70,11 +75,6 @@ public class QuarkBlocks {
     public static final RegistryObject<Block> PURPLE_STAINED_LARGE_BUTTON = registerStainedLargeButton("purple");
     public static final RegistryObject<Block> MAGENTA_STAINED_LARGE_BUTTON = registerStainedLargeButton("magenta");
     public static final RegistryObject<Block> PINK_STAINED_LARGE_BUTTON = registerStainedLargeButton("pink");
-    public static final RegistryObject<Block> BROWN_STAINED_LARGE_BUTTON = registerStainedLargeButton("brown");
-    public static final RegistryObject<Block> WHITE_STAINED_LARGE_BUTTON = registerStainedLargeButton("white");
-    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_LARGE_BUTTON = registerStainedLargeButton("light_gray");
-    public static final RegistryObject<Block> GRAY_STAINED_LARGE_BUTTON = registerStainedLargeButton("gray");
-    public static final RegistryObject<Block> BLACK_STAINED_LARGE_BUTTON = registerStainedLargeButton("black");
 
     public static final RegistryObject<Block> DEEPSLATE_LARGE_BUTTON = registerBlock("deepslate_large_button",
             () -> new StoneCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -173,6 +173,11 @@ public class QuarkBlocks {
     public static final RegistryObject<Block> CHISELED_POLISHED_SLATE_BRICK_SECRET_BUTTON = registerChiseledPolishedButton("slate", MaterialColor.ICE);
     public static final RegistryObject<Block> CHISELED_POLISHED_VOIDSTONE_BRICK_SECRET_BUTTON = registerChiseledPolishedButton("voidstone", MaterialColor.BLACK);
 
+    public static final RegistryObject<Block> WHITE_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("white", MaterialColor.SNOW);
+    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("light_gray", MaterialColor.LIGHT_GRAY);
+    public static final RegistryObject<Block> GRAY_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("gray", MaterialColor.GRAY);
+    public static final RegistryObject<Block> BLACK_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("black", MaterialColor.BLACK);
+    public static final RegistryObject<Block> BROWN_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("brown", MaterialColor.BROWN);
     public static final RegistryObject<Block> RED_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("red", MaterialColor.RED);
     public static final RegistryObject<Block> ORANGE_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("orange", MaterialColor.ADOBE);
     public static final RegistryObject<Block> YELLOW_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("yellow", MaterialColor.YELLOW);
@@ -184,11 +189,6 @@ public class QuarkBlocks {
     public static final RegistryObject<Block> PURPLE_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("purple", MaterialColor.PURPLE);
     public static final RegistryObject<Block> MAGENTA_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("magenta", MaterialColor.MAGENTA);
     public static final RegistryObject<Block> PINK_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("pink", MaterialColor.PINK);
-    public static final RegistryObject<Block> BROWN_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("brown", MaterialColor.BROWN);
-    public static final RegistryObject<Block> WHITE_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("white", MaterialColor.SNOW);
-    public static final RegistryObject<Block> LIGHT_GRAY_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("light_gray", MaterialColor.LIGHT_GRAY);
-    public static final RegistryObject<Block> GRAY_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("gray", MaterialColor.GRAY);
-    public static final RegistryObject<Block> BLACK_STAINED_PLANK_SECRET_BUTTON = registerStainedPlankButton("black", MaterialColor.BLACK);
     
     /**
      * Methods

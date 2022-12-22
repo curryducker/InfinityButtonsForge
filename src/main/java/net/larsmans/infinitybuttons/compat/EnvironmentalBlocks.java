@@ -55,6 +55,11 @@ public class EnvironmentalBlocks {
             () -> new FullCompatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ADOBE)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
 
+    public static final RegistryObject<Block> WHITE_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("white", MaterialColor.WHITE_TERRACOTTA);
+    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("light_gray", MaterialColor.LIGHT_GRAY_TERRACOTTA);
+    public static final RegistryObject<Block> GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("gray", MaterialColor.GRAY_TERRACOTTA);
+    public static final RegistryObject<Block> BLACK_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("black", MaterialColor.BLACK_TERRACOTTA);
+    public static final RegistryObject<Block> BROWN_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("brown", MaterialColor.BROWN_TERRACOTTA);
     public static final RegistryObject<Block> RED_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("red", MaterialColor.RED_TERRACOTTA);
     public static final RegistryObject<Block> ORANGE_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("orange", MaterialColor.ORANGE_TERRACOTTA);
     public static final RegistryObject<Block> YELLOW_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("yellow", MaterialColor.YELLOW_TERRACOTTA);
@@ -66,16 +71,16 @@ public class EnvironmentalBlocks {
     public static final RegistryObject<Block> PURPLE_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("purple", MaterialColor.PURPLE_TERRACOTTA);
     public static final RegistryObject<Block> MAGENTA_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("magenta", MaterialColor.MAGENTA_TERRACOTTA);
     public static final RegistryObject<Block> PINK_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("pink", MaterialColor.PINK_TERRACOTTA);
-    public static final RegistryObject<Block> BROWN_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("brown", MaterialColor.BROWN_TERRACOTTA);
-    public static final RegistryObject<Block> WHITE_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("white", MaterialColor.WHITE_TERRACOTTA);
-    public static final RegistryObject<Block> LIGHT_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("light_gray", MaterialColor.LIGHT_GRAY_TERRACOTTA);
-    public static final RegistryObject<Block> GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("gray", MaterialColor.GRAY_TERRACOTTA);
-    public static final RegistryObject<Block> BLACK_TERRACOTTA_BRICK_SECRET_BUTTON = registerTerracotta("black", MaterialColor.BLACK_TERRACOTTA);
 
     public static final RegistryObject<Block> CHISELED_TERRACOTTA_BRICK_SECRET_BUTTON = registerBlock("chiseled_terracotta_brick_secret_button",
             () -> new ChiseledCompatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.ADOBE)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.25f, 4.2f).notSolid().setRequiresTool()));
 
+    public static final RegistryObject<Block> CHISELED_WHITE_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("white", MaterialColor.WHITE_TERRACOTTA);
+    public static final RegistryObject<Block> CHISELED_LIGHT_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("light_gray", MaterialColor.LIGHT_GRAY_TERRACOTTA);
+    public static final RegistryObject<Block> CHISELED_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("gray", MaterialColor.GRAY_TERRACOTTA);
+    public static final RegistryObject<Block> CHISELED_BLACK_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("black", MaterialColor.BLACK_TERRACOTTA);
+    public static final RegistryObject<Block> CHISELED_BROWN_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("brown", MaterialColor.BROWN_TERRACOTTA);
     public static final RegistryObject<Block> CHISELED_RED_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("red", MaterialColor.RED_TERRACOTTA);
     public static final RegistryObject<Block> CHISELED_ORANGE_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("orange", MaterialColor.ORANGE_TERRACOTTA);
     public static final RegistryObject<Block> CHISELED_YELLOW_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("yellow", MaterialColor.YELLOW_TERRACOTTA);
@@ -87,11 +92,6 @@ public class EnvironmentalBlocks {
     public static final RegistryObject<Block> CHISELED_PURPLE_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("purple", MaterialColor.PURPLE_TERRACOTTA);
     public static final RegistryObject<Block> CHISELED_MAGENTA_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("magenta", MaterialColor.MAGENTA_TERRACOTTA);
     public static final RegistryObject<Block> CHISELED_PINK_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("pink", MaterialColor.PINK_TERRACOTTA);
-    public static final RegistryObject<Block> CHISELED_BROWN_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("brown", MaterialColor.BROWN_TERRACOTTA);
-    public static final RegistryObject<Block> CHISELED_WHITE_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("white", MaterialColor.WHITE_TERRACOTTA);
-    public static final RegistryObject<Block> CHISELED_LIGHT_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("light_gray", MaterialColor.LIGHT_GRAY_TERRACOTTA);
-    public static final RegistryObject<Block> CHISELED_GRAY_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("gray", MaterialColor.GRAY_TERRACOTTA);
-    public static final RegistryObject<Block> CHISELED_BLACK_TERRACOTTA_BRICK_SECRET_BUTTON = registerChiseledTerracotta("black", MaterialColor.BLACK_TERRACOTTA);
 
     public static final RegistryObject<Block> WILLOW_PLANK_SECRET_BUTTON = registerPlankButton("willow", MaterialColor.WOOD);
     public static final RegistryObject<Block> CHERRY_PLANK_SECRET_BUTTON = registerPlankButton("cherry", MaterialColor.WOOD);

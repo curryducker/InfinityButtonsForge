@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "infinitybuttons:white_safe_emergency_button",
+    "infinitybuttons:light_gray_safe_emergency_button",
+    "infinitybuttons:gray_safe_emergency_button",
+    "infinitybuttons:black_safe_emergency_button",
+    "infinitybuttons:brown_safe_emergency_button",
     "infinitybuttons:red_safe_emergency_button",
     "infinitybuttons:orange_safe_emergency_button",
     "infinitybuttons:yellow_safe_emergency_button",
@@ -11,11 +16,6 @@
     "infinitybuttons:blue_safe_emergency_button",
     "infinitybuttons:purple_safe_emergency_button",
     "infinitybuttons:magenta_safe_emergency_button",
-    "infinitybuttons:pink_safe_emergency_button",
-    "infinitybuttons:brown_safe_emergency_button",
-    "infinitybuttons:white_safe_emergency_button",
-    "infinitybuttons:light_gray_safe_emergency_button",
-    "infinitybuttons:gray_safe_emergency_button",
-    "infinitybuttons:black_safe_emergency_button"
+    "infinitybuttons:pink_safe_emergency_button"
   ]
 }
