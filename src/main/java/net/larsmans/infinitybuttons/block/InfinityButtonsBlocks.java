@@ -224,14 +224,14 @@ public class InfinityButtonsBlocks {
             () -> new ChiseledStoneBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
 
-    public static final RegistryObject<Block> OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("oak", Material.WOOD, MaterialColor.WOOD);
-    public static final RegistryObject<Block> SPRUCE_PLANK_SECRET_BUTTON = registerPlankSecretButton("spruce", Material.WOOD, MaterialColor.OBSIDIAN);
-    public static final RegistryObject<Block> BIRCH_PLANK_SECRET_BUTTON = registerPlankSecretButton("birch", Material.WOOD, MaterialColor.SAND);
-    public static final RegistryObject<Block> JUNGLE_PLANK_SECRET_BUTTON = registerPlankSecretButton("jungle", Material.WOOD, MaterialColor.DIRT);
-    public static final RegistryObject<Block> ACACIA_PLANK_SECRET_BUTTON = registerPlankSecretButton("acacia", Material.WOOD, MaterialColor.ADOBE);
-    public static final RegistryObject<Block> DARK_OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("dark_oak", Material.WOOD, MaterialColor.BROWN);
-    public static final RegistryObject<Block> CRIMSON_PLANK_SECRET_BUTTON = registerPlankSecretButton("crimson", Material.NETHER_WOOD, MaterialColor.CRIMSON_STEM);
-    public static final RegistryObject<Block> WARPED_PLANK_SECRET_BUTTON = registerPlankSecretButton("warped", Material.NETHER_WOOD, MaterialColor.WARPED_STEM);
+    public static final RegistryObject<Block> OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("oak", MaterialColor.WOOD);
+    public static final RegistryObject<Block> SPRUCE_PLANK_SECRET_BUTTON = registerPlankSecretButton("spruce", MaterialColor.OBSIDIAN);
+    public static final RegistryObject<Block> BIRCH_PLANK_SECRET_BUTTON = registerPlankSecretButton("birch", MaterialColor.SAND);
+    public static final RegistryObject<Block> JUNGLE_PLANK_SECRET_BUTTON = registerPlankSecretButton("jungle", MaterialColor.DIRT);
+    public static final RegistryObject<Block> ACACIA_PLANK_SECRET_BUTTON = registerPlankSecretButton("acacia", MaterialColor.ADOBE);
+    public static final RegistryObject<Block> DARK_OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("dark_oak", MaterialColor.BROWN);
+    public static final RegistryObject<Block> CRIMSON_PLANK_SECRET_BUTTON = registerNetherPlankSecretButton("crimson", MaterialColor.CRIMSON_STEM);
+    public static final RegistryObject<Block> WARPED_PLANK_SECRET_BUTTON = registerNetherPlankSecretButton("warped", MaterialColor.WARPED_STEM);
 
     public static final RegistryObject<Block> END_STONE_BRICK_SECRET_BUTTON = registerBlock("end_stone_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
@@ -445,8 +445,13 @@ public class InfinityButtonsBlocks {
                 .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).notSolid().sound(SoundType.METAL)));
     }
 
-    private static RegistryObject<Block> registerPlankSecretButton(String wood, Material material, MaterialColor materialColor) {
-        return registerBlock(wood + "_plank_secret_button", () -> new PlankSecretButton(AbstractBlock.Properties.create(material, materialColor)
+    private static RegistryObject<Block> registerPlankSecretButton(String wood, MaterialColor materialColor) {
+        return registerBlock(wood + "_plank_secret_button", () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, materialColor)
+                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+    }
+
+    private static RegistryObject<Block> registerNetherPlankSecretButton(String wood, MaterialColor materialColor) {
+        return registerBlock(wood + "_plank_secret_button", () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, materialColor)
                 .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
     }
 
