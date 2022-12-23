@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/button",
+  "parent": "minecraft:block/button_pressed",
   "textures": {
     "texture": "minecraft:block/white_concrete_powder"
   }
