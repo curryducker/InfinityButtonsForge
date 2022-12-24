@@ -46,6 +46,7 @@ Can be played without, but has additional content with:
 - [Quark](https://quarkmod.net/)
 - [Nether's Delight](https://www.curseforge.com/minecraft/mc-mods/nethers-delight)
 - [Woodworks](https://www.curseforge.com/minecraft/mc-mods/woodworks) (1.18.2 - 1.19.x)
+- [Carpenter](https://www.curseforge.com/minecraft/mc-mods/carpenter) (1.18.2)
 - [Environmental](https://www.curseforge.com/minecraft/mc-mods/environmental) (1.16.5)
 - [The Endergetic Expansion](https://www.curseforge.com/minecraft/mc-mods/endergetic) (1.16.5)
 - [Autumnity](https://www.curseforge.com/minecraft/mc-mods/autumnity) (1.16.5)
