@@ -398,13 +398,13 @@
   "infinitybuttons.tooltip.diamond_button": "\u00A77De grootste flex in het westen",
   "infinitybuttons.tooltip.prismarine_button": "\u00A77Deze knop kan in het water",
   "infinitybuttons.tooltip.falling_button": "\u00A77Deze knop kan maar één keer ingedrukt worden",
-  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77Shift-klik met een lege hand om het omhulsel te openen",
+  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77Sluip met een lege hand om te openen en sluiten",
   "infinitybuttons.tooltip.doorbell_button": "\u00A77Deze deurbel produceert een redstone-signaal",
 
   "itemGroup.infinityButtonsTab": "Infinity Buttons",
   "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",
 
-  "infinitybuttons.actionbar.closed_safety_button": "Houd shift ingedrukt om open en dicht te maken",
+  "infinitybuttons.actionbar.closed_safety_button": "Sluip met een lege hand om te openen en sluiten",
 
   "text.autoconfig.infinitybuttons.option.alarmSound": "Alarmgeluid",
   "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "Of de noodknoppen een alarmgeluid maken",

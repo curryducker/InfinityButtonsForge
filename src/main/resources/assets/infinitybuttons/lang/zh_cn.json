@@ -398,13 +398,13 @@
   "infinitybuttons.tooltip.diamond_button": "\u00A77有钱银，羡慕不？",
   "infinitybuttons.tooltip.prismarine_button": "\u00A77这个按钮可能会被水淹没",
   "infinitybuttons.tooltip.falling_button": "\u00A77这是一个一次性按钮",
-  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77空手按下 shift 键会触发事件",
+  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77Sneak with an empty hand to open and close",
   "infinitybuttons.tooltip.doorbell_button": "\u00A77这个门铃会发出红石信号",
 
   "itemGroup.infinityButtonsTab": "无限按钮",
   "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",
 
-  "infinitybuttons.actionbar.closed_safety_button": "按下 Shift 键打开或关闭它",
+  "infinitybuttons.actionbar.closed_safety_button": "Sneak with an empty hand to open and close",
 
   "text.autoconfig.infinitybuttons.option.alarmSound": "警报声音",
   "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "紧急按钮按下后是否会发出警报声音",
