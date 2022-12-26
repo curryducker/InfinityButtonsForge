@@ -37,7 +37,7 @@ public abstract class AbstractSecretButton extends HorizontalBlock {
         SOUTH_SHAPE = south_shape;
         WEST_SHAPE = west_shape;
         OFF_SHAPE = off_shape;
-        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, Boolean.FALSE));
+        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false));
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
@@ -74,7 +74,7 @@ public abstract class AbstractSecretButton extends HorizontalBlock {
     }
 
     public void powerBlock(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, state.with(PRESSED, Boolean.TRUE), 3);
+        world.setBlockState(pos, state.with(PRESSED, true), 3);
         this.updateNeighbors(state, world, pos);
         world.getPendingBlockTicks().scheduleTick(pos, this, 50);
     }
@@ -112,7 +112,7 @@ public abstract class AbstractSecretButton extends HorizontalBlock {
 
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(PRESSED)) {
-            worldIn.setBlockState(pos, state.with(PRESSED, Boolean.FALSE), 3);
+            worldIn.setBlockState(pos, state.with(PRESSED, false), 3);
             this.updateNeighbors(state, worldIn, pos);
             this.playSound(null, worldIn, pos, false);
         }
