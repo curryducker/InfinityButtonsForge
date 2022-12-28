@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "#infinitybuttons:wooden_large_buttons",
+    "#infinitybuttons:concrete_powder_large_buttons",
 
     "infinitybuttons:stone_large_button",
     "infinitybuttons:granite_large_button",
@@ -25,24 +26,7 @@
     "infinitybuttons:dark_prismarine_large_button",
     "infinitybuttons:sand_large_button",
     "infinitybuttons:red_sand_large_button",
-    "infinitybuttons:gravel_large_button",
-
-    "infinitybuttons:white_concrete_powder_large_button",
-    "infinitybuttons:light_gray_concrete_powder_large_button",
-    "infinitybuttons:gray_concrete_powder_large_button",
-    "infinitybuttons:black_concrete_powder_large_button",
-    "infinitybuttons:brown_concrete_powder_large_button",
-    "infinitybuttons:red_concrete_powder_large_button",
-    "infinitybuttons:orange_concrete_powder_large_button",
-    "infinitybuttons:yellow_concrete_powder_large_button",
-    "infinitybuttons:lime_concrete_powder_large_button",
-    "infinitybuttons:green_concrete_powder_large_button",
-    "infinitybuttons:cyan_concrete_powder_large_button",
-    "infinitybuttons:light_blue_concrete_powder_large_button",
-    "infinitybuttons:blue_concrete_powder_large_button",
-    "infinitybuttons:purple_concrete_powder_large_button",
-    "infinitybuttons:magenta_concrete_powder_large_button",
-    "infinitybuttons:pink_concrete_powder_large_button"
+    "infinitybuttons:gravel_large_button"
   ],
   "optional": [
     "infinitybuttons:deepslate_large_button",
