@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_planks": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinitybuttons:purple_concrete_powder_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thing": {
       "conditions": {
         "items": [
           {
@@ -16,13 +22,13 @@
   },
   "requirements": [
     [
-      "has_planks"
+      "has_thing",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:purple_concrete_powder_button",
-      "infinitybuttons:purple_concrete_powder_large_button"
+      "infinitybuttons:purple_concrete_powder_button"
     ]
   }
 }

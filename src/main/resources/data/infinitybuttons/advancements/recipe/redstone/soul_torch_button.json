@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_planks": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinitybuttons:soul_torch_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thing": {
       "conditions": {
         "items": [
           {
@@ -14,13 +20,13 @@
   },
   "requirements": [
     [
-      "has_planks"
+      "has_thing",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:soul_torch_button",
-      "infinitybuttons:soul_torch_lever"
+      "infinitybuttons:soul_torch_button"
     ]
   }
 }

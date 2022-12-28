@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_planks": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinitybuttons:doorbell"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thing": {
       "conditions": {
         "items": [
           {
@@ -12,25 +18,17 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "infinitybuttons:doorbell"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_planks",
+      "has_thing",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:doorbell",
-      "infinitybuttons:doorbell_button_1",
-      "infinitybuttons:doorbell_button_2"
+      "infinitybuttons:doorbell"
     ]
   }
 }

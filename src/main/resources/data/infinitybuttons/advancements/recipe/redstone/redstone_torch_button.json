@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_redstone": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinitybuttons:redstone_torch_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thing": {
       "conditions": {
         "items": [
           {
@@ -16,13 +22,13 @@
   },
   "requirements": [
     [
-      "has_redstone"
+      "has_thing",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "infinitybuttons:redstone_torch_button",
-      "infinitybuttons:redstone_torch_lever"
+      "infinitybuttons:redstone_torch_button"
     ]
   }
 }
