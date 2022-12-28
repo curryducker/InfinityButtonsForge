@@ -1,8 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [{"item": "minecraft:cyan_concrete_powder"}],
+  "group": "concrete_powder_buttons",
+  "ingredients": [
+    {
+      "item": "minecraft:cyan_concrete_powder"
+    }
+  ],
   "result": {
-    "item": "infinitybuttons:cyan_concrete_powder_button",
-    "count": 4
+    "count": 4,
+    "item": "infinitybuttons:cyan_concrete_powder_button"
   }
 }

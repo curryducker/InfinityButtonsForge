@@ -1,8 +1,15 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [{"item": "infinitybuttons:green_concrete_powder_button"},{"item": "infinitybuttons:green_concrete_powder_button"}],
+  "group": "concrete_powder_large_button",
+  "ingredients": [
+    {
+      "item": "infinitybuttons:green_concrete_powder_button"
+    },
+    {
+      "item": "infinitybuttons:green_concrete_powder_button"
+    }
+  ],
   "result": {
-    "item": "infinitybuttons:green_concrete_powder_large_button",
-    "count": 1
+    "item": "infinitybuttons:green_concrete_powder_large_button"
   }
 }

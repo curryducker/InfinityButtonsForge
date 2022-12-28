@@ -1,8 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [{"item": "minecraft:magenta_concrete_powder"}],
+  "group": "concrete_powder_buttons",
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_concrete_powder"
+    }
+  ],
   "result": {
-    "item": "infinitybuttons:magenta_concrete_powder_button",
-    "count": 4
+    "count": 4,
+    "item": "infinitybuttons:magenta_concrete_powder_button"
   }
 }
