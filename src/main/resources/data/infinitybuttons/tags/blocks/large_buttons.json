@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "#infinitybuttons:wooden_large_buttons",
-    "#infinitybuttons:concrete_powder_large_buttons",
 
     "infinitybuttons:stone_large_button",
     "infinitybuttons:granite_large_button",
@@ -26,7 +25,9 @@
     "infinitybuttons:dark_prismarine_large_button",
     "infinitybuttons:sand_large_button",
     "infinitybuttons:red_sand_large_button",
-    "infinitybuttons:gravel_large_button"
+    "infinitybuttons:gravel_large_button",
+
+    "#infinitybuttons:concrete_powder_large_buttons"
   ],
   "optional": [
     "infinitybuttons:deepslate_large_button",
