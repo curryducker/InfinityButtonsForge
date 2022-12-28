@@ -17,7 +17,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.5-3.0.0'
+version = '1.16.5-3.1.0'
 group = 'net.larsmans.infinitybuttons' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'infinitybuttons'
 
