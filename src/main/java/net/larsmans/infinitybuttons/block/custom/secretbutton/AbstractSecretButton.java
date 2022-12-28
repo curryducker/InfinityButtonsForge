@@ -65,7 +65,7 @@ public abstract class AbstractSecretButton extends HorizontalBlock {
     }
 
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (hit.getFace() == state.get(HORIZONTAL_FACING)) {
+        if (!state.get(PRESSED) && hit.getFace() == state.get(HORIZONTAL_FACING)) {
             this.powerBlock(state, worldIn, pos);
             this.playSound(player, worldIn, pos, true);
             return ActionResultType.func_233537_a_(worldIn.isRemote);
