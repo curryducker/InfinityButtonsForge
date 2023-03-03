@@ -27,7 +27,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class PrismarineButton extends AbstractButton {
+public class PrismarineButton extends AbstractButton implements IWaterLoggable{
     InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
