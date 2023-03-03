@@ -1,15 +1,12 @@
 package net.larsmans.infinitybuttons.block.custom.emergencybutton;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.block.custom.button.AbstractButton;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFaceBlock;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
+import net.minecraft.network.play.server.SPlaySoundEffectPacket;
 import net.minecraft.state.properties.AttachFace;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
@@ -20,15 +17,10 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 
-public class EmergencyButton extends HorizontalFaceBlock {
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
-
-    public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
+public class EmergencyButton extends AbstractButton {
     
     private static final VoxelShape STONE_DOWN  = Block.makeCuboidShape(4, 0, 4, 12, 1, 12);
     private static final VoxelShape STONE_UP    = Block.makeCuboidShape(4, 15, 4, 12, 16, 12);
@@ -37,13 +29,9 @@ public class EmergencyButton extends HorizontalFaceBlock {
     private static final VoxelShape STONE_SOUTH = Block.makeCuboidShape(4, 4, 0, 12, 12, 1);
     private static final VoxelShape STONE_WEST  = Block.makeCuboidShape(15, 4, 4, 16, 12, 12);
 
-    private static final VoxelShape FLOOR_X_SHAPE = VoxelShapes.or(
+    private static final VoxelShape FLOOR_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(5, 1, 5, 11, 5, 11), STONE_DOWN).simplify();
-    private static final VoxelShape FLOOR_Z_SHAPE = VoxelShapes.or(
-            Block.makeCuboidShape(5, 1, 5, 11, 5, 11), STONE_DOWN).simplify();
-    private static final VoxelShape FLOOR_X_PRESSED_SHAPE = VoxelShapes.or(
-            Block.makeCuboidShape(5, 1, 5, 11, 3, 11), STONE_DOWN).simplify();
-    private static final VoxelShape FLOOR_Z_PRESSED_SHAPE = VoxelShapes.or(
+    private static final VoxelShape FLOOR_PRESSED_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(5, 1, 5, 11, 3, 11), STONE_DOWN).simplify();
     private static final VoxelShape NORTH_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(5, 5, 11, 11, 11, 15), STONE_NORTH).simplify();
@@ -61,18 +49,19 @@ public class EmergencyButton extends HorizontalFaceBlock {
             Block.makeCuboidShape(11, 5, 5, 15, 11, 11), STONE_WEST).simplify();
     private static final VoxelShape WEST_PRESSED_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(13, 5, 5, 15, 11, 11), STONE_WEST).simplify();
-    private static final VoxelShape CEILING_X_SHAPE = VoxelShapes.or(
+    private static final VoxelShape CEILING_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(5, 11, 5, 11, 15, 11), STONE_UP).simplify();
-    private static final VoxelShape CEILING_Z_SHAPE = VoxelShapes.or(
-            Block.makeCuboidShape(5, 11, 5, 11, 15, 11), STONE_UP).simplify();
-    private static final VoxelShape CEILING_X_PRESSED_SHAPE = VoxelShapes.or(
-            Block.makeCuboidShape(5, 13, 5, 11, 15, 11), STONE_UP).simplify();
-    private static final VoxelShape CEILING_Z_PRESSED_SHAPE = VoxelShapes.or(
+    private static final VoxelShape CEILING_PRESSED_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(5, 13, 5, 11, 15, 11), STONE_UP).simplify();
 
     public EmergencyButton(AbstractBlock.Properties properties) {
-        super(properties);
+        super(false, properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR));
+    }
+
+    @Override
+    public int getActiveDuration() {
+        return 10;
     }
 
     @Override
@@ -81,11 +70,7 @@ public class EmergencyButton extends HorizontalFaceBlock {
         boolean flag = state.get(PRESSED);
         switch(state.get(FACE)) {
             case FLOOR:
-                if (direction.getAxis() == Direction.Axis.X) {
-                    return flag ? FLOOR_X_PRESSED_SHAPE : FLOOR_X_SHAPE;
-                }
-
-                return flag ? FLOOR_Z_PRESSED_SHAPE : FLOOR_Z_SHAPE;
+                return flag ? FLOOR_PRESSED_SHAPE : FLOOR_SHAPE;
             case WALL:
                 switch(direction) {
                     case EAST:
@@ -100,19 +85,11 @@ public class EmergencyButton extends HorizontalFaceBlock {
                 }
             case CEILING:
             default:
-                if (direction.getAxis() == Direction.Axis.X) {
-                    return flag ? CEILING_X_PRESSED_SHAPE : CEILING_X_SHAPE;
-                } else {
-                    return flag ? CEILING_Z_PRESSED_SHAPE : CEILING_Z_SHAPE;
-                }
+                return flag ? CEILING_PRESSED_SHAPE : CEILING_SHAPE;
         }
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(HORIZONTAL_FACING, PRESSED, FACE);
-    }
-
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (state.get(PRESSED)) {
             return ActionResultType.CONSUME;
@@ -120,61 +97,18 @@ public class EmergencyButton extends HorizontalFaceBlock {
         this.powerBlock(state, worldIn, pos);
         this.playSound(player, worldIn, pos, true);
         if (config.alarmSound) {
-            worldIn.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, 2f, 0.6f);
+            worldIn.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, 1, 1);
         }
         return ActionResultType.func_233537_a_(worldIn.isRemote);
     }
 
-    public void powerBlock(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, state.with(PRESSED, Boolean.TRUE), 3);
-        this.updateNeighbors(state, world, pos);
-        world.getPendingBlockTicks().scheduleTick(pos, this, 10);
-    }
-
+    @Override
     protected void playSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean pressed) {
-        worldIn.playSound(pressed ? playerIn : null, pos, SoundEvents.BLOCK_BONE_BLOCK_BREAK, SoundCategory.BLOCKS, 0.75F, pressed ? 0.6F : 0.5F);
+        worldIn.playSound(pressed ? playerIn : null, pos, this.getSoundEvent(pressed), SoundCategory.BLOCKS, 1, pressed ? 0.6f : 0.5f);
     }
 
     @Override
-    public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean moved) {
-        if (moved || state.matchesBlock(newState.getBlock())) {
-            return;
-        }
-        if (state.get(PRESSED)) {
-            this.updateNeighbors(state, worldIn, pos);
-        }
-        super.onReplaced(state, worldIn, pos, newState, moved);
-    }
-
-    @Override
-    public int getWeakPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        return blockState.get(PRESSED) ? 15 : 0;
-    }
-
-    @Override
-    public int getStrongPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        if (blockState.get(PRESSED) && getFacing(blockState) == side) {
-            return 15;
-        }
-        return 0;
-    }
-
-    @Override
-    public boolean canProvidePower(BlockState state) {
-        return true;
-    }
-
-    @Override
-    public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
-        if (state.get(PRESSED)) {
-            worldIn.setBlockState(pos, state.with(PRESSED, Boolean.FALSE), 3);
-            this.updateNeighbors(state, worldIn, pos);
-            this.playSound((PlayerEntity)null, worldIn, pos, false);
-        }
-    }
-
-    private void updateNeighbors(BlockState state, World worldIn, BlockPos pos) {
-        worldIn.notifyNeighborsOfStateChange(pos, this);
-        worldIn.notifyNeighborsOfStateChange(pos.offset(getFacing(state).getOpposite()), this);
+    protected SoundEvent getSoundEvent(boolean pressed) {
+        return SoundEvents.BLOCK_BONE_BLOCK_BREAK;
     }
 }

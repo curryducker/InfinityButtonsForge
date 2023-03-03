@@ -203,7 +203,7 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
                     this.powerBlock(state, worldIn, pos);
                     this.playClickSound(player, worldIn, pos, true);
                     if (config.alarmSound) {
-                        worldIn.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, 2f, 0.6f);
+                        worldIn.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, 1, 1);
                     }
                 }
                 break;
@@ -239,7 +239,7 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
     }
 
     protected void playClickSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean pressed) {
-        worldIn.playSound(pressed ? playerIn : null, pos, SoundEvents.BLOCK_BONE_BLOCK_BREAK, SoundCategory.BLOCKS, 0.75f, pressed ? 0.6f : 0.5f);
+        worldIn.playSound(pressed ? playerIn : null, pos, SoundEvents.BLOCK_BONE_BLOCK_BREAK, SoundCategory.BLOCKS, 1, pressed ? 0.6f : 0.5f);
     }
 
     protected void playToggleSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean pressed) {

@@ -1,5 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
+import me.shedaniel.autoconfig.AutoConfig;
+import net.larsmans.infinitybuttons.InfinityButtonsConfig;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -25,6 +27,7 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class AbstractButton extends HorizontalFaceBlock {
+    public InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
     protected static final VoxelShape CEILING_X_SHAPE = Block.makeCuboidShape(6.0, 14.0, 5.0, 10.0, 16.0, 11.0);
@@ -56,7 +59,7 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         Direction direction = state.get(HORIZONTAL_FACING);
         boolean flag = state.get(PRESSED);
-        switch((AttachFace)state.get(FACE)) {
+        switch(state.get(FACE)) {
             case FLOOR:
                 if (direction.getAxis() == Direction.Axis.X) {
                     return flag ? FLOOR_X_PRESSED_SHAPE : FLOOR_X_SHAPE;
@@ -136,7 +139,7 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
             } else {
                 worldIn.setBlockState(pos, state.with(PRESSED, false), 3);
                 this.updateNeighbors(state, worldIn, pos);
-                this.playSound((PlayerEntity)null, worldIn, pos, false);
+                this.playSound(null, worldIn, pos, false);
             }
 
         }
@@ -155,7 +158,7 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
         if (flag != flag1) {
             worldIn.setBlockState(pos, state.with(PRESSED, flag), 3);
             this.updateNeighbors(state, worldIn, pos);
-            this.playSound((PlayerEntity)null, worldIn, pos, flag);
+            this.playSound(null, worldIn, pos, flag);
         }
 
         if (flag) {
