@@ -1,5 +1,5 @@
 {
-  "block.infinitybuttons.deepslate_button": "Deepslate Button",
+  "block.infinitybuttons.deepslate_button": "深板岩按钮",
   "block.infinitybuttons.granite_button": "花岗岩按钮",
   "block.infinitybuttons.diorite_button": "闪长岩按钮",
   "block.infinitybuttons.andesite_button": "安山岩按钮",
@@ -68,7 +68,7 @@
   "block.infinitybuttons.crimson_large_button": "绯红木大按钮",
   "block.infinitybuttons.warped_large_button": "诡异木大按钮",
   "block.infinitybuttons.stone_large_button": "石质大按钮",
-  "block.infinitybuttons.deepslate_large_button": "Deepslate Large Button",
+  "block.infinitybuttons.deepslate_large_button": "深板岩大按钮",
   "block.infinitybuttons.granite_large_button": "花岗岩大按钮",
   "block.infinitybuttons.diorite_large_button": "闪长岩大按钮",
   "block.infinitybuttons.andesite_large_button": "安山岩大按钮",
@@ -246,8 +246,8 @@
 
   "block.infinitybuttons.doorbell": "门铃",
   "block.infinitybuttons.doorbell_button": "门铃按钮",
-  "block.infinitybuttons.lamp_button": "Lamp Button",
-  "block.infinitybuttons.lamp_lever": "Lamp Lever",
+  "block.infinitybuttons.lamp_button": "灯具按钮",
+  "block.infinitybuttons.lamp_lever": "灯具拉杆",
   "block.infinitybuttons.hoglin_mount_button": "Hoglin Mount Button",
 
   "block.infinitybuttons.ice_brick_secret_button": "Ice Brick Secret Button",
@@ -398,13 +398,13 @@
   "infinitybuttons.tooltip.diamond_button": "\u00A77有钱银，羡慕不？",
   "infinitybuttons.tooltip.prismarine_button": "\u00A77这个按钮可能会被水淹没",
   "infinitybuttons.tooltip.falling_button": "\u00A77这是一个一次性按钮",
-  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77Sneak with an empty hand to open and close",
+  "infinitybuttons.tooltip.safe_emergency_button": "\u00A77空手蹲下来开关按钮",
   "infinitybuttons.tooltip.doorbell_button": "\u00A77这个门铃会发出红石信号",
 
   "itemGroup.infinityButtonsTab": "无限按钮",
   "itemGroup.infinityButtonsCompatTab": "Infinity Buttons Compat",
 
-  "infinitybuttons.actionbar.closed_safety_button": "Sneak with an empty hand to open and close",
+  "infinitybuttons.actionbar.closed_safety_button": "空手蹲下来开关按钮",
 
   "text.autoconfig.infinitybuttons.option.alarmSound": "警报声音",
   "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "紧急按钮按下后是否会发出警报声音",
