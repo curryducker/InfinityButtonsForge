@@ -2,7 +2,7 @@ package net.larsmans.infinitybuttons.compat;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.block.custom.largebutton.compat.WoodenCompatLargeButton;
+import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.ChiseledCompatBrickSecretButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatBookshelfSecretButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatPlankSecretButton;
@@ -107,8 +107,8 @@ public class EnvironmentalBlocks {
     }
 
     private static RegistryObject<Block> registerLargeButton(String wood) {
-        return registerBlock(wood + "_large_button", () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+        return registerBlock(wood + "_large_button", () -> new WoodenCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD), true));
     }
 
     private static RegistryObject<Block> registerPlankButton(String wood, MaterialColor materialColor) {

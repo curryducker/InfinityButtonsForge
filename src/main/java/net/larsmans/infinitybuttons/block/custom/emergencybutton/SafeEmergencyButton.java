@@ -2,6 +2,7 @@ package net.larsmans.infinitybuttons.block.custom.emergencybutton;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -265,10 +266,7 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
 
     @Override
     public int getStrongPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        if (blockState.get(STATE) == SEBStateEnum.PRESSED && EmergencyButton.getFacing(blockState) == side) {
-            return 15;
-        }
-        return 0;
+        return (blockState.get(STATE) == SEBStateEnum.PRESSED && EmergencyButton.getFacing(blockState) == side) ? 15 : 0;
     }
 
     @Override
@@ -293,13 +291,7 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if (config.tooltips) {
-            if(Screen.hasShiftDown()) {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.safe_emergency_button"));
-            } else {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.hold_shift"));
-            }
-        }
+        InfinityButtonsUtil.tooltip(tooltip, "safe_emergency_button");
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 }

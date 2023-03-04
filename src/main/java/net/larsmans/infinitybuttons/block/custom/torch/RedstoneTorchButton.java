@@ -24,9 +24,10 @@ public class RedstoneTorchButton extends TorchBlock {
 
     public RedstoneTorchButton(Properties properties) {
         super(properties, RedstoneParticleData.REDSTONE_DUST);
-        this.setDefaultState((BlockState)((BlockState)this.stateContainer.getBaseState()).with(LIT, false));
+        this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false));
     }
 
+    @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (state.get(LIT)) {
             return ActionResultType.CONSUME;
@@ -36,17 +37,18 @@ public class RedstoneTorchButton extends TorchBlock {
         return ActionResultType.func_233537_a_(worldIn.isRemote);
     }
 
+    @Override
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(LIT)) {
-            worldIn.setBlockState(pos, (BlockState)state.with(LIT, false), 3);
+            worldIn.setBlockState(pos, state.with(LIT, false), 3);
             this.updateNeighbors(state, worldIn, pos);
-            this.playSound((PlayerEntity)null, worldIn, pos, false);
+            this.playSound(null, worldIn, pos, false);
 
         }
     }
 
     public void powerBlock(BlockState state, World worldIn, BlockPos pos) {
-        worldIn.setBlockState(pos, (BlockState)state.with(LIT, true), 3);
+        worldIn.setBlockState(pos, state.with(LIT, true), 3);
         this.updateNeighbors(state, worldIn, pos);
         worldIn.getPendingBlockTicks().scheduleTick(pos, this, 60);
     }
@@ -59,26 +61,24 @@ public class RedstoneTorchButton extends TorchBlock {
         worldIn.notifyNeighborsOfStateChange(pos, this);
     }
 
+    @Override
     public void onBlockAdded(BlockState state, World worldIn, BlockPos pos, BlockState oldState, boolean isMoving) {
         for(Direction direction : Direction.values()) {
             worldIn.notifyNeighborsOfStateChange(pos.offset(direction), this);
         }
     }
 
+    @Override
     public int getStrongPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        if (side == Direction.DOWN) {
-            return blockState.getWeakPower(blockAccess, pos, side);
-        }
-        return 0;
+        return (side == Direction.DOWN) ? blockState.getWeakPower(blockAccess, pos, side) : 0;
     }
 
+    @Override
     public int getWeakPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        if (blockState.get(LIT) && Direction.UP != side) {
-            return 15;
-        }
-        return 0;
+        return (blockState.get(LIT) && Direction.UP != side) ? 15 : 0;
     }
 
+    @Override
     public boolean canProvidePower(BlockState state) {
         return true;
     }
@@ -93,6 +93,7 @@ public class RedstoneTorchButton extends TorchBlock {
         }
     }
 
+    @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(LIT);
     }

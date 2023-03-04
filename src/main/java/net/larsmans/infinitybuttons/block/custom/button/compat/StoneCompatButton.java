@@ -1,6 +1,6 @@
-package net.larsmans.infinitybuttons.block.custom.largebutton.compat;
+package net.larsmans.infinitybuttons.block.custom.button.compat;
 
-import net.larsmans.infinitybuttons.block.custom.largebutton.StoneLargeButton;
+import net.larsmans.infinitybuttons.block.custom.button.StoneButton;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class StoneCompatLargeButton extends StoneLargeButton {
-    public StoneCompatLargeButton(Properties properties) {
-        super(properties);
+public class StoneCompatButton extends StoneButton {
+    public StoneCompatButton(Properties properties, boolean large) {
+        super(properties, large);
     }
 
     @Override

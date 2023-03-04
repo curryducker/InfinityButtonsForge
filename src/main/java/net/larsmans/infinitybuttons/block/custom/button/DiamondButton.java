@@ -1,7 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.particle.InfinityButtonsParticleTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -22,10 +21,12 @@ import java.util.List;
 import java.util.Random;
 
 public class DiamondButton extends AbstractButton{
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
-    public DiamondButton(Properties properties) {
-        super(false, properties);
+    private final boolean large;
+
+    public DiamondButton(Properties properties, boolean large) {
+        super(false, large, properties);
+        this.large = large;
     }
 
     @Override
@@ -41,8 +42,57 @@ public class DiamondButton extends AbstractButton{
     @Override
     @OnlyIn(Dist.CLIENT)
     public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (config.diamondParticles) {
-            if (random.nextInt(3) == 0) {
+        if (config.diamondParticles && random.nextInt(3) == 0) {
+            if (large) {
+                switch (state.get(FACE)) {
+                    case FLOOR:
+                        world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                (double) pos.getX() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                (double) pos.getY() + 0.125 + (double) random.nextFloat() * 0.0625,
+                                (double) pos.getZ() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                0, 0, 0);
+                        break;
+                    case WALL:
+                        switch (state.get(HORIZONTAL_FACING)) {
+                            case NORTH:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double) pos.getX() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                        (double) pos.getY() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                        (double) pos.getZ() + 0.8125 + (double) random.nextFloat() * 0.0625,
+                                        0, 0, 0);
+                                break;
+                            case EAST:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double) pos.getX() + 0.125 + (double) random.nextFloat() * 0.0625,
+                                        (double) pos.getY() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                        (double) pos.getZ() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                        0, 0, 0);
+                                break;
+                            case SOUTH:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double) pos.getX() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                        (double) pos.getY() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                        (double) pos.getZ() + 0.125 + (double) random.nextFloat() * 0.0625,
+                                        0, 0, 0);
+                                break;
+                            case WEST:
+                                world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                        (double) pos.getX() + 0.8125 + (double) random.nextFloat() * 0.0625,
+                                        (double) pos.getY() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                        (double) pos.getZ() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                        0, 0, 0);
+                                break;
+                        }
+                        break;
+                    case CEILING:
+                        world.addParticle(InfinityButtonsParticleTypes.SCRAPE.get(),
+                                (double) pos.getX() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                (double) pos.getY() + 0.8125 + (double) random.nextFloat() * 0.0625,
+                                (double) pos.getZ() + 0.1875 + (double) random.nextFloat() * 0.625,
+                                0, 0, 0);
+                        break;
+                }
+            } else {
                 switch (state.get(FACE)) {
                     case FLOOR:
                         switch (state.get(HORIZONTAL_FACING)) {
@@ -124,13 +174,7 @@ public class DiamondButton extends AbstractButton{
     @Override
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if (config.tooltips) {
-            if(Screen.hasShiftDown()) {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.diamond_button"));
-            } else {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.hold_shift"));
-            }
-        }
+        InfinityButtonsUtil.tooltip(tooltip, "diamond_button");
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 }

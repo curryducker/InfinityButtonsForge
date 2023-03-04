@@ -2,8 +2,8 @@ package net.larsmans.infinitybuttons.compat;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.block.custom.largebutton.compat.GlowshroomLargeButton;
-import net.larsmans.infinitybuttons.block.custom.largebutton.compat.WoodenCompatLargeButton;
+import net.larsmans.infinitybuttons.block.custom.button.compat.GlowshroomLargeButton;
+import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatBookshelfSecretButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatPlankSecretButton;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
@@ -27,9 +27,7 @@ public class EnhancedMushroomsBlocks {
 
     public static final RegistryObject<Block> GLOWSHROOM_LARGE_BUTTON = registerBlock("glowshroom_large_button",
             () -> new GlowshroomLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD).setLightLevel((state) -> {
-                        return 14;
-                    })));
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD).setLightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> RED_MUSHROOM_BOOKSHELF_SECRET_BUTTON = registerMushroomBookshelf("red");
     public static final RegistryObject<Block> BROWN_MUSHROOM_BOOKSHELF_SECRET_BUTTON = registerMushroomBookshelf("brown");
@@ -47,8 +45,8 @@ public class EnhancedMushroomsBlocks {
     }
 
     private static RegistryObject<Block> registerMushroomLargeButton(String color) {
-        return registerBlock(color + "_mushroom_large_button", () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+        return registerBlock(color + "_mushroom_large_button", () -> new WoodenCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD), true));
     }
 
     private static RegistryObject<Block> registerMushroomPlankButton(String color, MaterialColor materialColor) {

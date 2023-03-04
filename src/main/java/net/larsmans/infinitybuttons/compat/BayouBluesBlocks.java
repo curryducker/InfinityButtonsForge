@@ -2,7 +2,7 @@ package net.larsmans.infinitybuttons.compat;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.block.custom.largebutton.compat.WoodenCompatLargeButton;
+import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatBookshelfSecretButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatPlankSecretButton;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
@@ -22,8 +22,8 @@ import java.util.function.Supplier;
 public class BayouBluesBlocks {
 
     public static final RegistryObject<Block> CYPRESS_LARGE_BUTTON = registerBlock("cypress_large_button",
-            () -> new WoodenCompatLargeButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+            () -> new WoodenCompatButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD), true));
 
     public static final RegistryObject<Block> CYPRESS_BOOKSHELF_SECRET_BUTTON = registerBlock("cypress_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)

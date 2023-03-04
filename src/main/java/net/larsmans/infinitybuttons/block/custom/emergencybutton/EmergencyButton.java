@@ -55,7 +55,7 @@ public class EmergencyButton extends AbstractButton {
             Block.makeCuboidShape(5, 13, 5, 11, 15, 11), STONE_UP).simplify();
 
     public EmergencyButton(AbstractBlock.Properties properties) {
-        super(false, properties);
+        super(false, false, properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR));
     }
 

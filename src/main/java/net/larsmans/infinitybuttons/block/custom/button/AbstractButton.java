@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class AbstractButton extends HorizontalFaceBlock {
-    public InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
+    protected InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
     protected static final VoxelShape CEILING_X_SHAPE = Block.makeCuboidShape(6.0, 14.0, 5.0, 10.0, 16.0, 11.0);
@@ -46,17 +46,24 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
     protected static final VoxelShape SOUTH_PRESSED_SHAPE = Block.makeCuboidShape(5.0, 6.0, 0.0, 11.0, 10.0, 1.0);
     protected static final VoxelShape WEST_PRESSED_SHAPE = Block.makeCuboidShape(15.0, 6.0, 5.0, 16.0, 10.0, 11.0);
     protected static final VoxelShape EAST_PRESSED_SHAPE = Block.makeCuboidShape(0.0, 6.0, 5.0, 1.0, 10.0, 11.0);
-    private final boolean projectile;
 
-    protected AbstractButton(boolean projectile, AbstractBlock.Properties properties) {
+    private final boolean projectile;
+    private final boolean large;
+
+    protected AbstractButton(boolean projectile, boolean large, Properties properties) {
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR));
         this.projectile = projectile;
+        this.large = large;
     }
 
     public abstract int getActiveDuration();
 
+    @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+        if (large) {
+            return LargeButtonShape.outlineShape(state);
+        }
         Direction direction = state.get(HORIZONTAL_FACING);
         boolean flag = state.get(PRESSED);
         switch(state.get(FACE)) {
@@ -88,6 +95,7 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
         }
     }
 
+    @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (state.get(PRESSED)) {
             return ActionResultType.CONSUME;
@@ -110,6 +118,7 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
 
     protected abstract SoundEvent getSoundEvent(boolean pressed);
 
+    @Override
     public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!isMoving && !state.matchesBlock(newState.getBlock())) {
             if (state.get(PRESSED)) {
@@ -120,18 +129,22 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
         }
     }
 
+    @Override
     public int getWeakPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
         return blockState.get(PRESSED) ? 15 : 0;
     }
 
+    @Override
     public int getStrongPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
         return blockState.get(PRESSED) && getFacing(blockState) == side ? 15 : 0;
     }
 
+    @Override
     public boolean canProvidePower(BlockState state) {
         return true;
     }
 
+    @Override
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
         if (state.get(PRESSED)) {
             if (this.projectile) {
@@ -145,6 +158,7 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
         }
     }
 
+    @Override
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
         if (!worldIn.isRemote && this.projectile && !state.get(PRESSED)) {
             this.checkPressed(state, worldIn, pos);
@@ -172,6 +186,7 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
         worldIn.notifyNeighborsOfStateChange(pos.offset(getFacing(state).getOpposite()), this);
     }
 
+    @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING, PRESSED, FACE);
     }

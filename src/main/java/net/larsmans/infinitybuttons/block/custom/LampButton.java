@@ -13,19 +13,6 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 
 public class LampButton extends AbstractButton {
-    public LampButton(Properties properties) {
-        super(false, properties);
-    }
-
-    @Override
-    public int getActiveDuration() {
-        return 20;
-    }
-
-    @Override
-    protected SoundEvent getSoundEvent(boolean pressed) {
-        return pressed ? SoundEvents.BLOCK_STONE_BUTTON_CLICK_ON : SoundEvents.BLOCK_STONE_BUTTON_CLICK_OFF;
-    }
 
     private static final VoxelShape FLOOR_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(3, 0, 3, 13, 1, 13),
@@ -45,6 +32,20 @@ public class LampButton extends AbstractButton {
     private static final VoxelShape WEST_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(15, 3, 3, 16, 13, 13),
             Block.makeCuboidShape(8, 4, 4, 15, 12, 12));
+
+    public LampButton(Properties properties) {
+        super(false, false, properties);
+    }
+
+    @Override
+    public int getActiveDuration() {
+        return 20;
+    }
+
+    @Override
+    protected SoundEvent getSoundEvent(boolean pressed) {
+        return pressed ? SoundEvents.BLOCK_STONE_BUTTON_CLICK_ON : SoundEvents.BLOCK_STONE_BUTTON_CLICK_OFF;
+    }
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

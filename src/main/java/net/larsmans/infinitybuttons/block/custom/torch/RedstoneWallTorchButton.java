@@ -25,7 +25,7 @@ public class RedstoneWallTorchButton extends RedstoneTorchButton {
 
     public RedstoneWallTorchButton(Properties properties) {
         super(properties);
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateContainer.getBaseState()).with(LIT, false)).with(FACING, Direction.NORTH));
+        this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(FACING, Direction.NORTH));
     }
 
     @Override
@@ -47,7 +47,7 @@ public class RedstoneWallTorchButton extends RedstoneTorchButton {
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockState blockState = Blocks.WALL_TORCH.getStateForPlacement(context);
-        return blockState == null ? null : (BlockState)this.getDefaultState().with(FACING, blockState.get(FACING));
+        return blockState == null ? null : this.getDefaultState().with(FACING, blockState.get(FACING));
     }
 
     @Override
@@ -65,10 +65,7 @@ public class RedstoneWallTorchButton extends RedstoneTorchButton {
 
     @Override
     public int getWeakPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        if (blockState.get(LIT) && blockState.get(FACING) != side) {
-            return 15;
-        }
-        return 0;
+        return (blockState.get(LIT) && blockState.get(FACING) != side) ? 15 : 0;
     }
 
     @Override

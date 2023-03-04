@@ -1,58 +1,96 @@
 package net.larsmans.infinitybuttons.block.custom;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
+import net.larsmans.infinitybuttons.block.custom.button.AbstractWallButton;
+import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Random;
 
-public class DoorbellButton extends Doorbell{
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
+public class DoorbellButton extends AbstractWallButton {
+
+    protected static final VoxelShape NORTH_PRESSED_SHAPE =
+            Block.makeCuboidShape(6, 4, 14, 10, 12, 16);
+
+    protected static final VoxelShape EAST_PRESSED_SHAPE =
+            Block.makeCuboidShape(0, 4, 6, 2, 12, 10);
+
+    protected static final VoxelShape SOUTH_PRESSED_SHAPE =
+            Block.makeCuboidShape(6, 4, 0, 10, 12, 2);
+
+    protected static final VoxelShape WEST_PRESSED_SHAPE =
+            Block.makeCuboidShape(14, 4, 6, 16, 12, 10);
+
+    protected static final VoxelShape NORTH_SHAPE = VoxelShapes.or(NORTH_PRESSED_SHAPE,
+            Block.makeCuboidShape(7, 6, 13, 9, 10, 14));
+
+    protected static final VoxelShape EAST_SHAPE = VoxelShapes.or(EAST_PRESSED_SHAPE,
+            Block.makeCuboidShape(2, 6, 7, 3, 10, 9));
+
+    protected static final VoxelShape SOUTH_SHAPE = VoxelShapes.or(SOUTH_PRESSED_SHAPE,
+            Block.makeCuboidShape(7, 6, 2, 9, 10, 3));
+
+    protected static final VoxelShape WEST_SHAPE = VoxelShapes.or(WEST_PRESSED_SHAPE,
+            Block.makeCuboidShape(13, 6, 7, 14, 10, 9));
 
     public DoorbellButton(Properties properties) {
-        super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false));
+        super(properties, NORTH_SHAPE, EAST_SHAPE, SOUTH_SHAPE, WEST_SHAPE, NORTH_PRESSED_SHAPE, EAST_PRESSED_SHAPE, SOUTH_PRESSED_SHAPE, WEST_PRESSED_SHAPE);
     }
 
     @Override
-    public int getWeakPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        return blockState.get(PRESSED) ? 15 : 0;
+    public int getPressDuration() {
+        return 15;
     }
 
     @Override
-    public int getStrongPower(BlockState blockState, IBlockReader blockAccess, BlockPos pos, Direction side) {
-        if (blockState.get(PRESSED) && blockState.get(HORIZONTAL_FACING) == side) {
-            return 15;
+    protected void playSound(@Nullable PlayerEntity playerIn, IWorld worldIn, BlockPos pos, boolean hitByArrow) {
+        worldIn.playSound(hitByArrow ? playerIn : null, pos, InfinityButtonsSounds.DOORBELL.get(), SoundCategory.BLOCKS, 0.3F, 1f);
+    }
+
+    @Override
+    protected SoundEvent getSoundEvent(boolean pressed) {
+        return InfinityButtonsSounds.DOORBELL.get();
+    }
+
+    @Override
+    public void tick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
+        if (state.get(PRESSED)) {
+            world.setBlockState(pos, state.with(PRESSED, false), 3);
+            this.updateNeighbors(state, world, pos);
         }
-        return 0;
     }
 
     @Override
-    public boolean canProvidePower(BlockState state) {
-        return true;
+    public BlockState updatePostPlacement(BlockState state, Direction direction, BlockState facingState, IWorld world, BlockPos pos, BlockPos facingPos) {
+        if (direction.getOpposite() == state.get(HORIZONTAL_FACING) && !state.isValidPosition(world, pos)) {
+            return Blocks.AIR.getDefaultState();
+        }
+        return state;
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if (config.tooltips) {
-            if(Screen.hasShiftDown()) {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.doorbell_button"));
-            } else {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.hold_shift"));
-            }
-        }
+        InfinityButtonsUtil.tooltip(tooltip, "doorbell_button");
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 }

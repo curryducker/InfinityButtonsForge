@@ -10,8 +10,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class PrismarineCompatButton extends PrismarineButton {
-    public PrismarineCompatButton(Properties properties) {
-        super(properties);
+    public PrismarineCompatButton(Properties properties, boolean large) {
+        super(properties, large);
     }
 
     @Override

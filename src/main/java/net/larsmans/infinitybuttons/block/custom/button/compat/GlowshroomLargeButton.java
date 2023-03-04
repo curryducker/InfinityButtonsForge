@@ -1,4 +1,4 @@
-package net.larsmans.infinitybuttons.block.custom.largebutton.compat;
+package net.larsmans.infinitybuttons.block.custom.button.compat;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.particles.ParticleTypes;
@@ -9,9 +9,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-public class GlowshroomLargeButton extends WoodenCompatLargeButton{
+public class GlowshroomLargeButton extends WoodenCompatButton{
     public GlowshroomLargeButton(Properties properties) {
-        super(properties);
+        super(properties, true);
     }
     
     @OnlyIn(Dist.CLIENT)

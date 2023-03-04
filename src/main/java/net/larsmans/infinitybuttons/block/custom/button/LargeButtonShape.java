@@ -1,4 +1,4 @@
-package net.larsmans.infinitybuttons.block.custom.largebutton;
+package net.larsmans.infinitybuttons.block.custom.button;
 
 import net.larsmans.infinitybuttons.block.custom.button.AbstractButton;
 import net.minecraft.block.AbstractBlock;
@@ -21,8 +21,8 @@ public abstract class LargeButtonShape extends AbstractButton {
     private static final VoxelShape CEILING_SHAPE = Block.makeCuboidShape(4, 14, 4, 12, 16, 12);
     private static final VoxelShape CEILING_PRESSED_SHAPE = Block.makeCuboidShape(4, 15, 4, 12, 16, 12);
 
-    protected LargeButtonShape(boolean projectile, AbstractBlock.Properties properties) {
-        super(projectile, properties);
+    protected LargeButtonShape(boolean projectile, Properties properties, boolean large) {
+        super(projectile, large, properties);
     }
 
     public static VoxelShape outlineShape(BlockState state) {

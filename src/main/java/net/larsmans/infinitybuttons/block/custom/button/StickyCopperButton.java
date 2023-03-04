@@ -2,6 +2,7 @@ package net.larsmans.infinitybuttons.block.custom.button;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -26,10 +27,9 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class StickyCopperButton extends AbstractButton {
-    InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
 
-    public StickyCopperButton(Properties properties) {
-        super(false, properties);
+    public StickyCopperButton(Properties properties, boolean large) {
+        super(false, large, properties);
     }
 
     @Override
@@ -73,13 +73,7 @@ public class StickyCopperButton extends AbstractButton {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if (config.tooltips) {
-            if(Screen.hasShiftDown()) {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.sticky_copper_button"));
-            } else {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.hold_shift"));
-            }
-        }
+        InfinityButtonsUtil.tooltip(tooltip, "sticky_copper_button");
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 }

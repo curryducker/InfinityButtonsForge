@@ -4,8 +4,8 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 
 public class StoneButton extends AbstractButton{
-    public StoneButton(Properties properties) {
-        super(false, properties);
+    public StoneButton(Properties properties, boolean large) {
+        super(false, large, properties);
     }
 
     @Override

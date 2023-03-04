@@ -10,8 +10,8 @@ import net.minecraft.world.IWorld;
 import javax.annotation.Nullable;
 
 public class CopperButton extends AbstractButton {
-    public CopperButton(Properties properties) {
-        super(false, properties);
+    public CopperButton(Properties properties, boolean large) {
+        super(false, large, properties);
     }
 
     @Override
