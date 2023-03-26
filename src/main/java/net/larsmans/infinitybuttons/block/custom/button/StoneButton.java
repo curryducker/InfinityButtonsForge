@@ -3,7 +3,7 @@ package net.larsmans.infinitybuttons.block.custom.button;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 
-public class StoneButton extends AbstractButton{
+public class StoneButton extends AbstractSmallButton{
     public StoneButton(Properties properties, boolean large) {
         super(false, large, properties);
     }

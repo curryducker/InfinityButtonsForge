@@ -1,6 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom;
 
-import net.larsmans.infinitybuttons.block.custom.button.AbstractButton;
+import net.larsmans.infinitybuttons.block.custom.button.AbstractLeverableButton;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Direction;
@@ -12,7 +12,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 
-public class LampButton extends AbstractButton {
+public class LampButton extends AbstractLeverableButton {
 
     private static final VoxelShape FLOOR_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(3, 0, 3, 13, 1, 13),
@@ -33,8 +33,8 @@ public class LampButton extends AbstractButton {
             Block.makeCuboidShape(15, 3, 3, 16, 13, 13),
             Block.makeCuboidShape(8, 4, 4, 15, 12, 12));
 
-    public LampButton(Properties properties) {
-        super(false, false, properties);
+    public LampButton(Properties properties, boolean lever) {
+        super(lever, properties);
     }
 
     @Override

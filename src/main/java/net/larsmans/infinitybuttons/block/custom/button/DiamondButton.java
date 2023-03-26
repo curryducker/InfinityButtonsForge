@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
-public class DiamondButton extends AbstractButton{
+public class DiamondButton extends AbstractSmallButton{
 
     private final boolean large;
 

@@ -250,6 +250,15 @@
   "block.infinitybuttons.lamp_lever": "Lamphendel",
   "block.infinitybuttons.hoglin_mount_button": "Opgezette-hoglinknop",
 
+  "block.infinitybuttons.small_console_button": "Kleine consoleknop",
+  "block.infinitybuttons.small_console_lever": "Kleine consolehendel",
+  "block.infinitybuttons.console_button": "Consoleknop",
+  "block.infinitybuttons.console_lever": "Consolehendel",
+  "block.infinitybuttons.large_console_button": "Grote consoleknop",
+  "block.infinitybuttons.large_console_lever": "Grote consolehendel",
+  "block.infinitybuttons.big_console_button": "Joekel van een consoleknop",
+  "block.infinitybuttons.big_console_lever": "Joekel van een consolehendel",
+
   "block.infinitybuttons.ice_brick_secret_button": "Ijsblokstenen verborgen knop",
   "block.infinitybuttons.chiseled_ice_brick_secret_button": "Gebeiteld Ijsblokstenen verborgen knop",
 

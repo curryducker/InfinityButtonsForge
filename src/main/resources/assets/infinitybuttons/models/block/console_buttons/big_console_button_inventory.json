@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"0": "infinitybuttons:block/console/large_console",
+		"1": "infinitybuttons:block/console/big_console_top_pressed",
+		"2": "infinitybuttons:block/console/big_console_top",
+		"particle": "infinitybuttons:block/console/large_console"
+	},
+	"elements": [
+		{
+			"from": [1, 1, 7],
+			"to": [15, 11, 9],
+			"faces": {
+				"north": {"uv": [0, 0, 14, 10], "texture": "#1"},
+				"east": {"uv": [0, 12, 10, 14], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 10, 14, 0], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [0, 12, 10, 14], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [0, 10, 14, 12], "texture": "#0"},
+				"down": {"uv": [0, 10, 14, 12], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [1, 11, 8],
+			"to": [15, 16, 8],
+			"faces": {
+				"north": {"uv": [0, 10, 14, 15], "texture": "#2"},
+				"south": {"uv": [0, 15, 14, 10], "rotation": 180, "texture": "#2"}
+			}
+		}
+	]
+}

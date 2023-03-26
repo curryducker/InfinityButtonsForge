@@ -9,7 +9,7 @@ import net.minecraft.world.IWorld;
 
 import javax.annotation.Nullable;
 
-public class CopperButton extends AbstractButton {
+public class CopperButton extends AbstractSmallButton {
     public CopperButton(Properties properties, boolean large) {
         super(false, large, properties);
     }

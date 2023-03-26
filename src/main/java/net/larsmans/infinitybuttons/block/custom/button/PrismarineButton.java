@@ -24,13 +24,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class PrismarineButton extends AbstractButton implements IWaterLoggable{
+public class PrismarineButton extends AbstractSmallButton implements IWaterLoggable{
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     public PrismarineButton(Properties properties, boolean large) {
         super(true, large, properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR).with(WATERLOGGED, false));
     }
 
     @Override

@@ -54,8 +54,8 @@ public class EmergencyButton extends AbstractButton {
     private static final VoxelShape CEILING_PRESSED_SHAPE = VoxelShapes.or(
             Block.makeCuboidShape(5, 13, 5, 11, 15, 11), STONE_UP).simplify();
 
-    public EmergencyButton(AbstractBlock.Properties properties) {
-        super(false, false, properties);
+    public EmergencyButton(Properties properties) {
+        super(false, properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR));
     }
 

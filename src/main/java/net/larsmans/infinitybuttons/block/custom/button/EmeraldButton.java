@@ -13,7 +13,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class EmeraldButton extends AbstractButton {
+public class EmeraldButton extends AbstractSmallButton {
 
     public EmeraldButton(Properties properties, boolean large) {
         super(false, large, properties);

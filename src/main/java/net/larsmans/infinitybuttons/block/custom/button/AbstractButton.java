@@ -2,7 +2,6 @@ package net.larsmans.infinitybuttons.block.custom.button;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.InfinityButtonsConfig;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFaceBlock;
@@ -15,8 +14,6 @@ import net.minecraft.state.properties.AttachFace;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -30,70 +27,15 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
     protected InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
-    protected static final VoxelShape CEILING_X_SHAPE = Block.makeCuboidShape(6.0, 14.0, 5.0, 10.0, 16.0, 11.0);
-    protected static final VoxelShape CEILING_Z_SHAPE = Block.makeCuboidShape(5.0, 14.0, 6.0, 11.0, 16.0, 10.0);
-    protected static final VoxelShape FLOOR_X_SHAPE = Block.makeCuboidShape(6.0, 0.0, 5.0, 10.0, 2.0, 11.0);
-    protected static final VoxelShape FLOOR_Z_SHAPE = Block.makeCuboidShape(5.0, 0.0, 6.0, 11.0, 2.0, 10.0);
-    protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(5.0, 6.0, 14.0, 11.0, 10.0, 16.0);
-    protected static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(5.0, 6.0, 0.0, 11.0, 10.0, 2.0);
-    protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(14.0, 6.0, 5.0, 16.0, 10.0, 11.0);
-    protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(0.0, 6.0, 5.0, 2.0, 10.0, 11.0);
-    protected static final VoxelShape CEILING_X_PRESSED_SHAPE = Block.makeCuboidShape(6.0, 15.0, 5.0, 10.0, 16.0, 11.0);
-    protected static final VoxelShape CEILING_Z_PRESSED_SHAPE = Block.makeCuboidShape(5.0, 15.0, 6.0, 11.0, 16.0, 10.0);
-    protected static final VoxelShape FLOOR_X_PRESSED_SHAPE = Block.makeCuboidShape(6.0, 0.0, 5.0, 10.0, 1.0, 11.0);
-    protected static final VoxelShape FLOOR_Z_PRESSED_SHAPE = Block.makeCuboidShape(5.0, 0.0, 6.0, 11.0, 1.0, 10.0);
-    protected static final VoxelShape NORTH_PRESSED_SHAPE = Block.makeCuboidShape(5.0, 6.0, 15.0, 11.0, 10.0, 16.0);
-    protected static final VoxelShape SOUTH_PRESSED_SHAPE = Block.makeCuboidShape(5.0, 6.0, 0.0, 11.0, 10.0, 1.0);
-    protected static final VoxelShape WEST_PRESSED_SHAPE = Block.makeCuboidShape(15.0, 6.0, 5.0, 16.0, 10.0, 11.0);
-    protected static final VoxelShape EAST_PRESSED_SHAPE = Block.makeCuboidShape(0.0, 6.0, 5.0, 1.0, 10.0, 11.0);
-
     private final boolean projectile;
-    private final boolean large;
 
-    protected AbstractButton(boolean projectile, boolean large, Properties properties) {
+    protected AbstractButton(boolean projectile, Properties properties) {
         super(properties);
         this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR));
         this.projectile = projectile;
-        this.large = large;
     }
 
     public abstract int getActiveDuration();
-
-    @Override
-    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        if (large) {
-            return LargeButtonShape.outlineShape(state);
-        }
-        Direction direction = state.get(HORIZONTAL_FACING);
-        boolean flag = state.get(PRESSED);
-        switch(state.get(FACE)) {
-            case FLOOR:
-                if (direction.getAxis() == Direction.Axis.X) {
-                    return flag ? FLOOR_X_PRESSED_SHAPE : FLOOR_X_SHAPE;
-                }
-
-                return flag ? FLOOR_Z_PRESSED_SHAPE : FLOOR_Z_SHAPE;
-            case WALL:
-                switch(direction) {
-                    case EAST:
-                        return flag ? EAST_PRESSED_SHAPE : EAST_SHAPE;
-                    case WEST:
-                        return flag ? WEST_PRESSED_SHAPE : WEST_SHAPE;
-                    case SOUTH:
-                        return flag ? SOUTH_PRESSED_SHAPE : SOUTH_SHAPE;
-                    case NORTH:
-                    default:
-                        return flag ? NORTH_PRESSED_SHAPE : NORTH_SHAPE;
-                }
-            case CEILING:
-            default:
-                if (direction.getAxis() == Direction.Axis.X) {
-                    return flag ? CEILING_X_PRESSED_SHAPE : CEILING_X_SHAPE;
-                } else {
-                    return flag ? CEILING_Z_PRESSED_SHAPE : CEILING_Z_SHAPE;
-                }
-        }
-    }
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {

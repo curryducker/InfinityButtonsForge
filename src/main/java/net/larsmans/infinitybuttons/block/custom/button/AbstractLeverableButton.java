@@ -1,4 +1,4 @@
-package net.larsmans.infinitybuttons.block.custom;
+package net.larsmans.infinitybuttons.block.custom.button;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,17 +8,29 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
 
-public class LampLever extends LampButton{
-    public LampLever(Properties properties) {
-        super(properties);
+public abstract class AbstractLeverableButton extends AbstractButton {
+
+    public final boolean lever;
+
+    public AbstractLeverableButton(boolean lever, Properties properties) {
+        super(false, properties);
+        this.lever = lever;
     }
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (state.get(PRESSED)) {
-            this.unpowerBlock(state, worldIn, pos);
-            this.playSound(player, worldIn, pos, false);
+        if (lever) {
+            if (state.get(PRESSED)) {
+                this.unpowerBlock(state, worldIn, pos);
+                this.playSound(player, worldIn, pos, false);
+            } else {
+                this.powerBlock(state, worldIn, pos);
+                this.playSound(player, worldIn, pos, true);
+            }
         } else {
+            if (state.get(PRESSED)) {
+                return ActionResultType.CONSUME;
+            }
             this.powerBlock(state, worldIn, pos);
             this.playSound(player, worldIn, pos, true);
         }

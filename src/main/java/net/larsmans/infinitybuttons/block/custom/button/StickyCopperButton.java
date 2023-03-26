@@ -26,7 +26,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class StickyCopperButton extends AbstractButton {
+public class StickyCopperButton extends AbstractSmallButton {
 
     public StickyCopperButton(Properties properties, boolean large) {
         super(false, large, properties);
