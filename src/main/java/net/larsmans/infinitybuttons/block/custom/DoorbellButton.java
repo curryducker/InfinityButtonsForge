@@ -1,6 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom;
 
-import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.custom.button.AbstractWallButton;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;

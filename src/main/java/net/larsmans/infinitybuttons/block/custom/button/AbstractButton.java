@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class AbstractButton extends HorizontalFaceBlock {
-    protected InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
+    protected static InfinityButtonsConfig config = AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig();
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
 
     private final boolean projectile;

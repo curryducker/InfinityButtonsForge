@@ -1,6 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
-import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;

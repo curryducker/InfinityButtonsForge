@@ -2,12 +2,11 @@ package net.larsmans.infinitybuttons.block.custom.emergencybutton;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.InfinityButtonsConfig;
-import net.larsmans.infinitybuttons.block.InfinityButtonsUtil;
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFaceBlock;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -204,7 +203,7 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
                     this.powerBlock(state, worldIn, pos);
                     this.playClickSound(player, worldIn, pos, true);
                     if (config.alarmSound) {
-                        worldIn.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, 1, 1);
+                        EmergencyButton.emergencySound(worldIn, pos, player);
                     }
                 }
                 break;
