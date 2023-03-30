@@ -2,17 +2,11 @@ package net.larsmans.infinitybuttons.block.custom.button;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.state.properties.AttachFace;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
 
 public abstract class AbstractSmallButton extends AbstractButton{
 
@@ -33,18 +27,12 @@ public abstract class AbstractSmallButton extends AbstractButton{
     protected static final VoxelShape WEST_PRESSED_SHAPE = Block.makeCuboidShape(15, 6, 5, 16, 10, 11);
     protected static final VoxelShape EAST_PRESSED_SHAPE = Block.makeCuboidShape(0, 6, 5, 1, 10, 11);
 
-    private final boolean projectile;
     private final boolean large;
 
     protected AbstractSmallButton(boolean projectile, boolean large, Properties properties) {
         super(projectile, properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(PRESSED, false).with(FACE, AttachFace.FLOOR));
-        this.projectile = projectile;
         this.large = large;
     }
-    
-    public abstract int getActiveDuration();
-
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
@@ -79,17 +67,6 @@ public abstract class AbstractSmallButton extends AbstractButton{
                 } else {
                     return flag ? CEILING_Z_PRESSED_SHAPE : CEILING_Z_SHAPE;
                 }
-        }
-    }
-
-    @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (state.get(PRESSED)) {
-            return ActionResultType.CONSUME;
-        } else {
-            this.powerBlock(state, worldIn, pos);
-            this.playSound(player, worldIn, pos, true);
-            return ActionResultType.func_233537_a_(worldIn.isRemote);
         }
     }
 }
