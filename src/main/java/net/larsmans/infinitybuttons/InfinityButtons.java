@@ -4,6 +4,8 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.compat.*;
+import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.config.InfinityButtonsConfigMenu;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.particle.InfinityButtonsParticleTypes;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;

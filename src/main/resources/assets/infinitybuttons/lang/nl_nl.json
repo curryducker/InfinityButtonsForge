@@ -414,8 +414,10 @@
 
   "infinitybuttons.actionbar.closed_safety_button": "Sluip met een lege hand om te openen en sluiten",
 
-  "text.autoconfig.infinitybuttons.option.alarmSound": "Alarmgeluid",
-  "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "Of de noodknoppen een alarmgeluid maken",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarmgeluid",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip": "De manier waarop de noodknoppen een alarmgeluid maken",
+  "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarmgeluid bereik",
+  "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "Het bereik waarin het alarmgeluid hoorbaar is wanneer 'Alarmgeluid' is ingesteld op 'RANGE'",
   "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",
   "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Of tooltips worden weergegeven",
   "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamanten-knopdeeltjes",

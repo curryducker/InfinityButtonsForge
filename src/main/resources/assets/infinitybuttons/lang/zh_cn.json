@@ -414,8 +414,10 @@
 
   "infinitybuttons.actionbar.closed_safety_button": "空手蹲下来开关按钮",
 
-  "text.autoconfig.infinitybuttons.option.alarmSound": "警报声音",
-  "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "紧急按钮按下后是否会发出警报声音",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType": "警报声音",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip": "The way the Emergency Buttons will make an alarm sound",
+  "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarm Sound Range",
+  "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "The range in which the alarm sound is heard when 'Alarm sound' is set to 'RANGE'",
   "text.autoconfig.infinitybuttons.option.tooltips": "工具提示",
   "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "是否显示工具提示",
   "text.autoconfig.infinitybuttons.option.diamondParticles": "钻石按钮的粒子效果",

@@ -414,8 +414,10 @@
 
   "infinitybuttons.actionbar.closed_safety_button": "Sneak with an empty hand to open and close",
 
-  "text.autoconfig.infinitybuttons.option.alarmSound": "Alarm Sound",
-  "text.autoconfig.infinitybuttons.option.alarmSound.@Tooltip": "Whether the Emergency Buttons will make an alarm sound",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarm Sound",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip": "The way the Emergency Buttons will make an alarm sound",
+  "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarm Sound Range",
+  "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "The range in which the alarm sound is heard when 'Alarm sound' is set to 'RANGE'",
   "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",
   "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Whether tooltips will show up",
   "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamond Button Particles",
