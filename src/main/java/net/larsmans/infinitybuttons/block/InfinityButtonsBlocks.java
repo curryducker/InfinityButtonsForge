@@ -10,6 +10,7 @@ import net.larsmans.infinitybuttons.block.custom.consolebutton.LargeConsoleButto
 import net.larsmans.infinitybuttons.block.custom.consolebutton.SmallConsoleButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
+import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.*;
 import net.larsmans.infinitybuttons.block.custom.torch.*;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
@@ -290,6 +291,10 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> LAMP_LEVER = registerBlock("lamp_lever",
             () -> new LampButton(lampProperties(), true));
+
+    public static final RegistryObject<Block> LETTER_BUTTON = registerBlock("letter_button",
+            () -> new LetterButton(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
 
     /**
      * Console Buttons
