@@ -6,9 +6,14 @@ import net.larsmans.infinitybuttons.config.AlarmEnum;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.memory.MemoryModuleType;
+import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.state.properties.AttachFace;
 import net.minecraft.util.*;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -19,6 +24,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class EmergencyButton extends AbstractButton {
     
@@ -96,8 +102,17 @@ public class EmergencyButton extends AbstractButton {
         }
         this.powerBlock(state, worldIn, pos);
         this.playSound(player, worldIn, pos, true);
-        if (config.alarmSound != AlarmEnum.OFF) {
+        if (config.alarmSoundType != AlarmEnum.OFF) {
             emergencySound(worldIn, pos, player);
+        }
+        if (!worldIn.isRemote) {
+            List<LivingEntity> villagers = worldIn.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(pos).grow(config.alarmSoundRange), entity -> entity.getType() == EntityType.VILLAGER);
+            for (LivingEntity villager : villagers) {
+                if (villager instanceof VillagerEntity && config.alarmVillagerPanic) {
+                    VillagerEntity villagerEntity = (VillagerEntity) villager;
+                    villagerEntity.getBrain().setMemory(MemoryModuleType.HEARD_BELL_TIME, worldIn.getGameTime());
+                }
+            }
         }
         return ActionResultType.func_233537_a_(worldIn.isRemote);
     }
@@ -113,7 +128,7 @@ public class EmergencyButton extends AbstractButton {
     }
 
     public static void emergencySound(World level, BlockPos pos, PlayerEntity player) {
-        if (config.alarmSound != AlarmEnum.GLOBAL) {
+        if (config.alarmSoundType != AlarmEnum.GLOBAL) {
             InfinityButtonsUtil.playGlobalSound(level, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS);
         } else {
             level.playSound(player, pos, InfinityButtonsSounds.ALARM.get(), SoundCategory.BLOCKS, (float)config.alarmSoundRange / 16.0F, 1);
