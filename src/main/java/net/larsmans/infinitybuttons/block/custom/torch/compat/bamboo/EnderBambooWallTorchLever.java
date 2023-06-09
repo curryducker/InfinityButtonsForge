@@ -2,6 +2,7 @@ package net.larsmans.infinitybuttons.block.custom.torch.compat.bamboo;
 
 import net.larsmans.infinitybuttons.block.custom.torch.compat.PropelWallTorchLever;
 import net.larsmans.infinitybuttons.compat.BambooBlocksItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -11,8 +12,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class EnderBambooWallTorchLever extends PropelWallTorchLever {
-    public EnderBambooWallTorchLever(Properties properties) {
-        super(properties);
+    public EnderBambooWallTorchLever(Properties properties, Block jadeBlock) {
+        super(properties, jadeBlock);
     }
 
     @Override

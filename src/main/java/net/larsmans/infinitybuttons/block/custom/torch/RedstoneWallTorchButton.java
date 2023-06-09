@@ -23,8 +23,8 @@ import java.util.Random;
 public class RedstoneWallTorchButton extends RedstoneTorchButton {
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
-    public RedstoneWallTorchButton(Properties properties) {
-        super(properties);
+    public RedstoneWallTorchButton(Properties properties, Block jadeBlock) {
+        super(properties, jadeBlock);
         this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false).with(FACING, Direction.NORTH));
     }
 

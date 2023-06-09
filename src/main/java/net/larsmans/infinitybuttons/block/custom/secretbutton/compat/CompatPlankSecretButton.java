@@ -1,6 +1,7 @@
 package net.larsmans.infinitybuttons.block.custom.secretbutton.compat;
 
 import net.larsmans.infinitybuttons.block.custom.secretbutton.PlankSecretButton;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -10,8 +11,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class CompatPlankSecretButton extends PlankSecretButton {
-    public CompatPlankSecretButton(Properties properties) {
-        super(properties);
+    public CompatPlankSecretButton(Properties properties, Block jadeBlock) {
+        super(properties, jadeBlock);
     }
 
     @Override

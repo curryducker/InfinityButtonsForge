@@ -423,5 +423,9 @@
   "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Of tooltips worden weergegeven",
   "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamanten-knopdeeltjes",
   "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "Of de diamanten knoppen deeltjes zullen hebben",
-  "text.autoconfig.infinitybuttons.title": "Infinity Buttons Configuratie"
+  "text.autoconfig.infinitybuttons.title": "Infinity Buttons Configuratie",
+
+  "config.waila.plugin_infinitybuttons": "Infinity Buttons",
+  "config.waila.plugin_infinitybuttons.hide_secret_buttons": "Verberg verborgen knoppen",
+  "config.waila.plugin_infinitybuttons.hide_torch_buttons": "Verberg fakkelknoppen"
 }

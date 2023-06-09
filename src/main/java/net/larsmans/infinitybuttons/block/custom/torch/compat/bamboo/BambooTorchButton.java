@@ -3,6 +3,7 @@ package net.larsmans.infinitybuttons.block.custom.torch.compat.bamboo;
 
 import net.larsmans.infinitybuttons.block.custom.torch.compat.PropelTorchButton;
 import net.larsmans.infinitybuttons.compat.BambooBlocksItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -12,8 +13,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class BambooTorchButton extends PropelTorchButton {
-    public BambooTorchButton(Properties properties) {
-        super(properties);
+    public BambooTorchButton(Properties properties, Block jadeBlock) {
+        super(properties, jadeBlock);
     }
 
     @Override

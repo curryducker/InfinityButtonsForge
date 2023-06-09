@@ -3,6 +3,7 @@ package net.larsmans.infinitybuttons.block.custom.torch.compat;
 import com.minecraftabnormals.endergetic.client.particles.EEParticles;
 import net.larsmans.infinitybuttons.block.custom.torch.TorchLever;
 import net.larsmans.infinitybuttons.compat.EndergeticItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -19,8 +20,8 @@ import java.util.List;
 import java.util.Random;
 
 public class EnderTorchLever extends TorchLever {
-    public EnderTorchLever(Properties properties) {
-        super(properties, ParticleTypes.FLAME);
+    public EnderTorchLever(Properties properties, Block jadeBlock) {
+        super(properties, ParticleTypes.FLAME, jadeBlock);
     }
 
     @Override

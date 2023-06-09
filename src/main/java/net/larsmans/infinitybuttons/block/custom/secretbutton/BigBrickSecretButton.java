@@ -7,7 +7,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 
 public class BigBrickSecretButton extends AbstractSecretButton {
-    public BigBrickSecretButton(Properties properties) {
+    public BigBrickSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
                 VoxelShapes.or(BASE,
@@ -22,7 +22,8 @@ public class BigBrickSecretButton extends AbstractSecretButton {
                 VoxelShapes.or(BASE,
                         Block.makeCuboidShape(3, 8, 0, 19, 16, 16)
                 ),
-                Block.makeCuboidShape(0, 0, 0, 16, 16, 16)
+                Block.makeCuboidShape(0, 0, 0, 16, 16, 16),
+                jadeBlock
         );
     }
 

@@ -15,8 +15,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
@@ -31,51 +33,55 @@ public class BambooBlocksBlocks {
 
     public static final RegistryObject<Block> BAMBOO_BOOKSHELF_SECRET_BUTTON = registerBlock("bamboo_bookshelf_secret_button",
             () -> new CompatBookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD), byName("bamboo_bookshelf")));
 
     public static final RegistryObject<Block> BAMBOO_PLANK_SECRET_BUTTON = registerBlock("bamboo_plank_secret_button",
             () -> new BambooPlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.25f, 3.5f).notSolid().sound(SoundType.WOOD)));
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.25f, 3.5f).notSolid().sound(SoundType.WOOD), byName("bamboo_planks")));
 
     public static final RegistryObject<Block> BAMBOO_TORCH_BUTTON = registerTorchBlock("bamboo_torch_button",
-            () -> new BambooTorchButton(PROP));
+            () -> new BambooTorchButton(PROP, byName("bamboo_torch")));
 
     public static final RegistryObject<Block> BAMBOO_WALL_TORCH_BUTTON = registerTorchBlock("bamboo_wall_torch_button",
-            () -> new BambooWallTorchButton(PROP));
+            () -> new BambooWallTorchButton(PROP, byName("bamboo_torch")));
 
     public static final RegistryObject<Block> BAMBOO_TORCH_LEVER = registerTorchBlock("bamboo_torch_lever",
-            () -> new BambooTorchLever(PROP));
+            () -> new BambooTorchLever(PROP, byName("bamboo_torch")));
 
     public static final RegistryObject<Block> BAMBOO_WALL_TORCH_LEVER = registerTorchBlock("bamboo_wall_torch_lever",
-            () -> new BambooWallTorchLever(PROP));
+            () -> new BambooWallTorchLever(PROP, byName("bamboo_torch")));
 
     public static final RegistryObject<Block> SOUL_BAMBOO_TORCH_BUTTON = registerTorchBlock("soul_bamboo_torch_button",
-            () -> new SoulBambooTorchButton(SOUL_PROP));
+            () -> new SoulBambooTorchButton(SOUL_PROP, byName("soul_bamboo_torch")));
 
     public static final RegistryObject<Block> SOUL_BAMBOO_WALL_TORCH_BUTTON = registerTorchBlock("soul_bamboo_wall_torch_button",
-            () -> new SoulBambooWallTorchButton(SOUL_PROP));
+            () -> new SoulBambooWallTorchButton(SOUL_PROP, byName("soul_bamboo_torch")));
 
     public static final RegistryObject<Block> SOUL_BAMBOO_TORCH_LEVER = registerTorchBlock("soul_bamboo_torch_lever",
-            () -> new SoulBambooTorchLever(SOUL_PROP));
+            () -> new SoulBambooTorchLever(SOUL_PROP, byName("soul_bamboo_torch")));
 
     public static final RegistryObject<Block> SOUL_BAMBOO_WALL_TORCH_LEVER = registerTorchBlock("soul_bamboo_wall_torch_lever",
-            () -> new SoulBambooWallTorchLever(SOUL_PROP));
+            () -> new SoulBambooWallTorchLever(SOUL_PROP, byName("soul_bamboo_torch")));
 
     public static final RegistryObject<Block> ENDER_BAMBOO_TORCH_BUTTON = registerTorchBlock("ender_bamboo_torch_button",
-            () -> new EnderBambooTorchButton(PROP));
+            () -> new EnderBambooTorchButton(PROP, byName("ender_bamboo_torch")));
 
     public static final RegistryObject<Block> ENDER_BAMBOO_WALL_TORCH_BUTTON = registerTorchBlock("ender_bamboo_wall_torch_button",
-            () -> new EnderBambooWallTorchButton(PROP));
+            () -> new EnderBambooWallTorchButton(PROP, byName("ender_bamboo_torch")));
 
     public static final RegistryObject<Block> ENDER_BAMBOO_TORCH_LEVER = registerTorchBlock("ender_bamboo_torch_lever",
-            () -> new EnderBambooTorchLever(PROP));
+            () -> new EnderBambooTorchLever(PROP, byName("ender_bamboo_torch")));
 
     public static final RegistryObject<Block> ENDER_BAMBOO_WALL_TORCH_LEVER = registerTorchBlock("ender_bamboo_wall_torch_lever",
-            () -> new EnderBambooWallTorchLever(PROP));
+            () -> new EnderBambooWallTorchLever(PROP, byName("ender_bamboo_torch")));
 
     /**
      * Methods
      */
+
+    private static Block byName(String block) {
+        return ForgeRegistries.BLOCKS.getValue(new ResourceLocation("bamboo_blocks", block));
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = InfinityButtonsBlocks.BLOCKS.register(name, block);

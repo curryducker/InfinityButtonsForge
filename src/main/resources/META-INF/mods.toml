@@ -63,34 +63,10 @@ A mod which adds new exciting buttons!
     ordering="NONE"
     side="BOTH"
 [[dependencies.infinitybuttons]]
-    modId="quark"
+    modId="jade"
     mandatory=false
-    versionRange="[r2.4-322,)"
-    ordering="AFTER"
-    side="BOTH"
-[[dependencies.infinitybuttons]]
-    modId="environmental"
-    mandatory=false
-    versionRange="[1.1.1,)"
-    ordering="AFTER"
-    side="BOTH"
-[[dependencies.infinitybuttons]]
-    modId="endergetic"
-    mandatory=false
-    versionRange="[3.0.0,)"
-    ordering="AFTER"
-    side="BOTH"
-[[dependencies.infinitybuttons]]
-    modId="autumnity"
-    mandatory=false
-    versionRange="[2.1.2,)"
-    ordering="AFTER"
-    side="BOTH"
-[[dependencies.infinitybuttons]]
-    modId="nethers_delight"
-    mandatory=false
-    versionRange="[2.1,)"
-    ordering="AFTER"
+    versionRange="[2.8.3,)"
+    ordering="BEFORE"
     side="BOTH"
 [[dependencies.infinitybuttons]]
     modId="abundance"
@@ -102,6 +78,12 @@ A mod which adds new exciting buttons!
     modId="atmospheric"
     mandatory=false
     versionRange="[3.1.1,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="autumnity"
+    mandatory=false
+    versionRange="[2.1.2,)"
     ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
@@ -117,9 +99,51 @@ A mod which adds new exciting buttons!
     ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]
+    modId="buzzier_bees"
+    mandatory=false
+    versionRange="[3.0.3,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="endergetic"
+    mandatory=false
+    versionRange="[3.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
     modId="enhanced_mushrooms"
     mandatory=false
     versionRange="[1.16.5-3.0.9,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="environmental"
+    mandatory=false
+    versionRange="[1.1.1,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="neapolitan"
+    mandatory=false
+    versionRange="[2.2.1,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="nethers_delight"
+    mandatory=false
+    versionRange="[2.1,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="quark"
+    mandatory=false
+    versionRange="[r2.4-322,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.infinitybuttons]]
+    modId="savageandravage"
+    mandatory=false
+    versionRange="[3.2.0,)"
     ordering="AFTER"
     side="BOTH"
 [[dependencies.infinitybuttons]]

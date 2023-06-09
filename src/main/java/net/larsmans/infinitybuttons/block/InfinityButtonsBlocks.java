@@ -17,15 +17,13 @@ import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.particles.ParticleTypes;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -204,27 +202,27 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> BOOKSHELF_SECRET_BUTTON = registerBlock("bookshelf_secret_button",
             () -> new BookshelfSecretButton(AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD)));
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(1.5f).notSolid().sound(SoundType.WOOD), byName("bookshelf")));
 
     public static final RegistryObject<Block> BRICK_SECRET_BUTTON = registerBlock("brick_secret_button",
             () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.RED)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("bricks")));
 
     public static final RegistryObject<Block> STONE_BRICK_SECRET_BUTTON = registerBlock("stone_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("stone_bricks")));
 
     public static final RegistryObject<Block> MOSSY_STONE_BRICK_SECRET_BUTTON = registerBlock("mossy_stone_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("mossy_stone_bricks")));
 
     public static final RegistryObject<Block> CRACKED_STONE_BRICK_SECRET_BUTTON = registerBlock("cracked_stone_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("cracked_stone_bricks")));
 
     public static final RegistryObject<Block> CHISELED_STONE_BRICK_SECRET_BUTTON = registerBlock("chiseled_stone_brick_secret_button",
             () -> new ChiseledStoneBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("chiseled_stone_bricks")));
 
     public static final RegistryObject<Block> OAK_PLANK_SECRET_BUTTON = registerPlankSecretButton("oak", MaterialColor.WOOD);
     public static final RegistryObject<Block> SPRUCE_PLANK_SECRET_BUTTON = registerPlankSecretButton("spruce", MaterialColor.OBSIDIAN);
@@ -237,43 +235,43 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> END_STONE_BRICK_SECRET_BUTTON = registerBlock("end_stone_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("end_stone_bricks")));
 
     public static final RegistryObject<Block> QUARTZ_BRICK_SECRET_BUTTON = registerBlock("quartz_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("quartz_bricks")));
 
     public static final RegistryObject<Block> DARK_PRISMARINE_SECRET_BUTTON = registerBlock("dark_prismarine_secret_button",
             () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.DIAMOND)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("dark_prismarine")));
 
     public static final RegistryObject<Block> POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON = registerBlock("polished_blackstone_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("polished_blackstone_bricks")));
 
     public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_SECRET_BUTTON = registerBlock("cracked_polished_blackstone_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("cracked_polished_blackstone_bricks")));
 
     public static final RegistryObject<Block> CHISELED_POLISHED_BLACKSTONE_SECRET_BUTTON = registerBlock("chiseled_polished_blackstone_secret_button",
             () -> new ChiseledStoneBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("chiseled_polished_blackstone")));
 
     public static final RegistryObject<Block> NETHER_BRICK_SECRET_BUTTON = registerBlock("nether_brick_secret_button",
             () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool(), byName("nether_bricks")));
 
     public static final RegistryObject<Block> CRACKED_NETHER_BRICK_SECRET_BUTTON = registerBlock("cracked_nether_brick_secret_button",
             () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool(), byName("cracked_nether_bricks")));
 
     public static final RegistryObject<Block> CHISELED_NETHER_BRICK_SECRET_BUTTON = registerBlock("chiseled_nether_brick_secret_button",
             () -> new ChiseledNetherBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool(), byName("chiseled_nether_bricks")));
 
     public static final RegistryObject<Block> RED_NETHER_BRICK_SECRET_BUTTON = registerBlock("red_nether_brick_secret_button",
             () -> new FullBlockBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 6.0f).notSolid().sound(SoundType.NETHER_BRICK).setRequiresTool(), byName("red_nether_bricks")));
 
 
     /**
@@ -322,44 +320,48 @@ public class InfinityButtonsBlocks {
      */
 
     public static final RegistryObject<Block> TORCH_BUTTON = registerTorchBlock("torch_button",
-            () -> new TorchButton(torchProperties(14), ParticleTypes.FLAME));
+            () -> new TorchButton(torchProperties(14), ParticleTypes.FLAME, byName("torch")));
 
     public static final RegistryObject<Block> WALL_TORCH_BUTTON = registerTorchBlock("wall_torch_button",
-            () -> new WallTorchButton(torchProperties(14).lootFrom(TORCH_BUTTON), ParticleTypes.FLAME));
+            () -> new WallTorchButton(torchProperties(14).lootFrom(TORCH_BUTTON), ParticleTypes.FLAME, byName("torch")));
 
     public static final RegistryObject<Block> TORCH_LEVER = registerTorchBlock("torch_lever",
-            () -> new TorchLever(torchProperties(14), ParticleTypes.FLAME));
+            () -> new TorchLever(torchProperties(14), ParticleTypes.FLAME, byName("torch")));
 
     public static final RegistryObject<Block> WALL_TORCH_LEVER = registerTorchBlock("wall_torch_lever",
-            () -> new WallTorchLever(torchProperties(14).lootFrom(TORCH_LEVER), ParticleTypes.FLAME));
+            () -> new WallTorchLever(torchProperties(14).lootFrom(TORCH_LEVER), ParticleTypes.FLAME, byName("torch")));
 
     public static final RegistryObject<Block> SOUL_TORCH_BUTTON = registerTorchBlock("soul_torch_button",
-            () -> new TorchButton(torchProperties(10), ParticleTypes.SOUL_FIRE_FLAME));
+            () -> new TorchButton(torchProperties(10), ParticleTypes.SOUL_FIRE_FLAME, byName("soul_torch")));
 
     public static final RegistryObject<Block> SOUL_WALL_TORCH_BUTTON = registerTorchBlock("soul_wall_torch_button",
-            () -> new WallTorchButton(torchProperties(10).lootFrom(SOUL_TORCH_BUTTON), ParticleTypes.SOUL_FIRE_FLAME));
+            () -> new WallTorchButton(torchProperties(10).lootFrom(SOUL_TORCH_BUTTON), ParticleTypes.SOUL_FIRE_FLAME, byName("soul_torch")));
 
     public static final RegistryObject<Block> SOUL_TORCH_LEVER = registerTorchBlock("soul_torch_lever",
-            () -> new TorchLever(torchProperties(10), ParticleTypes.SOUL_FIRE_FLAME));
+            () -> new TorchLever(torchProperties(10), ParticleTypes.SOUL_FIRE_FLAME, byName("soul_torch")));
 
     public static final RegistryObject<Block> SOUL_WALL_TORCH_LEVER = registerTorchBlock("soul_wall_torch_lever",
-            () -> new WallTorchLever(torchProperties(10).lootFrom(SOUL_TORCH_LEVER), ParticleTypes.SOUL_FIRE_FLAME));
+            () -> new WallTorchLever(torchProperties(10).lootFrom(SOUL_TORCH_LEVER), ParticleTypes.SOUL_FIRE_FLAME, byName("soul_torch")));
 
     public static final RegistryObject<Block> REDSTONE_TORCH_BUTTON = registerTorchBlock("redstone_torch_button",
-            () -> new RedstoneTorchButton(torchProperties(7)));
+            () -> new RedstoneTorchButton(torchProperties(7), byName("redstone_torch")));
 
     public static final RegistryObject<Block> REDSTONE_WALL_TORCH_BUTTON = registerTorchBlock("redstone_wall_torch_button",
-            () -> new RedstoneWallTorchButton(torchProperties(7).lootFrom(REDSTONE_TORCH_BUTTON)));
+            () -> new RedstoneWallTorchButton(torchProperties(7).lootFrom(REDSTONE_TORCH_BUTTON), byName("redstone_torch")));
 
     public static final RegistryObject<Block> REDSTONE_TORCH_LEVER = registerTorchBlock("redstone_torch_lever",
-            () -> new RedstoneTorchLever(torchProperties(7)));
+            () -> new RedstoneTorchLever(torchProperties(7), byName("redstone_torch")));
 
     public static final RegistryObject<Block> REDSTONE_WALL_TORCH_LEVER = registerTorchBlock("redstone_wall_torch_lever",
-            () -> new RedstoneWallTorchLever(torchProperties(7).lootFrom(REDSTONE_TORCH_LEVER)));
+            () -> new RedstoneWallTorchLever(torchProperties(7).lootFrom(REDSTONE_TORCH_LEVER), byName("redstone_torch")));
 
     /**
      * Methods
      */
+
+    private static Block byName(String block) {
+        return ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft", block));
+    }
 
     private static AbstractBlock.Properties doorbellProperties() {
         return AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -471,12 +473,12 @@ public class InfinityButtonsBlocks {
 
     private static RegistryObject<Block> registerPlankSecretButton(String wood, MaterialColor materialColor) {
         return registerBlock(wood + "_plank_secret_button", () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.WOOD, materialColor)
-                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD), byName(wood + "_planks")));
     }
 
     private static RegistryObject<Block> registerNetherPlankSecretButton(String wood, MaterialColor materialColor) {
         return registerBlock(wood + "_plank_secret_button", () -> new PlankSecretButton(AbstractBlock.Properties.create(Material.NETHER_WOOD, materialColor)
-                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD)));
+                .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD), byName(wood + "_planks")));
     }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

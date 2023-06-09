@@ -423,5 +423,9 @@
   "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "是否显示工具提示",
   "text.autoconfig.infinitybuttons.option.diamondParticles": "钻石按钮的粒子效果",
   "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "钻石按钮四周是否会有粒子效果",
-  "text.autoconfig.infinitybuttons.title": "无限按钮 Config"
+  "text.autoconfig.infinitybuttons.title": "无限按钮 Config",
+
+  "config.waila.plugin_infinitybuttons": "Infinity Buttons",
+  "config.waila.plugin_infinitybuttons.hide_secret_buttons": "Hide Secret Buttons",
+  "config.waila.plugin_infinitybuttons.hide_torch_buttons": "Hide Torch Buttons"
 }

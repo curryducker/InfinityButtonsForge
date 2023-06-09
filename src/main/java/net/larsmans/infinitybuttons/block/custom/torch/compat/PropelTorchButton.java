@@ -2,6 +2,7 @@ package net.larsmans.infinitybuttons.block.custom.torch.compat;
 
 import net.larsmans.infinitybuttons.block.custom.torch.TorchButton;
 import net.larsmans.infinitybuttons.compat.NethersDelightItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
@@ -17,8 +18,8 @@ import java.util.List;
 import java.util.Random;
 
 public class PropelTorchButton extends TorchButton {
-    public PropelTorchButton(Properties properties) {
-        super(properties, ParticleTypes.FLAME);
+    public PropelTorchButton(Properties properties, Block jadeBlock) {
+        super(properties, ParticleTypes.FLAME, jadeBlock);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.torch;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResultType;
@@ -9,8 +10,8 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
 
 public class RedstoneWallTorchLever extends RedstoneWallTorchButton{
-    public RedstoneWallTorchLever(Properties properties) {
-        super(properties);
+    public RedstoneWallTorchLever(Properties properties, Block jadeBlock) {
+        super(properties, jadeBlock);
     }
 
     @Override

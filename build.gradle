@@ -132,10 +132,26 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
+
     api fg.deobf("me.shedaniel.cloth:cloth-config-forge:4.16.91")
+
     compileOnly fg.deobf("vazkii.autoreglib:AutoRegLib:1.6-49.90")
     compileOnly fg.deobf("vazkii.quark:Quark:r2.4-322.1")
     compileOnly fg.deobf("curse.maven:endergetic-291509:3750371")
+    compileOnly fg.deobf("curse.maven:abundance-452345:3250108")
+    compileOnly fg.deobf("curse.maven:atmospheric-362393:3553332")
+    compileOnly fg.deobf("curse.maven:autumnity-365045:3553317")
+    compileOnly fg.deobf("curse.maven:bamboo-blocks-348215:3549078")
+    compileOnly fg.deobf("curse.maven:bayou-blues-452344:3342861")
+    compileOnly fg.deobf("curse.maven:buzzier-bees-355458:3561118")
+    compileOnly fg.deobf("curse.maven:enhanced-mushrooms-383725:3353212")
+    compileOnly fg.deobf("curse.maven:environmental-388992:3561534")
+    compileOnly fg.deobf("curse.maven:neapolitan-382016:3567243")
+    compileOnly fg.deobf("curse.maven:nethers-delight-496394:3443481")
+    compileOnly fg.deobf("curse.maven:savage-and-ravage-381736:3560051")
+    compileOnly fg.deobf("curse.maven:upgrade-aquatic-326895:3561148")
+
+    implementation fg.deobf("curse.maven:jade-324717:3910873")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ChiseledEumusBrickSecretButton extends AbstractSecretButton {
-    public ChiseledEumusBrickSecretButton(Properties properties) {
+    public ChiseledEumusBrickSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
                 VoxelShapes.or(BOTTOM, TOP,
@@ -40,7 +40,8 @@ public class ChiseledEumusBrickSecretButton extends AbstractSecretButton {
                 ),
 
 
-                Block.makeCuboidShape(0, 0, 0, 16, 16, 16)
+                Block.makeCuboidShape(0, 0, 0, 16, 16, 16),
+                jadeBlock
         );
     }
 

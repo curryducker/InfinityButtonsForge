@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class BambooPlankSecretButton extends AbstractSecretButton {
-    public BambooPlankSecretButton(Properties properties) {
+    public BambooPlankSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
                 VoxelShapes.or(Block.makeCuboidShape(0, 0, 0, 9, 16, 16),
@@ -30,7 +30,8 @@ public class BambooPlankSecretButton extends AbstractSecretButton {
                         Block.makeCuboidShape(3, 0, 3, 16, 16, 7),
                         Block.makeCuboidShape(0, 0, 7, 16, 16, 16)),
 
-                Block.makeCuboidShape(0, 0, 0, 16, 16, 16)
+                Block.makeCuboidShape(0, 0, 0, 16, 16, 16),
+                jadeBlock
         );
     }
 

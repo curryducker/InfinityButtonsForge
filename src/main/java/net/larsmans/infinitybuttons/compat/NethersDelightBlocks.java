@@ -16,7 +16,9 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
@@ -28,20 +30,24 @@ public class NethersDelightBlocks {
             () -> new HoglinMountButton(AbstractBlock.Properties.from(Blocks.BROWN_WOOL).setLightLevel((state) -> 1)));
 
     public static final RegistryObject<Block> PROPELPLANT_TORCH_BUTTON = registerTorchBlock("propelplant_torch_button",
-            () -> new PropelTorchButton(PROP));
+            () -> new PropelTorchButton(PROP, byName("propelplant_torch")));
 
     public static final RegistryObject<Block> PROPELPLANT_WALL_TORCH_BUTTON = registerTorchBlock("propelplant_wall_torch_button",
-            () -> new PropelWallTorchButton(PROP));
+            () -> new PropelWallTorchButton(PROP, byName("propelplant_torch")));
 
     public static final RegistryObject<Block> PROPELPLANT_TORCH_LEVER = registerTorchBlock("propelplant_torch_lever",
-            () -> new PropelTorchLever(PROP));
+            () -> new PropelTorchLever(PROP, byName("propelplant_torch")));
 
     public static final RegistryObject<Block> PROPELPLANT_WALL_TORCH_LEVER = registerTorchBlock("propelplant_wall_torch_lever",
-            () -> new PropelWallTorchLever(PROP));
+            () -> new PropelWallTorchLever(PROP, byName("propelplant_torch")));
 
     /**
      * Methods
      */
+
+    private static Block byName(String block) {
+        return ForgeRegistries.BLOCKS.getValue(new ResourceLocation("nethers_delight", block));
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock(Supplier<T> block) {
         RegistryObject<T> toReturn = InfinityButtonsBlocks.BLOCKS.register("hoglin_mount_button", block);

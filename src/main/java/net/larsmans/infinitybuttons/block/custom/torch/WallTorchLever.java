@@ -1,5 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.torch;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particles.IParticleData;
@@ -10,8 +11,8 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
 
 public class WallTorchLever extends WallTorchButton{
-    public WallTorchLever(Properties properties, IParticleData particleData) {
-        super(properties, particleData);
+    public WallTorchLever(Properties properties, IParticleData particleData, Block jadeBlock) {
+        super(properties, particleData, jadeBlock);
     }
 
     @Override

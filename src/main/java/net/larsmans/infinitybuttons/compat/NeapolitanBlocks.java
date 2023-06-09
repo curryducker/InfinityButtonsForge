@@ -12,8 +12,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
@@ -21,7 +23,7 @@ public class NeapolitanBlocks {
 
     public static final RegistryObject<Block> CHISELED_CHOCOLATE_BRICK_SECRET_BUTTON = registerBlock("chiseled_chocolate_brick_secret_button",
             () -> new ChiseledCompatBrickSecretButton(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.BROWN)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD).setRequiresTool()));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.0f, 3.0f).notSolid().sound(SoundType.WOOD).setRequiresTool(), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("neapolitan", "chiseled_chocolate_bricks"))));
 
     /**
      * Methods

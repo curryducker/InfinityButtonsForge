@@ -423,5 +423,9 @@
   "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Whether tooltips will show up",
   "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamond Button Particles",
   "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "Whether the Diamond Buttons will have particles",
-  "text.autoconfig.infinitybuttons.title": "Infinity Buttons Config"
+  "text.autoconfig.infinitybuttons.title": "Infinity Buttons Config",
+
+  "config.waila.plugin_infinitybuttons": "Infinity Buttons",
+  "config.waila.plugin_infinitybuttons.hide_secret_buttons": "Hide Secret Buttons",
+  "config.waila.plugin_infinitybuttons.hide_torch_buttons": "Hide Torch Buttons"
 }

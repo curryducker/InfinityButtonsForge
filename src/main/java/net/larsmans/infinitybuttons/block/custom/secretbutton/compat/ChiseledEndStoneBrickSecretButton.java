@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ChiseledEndStoneBrickSecretButton extends AbstractSecretButton {
-    public ChiseledEndStoneBrickSecretButton(Properties properties) {
+    public ChiseledEndStoneBrickSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
                 VoxelShapes.or(BOTTOM, TOP,
@@ -27,7 +27,8 @@ public class ChiseledEndStoneBrickSecretButton extends AbstractSecretButton {
                 VoxelShapes.or(BOTTOM, TOP,
                         Block.makeCuboidShape(3, 4, 0, 16, 13, 16)),
 
-                Block.makeCuboidShape(0, 0, 0, 16, 16, 16)
+                Block.makeCuboidShape(0, 0, 0, 16, 16, 16),
+                jadeBlock
         );
     }
 

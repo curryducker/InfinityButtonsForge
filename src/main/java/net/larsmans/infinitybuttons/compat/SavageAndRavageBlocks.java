@@ -14,8 +14,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
@@ -23,7 +25,7 @@ public class SavageAndRavageBlocks {
 
     public static final RegistryObject<Block> CHISELED_GLOOMY_TILE_SECRET_BUTTON = registerBlock(
             () -> new ChiseledStonepatBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_BLUE_TERRACOTTA)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool().setLightLevel(SavageAndRavageBlocks::getPressLight)));
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool().setLightLevel(SavageAndRavageBlocks::getPressLight), ForgeRegistries.BLOCKS.getValue(new ResourceLocation("savageandravage", "chiseled_gloomy_tiles"))));
 
     /**
      * Methods

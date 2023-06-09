@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class DeepslateTileSecretButton extends AbstractSecretButton {
-    public DeepslateTileSecretButton(Properties properties) {
+    public DeepslateTileSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
                 VoxelShapes.or(BASE,
@@ -34,7 +34,8 @@ public class DeepslateTileSecretButton extends AbstractSecretButton {
                         Block.makeCuboidShape(0, 10, 0, 16, 16, 3),
                         Block.makeCuboidShape(3, 10, 3, 19, 16, 16)
                 ),
-                Block.makeCuboidShape(0, 0, 0, 16, 16, 16)
+                Block.makeCuboidShape(0, 0, 0, 16, 16, 16),
+                jadeBlock
         );
     }
 

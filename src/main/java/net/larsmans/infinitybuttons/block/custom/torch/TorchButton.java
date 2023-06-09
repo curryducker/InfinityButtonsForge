@@ -24,10 +24,12 @@ import java.util.Random;
 public class TorchButton extends AbstractHorizontalButton {
     protected static final VoxelShape BOUNDING_SHAPE = Block.makeCuboidShape(6.0, 0.0, 6.0, 10.0, 10.0, 10.0);
     protected final IParticleData particle;
+    public final Block jadeBlock;
 
-    public TorchButton(Properties properties, IParticleData particle) {
+    public TorchButton(Properties properties, IParticleData particle, Block jadeBlock) {
         super(properties, BOUNDING_SHAPE, BOUNDING_SHAPE, BOUNDING_SHAPE, BOUNDING_SHAPE, BOUNDING_SHAPE, BOUNDING_SHAPE, BOUNDING_SHAPE, BOUNDING_SHAPE);
         this.particle = particle;
+        this.jadeBlock = jadeBlock;
     }
 
     @Override

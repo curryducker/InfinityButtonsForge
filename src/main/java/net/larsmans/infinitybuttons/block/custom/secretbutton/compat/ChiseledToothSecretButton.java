@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ChiseledToothSecretButton extends AbstractSecretButton {
-    public ChiseledToothSecretButton(Properties properties) {
+    public ChiseledToothSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
                 VoxelShapes.or(BOTTOM, TOP,
@@ -38,7 +38,8 @@ public class ChiseledToothSecretButton extends AbstractSecretButton {
                         Block.makeCuboidShape(3, 1, 1, 16, 15, 15),
                         Block.makeCuboidShape(0, 1, 15, 16, 15, 16)
                 ),
-                Block.makeCuboidShape(0, 0, 0, 16, 16, 16)
+                Block.makeCuboidShape(0, 0, 0, 16, 16, 16),
+                jadeBlock
         );
     }
 

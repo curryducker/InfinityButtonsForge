@@ -22,9 +22,12 @@ import java.util.Random;
 public class RedstoneTorchButton extends TorchBlock {
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
-    public RedstoneTorchButton(Properties properties) {
+    public final Block jadeBlock;
+
+    public RedstoneTorchButton(Properties properties, Block jadeBlock) {
         super(properties, RedstoneParticleData.REDSTONE_DUST);
         this.setDefaultState(this.stateContainer.getBaseState().with(LIT, false));
+        this.jadeBlock = jadeBlock;
     }
 
     @Override

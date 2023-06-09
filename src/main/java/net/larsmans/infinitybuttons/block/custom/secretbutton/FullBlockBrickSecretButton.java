@@ -6,14 +6,15 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.shapes.VoxelShape;
 
 public class FullBlockBrickSecretButton extends AbstractSecretButton {
-    public FullBlockBrickSecretButton(Properties properties) {
+    public FullBlockBrickSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
                 FULL,
                 FULL,
                 FULL,
                 FULL,
-                FULL
+                FULL,
+                jadeBlock
         );
     }
 

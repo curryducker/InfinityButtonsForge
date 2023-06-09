@@ -9,14 +9,15 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IWorldReader;
 
 public class BookshelfSecretButton extends AbstractSecretButton {
-    public BookshelfSecretButton(Properties properties) {
+    public BookshelfSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
                 FULL,
                 FULL,
                 FULL,
                 FULL,
-                FULL
+                FULL,
+                jadeBlock
         );
     }
 
