@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "net.larsmans.infinitybuttons.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "infinitybuttons.refmap.json",
+  "mixins": [
+    "PlayerInteractionManagerMixin"
+  ],
+  "client": [
+    "PlayerControllerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
