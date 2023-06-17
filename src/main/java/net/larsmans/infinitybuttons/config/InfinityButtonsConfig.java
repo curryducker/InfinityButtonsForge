@@ -6,7 +6,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "infinitybuttons")
 public class InfinityButtonsConfig implements ConfigData {
-    @ConfigEntry.Gui.Tooltip()
+    @ConfigEntry.Gui.Tooltip(count = 3)
     @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
     public AlarmEnum alarmSoundType = AlarmEnum.RANGE;
     @ConfigEntry.Gui.Tooltip()

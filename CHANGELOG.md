@@ -28,8 +28,6 @@ Forge Only:
   - Savage & Ravage 1.18.2 & 1.19.x
   - Upgrade Aquatic 1.18.2 & 1.19.x
 
-
-
 ## 3.1.0
 
 - Fixed the Fabric version crashing when loaded on its own.

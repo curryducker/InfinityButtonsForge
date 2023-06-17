@@ -417,13 +417,15 @@
   "infinitybuttons.actionbar.closed_safety_button": "Sneak with an empty hand to open and close",
 
   "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarm Sound",
-  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip": "The way the Emergency Buttons will make an alarm sound",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "The way Emergency Buttons make an alarm sound",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "RANGE: The sound is audible up to a certain radius",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAL: The sound is audible from anywhere in the world",
   "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarm Sound Range",
   "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "The range in which the alarm sound is heard when 'Alarm sound' is set to 'RANGE'",
   "text.autoconfig.infinitybuttons.option.tooltips": "Tooltips",
-  "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Whether tooltips will show up",
+  "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Whether tooltips show up",
   "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamond Button Particles",
-  "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "Whether the Diamond Buttons will have particles",
+  "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "Whether Diamond Buttons have particles around them",
   "text.autoconfig.infinitybuttons.title": "Infinity Buttons Config",
 
   "config.waila.plugin_infinitybuttons": "Infinity Buttons",

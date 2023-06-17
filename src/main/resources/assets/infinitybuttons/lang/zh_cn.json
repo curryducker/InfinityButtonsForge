@@ -417,7 +417,9 @@
   "infinitybuttons.actionbar.closed_safety_button": "空手蹲下来开关按钮",
 
   "text.autoconfig.infinitybuttons.option.alarmSoundType": "警报声音",
-  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip": "The way the Emergency Buttons will make an alarm sound",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "The way Emergency Buttons make an alarm sound",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "RANGE: The sound is audible up to a certain radius",
+  "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[2]": "GLOBAL: The sound is audible from anywhere in the world",
   "text.autoconfig.infinitybuttons.option.alarmSoundRange": "Alarm Sound Range",
   "text.autoconfig.infinitybuttons.option.alarmSoundRange.@Tooltip": "The range in which the alarm sound is heard when 'Alarm sound' is set to 'RANGE'",
   "text.autoconfig.infinitybuttons.option.tooltips": "工具提示",
