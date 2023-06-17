@@ -1,5 +1,35 @@
 # Changelog Infinity Buttons
 
+## 3.2.0
+
+- Fixed weird pitch on Emergency Button sounds when using a resource pack.
+- Emergency Buttons can now be configured to have a custom range or be heard globally.
+- Fixed Prismarine Buttons not being able to be waterlogged properly.
+- When using Jade, Secret Buttons will now show up as their original block.
+- Added Console Buttons & Levers.
+- Emergency Buttons will now make Villagers run towards their bed like bells do. (Configurable)
+- Fixed Safety Buttons not being able to open when using a shield.
+- Fixed some blocks not working when using Every Compat (Wood Good)
+- Changed some language values.
+- Added Lantern Button & Lever
+- Added Create compat (1.18.2 & 1.19.x)
+
+Fabric Only:
+- Added Nether's Delight compat for 1.19.x
+
+Forge Only:
+- Added compat for:
+  - Atmospheric 1.18.2 & 1.19.x
+  - Autumnity 1.18.2 & 1.19.x
+  - Buzzier Bees 1.18.2 & 1.19.x
+  - Clayworks 1.18.2 & 1.19.x
+  - Environmental 1.18.2 & 1.19.x
+  - Neapolitan 1.18.2 & 1.19.x
+  - Savage & Ravage 1.18.2 & 1.19.x
+  - Upgrade Aquatic 1.18.2 & 1.19.x
+
+
+
 ## 3.1.0
 
 - Fixed the Fabric version crashing when loaded on its own.
