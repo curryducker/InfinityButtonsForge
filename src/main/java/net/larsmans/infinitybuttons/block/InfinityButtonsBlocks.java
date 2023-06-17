@@ -237,6 +237,10 @@ public class InfinityButtonsBlocks {
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.0f, 9.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("end_stone_bricks")));
 
+    public static final RegistryObject<Block> PURPUR_BLOCK_SECRET_BUTTON = registerBlock("purpur_block_secret_button",
+            () -> new TileSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.MAGENTA)
+                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(1.5f, 6.0f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("purpur_block")));
+
     public static final RegistryObject<Block> QUARTZ_BRICK_SECRET_BUTTON = registerBlock("quartz_brick_secret_button",
             () -> new BigBrickSecretButton(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.QUARTZ)
                     .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.8f).notSolid().sound(SoundType.STONE).setRequiresTool(), byName("quartz_bricks")));
