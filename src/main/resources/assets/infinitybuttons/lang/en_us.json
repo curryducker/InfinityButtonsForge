@@ -414,7 +414,7 @@
 
   "itemGroup.infinityButtonsTab": "Infinity Buttons",
 
-  "infinitybuttons.actionbar.closed_safety_button": "Sneak with an empty hand to open and close",
+  "infinitybuttons.actionbar.closed_safety_button": "Sneak to open and close",
 
   "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarm Sound",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "The way Emergency Buttons make an alarm sound",

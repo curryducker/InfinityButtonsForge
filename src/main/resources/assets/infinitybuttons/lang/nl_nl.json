@@ -414,7 +414,7 @@
 
   "itemGroup.infinityButtonsTab": "Infinity Buttons",
 
-  "infinitybuttons.actionbar.closed_safety_button": "Sluip met een lege hand om te openen en sluiten",
+  "infinitybuttons.actionbar.closed_safety_button": "Sluip om te openen en sluiten",
 
   "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarmgeluid",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "De manier waarop noodknoppen een alarmgeluid maken",
