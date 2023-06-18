@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "infinitybuttons.refmap.json",
   "mixins": [
-    "PlayerInteractionManagerMixin"
+    "PlayerInteractionManagerMixin",
+    "ChainBlockMixin"
   ],
   "client": [
     "PlayerControllerMixin"

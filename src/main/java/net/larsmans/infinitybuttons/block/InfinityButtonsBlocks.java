@@ -4,6 +4,7 @@ import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.LampButton;
+import net.larsmans.infinitybuttons.block.custom.LanternButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
 import net.larsmans.infinitybuttons.block.custom.consolebutton.ConsoleButton;
 import net.larsmans.infinitybuttons.block.custom.consolebutton.LargeConsoleButton;
@@ -296,7 +297,19 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> LETTER_BUTTON = registerBlock("letter_button",
             () -> new LetterButton(AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.WOOD)));
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).notSolid().doesNotBlockMovement().sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> LANTERN_BUTTON = registerBlock("lantern_button",
+            () -> new LanternButton(lanternProperties(15), false));
+
+    public static final RegistryObject<Block> LANTERN_LEVER = registerBlock("lantern_lever",
+            () -> new LanternButton(lanternProperties(15), true));
+
+    public static final RegistryObject<Block> SOUL_LANTERN_BUTTON = registerBlock("soul_lantern_button",
+            () -> new LanternButton(lanternProperties(10), false));
+
+    public static final RegistryObject<Block> SOUL_LANTERN_LEVER = registerBlock("soul_lantern_lever",
+            () -> new LanternButton(lanternProperties(10), true));
 
     /**
      * Console Buttons
@@ -375,6 +388,11 @@ public class InfinityButtonsBlocks {
     private static AbstractBlock.Properties lampProperties() {
         return AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                 .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.3f).sound(SoundType.GLASS).setLightLevel(InfinityButtonsBlocks::getPressLight);
+    }
+
+    private static AbstractBlock.Properties lanternProperties(int light) {
+        return AbstractBlock.Properties.create(Material.IRON)
+                .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(3.5f).notSolid().sound(SoundType.LANTERN).setRequiresTool().setLightLevel((state) -> light);
     }
 
     private static int getPressLight(BlockState state) {

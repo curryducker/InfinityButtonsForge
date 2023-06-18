@@ -251,6 +251,10 @@
   "block.infinitybuttons.lamp_lever": "灯具拉杆",
   "block.infinitybuttons.letter_button": "Letter Button",
   "block.infinitybuttons.hoglin_mount_button": "Hoglin Mount Button",
+  "block.infinitybuttons.lantern_button": "Lantern Button",
+  "block.infinitybuttons.lantern_lever": "Lantern Lever",
+  "block.infinitybuttons.soul_lantern_button": "Soul Lantern Button",
+  "block.infinitybuttons.soul_lantern_lever": "Soul Lantern Lever",
 
   "block.infinitybuttons.small_console_button": "Small Console Button",
   "block.infinitybuttons.small_console_lever": "Small Console Lever",
@@ -411,6 +415,7 @@
   "infinitybuttons.tooltip.falling_button": "\u00A77这是一个一次性按钮",
   "infinitybuttons.tooltip.safe_emergency_button": "\u00A77空手蹲下来开关按钮",
   "infinitybuttons.tooltip.doorbell_button": "\u00A77这个门铃会发出红石信号",
+  "infinitybuttons.tooltip.lantern_button": "\u00A77Emits a redstone signal at the top most chain above the lantern",
 
   "itemGroup.infinityButtonsTab": "无限按钮",
 

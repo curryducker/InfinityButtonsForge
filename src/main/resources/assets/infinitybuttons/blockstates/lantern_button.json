@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "pressed=false": {
+      "model": "minecraft:block/lantern_hanging"
+    },
+    "pressed=true": {
+      "model": "infinitybuttons:block/lantern_button_pressed"
+    }
+  }
+}

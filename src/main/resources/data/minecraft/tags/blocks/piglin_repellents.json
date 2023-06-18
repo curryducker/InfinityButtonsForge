@@ -4,7 +4,9 @@
     "infinitybuttons:soul_torch_button",
     "infinitybuttons:soul_wall_torch_button",
     "infinitybuttons:soul_torch_lever",
-    "infinitybuttons:soul_wall_torch_lever"
+    "infinitybuttons:soul_wall_torch_lever",
+    "infinitybuttons:soul_lantern_button",
+    "infinitybuttons:soul_lantern_lever"
   ],
   "optional": [
     "infinitybuttons:soul_bamboo_torch_button",

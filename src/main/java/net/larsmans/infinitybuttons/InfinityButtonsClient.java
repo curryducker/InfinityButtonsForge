@@ -48,6 +48,10 @@ public class InfinityButtonsClient {
             cutout(InfinityButtonsBlocks.GRAY_SAFE_EMERGENCY_BUTTON.get());
             cutout(InfinityButtonsBlocks.BLACK_SAFE_EMERGENCY_BUTTON.get());
             cutout(InfinityButtonsBlocks.FANCY_SAFE_EMERGENCY_BUTTON.get());
+            cutout(InfinityButtonsBlocks.LANTERN_BUTTON.get());
+            cutout(InfinityButtonsBlocks.LANTERN_LEVER.get());
+            cutout(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON.get());
+            cutout(InfinityButtonsBlocks.SOUL_LANTERN_BUTTON.get());
             cutout(InfinityButtonsBlocks.SMALL_CONSOLE_BUTTON.get());
             cutout(InfinityButtonsBlocks.SMALL_CONSOLE_LEVER.get());
             cutout(InfinityButtonsBlocks.CONSOLE_BUTTON.get());
