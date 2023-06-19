@@ -25,7 +25,6 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -210,10 +209,10 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
                     if (config.alarmSoundType != AlarmEnum.OFF) {
                         EmergencyButton.emergencySound(worldIn, pos, player);
                     }
-                    if (!worldIn.isRemote) {
+                    if (!worldIn.isRemote && config.alarmVillagerPanic) {
                         List<LivingEntity> villagers = worldIn.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(pos).grow(config.alarmSoundRange), entity -> entity.getType() == EntityType.VILLAGER);
                         for (LivingEntity villager : villagers) {
-                            if (villager instanceof VillagerEntity && config.alarmVillagerPanic) {
+                            if (villager instanceof VillagerEntity) {
                                 VillagerEntity villagerEntity = (VillagerEntity) villager;
                                 villagerEntity.getBrain().setMemory(MemoryModuleType.HEARD_BELL_TIME, worldIn.getGameTime());
                             }
@@ -227,7 +226,7 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
                     this.openCase(state, worldIn, pos);
                     this.playToggleSound(player, worldIn, pos, true);
                 } else {
-                    player.sendStatusMessage(new TranslationTextComponent("infinitybuttons.actionbar.closed_safety_button"), true);
+                    player.sendStatusMessage(InfinityButtonsUtil.SAFE_EMERGENCY_BUTTON_ACTIONBAR_TEXT, true);
                     return ActionResultType.CONSUME;
                 }
                 break;

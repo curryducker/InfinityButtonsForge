@@ -8,7 +8,9 @@ import net.minecraft.client.renderer.ActiveRenderInfo;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.IFormattableTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
@@ -16,12 +18,15 @@ import java.util.List;
 
 public class InfinityButtonsUtil {
 
+    public static final IFormattableTextComponent HOLD_SHIFT_TEXT = new TranslationTextComponent("infinitybuttons.tooltip.hold_shift").mergeStyle(TextFormatting.GRAY);
+    public static final IFormattableTextComponent SAFE_EMERGENCY_BUTTON_ACTIONBAR_TEXT = new TranslationTextComponent("infinitybuttons.actionbar.closed_safety_button");
+
     public static void tooltip(List<ITextComponent> tooltip, String name) {
         if (AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig().tooltips) {
             if (Screen.hasShiftDown()) {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip." + name));
+                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip." + name).mergeStyle(TextFormatting.GRAY));
             } else {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.hold_shift"));
+                tooltip.add(HOLD_SHIFT_TEXT);
             }
         }
     }
@@ -29,10 +34,10 @@ public class InfinityButtonsUtil {
     public static void tooltip(List<ITextComponent> tooltip, String name1, String name2) {
         if (AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig().tooltips) {
             if (Screen.hasShiftDown()) {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip." + name1));
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip." + name2));
+                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip." + name1).mergeStyle(TextFormatting.GRAY));
+                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip." + name2).mergeStyle(TextFormatting.GRAY));
             } else {
-                tooltip.add(new TranslationTextComponent("infinitybuttons.tooltip.hold_shift"));
+                tooltip.add(HOLD_SHIFT_TEXT);
             }
         }
     }

@@ -105,10 +105,10 @@ public class EmergencyButton extends AbstractButton {
         if (config.alarmSoundType != AlarmEnum.OFF) {
             emergencySound(worldIn, pos, player);
         }
-        if (!worldIn.isRemote) {
+        if (!worldIn.isRemote && config.alarmVillagerPanic) {
             List<LivingEntity> villagers = worldIn.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(pos).grow(config.alarmSoundRange), entity -> entity.getType() == EntityType.VILLAGER);
             for (LivingEntity villager : villagers) {
-                if (villager instanceof VillagerEntity && config.alarmVillagerPanic) {
+                if (villager instanceof VillagerEntity) {
                     VillagerEntity villagerEntity = (VillagerEntity) villager;
                     villagerEntity.getBrain().setMemory(MemoryModuleType.HEARD_BELL_TIME, worldIn.getGameTime());
                 }
