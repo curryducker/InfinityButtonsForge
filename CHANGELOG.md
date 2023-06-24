@@ -13,6 +13,7 @@
 - Changed some language values.
 - Added Lantern Button & Lever
 - Added Create compat (1.18.2 & 1.19.x)
+- Overhauled Copper Buttons (1.18.2+)
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x
