@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "infinitybuttons:oak_large_button"
+    },
+    "title": {
+      "translate": "advancement.infinitybuttons.root"
+    },
+    "description": {
+      "translate": "advancement.infinitybuttons.root.desc"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "infinitybuttons:textures/block/copper_button.png"
+  },
+  "criteria": {
+    "show": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    ["show"]
+  ]
+}

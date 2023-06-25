@@ -421,6 +421,19 @@
 
   "infinitybuttons.actionbar.closed_safety_button": "Sluip om te openen en sluiten",
 
+  "advancement.infinitybuttons.root": "Infinity Buttons",
+  "advancement.infinitybuttons.root.desc": "Indrukken die hap!",
+  "advancement.infinitybuttons.first_button": "Eerste knop",
+  "advancement.infinitybuttons.first_button.desc": "Verkrijg je eerste knop",
+  "advancement.infinitybuttons.emergency": "Noodgeval!",
+  "advancement.infinitybuttons.emergency.desc": "Druk de noodknop in!",
+  "advancement.infinitybuttons.ding_dong": "Ding Dong!",
+  "advancement.infinitybuttons.ding_dong.desc": "Bel aan",
+  "advancement.infinitybuttons.secret_button": "Sttt... het is geheim!",
+  "advancement.infinitybuttons.secret_button.desc": "Verstop een verborgen knop in een muur",
+  "advancement.infinitybuttons.safety_button": "Stijlvol!",
+  "advancement.infinitybuttons.safety_button.desc": "Draag een veilige noodknop op je hoofd",
+
   "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarmgeluid",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "De manier waarop noodknoppen alarmgeluiden maken",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[1]": "RANGE: Het alarm is hoorbaar tot een bepaalde radius",

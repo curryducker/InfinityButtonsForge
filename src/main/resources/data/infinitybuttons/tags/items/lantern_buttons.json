@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "infinitybuttons:lantern_button",
+    "infinitybuttons:lantern_lever",
+    "infinitybuttons:soul_lantern_button",
+    "infinitybuttons:soul_lantern_lever"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "parent": "infinitybuttons:root",
+  "display": {
+    "icon": {
+      "item": "infinitybuttons:iron_button"
+    },
+    "title": {
+      "translate": "advancement.infinitybuttons.first_button"
+    },
+    "description": {
+      "translate": "advancement.infinitybuttons.first_button.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "buttons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:buttons"
+          }
+        ]
+      }
+    },
+    "large_buttons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "infinitybuttons:large_buttons"
+          }
+        ]
+      }
+    },
+    "secret_buttons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "infinitybuttons:secret_buttons"
+          }
+        ]
+      }
+    },
+    "emergency_buttons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "infinitybuttons:emergency_buttons"
+          }
+        ]
+      }
+    },
+    "safe_emergency_buttons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "infinitybuttons:safe_emergency_buttons"
+          }
+        ]
+      }
+    },
+    "torch_buttons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "infinitybuttons:torch_buttons"
+          }
+        ]
+      }
+    },
+    "lantern_buttons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "infinitybuttons:lantern_buttons"
+          }
+        ]
+      }
+    },
+    "console_buttons": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "infinitybuttons:console_buttons"
+          }
+        ]
+      }
+    },
+    "lamp_button": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "infinitybuttons:lamp_button"
+          }
+        ]
+      }
+    },
+    "lamp_lever": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "infinitybuttons:lamp_lever"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["buttons", "large_buttons", "secret_buttons", "emergency_buttons", "safe_emergency_buttons", "torch_buttons", "lantern_buttons", "console_buttons", "lamp_button", "lamp_lever"]
+  ]
+}

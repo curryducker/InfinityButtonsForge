@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "infinitybuttons:small_console_button",
+    "infinitybuttons:small_console_lever",
+    "infinitybuttons:console_button",
+    "infinitybuttons:console_lever",
+    "infinitybuttons:large_console_button",
+    "infinitybuttons:large_console_lever",
+    "infinitybuttons:big_console_button",
+    "infinitybuttons:big_console_lever"
+  ]
+}

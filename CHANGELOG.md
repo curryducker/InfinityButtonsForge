@@ -9,11 +9,13 @@
 - Added Console Buttons & Levers.
 - Emergency Buttons will now make Villagers run towards their bed like bells do. (Configurable)
 - Fixed Safety Buttons not being able to open when using a shield.
-- Fixed some blocks not working when using Every Compat (Wood Good)
+- Fixed some blocks not working when using 'Every Compat (Wood Good)'.
 - Changed some language values.
-- Added Lantern Button & Lever
-- Added Create compat (1.18.2 & 1.19.x)
-- Overhauled Copper Buttons (1.18.2+)
+- Added Lantern Buttons & Levers.
+- Added Create compat. (1.18.2 & 1.19.x)
+- Overhauled Copper Buttons. (1.18.2+)
+- Fancy Emergency Buttons are now included in their corresponding tags.
+- Added Advancements.
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x

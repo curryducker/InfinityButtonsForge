@@ -2,6 +2,7 @@ package net.larsmans.infinitybuttons.block.custom.emergencybutton;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
+import net.larsmans.infinitybuttons.advancement.InfinityButtonsTriggers;
 import net.larsmans.infinitybuttons.config.AlarmEnum;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.minecraft.block.Block;
@@ -13,6 +14,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.brain.memory.MemoryModuleType;
 import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
@@ -208,6 +210,9 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
                     this.playClickSound(player, worldIn, pos, true);
                     if (config.alarmSoundType != AlarmEnum.OFF) {
                         EmergencyButton.emergencySound(worldIn, pos, player);
+                    }
+                    if (player instanceof ServerPlayerEntity) {
+                        InfinityButtonsTriggers.EMERGENCY_TRIGGER.trigger((ServerPlayerEntity) player);
                     }
                     if (!worldIn.isRemote && config.alarmVillagerPanic) {
                         List<LivingEntity> villagers = worldIn.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(pos).grow(config.alarmSoundRange), entity -> entity.getType() == EntityType.VILLAGER);
