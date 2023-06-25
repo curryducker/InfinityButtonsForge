@@ -415,7 +415,7 @@
   "infinitybuttons.tooltip.diamond_button": "有钱银，羡慕不？",
   "infinitybuttons.tooltip.prismarine_button": "这个按钮可能会被水淹没",
   "infinitybuttons.tooltip.falling_button": "这是一个一次性按钮",
-  "infinitybuttons.tooltip.safe_emergency_button": "空手蹲下来开关按钮",
+  "infinitybuttons.tooltip.safe_emergency_button": "Sneak to open and close",
   "infinitybuttons.tooltip.doorbell_button": "这个门铃会发出红石信号",
   "infinitybuttons.tooltip.lantern_button": "Emits a redstone signal at the top most chain above the lantern",
 

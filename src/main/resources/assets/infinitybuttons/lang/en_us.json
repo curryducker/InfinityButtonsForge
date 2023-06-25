@@ -415,7 +415,7 @@
   "infinitybuttons.tooltip.diamond_button": "The biggest flex in the west",
   "infinitybuttons.tooltip.prismarine_button": "This button can be waterlogged",
   "infinitybuttons.tooltip.falling_button": "This button can only be pressed once",
-  "infinitybuttons.tooltip.safe_emergency_button": "Sneak with an empty hand to open and close",
+  "infinitybuttons.tooltip.safe_emergency_button": "Sneak to open and close",
   "infinitybuttons.tooltip.doorbell_button": "This doorbell emits a redstone signal",
   "infinitybuttons.tooltip.lantern_button": "Emits a redstone signal at the top most chain above the lantern",
 
