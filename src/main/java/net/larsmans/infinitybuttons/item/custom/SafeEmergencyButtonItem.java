@@ -10,6 +10,8 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
+
 public class SafeEmergencyButtonItem extends BlockItem {
     public SafeEmergencyButtonItem(Block blockIn, Properties builder) {
         super(blockIn, builder);
@@ -18,6 +20,12 @@ public class SafeEmergencyButtonItem extends BlockItem {
     @Override
     public boolean canEquip(ItemStack stack, EquipmentSlotType armorType, Entity entity) {
         return armorType == EquipmentSlotType.HEAD;
+    }
+
+    @Nullable
+    @Override
+    public EquipmentSlotType getEquipmentSlot(ItemStack stack) {
+        return EquipmentSlotType.HEAD;
     }
 
     @Override
