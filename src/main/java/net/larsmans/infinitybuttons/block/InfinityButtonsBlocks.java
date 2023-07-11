@@ -1,6 +1,7 @@
 package net.larsmans.infinitybuttons.block;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.custom.Doorbell;
 import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.LampButton;
@@ -18,7 +19,10 @@ import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
-import net.minecraft.block.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
@@ -405,9 +409,7 @@ public class InfinityButtonsBlocks {
     }
 
     private static AbstractBlock.Properties torchProperties(int light) {
-        return AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> {
-            return light;
-        }).sound(SoundType.WOOD);
+        return AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> light).sound(SoundType.WOOD);
     }
 
     private static RegistryObject<Block> registerStoneButton(String type) {
@@ -516,13 +518,15 @@ public class InfinityButtonsBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        InfinityButtonsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        RegistryObject<Item> register = InfinityButtonsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+        InfinityButtonsUtil.REGISTRY_FOR_TAB.add(register);
     }
 
     private static <T extends Block> void registerSafeEmergencyButtonItem(String name, RegistryObject<T> block) {
-        InfinityButtonsItems.ITEMS.register(name, () -> new SafeEmergencyButtonItem(block.get(),
+        RegistryObject<Item> register = InfinityButtonsItems.ITEMS.register(name, () -> new SafeEmergencyButtonItem(block.get(),
                 new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+        InfinityButtonsUtil.REGISTRY_FOR_TAB.add(register);
     }
 
     private static <T extends Block> RegistryObject<T> registerTorchBlock(String name, Supplier<T> block) {

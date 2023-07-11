@@ -1,7 +1,5 @@
 package net.larsmans.infinitybuttons.block.custom.button;
 
-import net.larsmans.infinitybuttons.block.custom.button.AbstractButton;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Direction;

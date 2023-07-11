@@ -5,7 +5,6 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import mcp.mobius.waila.Waila;
 import mcp.mobius.waila.addons.core.HUDHandlerBlocks;
-import mcp.mobius.waila.addons.core.PluginCore;
 import mcp.mobius.waila.api.IComponentProvider;
 import mcp.mobius.waila.api.IDataAccessor;
 import mcp.mobius.waila.api.IPluginConfig;
@@ -16,21 +15,14 @@ import net.larsmans.infinitybuttons.block.custom.secretbutton.AbstractSecretButt
 import net.larsmans.infinitybuttons.block.custom.torch.RedstoneTorchButton;
 import net.larsmans.infinitybuttons.block.custom.torch.TorchButton;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.Property;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.registries.ForgeRegistries;
 import snownee.jade.JadePlugin;
-import snownee.jade.Renderables;
 
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 
 public class SecretHandler implements IComponentProvider {

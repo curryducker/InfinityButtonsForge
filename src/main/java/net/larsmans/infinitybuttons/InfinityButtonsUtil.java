@@ -5,6 +5,7 @@ import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.renderer.ActiveRenderInfo;
+import net.minecraft.item.Item;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
@@ -13,10 +14,13 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.RegistryObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InfinityButtonsUtil {
+    public static List<RegistryObject<Item>> REGISTRY_FOR_TAB = new ArrayList<>();
 
     public static final IFormattableTextComponent HOLD_SHIFT_TEXT = new TranslationTextComponent("infinitybuttons.tooltip.hold_shift").mergeStyle(TextFormatting.GRAY);
     public static final IFormattableTextComponent SAFE_EMERGENCY_BUTTON_ACTIONBAR_TEXT = new TranslationTextComponent("infinitybuttons.actionbar.closed_safety_button");

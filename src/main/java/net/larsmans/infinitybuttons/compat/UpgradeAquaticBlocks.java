@@ -1,6 +1,5 @@
 package net.larsmans.infinitybuttons.compat;
 
-import com.minecraftabnormals.upgrade_aquatic.core.registry.UABlocks;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;

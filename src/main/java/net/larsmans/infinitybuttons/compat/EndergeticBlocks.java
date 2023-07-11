@@ -1,6 +1,5 @@
 package net.larsmans.infinitybuttons.compat;
 
-import com.minecraftabnormals.endergetic.core.registry.EEBlocks;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;

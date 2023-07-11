@@ -2,9 +2,9 @@ package net.larsmans.infinitybuttons.compat;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.block.custom.button.compat.PrismarineCompatButton;
 import net.larsmans.infinitybuttons.block.custom.button.compat.StoneCompatButton;
 import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;
-import net.larsmans.infinitybuttons.block.custom.button.compat.PrismarineCompatButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.*;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
@@ -20,8 +20,6 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import vazkii.quark.base.handler.QuarkSounds;
-import vazkii.quark.base.handler.VariantHandler;
-import vazkii.quark.content.world.module.DeepslateModule;
 
 import java.util.function.Supplier;
 

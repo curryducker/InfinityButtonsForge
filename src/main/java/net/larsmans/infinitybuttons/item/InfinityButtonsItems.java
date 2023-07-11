@@ -1,6 +1,7 @@
 package net.larsmans.infinitybuttons.item;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -35,8 +36,10 @@ public class InfinityButtonsItems {
         return registerItem(name, () -> new WallOrFloorItem(standing.get(), wall.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
     }
 
-    private static <T extends Item> RegistryObject<T> registerItem(String name, Supplier<T> item) {
-        return ITEMS.register(name, item);
+    private static <T extends Item> RegistryObject<Item> registerItem(String name, Supplier<T> item) {
+        RegistryObject<Item> register = ITEMS.register(name, item);
+        InfinityButtonsUtil.REGISTRY_FOR_TAB.add(register);
+        return register;
     }
 
     public static void register(IEventBus eventBus) {

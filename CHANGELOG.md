@@ -21,6 +21,7 @@ Fabric Only:
 - Added Nether's Delight compat for 1.19.x
 
 Forge Only:
+- Fixed Creative Tab being unsorted. (1.16.5-1.19.2)
 - Added compat for:
   - Atmospheric 1.18.2 & 1.19.x
   - Autumnity 1.18.2 & 1.19.x

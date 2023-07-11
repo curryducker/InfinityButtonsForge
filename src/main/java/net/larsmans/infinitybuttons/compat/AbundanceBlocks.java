@@ -9,7 +9,6 @@ import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -19,7 +18,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
-import vazkii.quark.base.block.QuarkBlock;
 
 import java.util.function.Supplier;
 
