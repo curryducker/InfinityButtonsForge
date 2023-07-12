@@ -12,15 +12,19 @@
 - Fixed some blocks not working when using 'Every Compat (Wood Good)'.
 - Changed some language values.
 - Added Lantern Buttons & Levers.
+- Added Purpur Block Secret Button
 - Added Create compat. (1.18.2 & 1.19.x)
 - Overhauled Copper Buttons. (1.18.2+)
 - Fancy Emergency Buttons are now included in their corresponding tags.
 - Added Advancements.
+- Metallic Buttons now require the correct Tool Tier to drop.
+- Added more Buttons to Vanilla Tabs (1.19.3)
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x
 
 Forge Only:
+- Added assets for EMI. (1.18.2+)
 - Fixed Creative Tab being unsorted. (1.16.5-1.19.2)
 - Added compat for:
   - Atmospheric 1.18.2 & 1.19.x

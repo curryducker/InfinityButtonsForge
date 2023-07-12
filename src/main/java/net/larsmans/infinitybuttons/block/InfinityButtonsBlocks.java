@@ -60,16 +60,16 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> STICKY_WEATHERED_COPPER_BUTTON = registerStickyCopperButton("weathered_copper");
     public static final RegistryObject<Block> STICKY_OXIDIZED_COPPER_BUTTON = registerStickyCopperButton("oxidized_copper");
 
-    public static final RegistryObject<Block> IRON_BUTTON = registerArrowButton("iron");
-    public static final RegistryObject<Block> GOLD_BUTTON = registerArrowButton("gold");
+    public static final RegistryObject<Block> IRON_BUTTON = registerArrowButton("iron", true);
+    public static final RegistryObject<Block> GOLD_BUTTON = registerArrowButton("gold", false);
 
     public static final RegistryObject<Block> EMERALD_BUTTON = registerBlock("emerald_button",
             () -> new EmeraldButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL), false));
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL).setRequiresTool(), false));
 
     public static final RegistryObject<Block> DIAMOND_BUTTON = registerBlock("diamond_button",
             () -> new DiamondButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL), false));
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL).setRequiresTool(), false));
 
     public static final RegistryObject<Block> PRISMARINE_BUTTON = registerPrismarineButton("prismarine");
     public static final RegistryObject<Block> PRISMARINE_BRICK_BUTTON = registerPrismarineButton("prismarine_brick");
@@ -125,16 +125,16 @@ public class InfinityButtonsBlocks {
     public static final RegistryObject<Block> STICKY_WEATHERED_COPPER_LARGE_BUTTON = registerStickyCopperLargeButton("weathered_copper");
     public static final RegistryObject<Block> STICKY_OXIDIZED_COPPER_LARGE_BUTTON = registerStickyCopperLargeButton("oxidized_copper");
 
-    public static final RegistryObject<Block> IRON_LARGE_BUTTON = registerArrowLargeButton("iron");
-    public static final RegistryObject<Block> GOLD_LARGE_BUTTON = registerArrowLargeButton("gold");
+    public static final RegistryObject<Block> IRON_LARGE_BUTTON = registerArrowLargeButton("iron", true);
+    public static final RegistryObject<Block> GOLD_LARGE_BUTTON = registerArrowLargeButton("gold", false);
 
     public static final RegistryObject<Block> EMERALD_LARGE_BUTTON = registerBlock("emerald_large_button",
             () -> new EmeraldButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL), true));
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL).setRequiresTool(), true));
 
     public static final RegistryObject<Block> DIAMOND_LARGE_BUTTON = registerBlock("diamond_large_button",
             () -> new DiamondButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL), true));
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL).setRequiresTool(), true));
 
     public static final RegistryObject<Block> PRISMARINE_LARGE_BUTTON = registerPrismarineLargeButton("prismarine");
     public static final RegistryObject<Block> PRISMARINE_BRICK_LARGE_BUTTON = registerPrismarineLargeButton("prismarine_brick");
@@ -403,6 +403,10 @@ public class InfinityButtonsBlocks {
         return state.get(LampButton.PRESSED) ? 15 : 0;
     }
 
+    private static int getHarvestLevel(boolean iron) {
+        return iron ? 1 : 2;
+    }
+
     public static AbstractBlock.Properties consoleButtonProperties() {
         return AbstractBlock.Properties.create(Material.IRON)
                 .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).sound(SoundType.METAL);
@@ -419,17 +423,17 @@ public class InfinityButtonsBlocks {
 
     private static RegistryObject<Block> registerCopperButton(String type) {
         return registerBlock(type + "_button", () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(InfinityButtonsSounds.COPPER), false));
+                .harvestLevel(1).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(InfinityButtonsSounds.COPPER).setRequiresTool(), false));
     }
 
     private static RegistryObject<Block> registerStickyCopperButton(String type) {
         return registerBlock("sticky_" + type + "_button", () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(InfinityButtonsSounds.COPPER), false));
+                .harvestLevel(1).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(InfinityButtonsSounds.COPPER).setRequiresTool(), false));
     }
 
-    private static RegistryObject<Block> registerArrowButton(String type) {
+    private static RegistryObject<Block> registerArrowButton(String type, boolean iron) {
         return registerBlock(type + "_button", () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL), false));
+                .harvestLevel(getHarvestLevel(iron)).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL).setRequiresTool(), false));
     }
 
     private static RegistryObject<Block> registerPrismarineButton(String type) {
@@ -458,17 +462,17 @@ public class InfinityButtonsBlocks {
 
     private static RegistryObject<Block> registerCopperLargeButton(String type) {
         return registerBlock(type + "_large_button", () -> new CopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(InfinityButtonsSounds.COPPER), true));
+                .harvestLevel(1).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(InfinityButtonsSounds.COPPER).setRequiresTool(), true));
     }
 
     private static RegistryObject<Block> registerStickyCopperLargeButton(String type) {
         return registerBlock("sticky_" + type + "_large_button", () -> new StickyCopperButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(InfinityButtonsSounds.COPPER), true));
+                .harvestLevel(1).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(InfinityButtonsSounds.COPPER).setRequiresTool(), true));
     }
 
-    private static RegistryObject<Block> registerArrowLargeButton(String type) {
+    private static RegistryObject<Block> registerArrowLargeButton(String type, boolean iron) {
         return registerBlock(type + "_large_button", () -> new ArrowButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                .harvestLevel(0).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL), true));
+                .harvestLevel(getHarvestLevel(iron)).harvestTool(ToolType.PICKAXE).hardnessAndResistance(0.5f).doesNotBlockMovement().sound(SoundType.METAL).setRequiresTool(), true));
     }
 
     private static RegistryObject<Block> registerPrismarineLargeButton(String type) {
