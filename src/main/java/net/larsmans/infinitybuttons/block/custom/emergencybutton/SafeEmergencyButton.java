@@ -35,6 +35,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -215,7 +216,20 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
                         InfinityButtonsTriggers.EMERGENCY_TRIGGER.trigger((ServerPlayerEntity) player);
                     }
                     if (!worldIn.isRemote && config.alarmVillagerPanic) {
-                        List<LivingEntity> villagers = worldIn.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(pos).grow(config.alarmSoundRange), entity -> entity.getType() == EntityType.VILLAGER);
+                        List<LivingEntity> villagers = new ArrayList<>();
+                        if (config.alarmSoundType == AlarmEnum.GLOBAL) {
+                            villagers = new ArrayList<>();
+                            List<LivingEntity> villagersDup = worldIn.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(pos).grow(512), entity -> entity.getType() == EntityType.VILLAGER);
+                            for (PlayerEntity player1 : worldIn.getPlayers())
+                                villagersDup.addAll(worldIn.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(player1.getPosition()).grow(512), entity -> entity.getType() == EntityType.VILLAGER));
+                            for (LivingEntity villager : villagersDup)
+                                if (!villagers.contains(villager))
+                                    villagers.add(villager);
+
+                        }
+                        if (config.alarmSoundType == AlarmEnum.RANGE) {
+                            villagers = worldIn.getEntitiesWithinAABB(LivingEntity.class, new AxisAlignedBB(pos).grow(config.alarmSoundRange), entity -> entity.getType() == EntityType.VILLAGER);
+                        }
                         for (LivingEntity villager : villagers) {
                             if (villager instanceof VillagerEntity) {
                                 VillagerEntity villagerEntity = (VillagerEntity) villager;
