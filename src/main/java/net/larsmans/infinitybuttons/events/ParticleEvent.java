@@ -9,7 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = InfinityButtons.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class InfinityButtonsEventBusEvents {
+public class ParticleEvent {
     @SubscribeEvent
     public static void registerParticleFactories(final ParticleFactoryRegisterEvent event ) {
         Minecraft.getInstance().particles.registerFactory(InfinityButtonsParticleTypes.DIAMOND_SPARKLE.get(), DiamondSparkleParticle.DiamondSparkleProvider::new);

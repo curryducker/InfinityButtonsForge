@@ -1,7 +1,11 @@
 package net.larsmans.infinitybuttons;
 
 import me.shedaniel.autoconfig.AutoConfig;
+import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
+import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.renderer.ActiveRenderInfo;
@@ -24,6 +28,8 @@ public class InfinityButtonsUtil {
 
     public static final IFormattableTextComponent HOLD_SHIFT_TEXT = new TranslationTextComponent("infinitybuttons.tooltip.hold_shift").mergeStyle(TextFormatting.GRAY);
     public static final IFormattableTextComponent SAFE_EMERGENCY_BUTTON_ACTIONBAR_TEXT = new TranslationTextComponent("infinitybuttons.actionbar.closed_safety_button");
+
+    public static List<SafeEmergencyButtonItem> SAFETY_BUTTONS;
 
     public static void tooltip(List<ITextComponent> tooltip, String name) {
         if (AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig().tooltips) {
@@ -62,6 +68,15 @@ public class InfinityButtonsUtil {
                 z += d2 / d3 * 2.0D;
             }
             level.playSound(x, y, z, soundEvent, soundSource, 1.0F, 1.0F, false);
+        }
+    }
+
+    public static void buildSafety() {
+        if (SAFETY_BUTTONS == null) {
+            SAFETY_BUTTONS = new ArrayList<>();
+            for (RegistryObject<? extends Block> entry : InfinityButtonsBlocks.BLOCKS.getEntries())
+                if (entry.get() instanceof SafeEmergencyButton)
+                    SAFETY_BUTTONS.add((SafeEmergencyButtonItem) entry.get().asItem());
         }
     }
 }
