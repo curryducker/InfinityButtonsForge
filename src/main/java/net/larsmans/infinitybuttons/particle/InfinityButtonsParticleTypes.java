@@ -12,7 +12,7 @@ public class InfinityButtonsParticleTypes {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES =
             DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, InfinityButtons.MOD_ID);
 
-    public static RegistryObject<BasicParticleType> SCRAPE = registerParticleType("scrape", true);
+    public static RegistryObject<BasicParticleType> DIAMOND_SPARKLE = registerParticleType("diamond_sparkle", true);
 
     private static RegistryObject<BasicParticleType> registerParticleType(String name, boolean alwaysShow) {
         return PARTICLE_TYPES.register(name, () -> new BasicParticleType(alwaysShow));
