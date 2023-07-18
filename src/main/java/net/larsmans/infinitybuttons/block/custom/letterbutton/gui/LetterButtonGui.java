@@ -75,7 +75,7 @@ public class LetterButtonGui extends Screen {
     @Override
     public void onClose() {
         for (LetterButtonEnum buttonEnum : LetterButtonEnum.values()) {
-            if (selectedButton == buttonEnum.getId()) {
+            if (selectedButton == buttonEnum.ordinal()) {
                 letterButton.setState(state, world, pos, buttonEnum);
                 IBPacketHandler.sendToServer(new LetterButtonStatePacket(pos, buttonEnum));
             }
