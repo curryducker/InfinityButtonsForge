@@ -10,7 +10,7 @@
 - Emergency Buttons will now make Villagers run towards their bed like bells do. (Configurable)
 - Fixed Safety Buttons not being able to open when using a shield.
 - Fixed some blocks not working when using 'Every Compat (Wood Good)'.
-- Changed some language values.
+- Made some small changes to language values.
 - Added Lantern Buttons & Levers.
 - Added Purpur Block Secret Button.
 - Added Create compat. (1.18.2 & 1.19.x)
@@ -20,6 +20,7 @@
 - Metallic Buttons now require the correct Tool Tier to drop.
 - Added more Buttons to Vanilla Tabs. (1.19.3)
 - Fixed Small Brick Textures being rotated incorrectly.
+- Changed Diamond Button Particle.
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x
