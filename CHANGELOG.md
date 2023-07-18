@@ -25,6 +25,7 @@ Fabric Only:
 
 Forge Only:
 - Added assets for EMI. (1.18.2+)
+- Added integration for Copperized JEI Categories. (1.18.2-1.19.2)
 - Fixed Creative Tab being unsorted. (1.16.5-1.19.2)
 - Added compat for:
   - Atmospheric 1.18.2 & 1.19.x
