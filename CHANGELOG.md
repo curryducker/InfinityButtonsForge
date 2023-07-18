@@ -6,7 +6,8 @@
 - Emergency Buttons can now be configured to have a custom range or be heard globally.
 - Fixed Prismarine Buttons not being able to be waterlogged properly.
 - When using Jade, Secret Buttons will now show up as their original block.
-- Added Console Buttons & Levers.
+- Added Console Buttons & Toggle Buttons.
+- Renamed Lamp Lever to Lamp Toggle Button
 - Emergency Buttons will now make Villagers run towards their bed like bells do. (Configurable)
 - Fixed Safety Buttons not being able to open when using a shield.
 - Fixed some blocks not working when using 'Every Compat (Wood Good)'.
