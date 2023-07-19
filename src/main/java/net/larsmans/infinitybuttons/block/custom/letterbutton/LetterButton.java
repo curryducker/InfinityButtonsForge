@@ -5,6 +5,7 @@ import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGu
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.network.play.ClientPlayNetHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
@@ -12,7 +13,10 @@ import net.minecraft.state.properties.AttachFace;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.world.GameType;
 import net.minecraft.world.World;
+
+import java.util.Objects;
 
 public class LetterButton extends AbstractSmallButton {
 
@@ -25,7 +29,13 @@ public class LetterButton extends AbstractSmallButton {
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        ClientPlayNetHandler connection = Minecraft.getInstance().getConnection();
+        assert connection != null;
+        GameType gameMode = Objects.requireNonNull(connection.getPlayerInfo(player.getGameProfile().getId())).getGameType();
         if (player.isSneaking()) {
+            if (gameMode == GameType.ADVENTURE) {
+                return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+            }
             if (worldIn.isRemote) {
                 Minecraft.getInstance().displayGuiScreen(new LetterButtonGui(this, state, worldIn, pos));
             }

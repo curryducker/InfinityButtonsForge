@@ -8,6 +8,8 @@ import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFaceBlock;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.network.play.ClientPlayNetHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -27,6 +29,7 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.world.GameType;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -37,6 +40,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class SafeEmergencyButton extends HorizontalFaceBlock {
@@ -198,6 +202,11 @@ public class SafeEmergencyButton extends HorizontalFaceBlock {
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        ClientPlayNetHandler connection = Minecraft.getInstance().getConnection();
+        assert connection != null;
+        GameType gameMode = Objects.requireNonNull(connection.getPlayerInfo(player.getGameProfile().getId())).getGameType();
+        if (gameMode == GameType.SPECTATOR)
+            return ActionResultType.FAIL;
         switch (state.get(STATE)) {
             case PRESSED: {
                 return ActionResultType.CONSUME;
