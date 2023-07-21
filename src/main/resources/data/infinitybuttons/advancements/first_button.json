@@ -96,28 +96,23 @@
         ]
       }
     },
-    "lamp_button": {
+    "other_buttons": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "infinitybuttons:lamp_button"
-          }
-        ]
-      }
-    },
-    "lamp_lever": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "infinitybuttons:lamp_lever"
+            "items": [
+              "infinitybuttons:lamp_button",
+              "infinitybuttons:lamp_lever",
+              "infinitybuttons:letter_button",
+              "infinitybuttons:letter_lever"
+            ]
           }
         ]
       }
     }
   },
   "requirements": [
-    ["buttons", "large_buttons", "secret_buttons", "emergency_buttons", "safe_emergency_buttons", "torch_buttons", "lantern_buttons", "console_buttons", "lamp_button", "lamp_lever"]
+    ["buttons", "large_buttons", "secret_buttons", "emergency_buttons", "safe_emergency_buttons", "torch_buttons", "lantern_buttons", "console_buttons", "other_buttons"]
   ]
 }
