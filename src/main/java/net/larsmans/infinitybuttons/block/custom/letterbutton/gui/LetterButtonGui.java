@@ -103,5 +103,6 @@ public class LetterButtonGui extends Screen {
 
     protected void onClick(int button) {
         selectedButton = button;
+        close();
     }
 }

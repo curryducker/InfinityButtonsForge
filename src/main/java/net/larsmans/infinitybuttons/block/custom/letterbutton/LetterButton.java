@@ -9,6 +9,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.network.play.ClientPlayNetHandler;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.EnumProperty;
@@ -48,12 +49,22 @@ public class LetterButton extends AbstractLeverableButton {
             if (gameMode == GameType.ADVENTURE) {
                 return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
             }
-            if (worldIn.isRemote) {
-                Minecraft.getInstance().displayGuiScreen(new LetterButtonGui(this, state, worldIn, pos));
-            }
+            openScreen(state, worldIn, pos);
             return ActionResultType.func_233537_a_(worldIn.isRemote);
         } else {
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+        }
+    }
+
+    @Override
+    public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
+        super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
+        openScreen(state, worldIn, pos);
+    }
+
+    public void openScreen(BlockState state, World worldIn, BlockPos pos) {
+        if (worldIn.isRemote) {
+            Minecraft.getInstance().displayGuiScreen(new LetterButtonGui(this, state, worldIn, pos));
         }
     }
 

@@ -1,0 +1,35 @@
+{
+  "parent": "infinitybuttons:first_button",
+  "display": {
+    "icon": {
+      "item": "infinitybuttons:letter_button"
+    },
+    "title": {
+      "translate": "advancement.infinitybuttons.letter_button"
+    },
+    "description": {
+      "translate": "advancement.infinitybuttons.letter_button.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "letterbutton": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "infinitybuttons:letter_button"
+      }
+    },
+    "letterlever": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "infinitybuttons:letter_lever"
+      }
+    }
+  },
+  "requirements": [
+    ["letterbutton", "letterlever"]
+  ]
+}

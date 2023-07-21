@@ -435,6 +435,8 @@
   "advancement.infinitybuttons.secret_button.desc": "Hide a secret button in a wall",
   "advancement.infinitybuttons.safety_button": "Stylish!",
   "advancement.infinitybuttons.safety_button.desc": "Wear a Safety Button on your head",
+  "advancement.infinitybuttons.letter_button": "Write Me a Letter",
+  "advancement.infinitybuttons.letter_button.desc": "Express yourself with a Letter Button",
 
   "text.autoconfig.infinitybuttons.option.alarmSoundType": "警报声音",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "The way in which Emergency Buttons make alarm sounds",

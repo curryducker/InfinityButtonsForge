@@ -435,6 +435,8 @@
   "advancement.infinitybuttons.secret_button.desc": "Verstop een verborgen knop in een muur",
   "advancement.infinitybuttons.safety_button": "Stijlvol!",
   "advancement.infinitybuttons.safety_button.desc": "Draag een veilige noodknop op je hoofd",
+  "advancement.infinitybuttons.letter_button": "Schrijf er een brief mee!",
+  "advancement.infinitybuttons.letter_button.desc": "Uit jezelf met een letterknop",
 
   "text.autoconfig.infinitybuttons.option.alarmSoundType": "Alarmgeluid",
   "text.autoconfig.infinitybuttons.option.alarmSoundType.@Tooltip[0]": "De manier waarop noodknoppen alarmgeluiden maken",
