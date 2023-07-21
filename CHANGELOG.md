@@ -22,6 +22,8 @@
 - Added more Buttons to Vanilla Tabs. (1.19.3)
 - Fixed Small Brick Textures being rotated incorrectly.
 - Changed Diamond Button Particle.
+- Fixed Buttons having wrong Piston Behaviour.
+- Shifted Lamp Button inventory model a bit.
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x
