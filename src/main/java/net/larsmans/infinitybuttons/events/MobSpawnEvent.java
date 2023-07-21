@@ -5,8 +5,7 @@ import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.monster.SkeletonEntity;
-import net.minecraft.entity.monster.ZombieEntity;
+import net.minecraft.entity.monster.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -25,7 +24,7 @@ public class MobSpawnEvent {
         InfinityButtonsUtil.buildSafety();
         MobEntity entity = (MobEntity) event.getEntity();
 
-        if (entity instanceof SkeletonEntity || entity instanceof ZombieEntity) {
+        if (entity instanceof AbstractSkeletonEntity && !(entity instanceof WitherSkeletonEntity) || entity instanceof ZombieEntity && !(entity instanceof ZombifiedPiglinEntity || entity instanceof DrownedEntity)) {
             Random random = event.getWorld().getRandom();
             double chance = 0.001;
 
