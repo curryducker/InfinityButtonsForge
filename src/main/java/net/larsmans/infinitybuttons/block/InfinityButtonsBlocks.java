@@ -300,7 +300,7 @@ public class InfinityButtonsBlocks {
             () -> new LampButton(lampProperties(), true));
 
     public static final RegistryObject<Block> LETTER_BUTTON = registerBlock("letter_button",
-            () -> new LetterButton(AbstractBlock.Properties.create(Material.WOOD)
+            () -> new LetterButton(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).notSolid().doesNotBlockMovement().sound(SoundType.WOOD), false));
 
     public static final RegistryObject<Block> LETTER_LEVER = registerBlock("letter_lever",
