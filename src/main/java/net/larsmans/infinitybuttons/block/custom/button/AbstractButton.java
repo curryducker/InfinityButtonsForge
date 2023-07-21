@@ -5,6 +5,7 @@ import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFaceBlock;
+import net.minecraft.block.material.PushReaction;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
@@ -121,6 +122,11 @@ public abstract class AbstractButton extends HorizontalFaceBlock {
             worldIn.getPendingBlockTicks().scheduleTick(new BlockPos(pos), this, this.getActiveDuration());
         }
 
+    }
+
+    @Override
+    public PushReaction getPushReaction(BlockState state) {
+        return PushReaction.DESTROY;
     }
 
     public void updateNeighbors(BlockState state, World worldIn, BlockPos pos) {

@@ -3,6 +3,7 @@ package net.larsmans.infinitybuttons.block.custom.button;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.material.PushReaction;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
@@ -125,6 +126,11 @@ public abstract class AbstractHorizontalButton extends HorizontalBlock {
             this.updateNeighbors(state, worldIn, pos);
             this.playSound(null, worldIn, pos, false);
         }
+    }
+
+    @Override
+    public PushReaction getPushReaction(BlockState state) {
+        return PushReaction.DESTROY;
     }
 
     public void updateNeighbors(BlockState state, World world, BlockPos pos) {
