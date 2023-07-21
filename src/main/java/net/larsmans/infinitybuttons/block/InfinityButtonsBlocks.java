@@ -301,7 +301,10 @@ public class InfinityButtonsBlocks {
 
     public static final RegistryObject<Block> LETTER_BUTTON = registerBlock("letter_button",
             () -> new LetterButton(AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).notSolid().doesNotBlockMovement().sound(SoundType.WOOD)));
+                    .harvestLevel(0).harvestTool(ToolType.AXE).hardnessAndResistance(0.5f).notSolid().doesNotBlockMovement().sound(SoundType.WOOD), false));
+
+    public static final RegistryObject<Block> LETTER_LEVER = registerBlock("letter_lever",
+            () -> new LetterButton(AbstractBlock.Properties.from((LETTER_BUTTON.get())), true));
 
     public static final RegistryObject<Block> LANTERN_BUTTON = registerBlock("lantern_button",
             () -> new LanternButton(lanternProperties(15), false));

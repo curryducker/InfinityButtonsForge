@@ -3,6 +3,7 @@ package net.larsmans.infinitybuttons;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
+import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
 import net.minecraft.block.Block;
@@ -30,6 +31,10 @@ public class InfinityButtonsUtil {
     public static final IFormattableTextComponent SAFE_EMERGENCY_BUTTON_ACTIONBAR_TEXT = new TranslationTextComponent("infinitybuttons.actionbar.closed_safety_button");
 
     public static List<SafeEmergencyButtonItem> SAFETY_BUTTONS;
+
+    public static boolean crouchClickOverrides(Block block) {
+        return block instanceof SafeEmergencyButton || block instanceof LetterButton;
+    }
 
     public static void tooltip(List<ITextComponent> tooltip, String name) {
         if (AutoConfig.getConfigHolder(InfinityButtonsConfig.class).getConfig().tooltips) {

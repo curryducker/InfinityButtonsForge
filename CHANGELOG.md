@@ -1,6 +1,6 @@
 # Changelog Infinity Buttons
 
-## 3.2.0
+## 4.0.0
 
 - Fixed weird pitch on Emergency Button sounds when using a resource pack.
 - Emergency Buttons can now be configured to have a custom range or be heard globally.

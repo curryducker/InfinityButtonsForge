@@ -1,5 +1,6 @@
 package net.larsmans.infinitybuttons.mixin;
 
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -27,7 +28,7 @@ public abstract class PlayerControllerMixin {
     private void func_217292_a(ClientPlayerEntity player, ClientWorld world, Hand hand, BlockRayTraceResult p_217292_4_, CallbackInfoReturnable<ActionResultType> cir) {
         BlockState state = world.getBlockState(p_217292_4_.getPos());
         Block block = state.getBlock();
-        if (block instanceof SafeEmergencyButton) {
+        if (InfinityButtonsUtil.crouchClickOverrides(block)) {
             this.connection.sendPacket(new CPlayerTryUseItemOnBlockPacket(hand, p_217292_4_));
             cir.setReturnValue(block.onBlockActivated(state, world, p_217292_4_.getPos(), player, hand, p_217292_4_));
         }
