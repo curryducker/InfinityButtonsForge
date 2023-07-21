@@ -41,6 +41,9 @@ public abstract class AbstractLeverableButton extends AbstractButton {
     public void powerBlock(BlockState state, World world, BlockPos pos) {
         world.setBlockState(pos, state.with(PRESSED, Boolean.TRUE), 3);
         this.updateNeighbors(state, world, pos);
+        if (!lever) {
+            world.getPendingBlockTicks().scheduleTick(pos, this, this.getActiveDuration());
+        }
     }
 
     public void unpowerBlock(BlockState state, World world, BlockPos pos) {
