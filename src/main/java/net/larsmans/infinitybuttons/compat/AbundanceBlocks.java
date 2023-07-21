@@ -1,6 +1,7 @@
 package net.larsmans.infinitybuttons.compat;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatBookshelfSecretButton;
@@ -62,8 +63,9 @@ public class AbundanceBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        InfinityButtonsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        RegistryObject<Item> register = InfinityButtonsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+        InfinityButtonsUtil.REGISTRY_FOR_TAB.add(register);
     }
 
     public static void registerCompatBlocks() {

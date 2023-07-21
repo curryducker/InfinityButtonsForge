@@ -1,6 +1,7 @@
 package net.larsmans.infinitybuttons.compat;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.block.custom.HoglinMountButton;
 import net.larsmans.infinitybuttons.block.custom.torch.compat.PropelTorchButton;
@@ -56,8 +57,9 @@ public class NethersDelightBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(RegistryObject<T> block) {
-        InfinityButtonsItems.ITEMS.register("hoglin_mount_button", () -> new BlockItem(block.get(),
+        RegistryObject<Item> register = InfinityButtonsItems.ITEMS.register("hoglin_mount_button", () -> new BlockItem(block.get(),
                 new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+        InfinityButtonsUtil.REGISTRY_FOR_TAB.add(register);
     }
 
     private static <T extends Block> RegistryObject<T> registerTorchBlock(String name, Supplier<T> block) {
