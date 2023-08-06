@@ -34,8 +34,7 @@ credits="Forge port by curryducker!" #optional
 authors="LarsMans" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-A mod which adds new exciting buttons!
-'''
+A mod which adds new exciting buttons!'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.infinitybuttons]] #optional
     # the modid of the dependency

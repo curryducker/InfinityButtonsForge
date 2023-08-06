@@ -67,7 +67,11 @@ public class TorchButton extends AbstractHorizontalButton {
                     d2 + 0.23D * (double) direction2.getZOffset(),
                     0.0D, 0.0D, 0.0D);
         } else {
-            super.animateTick(stateIn, worldIn, pos, rand);
+            double d = (double)pos.getX() + 0.5;
+            double e = (double)pos.getY() + 0.7;
+            double f = (double)pos.getZ() + 0.5;
+            worldIn.addParticle(ParticleTypes.SMOKE, d, e, f, 0.0, 0.0, 0.0);
+            worldIn.addParticle(this.particle, d, e, f, 0.0, 0.0, 0.0);
         }
     }
 

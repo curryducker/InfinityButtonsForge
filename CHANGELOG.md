@@ -13,6 +13,7 @@
 - Fixed some blocks not working when using 'Every Compat (Wood Good)'.
 - Made some small changes to language values.
 - Added Lantern Buttons & Levers.
+- Added Letter Button & Toggle Button.
 - Added Purpur Block Secret Button.
 - Added Create compat. (1.18.2 & 1.19.x)
 - Overhauled Copper Buttons. (1.18.2+)
@@ -24,12 +25,16 @@
 - Changed Diamond Button Particle.
 - Fixed Buttons having wrong Piston Behaviour.
 - Shifted Lamp Button inventory model a bit.
+- Alarm and doorbell sounds are now actually directional (stereo) and decrease in volume when standing further away.
+- Amplified the alarm feel by adding some reverb to the alarm.
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x
 
 Forge Only:
 - Added assets for EMI. (1.18.2+)
+- Fixed a weird symbol appearing in the mod description.
+- Changed background in config menu.
 - Added integration for Copperized JEI Categories. (1.18.2-1.19.2)
 - Fixed Creative Tab being unsorted. (1.16.5-1.19.2)
 - Added compat for:

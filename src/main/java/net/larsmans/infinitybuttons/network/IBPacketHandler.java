@@ -1,6 +1,8 @@
 package net.larsmans.infinitybuttons.network;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
+import net.larsmans.infinitybuttons.network.packets.AlarmPacket;
+import net.larsmans.infinitybuttons.network.packets.LetterButtonScreenPacket;
 import net.larsmans.infinitybuttons.network.packets.LetterButtonStatePacket;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.ResourceLocation;
@@ -20,7 +22,7 @@ public class IBPacketHandler {
     public static void register() {
         SimpleChannel net = NetworkRegistry.ChannelBuilder
                 .named(new ResourceLocation(InfinityButtons.MOD_ID, "messages"))
-                .networkProtocolVersion(() -> "1.0")
+                .networkProtocolVersion(() -> "4.0.0")
                 .clientAcceptedVersions(s -> true)
                 .serverAcceptedVersions(s -> true)
                 .simpleChannel();
@@ -32,6 +34,18 @@ public class IBPacketHandler {
                 .encoder(LetterButtonStatePacket::encode)
                 .consumer(LetterButtonStatePacket::handle)
                 .add();
+
+        net.messageBuilder(LetterButtonScreenPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(LetterButtonScreenPacket::decode)
+                .encoder(LetterButtonScreenPacket::encode)
+                .consumer(LetterButtonScreenPacket::handle)
+                .add();
+
+        net.messageBuilder(AlarmPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(AlarmPacket::decode)
+                .encoder(AlarmPacket::encode)
+                .consumer(AlarmPacket::handle)
+                .add();
     }
 
     public static <MSG> void sendToServer(MSG message) {
@@ -40,5 +54,9 @@ public class IBPacketHandler {
 
     public static <MSG> void sendToPlayer(MSG message, ServerPlayerEntity player) {
         INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), message);
+    }
+
+    public static <MSG> void sendToAllPlayers(MSG message) {
+        INSTANCE.send(PacketDistributor.ALL.noArg(), message);
     }
 }

@@ -3,7 +3,8 @@ package net.larsmans.infinitybuttons.block.custom.letterbutton;
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.custom.button.AbstractLeverableButton;
 import net.larsmans.infinitybuttons.block.custom.button.LargeButtonShape;
-import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGui;
+import net.larsmans.infinitybuttons.network.IBPacketHandler;
+import net.larsmans.infinitybuttons.network.packets.LetterButtonScreenPacket;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
@@ -11,6 +12,7 @@ import net.minecraft.client.network.play.ClientPlayNetHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
@@ -42,29 +44,30 @@ public class LetterButton extends AbstractLeverableButton {
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        ClientPlayNetHandler connection = Minecraft.getInstance().getConnection();
-        assert connection != null;
-        GameType gameMode = Objects.requireNonNull(connection.getPlayerInfo(player.getGameProfile().getId())).getGameType();
-        if (player.isSneaking()) {
-            if (gameMode == GameType.ADVENTURE) {
-                return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
-            }
-            openScreen(state, worldIn, pos);
-            return ActionResultType.func_233537_a_(worldIn.isRemote);
-        } else {
-            return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+        GameType gameMode = GameType.SURVIVAL;
+        if (worldIn.isRemote) {
+            ClientPlayNetHandler connection = Minecraft.getInstance().getConnection();
+            assert connection != null;
+            gameMode = Objects.requireNonNull(connection.getPlayerInfo(player.getGameProfile().getId())).getGameType();
+        } else if (player instanceof ServerPlayerEntity) {
+            gameMode = ((ServerPlayerEntity) player).interactionManager.getGameType();
         }
+        if (player.isSneaking() && gameMode != GameType.ADVENTURE) {
+            openScreen(pos, player);
+            return ActionResultType.func_233537_a_(worldIn.isRemote);
+        }
+        return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
     }
 
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
-        openScreen(state, worldIn, pos);
+        openScreen(pos, placer);
     }
 
-    public void openScreen(BlockState state, World worldIn, BlockPos pos) {
-        if (worldIn.isRemote) {
-            Minecraft.getInstance().displayGuiScreen(new LetterButtonGui(this, state, worldIn, pos));
+    public void openScreen(BlockPos pos, LivingEntity entity) {
+        if (entity instanceof ServerPlayerEntity) {
+            IBPacketHandler.sendToPlayer(new LetterButtonScreenPacket(pos), (ServerPlayerEntity) entity);
         }
     }
 
