@@ -52,6 +52,9 @@ public class LetterButton extends AbstractLeverableButton {
         } else if (player instanceof ServerPlayerEntity) {
             gameMode = ((ServerPlayerEntity) player).interactionManager.getGameType();
         }
+        if (gameMode == GameType.SPECTATOR)
+            return ActionResultType.FAIL;
+
         if (player.isSneaking() && gameMode != GameType.ADVENTURE) {
             openScreen(pos, player);
             return ActionResultType.func_233537_a_(worldIn.isRemote);
