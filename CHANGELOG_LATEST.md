@@ -25,6 +25,7 @@
 - Shifted Lamp Button inventory model a bit.
 - Alarm and doorbell sounds are now actually directional (stereo) and decrease in volume when standing further away.
 - Amplified the alarm feel by adding some reverb to the alarm.
+- Fixed typo in Dutch localization.
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x
