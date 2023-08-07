@@ -6,6 +6,7 @@ import net.larsmans.infinitybuttons.block.custom.letterbutton.gui.LetterButtonGu
 import net.larsmans.infinitybuttons.config.AlarmEnum;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.larsmans.infinitybuttons.network.packets.AlarmPacket;
+import net.larsmans.infinitybuttons.network.packets.JadePacket;
 import net.larsmans.infinitybuttons.network.packets.LetterButtonScreenPacket;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.BlockState;
@@ -49,5 +50,15 @@ public class IBClientPacketHandler {
         if (cam.isValid()) {
             level.playSound(pos.getX(), pos.getY(), pos.getZ(), soundEvent, soundSource, (float)cam.getProjectedView().distanceTo(Vector3d.copyCentered(pos))/16.0F + 20.0F, 1.0F, false);
         }
+    }
+
+    public static void handleJadePacket(JadePacket packet) {
+        forceHidden = packet.getConfig();
+    }
+
+    private static boolean forceHidden = true;
+
+    public static boolean getForceHidden() {
+        return forceHidden;
     }
 }

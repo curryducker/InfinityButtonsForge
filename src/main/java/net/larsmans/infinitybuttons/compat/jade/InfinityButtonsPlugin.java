@@ -19,8 +19,8 @@ public class InfinityButtonsPlugin implements IWailaPlugin {
 
     @Override
     public void register(IRegistrar iRegistrar) {
-        iRegistrar.addSyncedConfig(CONFIG_HIDE_SECRET_BUTTONS, true);
-        iRegistrar.addSyncedConfig(CONFIG_HIDE_TORCH_BUTTONS, true);
+        iRegistrar.addConfig(CONFIG_HIDE_SECRET_BUTTONS, true);
+        iRegistrar.addConfig(CONFIG_HIDE_TORCH_BUTTONS, true);
 
         iRegistrar.registerStackProvider(SecretHandler.INSTANCE, AbstractSecretButton.class);
         iRegistrar.registerComponentProvider(SecretHandler.INSTANCE, TooltipPosition.HEAD, AbstractSecretButton.class);

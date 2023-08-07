@@ -454,6 +454,11 @@
   "text.autoconfig.infinitybuttons.option.tooltips.@Tooltip": "Of tooltips worden weergegeven",
   "text.autoconfig.infinitybuttons.option.diamondParticles": "Diamanten-knopdeeltjes",
   "text.autoconfig.infinitybuttons.option.diamondParticles.@Tooltip": "Of er deeltjes om diamanten knoppen komen",
+  "text.autoconfig.infinitybuttons.option.forceJadeHiding": "Forceer Verstoppen In Jade",
+  "text.autoconfig.infinitybuttons.option.forceJadeHiding.@Tooltip[0]": "Of een server clients moet forceren om verborgen knoppen te verstoppen wanneer ze Jade gebruiken",
+  "text.autoconfig.infinitybuttons.option.forceJadeHiding.@Tooltip[1]": " ",
+  "text.autoconfig.infinitybuttons.option.forceJadeHiding.@Tooltip[2]": "§cDit client-side veranderen heeft geen effect op een server,",
+  "text.autoconfig.infinitybuttons.option.forceJadeHiding.@Tooltip[3]": "§chet moet in de config van de server veranderd worden",
   "text.autoconfig.infinitybuttons.title": "Infinity Buttons Configuratie",
 
   "config.waila.plugin_infinitybuttons": "Infinity Buttons",

@@ -40,9 +40,7 @@ public class AlarmPacket {
 
     public static void handle(AlarmPacket packet, Supplier<NetworkEvent.Context> contextSupplier) {
         NetworkEvent.Context context = contextSupplier.get();
-        context.enqueueWork(() -> {
-            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> IBClientPacketHandler.handleAlarmPacket(packet));
-        });
+        context.enqueueWork(() -> DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> IBClientPacketHandler.handleAlarmPacket(packet)));
         context.setPacketHandled(true);
     }
 }

@@ -7,6 +7,7 @@ import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
 import net.larsmans.infinitybuttons.compat.*;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfig;
 import net.larsmans.infinitybuttons.config.InfinityButtonsConfigMenu;
+import net.larsmans.infinitybuttons.events.ClientLoginEvent;
 import net.larsmans.infinitybuttons.events.MobSpawnEvent;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.larsmans.infinitybuttons.item.custom.SafeEmergencyButtonItem;
@@ -105,6 +106,7 @@ public class InfinityButtons
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(MobSpawnEvent.class);
+        MinecraftForge.EVENT_BUS.register(ClientLoginEvent.class);
     }
 
     private void setup(final FMLCommonSetupEvent event)

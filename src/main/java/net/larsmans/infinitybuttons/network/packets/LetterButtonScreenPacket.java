@@ -31,9 +31,7 @@ public class LetterButtonScreenPacket {
 
     public static void handle(LetterButtonScreenPacket packet, Supplier<NetworkEvent.Context> contextSupplier) {
         NetworkEvent.Context context = contextSupplier.get();
-        context.enqueueWork(() -> {
-            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> IBClientPacketHandler.handleScreenPacket(packet));
-        });
+        context.enqueueWork(() -> DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> IBClientPacketHandler.handleScreenPacket(packet)));
         context.setPacketHandled(true);
     }
 }

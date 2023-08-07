@@ -26,4 +26,7 @@ public class InfinityButtonsConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip()
     public boolean diamondParticles = true;
+
+    @ConfigEntry.Gui.Tooltip(count = 4)
+    public boolean forceJadeHiding = true;
 }
