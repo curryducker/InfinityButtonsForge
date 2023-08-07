@@ -2,6 +2,8 @@
 
 ## 4.0.0
 
+- Ported to 1.20.1
+
 - Fixed weird pitch on Emergency Button sounds when using a resource pack.
 - Emergency Buttons can now be configured to have a custom range or be heard globally.
 - Fixed Prismarine Buttons not being able to be waterlogged properly.
