@@ -12,6 +12,7 @@ import mcp.mobius.waila.api.IPluginConfig;
 import mcp.mobius.waila.api.ITaggableList;
 import mcp.mobius.waila.utils.ModIdentification;
 import net.larsmans.infinitybuttons.block.custom.HoglinMountButton;
+import net.larsmans.infinitybuttons.block.custom.LanternButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.AbstractSecretButton;
 import net.larsmans.infinitybuttons.block.custom.torch.RedstoneTorchButton;
 import net.larsmans.infinitybuttons.block.custom.torch.TorchButton;
@@ -58,6 +59,10 @@ public class SecretHandler implements IComponentProvider {
 
         if (hidden(InfinityButtonsPlugin.CONFIG_HIDE_TORCH_BUTTONS, config) && accessor.getBlock() instanceof RedstoneTorchButton) {
             return new ItemStack(((RedstoneTorchButton) accessor.getBlock()).jadeBlock.asItem());
+        }
+
+        if (hidden(InfinityButtonsPlugin.CONFIG_HIDE_LANTERN_BUTTONS, config) && accessor.getBlock() instanceof LanternButton) {
+            return new ItemStack(((LanternButton) accessor.getBlock()).jadeBlock.asItem());
         }
         return ItemStack.EMPTY;
     }
@@ -107,6 +112,17 @@ public class SecretHandler implements IComponentProvider {
             } catch (Exception ignored) {
             }
         }
+
+        if (hidden(InfinityButtonsPlugin.CONFIG_HIDE_LANTERN_BUTTONS, config) && accessor.getBlock() instanceof LanternButton) {
+            try {
+                ITextComponent name = CACHE.get(accessor.getBlock(), () -> new TranslationTextComponent(((LanternButton) accessor.getBlock()).jadeBlock.getTranslationKey()));
+                ((ITaggableList<ResourceLocation, ITextComponent>)tooltip).setTag(HUDHandlerBlocks.OBJECT_NAME_TAG, new StringTextComponent(String.format(Waila.CONFIG.get().getFormatting().getBlockName(), name.getString())));
+                if (config.get(PluginCore.CONFIG_SHOW_REGISTRY)) {
+                    ((ITaggableList<ResourceLocation, ITextComponent>)tooltip).setTag(HUDHandlerBlocks.REGISTRY_NAME_TAG, (new StringTextComponent(Objects.requireNonNull(((LanternButton) accessor.getBlock()).jadeBlock.getRegistryName()).toString())).mergeStyle(TextFormatting.GRAY));
+                }
+            } catch (Exception ignored) {
+            }
+        }
     }
 
     @Override
@@ -137,6 +153,14 @@ public class SecretHandler implements IComponentProvider {
 
         if (!config.get(JadePlugin.HIDE_MOD_NAME) && hidden(InfinityButtonsPlugin.CONFIG_HIDE_TORCH_BUTTONS, config) && accessor.getBlock() instanceof RedstoneTorchButton) {
             String modName = ModIdentification.getModName(((RedstoneTorchButton) accessor.getBlock()).jadeBlock);
+            if (!Strings.isNullOrEmpty(modName)) {
+                modName = String.format(Waila.CONFIG.get().getFormatting().getModName(), modName);
+                ((ITaggableList<ResourceLocation, ITextComponent>) tooltip).setTag(HUDHandlerBlocks.MOD_NAME_TAG, new StringTextComponent(modName));
+            }
+        }
+
+        if (!config.get(JadePlugin.HIDE_MOD_NAME) && hidden(InfinityButtonsPlugin.CONFIG_HIDE_LANTERN_BUTTONS, config) && accessor.getBlock() instanceof LanternButton) {
+            String modName = ModIdentification.getModName(((LanternButton) accessor.getBlock()).jadeBlock);
             if (!Strings.isNullOrEmpty(modName)) {
                 modName = String.format(Waila.CONFIG.get().getFormatting().getModName(), modName);
                 ((ITaggableList<ResourceLocation, ITextComponent>) tooltip).setTag(HUDHandlerBlocks.MOD_NAME_TAG, new StringTextComponent(modName));

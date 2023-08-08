@@ -307,16 +307,16 @@ public class InfinityButtonsBlocks {
             () -> new LetterButton(AbstractBlock.Properties.from((LETTER_BUTTON.get())), true));
 
     public static final RegistryObject<Block> LANTERN_BUTTON = registerBlock("lantern_button",
-            () -> new LanternButton(lanternProperties(15), false));
+            () -> new LanternButton(lanternProperties(15), false, byName("lantern")));
 
     public static final RegistryObject<Block> LANTERN_LEVER = registerBlock("lantern_lever",
-            () -> new LanternButton(lanternProperties(15), true));
+            () -> new LanternButton(lanternProperties(15), true, byName("lantern")));
 
     public static final RegistryObject<Block> SOUL_LANTERN_BUTTON = registerBlock("soul_lantern_button",
-            () -> new LanternButton(lanternProperties(10), false));
+            () -> new LanternButton(lanternProperties(10), false, byName("soul_lantern")));
 
     public static final RegistryObject<Block> SOUL_LANTERN_LEVER = registerBlock("soul_lantern_lever",
-            () -> new LanternButton(lanternProperties(10), true));
+            () -> new LanternButton(lanternProperties(10), true, byName("soul_lantern")));
 
     /**
      * Console Buttons

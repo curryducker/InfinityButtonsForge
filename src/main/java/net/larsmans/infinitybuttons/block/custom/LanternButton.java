@@ -34,10 +34,12 @@ public class LanternButton extends LanternBlock {
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
     public static final VoxelShape SHAPE_PRESSED = HANGING_SHAPES.withOffset(0, (double) -1 / 16, 0);
     private final boolean isLever;
+    public final Block jadeBlock;
 
-    public LanternButton(Properties properties, boolean isLever) {
+    public LanternButton(Properties properties, boolean isLever, Block jadeBlock) {
         super(properties);
         this.isLever = isLever;
+        this.jadeBlock = jadeBlock;
         this.setDefaultState(this.stateContainer.getBaseState().with(HANGING, true).with(WATERLOGGED, false).with(PRESSED, false));
     }
 

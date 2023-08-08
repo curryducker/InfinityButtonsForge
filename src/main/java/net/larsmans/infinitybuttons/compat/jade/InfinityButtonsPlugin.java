@@ -6,6 +6,7 @@ import mcp.mobius.waila.api.TooltipPosition;
 import mcp.mobius.waila.api.WailaPlugin;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.block.custom.HoglinMountButton;
+import net.larsmans.infinitybuttons.block.custom.LanternButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.AbstractSecretButton;
 import net.larsmans.infinitybuttons.block.custom.torch.RedstoneTorchButton;
 import net.larsmans.infinitybuttons.block.custom.torch.TorchButton;
@@ -16,11 +17,13 @@ public class InfinityButtonsPlugin implements IWailaPlugin {
 
     static final ResourceLocation CONFIG_HIDE_SECRET_BUTTONS = new ResourceLocation(InfinityButtons.MOD_ID, "hide_secret_buttons");
     static final ResourceLocation CONFIG_HIDE_TORCH_BUTTONS = new ResourceLocation(InfinityButtons.MOD_ID, "hide_torch_buttons");
+    static final ResourceLocation CONFIG_HIDE_LANTERN_BUTTONS = new ResourceLocation(InfinityButtons.MOD_ID, "hide_lantern_buttons");
 
     @Override
     public void register(IRegistrar iRegistrar) {
         iRegistrar.addConfig(CONFIG_HIDE_SECRET_BUTTONS, true);
         iRegistrar.addConfig(CONFIG_HIDE_TORCH_BUTTONS, true);
+        iRegistrar.addConfig(CONFIG_HIDE_LANTERN_BUTTONS, true);
 
         iRegistrar.registerStackProvider(SecretHandler.INSTANCE, AbstractSecretButton.class);
         iRegistrar.registerComponentProvider(SecretHandler.INSTANCE, TooltipPosition.HEAD, AbstractSecretButton.class);
@@ -37,5 +40,9 @@ public class InfinityButtonsPlugin implements IWailaPlugin {
         iRegistrar.registerStackProvider(SecretHandler.INSTANCE, RedstoneTorchButton.class);
         iRegistrar.registerComponentProvider(SecretHandler.INSTANCE, TooltipPosition.HEAD, RedstoneTorchButton.class);
         iRegistrar.registerComponentProvider(SecretHandler.INSTANCE, TooltipPosition.TAIL, RedstoneTorchButton.class);
+
+        iRegistrar.registerStackProvider(SecretHandler.INSTANCE, LanternButton.class);
+        iRegistrar.registerComponentProvider(SecretHandler.INSTANCE, TooltipPosition.HEAD, LanternButton.class);
+        iRegistrar.registerComponentProvider(SecretHandler.INSTANCE, TooltipPosition.TAIL, LanternButton.class);
     }
 }

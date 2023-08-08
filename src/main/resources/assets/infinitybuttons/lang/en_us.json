@@ -463,5 +463,6 @@
 
   "config.waila.plugin_infinitybuttons": "Infinity Buttons",
   "config.waila.plugin_infinitybuttons.hide_secret_buttons": "Hide Secret Buttons",
-  "config.waila.plugin_infinitybuttons.hide_torch_buttons": "Hide Torch Buttons"
+  "config.waila.plugin_infinitybuttons.hide_torch_buttons": "Hide Torch Buttons",
+  "config.waila.plugin_infinitybuttons.hide_lantern_buttons": "Hide Lantern Buttons"
 }
