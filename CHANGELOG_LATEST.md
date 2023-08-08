@@ -13,7 +13,7 @@
 - Added Lantern Buttons & Levers.
 - Added Letter Button & Toggle Button.
 - Added Purpur Block Secret Button.
-- Added Create compat. (1.18.2 & 1.19.x)
+- Added Create compat. (1.18.2, 1.19.x & Forge 1.20.1)
 - Overhauled Copper Buttons. (1.18.2+)
 - Fancy Emergency Buttons are now included in their corresponding tags.
 - Added Advancements.
