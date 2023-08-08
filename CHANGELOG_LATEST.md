@@ -18,7 +18,7 @@
 - Fancy Emergency Buttons are now included in their corresponding tags.
 - Added Advancements.
 - Metallic Buttons now require the correct Tool Tier to drop.
-- Added more Buttons to Vanilla Tabs. (1.19.3)
+- Added more Buttons to Vanilla Tabs. (1.19.3+)
 - Fixed Small Brick Textures being rotated incorrectly.
 - Changed Diamond Button Particle.
 - Fixed Buttons having wrong Piston Behaviour.
@@ -26,6 +26,10 @@
 - Alarm and doorbell sounds are now actually directional (stereo) and decrease in volume when standing further away.
 - Amplified the alarm feel by adding some reverb to the alarm.
 - Fixed typo in Dutch localization.
+- Added Cherry Large Button (1.20)
+- Added Bamboo Large Button (1.20)
+- Added Cherry Plank Secret Button (1.20)
+- Change tags to match Vanilla (1.20)
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x
