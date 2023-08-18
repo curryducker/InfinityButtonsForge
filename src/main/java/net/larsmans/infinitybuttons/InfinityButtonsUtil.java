@@ -20,6 +20,7 @@ import net.minecraftforge.fml.RegistryObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class InfinityButtonsUtil {
     public static List<RegistryObject<Item>> REGISTRY_FOR_TAB = new ArrayList<>();
@@ -69,5 +70,9 @@ public class InfinityButtonsUtil {
             i++;
         }
         return i;
+    }
+
+    public static boolean blockPathContains(Block block, String contains) {
+        return Objects.requireNonNull(block.getRegistryName()).getPath().contains(contains);
     }
 }

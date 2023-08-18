@@ -24,6 +24,10 @@ public class PlankSecretButton extends AbstractSecretButton {
         );
     }
 
+    public PlankSecretButton(Properties properties, VoxelShape north_shape, VoxelShape east_shape, VoxelShape south_shape, VoxelShape west_shape, VoxelShape off_shape, Block jadeBlock) {
+        super(properties, north_shape, east_shape, south_shape, west_shape, off_shape, jadeBlock);
+    }
+
     // The bottom part that never moves
     private static final VoxelShape BOTTOM = Block.makeCuboidShape(0, 0, 0, 16, 4, 16);
     // The top part that never moves

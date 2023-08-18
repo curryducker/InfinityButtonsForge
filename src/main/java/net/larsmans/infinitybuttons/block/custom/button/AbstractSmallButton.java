@@ -69,4 +69,8 @@ public abstract class AbstractSmallButton extends AbstractButton{
                 }
         }
     }
+
+    public boolean isLarge() {
+        return large;
+    }
 }

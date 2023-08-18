@@ -1,6 +1,6 @@
 package net.larsmans.infinitybuttons.block.custom.secretbutton.compat;
 
-import net.larsmans.infinitybuttons.block.custom.secretbutton.AbstractSecretButton;
+import net.larsmans.infinitybuttons.block.custom.secretbutton.PlankSecretButton;
 import net.larsmans.infinitybuttons.sounds.InfinityButtonsSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class BambooPlankSecretButton extends AbstractSecretButton {
+public class BambooPlankSecretButton extends PlankSecretButton {
     public BambooPlankSecretButton(Properties properties, Block jadeBlock) {
         super(
                 properties,
