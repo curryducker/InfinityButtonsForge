@@ -256,6 +256,10 @@
   "block.infinitybuttons.lantern_lever": "Lantaarnhendel",
   "block.infinitybuttons.soul_lantern_button": "Zielenlantaarnknop",
   "block.infinitybuttons.soul_lantern_lever": "Zielenlantaarnhendel",
+  "block.infinitybuttons.ender_lantern_button": "Enderlantaarnknop",
+  "block.infinitybuttons.ender_lantern_lever": "Enderlantaarnhendel",
+  "block.infinitybuttons.ice_lantern_button": "Ijslantaarnknop",
+  "block.infinitybuttons.ice_lantern_lever": "Ijslantaarnhendel",
 
   "block.infinitybuttons.small_console_button": "Kleine consoleknop",
   "block.infinitybuttons.small_console_lever": "Kleine consoleschakelknop",

@@ -5,5 +5,11 @@
     "infinitybuttons:lantern_lever",
     "infinitybuttons:soul_lantern_button",
     "infinitybuttons:soul_lantern_lever"
+  ],
+  "optional": [
+    "infinitybuttons:ender_lantern_button",
+    "infinitybuttons:ender_lantern_lever",
+    "infinitybuttons:ice_lantern_button",
+    "infinitybuttons:ice_lantern_lever"
   ]
 }

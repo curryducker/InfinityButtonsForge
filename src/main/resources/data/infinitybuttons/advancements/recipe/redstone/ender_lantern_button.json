@@ -1,0 +1,40 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "endergetic"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinitybuttons:ender_lantern_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thing": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "endergetic:ender_lantern"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_thing",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinitybuttons:ender_lantern_button"
+    ]
+  }
+}

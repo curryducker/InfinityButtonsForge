@@ -1,10 +1,7 @@
 package net.larsmans.infinitybuttons;
 
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.compat.BambooBlocksBlocks;
-import net.larsmans.infinitybuttons.compat.EndergeticBlocks;
-import net.larsmans.infinitybuttons.compat.EnhancedMushroomsBlocks;
-import net.larsmans.infinitybuttons.compat.NethersDelightBlocks;
+import net.larsmans.infinitybuttons.compat.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -62,7 +59,13 @@ public class InfinityButtonsClient {
             cutout(InfinityButtonsBlocks.LARGE_CONSOLE_LEVER.get());
             cutout(InfinityButtonsBlocks.BIG_CONSOLE_BUTTON.get());
             cutout(InfinityButtonsBlocks.BIG_CONSOLE_LEVER.get());
+            if (ModList.get().isLoaded("environmental")) {
+                cutout(EnvironmentalBlocks.ICE_LANTERN_BUTTON.get());
+                cutout(EnvironmentalBlocks.ICE_LANTERN_LEVER.get());
+            }
             if (ModList.get().isLoaded("endergetic")) {
+                cutout(EndergeticBlocks.ENDER_LANTERN_BUTTON.get());
+                cutout(EndergeticBlocks.ENDER_LANTERN_LEVER.get());
                 cutout(EndergeticBlocks.ENDER_TORCH_BUTTON.get());
                 cutout(EndergeticBlocks.ENDER_WALL_TORCH_BUTTON.get());
                 cutout(EndergeticBlocks.ENDER_TORCH_LEVER.get());

@@ -256,6 +256,10 @@
   "block.infinitybuttons.lantern_lever": "Lantern Lever",
   "block.infinitybuttons.soul_lantern_button": "Soul Lantern Button",
   "block.infinitybuttons.soul_lantern_lever": "Soul Lantern Lever",
+  "block.infinitybuttons.ender_lantern_button": "Ender Lantern Button",
+  "block.infinitybuttons.ender_lantern_lever": "Ender Lantern Lever",
+  "block.infinitybuttons.ice_lantern_button": "Ice Lantern Button",
+  "block.infinitybuttons.ice_lantern_lever": "Ice Lantern Lever",
 
   "block.infinitybuttons.small_console_button": "Small Console Button",
   "block.infinitybuttons.small_console_lever": "Small Console Toggle Button",

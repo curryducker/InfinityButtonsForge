@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "pressed=false": {
+      "model": "environmental:block/ice_lantern_hanging"
+    },
+    "pressed=true": {
+      "model": "infinitybuttons:block/ice_lantern_button_pressed"
+    }
+  }
+}

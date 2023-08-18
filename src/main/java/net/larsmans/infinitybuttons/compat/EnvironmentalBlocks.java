@@ -3,6 +3,7 @@ package net.larsmans.infinitybuttons.compat;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.block.custom.LanternCompatButton;
 import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.ChiseledCompatBrickSecretButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatBookshelfSecretButton;
@@ -99,6 +100,12 @@ public class EnvironmentalBlocks {
     public static final RegistryObject<Block> WILLOW_PLANK_SECRET_BUTTON = registerPlankButton("willow", MaterialColor.WOOD);
     public static final RegistryObject<Block> CHERRY_PLANK_SECRET_BUTTON = registerPlankButton("cherry", MaterialColor.WOOD);
     public static final RegistryObject<Block> WISTERIA_PLANK_SECRET_BUTTON = registerPlankButton("wisteria", MaterialColor.WHITE_TERRACOTTA);
+
+    public static final RegistryObject<Block> ICE_LANTERN_BUTTON = registerBlock("ice_lantern_button",
+            () -> new LanternCompatButton(AbstractBlock.Properties.from(com.minecraftabnormals.environmental.core.registry.EnvironmentalBlocks.ICE_LANTERN.get()), false, byName("ice_lantern")));
+
+    public static final RegistryObject<Block> ICE_LANTERN_LEVER = registerBlock("ice_lantern_lever",
+            () -> new LanternCompatButton(AbstractBlock.Properties.from(com.minecraftabnormals.environmental.core.registry.EnvironmentalBlocks.ICE_LANTERN.get()), true, byName("ice_lantern")));
 
     /**
      * Methods

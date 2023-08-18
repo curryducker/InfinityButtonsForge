@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "pressed=false": {
+      "model": "endergetic:block/ender_lantern_hanging"
+    },
+    "pressed=true": {
+      "model": "infinitybuttons:block/ender_lantern_button_pressed"
+    }
+  }
+}

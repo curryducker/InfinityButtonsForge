@@ -1,8 +1,10 @@
 package net.larsmans.infinitybuttons.compat;
 
+import com.minecraftabnormals.endergetic.core.registry.EEBlocks;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
+import net.larsmans.infinitybuttons.block.custom.LanternCompatButton;
 import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.*;
 import net.larsmans.infinitybuttons.block.custom.torch.compat.EnderTorchButton;
@@ -72,6 +74,12 @@ public class EndergeticBlocks {
 
     public static final RegistryObject<Block> ENDER_WALL_TORCH_LEVER = registerTorchBlock("ender_wall_torch_lever",
             () -> new EnderWallTorchLever(PROP, byName("ender_torch")));
+
+    public static final RegistryObject<Block> ENDER_LANTERN_BUTTON = registerBlock("ender_lantern_button",
+            () -> new LanternCompatButton(AbstractBlock.Properties.from(EEBlocks.ENDER_LANTERN.get()), false, byName("ender_lantern")));
+
+    public static final RegistryObject<Block> ENDER_LANTERN_LEVER = registerBlock("ender_lantern_lever",
+            () -> new LanternCompatButton(AbstractBlock.Properties.from(EEBlocks.ENDER_LANTERN.get()), true, byName("ender_lantern")));
 
     /**
      * Methods
