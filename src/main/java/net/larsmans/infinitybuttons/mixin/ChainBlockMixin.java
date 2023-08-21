@@ -2,7 +2,6 @@ package net.larsmans.infinitybuttons.mixin;
 
 import net.larsmans.infinitybuttons.block.custom.LanternButton;
 import net.minecraft.block.*;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;

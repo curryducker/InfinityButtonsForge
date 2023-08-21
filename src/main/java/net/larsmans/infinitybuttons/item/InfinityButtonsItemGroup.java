@@ -5,7 +5,6 @@ import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.LampButton;
 import net.larsmans.infinitybuttons.block.custom.LanternButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
-import net.larsmans.infinitybuttons.block.custom.button.compat.PrismarineCompatButton;
 import net.larsmans.infinitybuttons.block.custom.consolebutton.ConsoleButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
@@ -13,7 +12,6 @@ import net.larsmans.infinitybuttons.block.custom.letterbutton.LetterButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.AbstractSecretButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.BookshelfSecretButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.PlankSecretButton;
-import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.DeepslateTileSecretButton;
 import net.larsmans.infinitybuttons.block.custom.torch.RedstoneTorchButton;
 import net.larsmans.infinitybuttons.block.custom.torch.TorchButton;
 import net.minecraft.block.Block;
@@ -24,9 +22,9 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.rmi.registry.Registry;
-import java.util.*;
-import java.util.function.Predicate;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Objects;
 
 import static net.larsmans.infinitybuttons.InfinityButtonsUtil.REGISTRY_FOR_TAB;
 import static net.larsmans.infinitybuttons.InfinityButtonsUtil.blockPathContains;
