@@ -30,16 +30,18 @@
 - Added Bamboo Large Button (1.20)
 - Added Cherry Plank Secret Button (1.20)
 - Change tags to match Vanilla (1.20)
+- (Mostly) Added Spanish translations by SoyTutta!
+- The Creative Tab has been sorted correctly. (1.16.5-1.19.2)
 
 Fabric Only:
 - Added Nether's Delight compat for 1.19.x
+- Fixed not being able to use the latest version of Cloth Config API (1.18.2)
 
 Forge Only:
 - Added assets for EMI. (1.18.2+)
 - Fixed a weird symbol appearing in the mod description.
 - Changed background in config menu.
 - Added integration for Copperized JEI Categories. (1.18.2-1.19.2)
-- Fixed Creative Tab being unsorted. (1.16.5-1.19.2)
 - Added compat for:
     - Atmospheric 1.18.2 & 1.19.x
     - Autumnity 1.18.2 & 1.19.x

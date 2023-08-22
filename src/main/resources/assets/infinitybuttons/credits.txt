@@ -7,6 +7,9 @@ Forge port developer
 Chinese translator
 - haoooo_
 
+Spanish translator
+- SoyTutta
+
 ------------------------
 
 Supporter
