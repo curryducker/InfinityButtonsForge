@@ -20,7 +20,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -46,7 +45,7 @@ public class InfinityButtonsItemGroup extends ItemGroup {
     public void fill(NonNullList<ItemStack> items) {
         String[] BEFORE_PLANKS = {"brick_secret_button", "stone_brick_secret_button", "mossy_stone_brick_secret_button", "cracked_stone_brick_secret_button", "chiseled_stone_brick_secret_button", "deepslate_brick_secret_button", "cracked_deepslate_brick_secret_button", "deepslate_tile_secret_button", "cracked_deepslate_tile_secret_button"};
         REGISTRY_FOR_TAB.sort(Comparator.comparing(o -> {
-            Block block = ForgeRegistries.BLOCKS.getValue(o.get().getRegistryName());
+            Block block = Block.getBlockFromItem(o.get());
             if (block instanceof AbstractSmallButton && !((AbstractSmallButton) block).isLarge()) {
                 if (block instanceof WoodenButton) {
                     return "AA";

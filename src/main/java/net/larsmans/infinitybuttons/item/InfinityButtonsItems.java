@@ -21,20 +21,28 @@ public class InfinityButtonsItems {
      * Torches
      */
 
-    public static final RegistryObject<Item> TORCH_BUTTON = registerTorch("torch_button", InfinityButtonsBlocks.TORCH_BUTTON, InfinityButtonsBlocks.WALL_TORCH_BUTTON);
-    public static final RegistryObject<Item> TORCH_LEVER = registerTorch("torch_lever", InfinityButtonsBlocks.TORCH_LEVER, InfinityButtonsBlocks.WALL_TORCH_LEVER);
-    public static final RegistryObject<Item> SOUL_TORCH_BUTTON = registerTorch("soul_torch_button", InfinityButtonsBlocks.SOUL_TORCH_BUTTON, InfinityButtonsBlocks.SOUL_WALL_TORCH_BUTTON);
-    public static final RegistryObject<Item> SOUL_TORCH_LEVER = registerTorch("soul_torch_lever", InfinityButtonsBlocks.SOUL_TORCH_LEVER, InfinityButtonsBlocks.SOUL_WALL_TORCH_LEVER);
-    public static final RegistryObject<Item> REDSTONE_TORCH_BUTTON = registerTorch("redstone_torch_button", InfinityButtonsBlocks.REDSTONE_TORCH_BUTTON, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_BUTTON);
-    public static final RegistryObject<Item> REDSTONE_TORCH_LEVER = registerTorch("redstone_torch_lever", InfinityButtonsBlocks.REDSTONE_TORCH_LEVER, InfinityButtonsBlocks.REDSTONE_WALL_TORCH_LEVER);
+    public static final RegistryObject<Item> TORCH_BUTTON = registerItem("torch_button",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.TORCH_BUTTON.get(), InfinityButtonsBlocks.WALL_TORCH_BUTTON.get(),
+                    new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final RegistryObject<Item> TORCH_LEVER = registerItem("torch_lever",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.TORCH_LEVER.get(), InfinityButtonsBlocks.WALL_TORCH_LEVER.get(),
+                    new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final RegistryObject<Item> SOUL_TORCH_BUTTON = registerItem("soul_torch_button",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.SOUL_TORCH_BUTTON.get(), InfinityButtonsBlocks.SOUL_WALL_TORCH_BUTTON.get(),
+                    new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final RegistryObject<Item> SOUL_TORCH_LEVER = registerItem("soul_torch_lever",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.SOUL_TORCH_LEVER.get(), InfinityButtonsBlocks.SOUL_WALL_TORCH_LEVER.get(),
+                    new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final RegistryObject<Item> REDSTONE_TORCH_BUTTON = registerItem("redstone_torch_button",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.REDSTONE_TORCH_BUTTON.get(), InfinityButtonsBlocks.REDSTONE_WALL_TORCH_BUTTON.get(),
+                    new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
+    public static final RegistryObject<Item> REDSTONE_TORCH_LEVER = registerItem("redstone_torch_lever",
+            () -> new WallOrFloorItem(InfinityButtonsBlocks.REDSTONE_TORCH_LEVER.get(), InfinityButtonsBlocks.REDSTONE_WALL_TORCH_LEVER.get(),
+                    new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
 
     /**
      * Methods
      */
-
-    public static RegistryObject<Item> registerTorch(String name, RegistryObject<Block> standing, RegistryObject<Block> wall) {
-        return registerItem(name, () -> new WallOrFloorItem(standing.get(), wall.get(), new Item.Properties().group(InfinityButtonsItemGroup.INFINITYBUTTONS)));
-    }
 
     private static <T extends Item> RegistryObject<Item> registerItem(String name, Supplier<T> item) {
         RegistryObject<Item> register = ITEMS.register(name, item);

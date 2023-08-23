@@ -51,6 +51,10 @@ public class InfinityButtons
         InfinityButtonsParticleTypes.register(eventBus);
         InfinityButtonsTriggers.register();
 
+        if (ModList.get().isLoaded("endergetic")){
+            EndergeticItems.registerCompatItems();
+            EndergeticBlocks.registerCompatBlocks();
+        }
         if (ModList.get().isLoaded("nethers_delight")) {
             NethersDelightItems.registerCompatItems();
             NethersDelightBlocks.registerCompatBlocks();
@@ -60,10 +64,6 @@ public class InfinityButtons
         }
         if (ModList.get().isLoaded("environmental")){
             EnvironmentalBlocks.registerCompatBlocks();
-        }
-        if (ModList.get().isLoaded("endergetic")){
-            EndergeticItems.registerCompatItems();
-            EndergeticBlocks.registerCompatBlocks();
         }
         if (ModList.get().isLoaded("autumnity")){
             AutumnityBlocks.registerCompatBlocks();

@@ -1,6 +1,7 @@
 package net.larsmans.infinitybuttons.compat;
 
 import net.larsmans.infinitybuttons.InfinityButtons;
+import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItemGroup;
 import net.larsmans.infinitybuttons.item.InfinityButtonsItems;
 import net.minecraft.item.Item;
@@ -8,6 +9,8 @@ import net.minecraft.item.WallOrFloorItem;
 import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
+
+import static net.larsmans.infinitybuttons.item.InfinityButtonsItems.ITEMS;
 
 public class EndergeticItems {
 
@@ -21,8 +24,10 @@ public class EndergeticItems {
      * Methods
      */
 
-    private static <T extends Item> RegistryObject<T> registerItem(String name, Supplier<T> item) {
-        return InfinityButtonsItems.ITEMS.register(name, item);
+    private static <T extends Item> RegistryObject<Item> registerItem(String name, Supplier<T> item) {
+        RegistryObject<Item> register = ITEMS.register(name, item);
+        InfinityButtonsUtil.REGISTRY_FOR_TAB.add(register);
+        return register;
     }
 
     public static void registerCompatItems() {
