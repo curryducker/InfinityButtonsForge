@@ -3,13 +3,15 @@ package net.larsmans.infinitybuttons.block.custom;
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.LanternBlock;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.IWaterLoggable;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.*;
@@ -17,9 +19,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,10 +34,12 @@ import java.util.List;
 import java.util.Random;
 
 import static net.larsmans.infinitybuttons.InfinityButtonsUtil.checkChains;
+import static net.minecraft.block.LanternBlock.WATERLOGGED;
 
-public class LanternButton extends LanternBlock {
+public class LanternButton extends Block implements IWaterLoggable {
 
     public static final BooleanProperty PRESSED = BooleanProperty.create("pressed");
+    private static final VoxelShape HANGING_SHAPES = VoxelShapes.or(Block.makeCuboidShape(5.0D, 1.0D, 5.0D, 11.0D, 8.0D, 11.0D), Block.makeCuboidShape(6.0D, 8.0D, 6.0D, 10.0D, 10.0D, 10.0D));
     public static final VoxelShape SHAPE_PRESSED = HANGING_SHAPES.withOffset(0, (double) -1 / 16, 0);
     private final boolean isLever;
     public final Block jadeBlock;
@@ -42,7 +48,7 @@ public class LanternButton extends LanternBlock {
         super(properties);
         this.isLever = isLever;
         this.jadeBlock = jadeBlock;
-        this.setDefaultState(this.stateContainer.getBaseState().with(HANGING, true).with(WATERLOGGED, false).with(PRESSED, false));
+        this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, false).with(PRESSED, false));
     }
 
     @Override
@@ -63,7 +69,7 @@ public class LanternButton extends LanternBlock {
 
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(HANGING, WATERLOGGED, PRESSED);
+        builder.add(WATERLOGGED, PRESSED);
     }
 
     protected int getPressDuration() {
@@ -72,7 +78,10 @@ public class LanternButton extends LanternBlock {
 
     @Override
     public BlockState updatePostPlacement(BlockState state, Direction direction, BlockState facingState, IWorld world, BlockPos pos, BlockPos facingPos) {
-        return super.updatePostPlacement(state, direction, facingState, world, pos, facingPos);
+        if (state.get(WATERLOGGED)) {
+            world.getPendingFluidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+        }
+        return direction == Direction.UP && !state.isValidPosition(world, pos) ? Blocks.AIR.getDefaultState() : super.updatePostPlacement(state, direction, facingState, world, pos, facingPos);
     }
 
     @Override
@@ -161,5 +170,20 @@ public class LanternButton extends LanternBlock {
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         InfinityButtonsUtil.tooltip(tooltip, "lantern_button");
+    }
+
+    @Override
+    public boolean allowsMovement(BlockState state, IBlockReader world, BlockPos pos, PathType type) {
+        return false;
+    }
+
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        return Block.hasEnoughSolidSide(world, pos.offset(Direction.UP), Direction.DOWN);
     }
 }
