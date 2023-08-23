@@ -59,6 +59,9 @@
   "block.infinitybuttons.elder_prismarine_brick_button": "Oudeprismarienblokstenen knop",
   "block.infinitybuttons.dark_elder_prismarine_button": "Donkeroudeprismarienen knop",
 
+  "block.infinitybuttons.arid_sand_button": "Dorre zandknop",
+  "block.infinitybuttons.red_arid_sand_button": "Rode dorre zandknop",
+
   "block.infinitybuttons.oak_large_button": "Eikenhouten grote knop",
   "block.infinitybuttons.spruce_large_button": "Sparrenhouten grote knop",
   "block.infinitybuttons.birch_large_button": "Berkenhouten grote knop",
@@ -148,6 +151,9 @@
   "block.infinitybuttons.elder_prismarine_large_button": "Oudeprismarienen grote knop",
   "block.infinitybuttons.elder_prismarine_brick_large_button": "Oudeprismarienblokstenen grote knop",
   "block.infinitybuttons.dark_elder_prismarine_large_button": "Donkeroudeprismarienen grote knop",
+
+  "block.infinitybuttons.arid_sand_large_button": "Grote dorre zandknop",
+  "block.infinitybuttons.red_arid_sand_large_button": "Grote rode dorre zandknop",
 
   "block.infinitybuttons.white_emergency_button": "Witte noodknop",
   "block.infinitybuttons.light_gray_emergency_button": "Lichtgrijze noodknop",

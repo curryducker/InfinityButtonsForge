@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
-public class FallingButton extends AbstractSmallButton{
+public class FallingButton extends AbstractSmallButton {
 
     public boolean gravel;
 
@@ -42,7 +42,7 @@ public class FallingButton extends AbstractSmallButton{
         if (state.get(PRESSED)) {
             worldIn.setBlockState(pos, state.with(PRESSED, false), 3);
             this.updateNeighbors(state, worldIn, pos);
-            this.playSound((PlayerEntity)null, worldIn, pos, false);
+            this.playSound(null, worldIn, pos, false);
             worldIn.destroyBlock(pos, false);
         }
     }

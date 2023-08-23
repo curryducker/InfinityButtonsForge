@@ -1,0 +1,14 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "atmospheric"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{"item": "infinitybuttons:arid_sand_button"},{"item": "infinitybuttons:arid_sand_button"}],
+  "result": {
+    "item": "infinitybuttons:arid_sand_large_button",
+    "count": 1
+  }
+}

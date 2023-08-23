@@ -29,6 +29,8 @@
     "infinitybuttons:deepslate_button",
     "infinitybuttons:elder_prismarine_button",
     "infinitybuttons:elder_prismarine_brick_button",
-    "infinitybuttons:dark_elder_prismarine_button"
+    "infinitybuttons:dark_elder_prismarine_button",
+    "infinitybuttons:arid_sand_button",
+    "infinitybuttons:red_arid_sand_button"
   ]
 }

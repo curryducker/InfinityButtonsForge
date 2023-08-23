@@ -59,6 +59,9 @@
   "block.infinitybuttons.elder_prismarine_brick_button": "Elder Prismarine Brick Button",
   "block.infinitybuttons.dark_elder_prismarine_button": "Dark Elder Prismarine Button",
 
+  "block.infinitybuttons.arid_sand_button": "Arid Sand Button",
+  "block.infinitybuttons.red_arid_sand_button": "Red Arid Sand Button",
+
   "block.infinitybuttons.oak_large_button": "Oak Large Button",
   "block.infinitybuttons.spruce_large_button": "Spruce Large Button",
   "block.infinitybuttons.birch_large_button": "Birch Large Button",
@@ -148,6 +151,9 @@
   "block.infinitybuttons.elder_prismarine_large_button": "Elder Prismarine Large Button",
   "block.infinitybuttons.elder_prismarine_brick_large_button": "Elder Prismarine Brick Large Button",
   "block.infinitybuttons.dark_elder_prismarine_large_button": "Dark Elder Prismarine Large Button",
+
+  "block.infinitybuttons.arid_sand_large_button": "Arid Sand Large Button",
+  "block.infinitybuttons.red_arid_sand_large_button": "Red Arid Sand Large Button",
 
   "block.infinitybuttons.white_emergency_button": "White Emergency Button",
   "block.infinitybuttons.light_gray_emergency_button": "Light Gray Emergency Button",

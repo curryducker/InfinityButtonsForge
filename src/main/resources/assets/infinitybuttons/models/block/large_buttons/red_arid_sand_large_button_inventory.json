@@ -1,0 +1,6 @@
+{
+  "parent": "infinitybuttons:block/large_button_inventory",
+  "textures": {
+    "texture": "atmospheric:block/red_arid_sand"
+  }
+}

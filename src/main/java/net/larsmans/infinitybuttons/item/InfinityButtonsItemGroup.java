@@ -5,6 +5,7 @@ import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.LampButton;
 import net.larsmans.infinitybuttons.block.custom.LanternButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
+import net.larsmans.infinitybuttons.block.custom.button.compat.FallingCompatButton;
 import net.larsmans.infinitybuttons.block.custom.consolebutton.ConsoleButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
@@ -57,6 +58,14 @@ public class InfinityButtonsItemGroup extends ItemGroup {
                     return "AC";
                 } else if (block instanceof PrismarineButton) {
                     return "AD";
+                } else if (block instanceof FallingButton) {
+                    if (!((FallingButton)block).gravel && !blockPathContains(block, "concrete")) {
+                        return "AEA";
+                    } else if (((FallingButton)block).gravel) {
+                        return "AEB";
+                    } else {
+                        return "AEZ";
+                    }
                 } else {
                     return "AZ";
                 }
@@ -71,6 +80,14 @@ public class InfinityButtonsItemGroup extends ItemGroup {
                     return "BC";
                 } else if (block instanceof PrismarineButton) {
                     return "BD";
+                } else if (block instanceof FallingButton) {
+                    if (!((FallingButton)block).gravel && !blockPathContains(block, "concrete")) {
+                        return "BEA";
+                    } else if (((FallingButton)block).gravel) {
+                        return "BEB";
+                    } else {
+                        return "BEZ";
+                    }
                 } else {
                     return "BZ";
                 }

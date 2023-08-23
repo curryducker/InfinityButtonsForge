@@ -1,0 +1,40 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "atmospheric"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinitybuttons:arid_sand_large_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thing": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "atmospheric:arid_sand"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_thing",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinitybuttons:arid_sand_large_button"
+    ]
+  }
+}
