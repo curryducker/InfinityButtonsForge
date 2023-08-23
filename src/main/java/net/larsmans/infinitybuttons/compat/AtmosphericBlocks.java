@@ -3,7 +3,6 @@ package net.larsmans.infinitybuttons.compat;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.larsmans.infinitybuttons.block.custom.button.FallingButton;
 import net.larsmans.infinitybuttons.block.custom.button.compat.FallingCompatButton;
 import net.larsmans.infinitybuttons.block.custom.button.compat.WoodenCompatButton;
 import net.larsmans.infinitybuttons.block.custom.secretbutton.compat.CompatBookshelfSecretButton;

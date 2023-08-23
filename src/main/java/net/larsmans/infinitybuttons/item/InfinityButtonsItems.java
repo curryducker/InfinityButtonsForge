@@ -3,7 +3,6 @@ package net.larsmans.infinitybuttons.item;
 import net.larsmans.infinitybuttons.InfinityButtons;
 import net.larsmans.infinitybuttons.InfinityButtonsUtil;
 import net.larsmans.infinitybuttons.block.InfinityButtonsBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.WallOrFloorItem;
 import net.minecraftforge.eventbus.api.IEventBus;

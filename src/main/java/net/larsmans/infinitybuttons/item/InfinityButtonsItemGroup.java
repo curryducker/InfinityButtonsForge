@@ -5,7 +5,6 @@ import net.larsmans.infinitybuttons.block.custom.DoorbellButton;
 import net.larsmans.infinitybuttons.block.custom.LampButton;
 import net.larsmans.infinitybuttons.block.custom.LanternButton;
 import net.larsmans.infinitybuttons.block.custom.button.*;
-import net.larsmans.infinitybuttons.block.custom.button.compat.FallingCompatButton;
 import net.larsmans.infinitybuttons.block.custom.consolebutton.ConsoleButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.EmergencyButton;
 import net.larsmans.infinitybuttons.block.custom.emergencybutton.SafeEmergencyButton;
