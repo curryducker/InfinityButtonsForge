@@ -1,5 +1,16 @@
 # Changelog Infinity Buttons
 
+## 4.0.3
+
+Forge:
+- Removed Secret Buttons of Upgrade Aquatic's Kelpy Brick variants as they have been removed from the original mod.
+
+## 4.0.2
+
+Forge:
+- Bookshelf Secret Buttons made from Abnormals wood types are now able to use Woodworks.
+- Fixed Hoglin Mount Button missing model when turned off. (1.20.1)
+
 ## 4.0.1
 
 - Fixed missing textures on Purpur Block Secret Button.
