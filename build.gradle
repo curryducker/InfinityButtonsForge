@@ -24,7 +24,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: "org.spongepowered.mixin"
 
-version = '1.16.5-4.0.1'
+version = '1.16.5-4.0.4'
 group = 'net.larsmans.infinitybuttons' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'infinitybuttons'
 
@@ -189,8 +189,8 @@ dependencies {
 modrinth {
     token = System.getenv("MODRINTH_TOKEN")
     projectId = "infinitybuttons"
-    versionNumber = "4.0.1-forge-1.16.5"
-    versionName = "Infinity Buttons [FORGE] 4.0.1 - 1.16.5"
+    versionNumber = "4.0.4-forge-1.16.5"
+    versionName = "Infinity Buttons [FORGE] 4.0.4 - 1.16.5"
     versionType = "release"
     uploadFile = jar
     gameVersions = ["1.16.5"]
@@ -233,7 +233,7 @@ curseforge {
             optionalDependency "nethers-delight"
         }
         mainArtifact(jar) {
-            displayName = "Infinity Buttons [FORGE] 4.0.1 - 1.16.5"
+            displayName = "Infinity Buttons [FORGE] 4.0.4 - 1.16.5"
         }
         options {
             javaVersionAutoDetect = false
