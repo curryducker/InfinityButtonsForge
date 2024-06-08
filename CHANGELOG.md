@@ -1,5 +1,10 @@
 # Changelog Infinity Buttons
 
+## 4.0.5
+
+Fabric:
+- Fixed Fancy Emergency Button and Fancy Safety Button not having a loot table.
+
 ## 4.0.4
 
 - Partially added translations for:
